@@ -1,37 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="title">Digital Signature Tool - Create & Export Signatures Online Free</title>
+    <title data-i18n="metaTitle">电子手写签名生成器 - 免费在线手写签名 PNG/PDF 导出</title>
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Free online digital signature tool. Create, design and export your signature as PNG or PDF. No registration required. Supports multiple languages. Perfect for documents and contracts.">
-    <meta name="keywords" content="digital signature, electronic signature, online signature, signature generator, PDF signature, PNG signature, free signature tool, e-signature, document signing">
+    <meta id="metaDescription" name="description" content="免费在线电子手写签名工具，手绘签名支持 PNG/PDF 导出，无需注册，浏览器本地运行。适用于合同、文档、发票等场景，支持多语言。">
+    <meta name="keywords" content="手写签名, 电子手写签名, 在线签名, 签名生成器, 数字签名, 电子签名, 签名 PNG, 签名 PDF, 免费签名工具, electronic signature, online signature, signature generator">
     <meta name="author" content="Digital Signature Tool">
     <meta name="robots" content="index, follow">
     <meta name="language" content="Multiple">
 
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Digital Signature Tool - Create & Export Signatures Online">
-    <meta property="og:description" content="Free online tool to create and export digital signatures as PNG or PDF files. No registration required. Supports 10+ languages.">
+    <meta id="ogTitle" property="og:title" content="电子手写签名生成器 - 免费在线手写签名 PNG/PDF 导出">
+    <meta id="ogDescription" property="og:description" content="免费在线电子手写签名工具，手绘签名支持 PNG/PDF 导出，无需注册，浏览器本地运行。适用于合同、文档、发票等场景，支持多语言。">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://your-domain.vercel.app">
-    <meta property="og:image" content="https://your-domain.vercel.app/og-image.png">
+    <meta id="ogUrl" property="og:url" content="https://signaturesketch.tech/">
+    <meta property="og:image" content="https://signaturesketch.tech/og-image.png">
     <meta property="og:site_name" content="Digital Signature Tool">
 
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Digital Signature Tool - Create & Export Signatures Online">
-    <meta name="twitter:description" content="Free online tool to create and export digital signatures as PNG or PDF files. No registration required.">
-    <meta name="twitter:image" content="https://your-domain.vercel.app/twitter-image.png">
+    <meta id="twitterTitle" name="twitter:title" content="电子手写签名生成器 - 免费在线手写签名 PNG/PDF 导出">
+    <meta id="twitterDescription" name="twitter:description" content="免费在线电子手写签名工具，手绘签名支持 PNG/PDF 导出，无需注册，浏览器本地运行。适用于合同、文档、发票等场景，支持多语言。">
+    <meta name="twitter:image" content="https://signaturesketch.tech/twitter-image.png">
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://your-domain.vercel.app">
+    <link id="canonicalLink" rel="canonical" href="https://signaturesketch.tech/">
+    <!-- Static hreflang alternates (update domain after deploy) -->
+    <link rel="alternate" hreflang="zh" href="https://signaturesketch.tech/zh/">
+    <link rel="alternate" hreflang="en" href="https://signaturesketch.tech/en/">
+    <link rel="alternate" hreflang="es" href="https://signaturesketch.tech/es/">
+    <link rel="alternate" hreflang="fr" href="https://signaturesketch.tech/fr/">
+    <link rel="alternate" hreflang="ru" href="https://signaturesketch.tech/ru/">
+    <link rel="alternate" hreflang="ar" href="https://signaturesketch.tech/ar/">
+    <link rel="alternate" hreflang="ja" href="https://signaturesketch.tech/ja/">
+    <link rel="alternate" hreflang="ko" href="https://signaturesketch.tech/ko/">
+    <link rel="alternate" hreflang="pt" href="https://signaturesketch.tech/pt/">
+    <link rel="alternate" hreflang="de" href="https://signaturesketch.tech/de/">
+    <link rel="alternate" hreflang="x-default" href="https://signaturesketch.tech/">
+    <!-- hreflang alternates are injected at runtime by i18n.js to match current host -->
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -39,8 +52,8 @@
       "@context": "https://schema.org",
       "@type": "WebApplication",
       "name": "Digital Signature Tool",
-      "description": "Free online digital signature creator and exporter. Create custom signatures and export as PNG or PDF files.",
-      "url": "https://your-domain.vercel.app",
+      "description": "Free online handwritten electronic signature generator. Draw a signature and export as PNG or PDF files.",
+      "url": "https://signaturesketch.tech/",
       "applicationCategory": "Productivity",
       "operatingSystem": "Any",
       "offers": {
@@ -55,6 +68,39 @@
         "Multi-language support",
         "No registration required",
         "Free to use"
+      ]
+    }
+    </script>
+    <!-- FAQ structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "什么是电子手写签名工具？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "这是一个在线手写签名生成器，支持在浏览器内本地绘制签名并导出 PNG 或 PDF 文件，无需注册。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "是否需要上传文件或注册账号？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "不需要。所有操作都在浏览器本地完成，不会上传任何内容到服务器。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "支持哪些导出格式？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "支持 PNG 图片和 PDF 文档两种导出格式。"
+          }
+        }
       ]
     }
     </script>
@@ -153,6 +199,33 @@
                 </div>
             </div>
         </main>
+
+            <!-- 静态 SEO 内容：无JS也可抓取 -->
+            <section class="seo-section" aria-labelledby="seoTitle">
+                <div class="seo-container">
+                    <h2 id="seoTitle">手写电子签名在线生成器（支持 PNG / PDF 导出）</h2>
+                    <p>
+                        本工具是一款免费在线<strong>电子手写签名</strong>生成器，支持在浏览器内本地绘制签名并一键导出
+                        <strong>PNG</strong> 图片或 <strong>PDF</strong> 文档。无需注册登录，适用于合同、协议、发票、证明等多种文档场景。
+                    </p>
+                    <h3>核心特性</h3>
+                    <ul>
+                        <li>流畅手写：鼠标/触屏均可使用</li>
+                        <li>多语言界面：支持中文、英文等 10 种语言</li>
+                        <li>导出灵活：支持 PNG 与 PDF 两种格式</li>
+                        <li>本地运行：无需上传文件，更安全</li>
+                    </ul>
+                    <h3>适用场景</h3>
+                    <ul>
+                        <li>电子合同与协议签名</li>
+                        <li>企业/学校/机构的盖章签字留档</li>
+                        <li>日常文档签名、表格签署</li>
+                    </ul>
+                    <h3>常见问题</h3>
+                    <p><strong>是否真的免费？</strong> 是，工具可免费使用。</p>
+                    <p><strong>如何插入到文档？</strong> 导出 PNG 图片后即可粘贴到 Word、WPS、Google Docs 等文档中；或导出 PDF 用于打印/归档。</p>
+                </div>
+            </section>
 
             <!-- 底部信息 -->
             <footer class="footer">

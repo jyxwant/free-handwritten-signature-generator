@@ -456,6 +456,33 @@ body {
     color: var(--text-secondary);
 }
 
+/* SEO 静态内容区 */
+.seo-section {
+    padding: var(--spacing-xl) var(--spacing-xl) var(--spacing-xxl, 48px);
+    background: var(--background-primary);
+}
+.seo-container {
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--text-primary);
+}
+.seo-container h2 {
+    font-size: 22px;
+    margin-bottom: var(--spacing-md);
+}
+.seo-container h3 {
+    font-size: 18px;
+    margin: var(--spacing-lg) 0 var(--spacing-sm);
+}
+.seo-container p {
+    margin: var(--spacing-sm) 0;
+    color: var(--text-primary);
+}
+.seo-container ul {
+    margin-left: 1.25rem;
+    color: var(--text-primary);
+}
+
 /* 响应式设计 */
 @media (max-width: 1200px) {
     .ad-sidebar {

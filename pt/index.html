@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de assinatura manuscrita – Grátis online PNG/PDF</title>
+
+    <!-- SEO Meta Tags -->
+    <meta id="metaDescription" name="description" content="Gere assinaturas manuscritas online e exporte como PNG ou PDF. Sem cadastro. Em navegador. Ideal para documentos e contratos.">
+    <meta name="keywords" content="assinatura manuscrita, assinatura eletrônica, assinatura online, gerador de assinatura, assinatura PNG, assinatura PDF, ferramenta gratuita">
+    <meta name="author" content="Ferramenta de Assinatura Digital">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Portuguese">
+
+    <!-- Open Graph Meta Tags -->
+    <meta id="ogTitle" property="og:title" content="Gerador de assinatura manuscrita – Grátis online PNG/PDF">
+    <meta id="ogDescription" property="og:description" content="Crie assinaturas manuscritas online e exporte como PNG ou PDF. Sem cadastro.">
+    <meta property="og:type" content="website">
+    <meta id="ogUrl" property="og:url" content="https://signaturesketch.tech/pt/">
+    <meta property="og:image" content="https://signaturesketch.tech/og-image.png">
+    <meta property="og:site_name" content="Ferramenta de Assinatura Digital">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta id="twitterTitle" name="twitter:title" content="Gerador de assinatura manuscrita – Grátis online PNG/PDF">
+    <meta id="twitterDescription" name="twitter:description" content="Gere assinaturas manuscritas online e exporte como PNG ou PDF.">
+    <meta name="twitter:image" content="https://signaturesketch.tech/twitter-image.png">
+
+    <!-- Canonical URL & hreflang -->
+    <link id="canonicalLink" rel="canonical" href="https://signaturesketch.tech/pt/">
+    <link rel="alternate" hreflang="zh" href="https://signaturesketch.tech/zh/">
+    <link rel="alternate" hreflang="en" href="https://signaturesketch.tech/en/">
+    <link rel="alternate" hreflang="es" href="https://signaturesketch.tech/es/">
+    <link rel="alternate" hreflang="fr" href="https://signaturesketch.tech/fr/">
+    <link rel="alternate" hreflang="ru" href="https://signaturesketch.tech/ru/">
+    <link rel="alternate" hreflang="ar" href="https://signaturesketch.tech/ar/">
+    <link rel="alternate" hreflang="ja" href="https://signaturesketch.tech/ja/">
+    <link rel="alternate" hreflang="ko" href="https://signaturesketch.tech/ko/">
+    <link rel="alternate" hreflang="pt" href="https://signaturesketch.tech/pt/">
+    <link rel="alternate" hreflang="de" href="https://signaturesketch.tech/de/">
+    <link rel="alternate" hreflang="x-default" href="https://signaturesketch.tech/">
+
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="ad-sidebar ad-sidebar-left" id="leftAdSidebar">
+            <div class="ad-container">
+                <div class="ad-placeholder">
+                    <span>Advertisement</span>
+                </div>
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXX" data-ad-slot="1234567890" data-ad-format="vertical" data-full-width-responsive="true"></ins>
+            </div>
+        </aside>
+
+        <div class="main-wrapper">
+            <nav class="nav-bar">
+                <div class="nav-content">
+                    <h1 class="nav-title" data-i18n="title">Assinatura Digital</h1>
+                    <div class="nav-actions">
+                        <select class="language-selector" id="languageSelector">
+                            <option value="zh">中文</option>
+                            <option value="en">English</option>
+                            <option value="es">Español</option>
+                            <option value="fr">Français</option>
+                            <option value="ru">Русский</option>
+                            <option value="ar">العربية</option>
+                            <option value="ja">日本語</option>
+                            <option value="ko">한국어</option>
+                            <option value="pt" selected>Português</option>
+                            <option value="de">Deutsch</option>
+                        </select>
+                    </div>
+                </div>
+            </nav>
+
+            <main class="main-content">
+                <div class="signature-card">
+                    <div class="prompt-section">
+                        <h2 class="prompt-title" data-i18n="prompt">Por favor escreva sua assinatura na área abaixo</h2>
+                        <div class="action-buttons">
+                            <button class="btn btn-secondary" id="clearBtn" data-i18n="clear">Limpar</button>
+                            <button class="btn btn-primary" id="saveBtn" data-i18n="save">Salvar Assinatura</button>
+                        </div>
+                    </div>
+
+                    <div class="canvas-container">
+                        <canvas id="signatureCanvas" class="signature-canvas"></canvas>
+                        <div class="canvas-placeholder" data-i18n="placeholder">Clique para começar a assinar</div>
+                    </div>
+
+                    <div class="toolbar">
+                        <div class="tool-group">
+                            <label class="tool-label" data-i18n="color">Cor:</label>
+                            <div class="color-palette">
+                                <div class="color-swatch active" data-color="#000000"></div>
+                                <div class="color-swatch" data-color="#FF0000"></div>
+                                <div class="color-swatch" data-color="#0066FF"></div>
+                                <div class="color-swatch" data-color="#00AA00"></div>
+                                <div class="color-swatch" data-color="#8A2BE2"></div>
+                                <input type="color" id="customColor" class="custom-color-picker" value="#000000">
+                            </div>
+                        </div>
+
+                        <div class="tool-group">
+                            <label class="tool-label" data-i18n="thickness">Espessura:</label>
+                            <div class="thickness-control">
+                                <input type="range" id="thicknessSlider" min="2" max="20" value="5" class="thickness-slider">
+                                <span class="thickness-value" id="thicknessValue">5</span>
+                                <div class="thickness-preview" id="thicknessPreview"></div>
+                            </div>
+                        </div>
+
+                        <div class="tool-group">
+                            <label class="tool-label" data-i18n="export">Exportar:</label>
+                            <div class="export-options">
+                                <button class="btn btn-outline" id="exportPngBtn" data-i18n="exportPng">Imagem PNG</button>
+                                <button class="btn btn-outline" id="exportPdfBtn" data-i18n="exportPdf">Documento PDF</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <section class="seo-section" aria-labelledby="seoTitle">
+                <div class="seo-container">
+                    <h2 id="seoTitle">Gerador de assinatura manuscrita online (PNG / PDF)</h2>
+                    <p>
+                        <strong>Gerador de assinatura eletrônica manuscrita</strong> gratuito: desenhe sua assinatura no navegador e exporte como
+                        <strong>PNG</strong> ou <strong>PDF</strong>. Sem cadastro. Ideal para contratos, documentos e faturas.
+                    </p>
+                    <h3>Recursos principais</h3>
+                    <ul>
+                        <li>Escrita suave: mouse ou toque</li>
+                        <li>Interface multilíngue: 10 idiomas</li>
+                        <li>Exportação flexível: PNG e PDF</li>
+                        <li>Processamento local: mais privacidade e segurança</li>
+                    </ul>
+                    <h3>Casos de uso</h3>
+                    <ul>
+                        <li>Contratos e acordos eletrônicos</li>
+                        <li>Assinatura e arquivamento em empresas/escolas/instituições</li>
+                        <li>Assinaturas cotidianas de documentos e formulários</li>
+                    </ul>
+                    <h3>Perguntas frequentes</h3>
+                    <p><strong>É realmente grátis?</strong> Sim, o uso é gratuito.</p>
+                    <p><strong>Como inserir no documento?</strong> Exporte em PNG e cole no Word, WPS ou Google Docs; ou exporte em PDF para impressão/arquivo.</p>
+                </div>
+            </section>
+
+            <footer class="footer">
+                <p class="footer-text" data-i18n="footer">Ferramenta de Assinatura Digital - Simples, Rápida, Profissional</p>
+            </footer>
+        </div>
+
+        <aside class="ad-sidebar ad-sidebar-right" id="rightAdSidebar">
+            <div class="ad-container">
+                <div class="ad-placeholder">
+                    <span>Advertisement</span>
+                </div>
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXX" data-ad-slot="0987654321" data-ad-format="vertical" data-full-width-responsive="true"></ins>
+            </div>
+        </aside>
+    </div>
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXX" crossorigin="anonymous"></script>
+    <script>
+        window.addEventListener('load', () => { setTimeout(() => { try {(adsbygoogle = window.adsbygoogle || []).push({});(adsbygoogle = window.adsbygoogle || []).push({});} catch (e) {} }, 2000); });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script>window.__forceLang = 'pt';</script>
+    <script src="/i18n.js"></script>
+    <script src="/signature.js"></script>
+</body>
+</html>

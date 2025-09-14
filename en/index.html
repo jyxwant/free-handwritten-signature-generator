@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handwritten Electronic Signature Maker – Free Online PNG/PDF</title>
+
+    <!-- SEO Meta Tags -->
+    <meta id="metaDescription" name="description" content="Free online handwritten electronic signature generator. Draw your signature and export as PNG or PDF. No registration. 100% in‑browser. Great for documents and contracts.">
+    <meta name="keywords" content="handwritten signature, electronic signature, online signature, signature generator, PNG signature, PDF signature, free signature tool, e-signature, document signing">
+    <meta name="author" content="Digital Signature Tool">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+
+    <!-- Open Graph Meta Tags -->
+    <meta id="ogTitle" property="og:title" content="Handwritten Electronic Signature Maker – Free Online PNG/PDF">
+    <meta id="ogDescription" property="og:description" content="Free online handwritten electronic signature generator. Draw your signature and export as PNG or PDF. No registration.">
+    <meta property="og:type" content="website">
+    <meta id="ogUrl" property="og:url" content="https://signaturesketch.tech/en/">
+    <meta property="og:image" content="https://signaturesketch.tech/og-image.png">
+    <meta property="og:site_name" content="Digital Signature Tool">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta id="twitterTitle" name="twitter:title" content="Handwritten Electronic Signature Maker – Free Online PNG/PDF">
+    <meta id="twitterDescription" name="twitter:description" content="Free online handwritten electronic signature generator. Draw your signature and export as PNG or PDF.">
+    <meta name="twitter:image" content="https://signaturesketch.tech/twitter-image.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <!-- Canonical URL & hreflang -->
+    <link id="canonicalLink" rel="canonical" href="https://signaturesketch.tech/en/">
+    <link rel="alternate" hreflang="zh" href="https://signaturesketch.tech/zh/">
+    <link rel="alternate" hreflang="en" href="https://signaturesketch.tech/en/">
+    <link rel="alternate" hreflang="es" href="https://signaturesketch.tech/es/">
+    <link rel="alternate" hreflang="fr" href="https://signaturesketch.tech/fr/">
+    <link rel="alternate" hreflang="ru" href="https://signaturesketch.tech/ru/">
+    <link rel="alternate" hreflang="ar" href="https://signaturesketch.tech/ar/">
+    <link rel="alternate" hreflang="ja" href="https://signaturesketch.tech/ja/">
+    <link rel="alternate" hreflang="ko" href="https://signaturesketch.tech/ko/">
+    <link rel="alternate" hreflang="pt" href="https://signaturesketch.tech/pt/">
+    <link rel="alternate" hreflang="de" href="https://signaturesketch.tech/de/">
+    <link rel="alternate" hreflang="x-default" href="https://signaturesketch.tech/">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Digital Signature Tool",
+      "description": "Free online handwritten electronic signature generator. Draw a signature and export as PNG or PDF files.",
+      "url": "https://signaturesketch.tech/en/",
+      "applicationCategory": "Productivity",
+      "operatingSystem": "Any",
+      "offers": {"@type": "Offer","price": "0","priceCurrency": "USD"},
+      "featureList": [
+        "Create handwritten signatures",
+        "Export as PNG images",
+        "Export as PDF documents",
+        "Multi-language support",
+        "No registration required",
+        "Free to use"
+      ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="ad-sidebar ad-sidebar-left" id="leftAdSidebar">
+            <div class="ad-container">
+                <div class="ad-placeholder">
+                    <span>Advertisement</span>
+                </div>
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXX" data-ad-slot="1234567890" data-ad-format="vertical" data-full-width-responsive="true"></ins>
+            </div>
+        </aside>
+
+        <div class="main-wrapper">
+            <nav class="nav-bar">
+                <div class="nav-content">
+                    <h1 class="nav-title" data-i18n="title">Digital Signature</h1>
+                    <div class="nav-actions">
+                        <select class="language-selector" id="languageSelector">
+                            <option value="zh">中文</option>
+                            <option value="en" selected>English</option>
+                            <option value="es">Español</option>
+                            <option value="fr">Français</option>
+                            <option value="ru">Русский</option>
+                            <option value="ar">العربية</option>
+                            <option value="ja">日本語</option>
+                            <option value="ko">한국어</option>
+                            <option value="pt">Português</option>
+                            <option value="de">Deutsch</option>
+                        </select>
+                    </div>
+                </div>
+            </nav>
+
+            <main class="main-content">
+                <div class="signature-card">
+                    <div class="prompt-section">
+                        <h2 class="prompt-title" data-i18n="prompt">Please write your signature in the area below</h2>
+                        <div class="action-buttons">
+                            <button class="btn btn-secondary" id="clearBtn" data-i18n="clear">Clear</button>
+                            <button class="btn btn-primary" id="saveBtn" data-i18n="save">Save Signature</button>
+                        </div>
+                    </div>
+
+                    <div class="canvas-container">
+                        <canvas id="signatureCanvas" class="signature-canvas"></canvas>
+                        <div class="canvas-placeholder" data-i18n="placeholder">Click to start signing</div>
+                    </div>
+
+                    <div class="toolbar">
+                        <div class="tool-group">
+                            <label class="tool-label" data-i18n="color">Color:</label>
+                            <div class="color-palette">
+                                <div class="color-swatch active" data-color="#000000"></div>
+                                <div class="color-swatch" data-color="#FF0000"></div>
+                                <div class="color-swatch" data-color="#0066FF"></div>
+                                <div class="color-swatch" data-color="#00AA00"></div>
+                                <div class="color-swatch" data-color="#8A2BE2"></div>
+                                <input type="color" id="customColor" class="custom-color-picker" value="#000000">
+                            </div>
+                        </div>
+
+                        <div class="tool-group">
+                            <label class="tool-label" data-i18n="thickness">Thickness:</label>
+                            <div class="thickness-control">
+                                <input type="range" id="thicknessSlider" min="2" max="20" value="5" class="thickness-slider">
+                                <span class="thickness-value" id="thicknessValue">5</span>
+                                <div class="thickness-preview" id="thicknessPreview"></div>
+                            </div>
+                        </div>
+
+                        <div class="tool-group">
+                            <label class="tool-label" data-i18n="export">Export:</label>
+                            <div class="export-options">
+                                <button class="btn btn-outline" id="exportPngBtn" data-i18n="exportPng">PNG Image</button>
+                                <button class="btn btn-outline" id="exportPdfBtn" data-i18n="exportPdf">PDF Document</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <section class="seo-section" aria-labelledby="seoTitle">
+                <div class="seo-container">
+                    <h2 id="seoTitle">Handwritten Electronic Signature Generator (PNG / PDF)</h2>
+                    <p>
+                        This free online <strong>handwritten electronic signature</strong> generator lets you draw your signature directly in the browser and export it as
+                        a <strong>PNG</strong> image or <strong>PDF</strong> document. No registration required. Ideal for contracts, documents, invoices, and more.
+                    </p>
+                    <h3>Key Features</h3>
+                    <ul>
+                        <li>Smooth handwriting: works with mouse or touch</li>
+                        <li>Multi-language UI: 10 languages supported</li>
+                        <li>Flexible export: PNG and PDF formats</li>
+                        <li>Local processing: more private and secure</li>
+                    </ul>
+                    <h3>Use Cases</h3>
+                    <ul>
+                        <li>E‑contracts and agreements</li>
+                        <li>Company/School/Institution signing and archiving</li>
+                        <li>Daily document signatures and form signing</li>
+                    </ul>
+                    <h3>FAQ</h3>
+                    <p><strong>Is it really free?</strong> Yes, the tool is free to use.</p>
+                    <p><strong>How do I add it to a document?</strong> Export a PNG and paste it into Word, WPS, or Google Docs; or export a PDF for printing/archiving.</p>
+                </div>
+            </section>
+
+            <footer class="footer">
+                <p class="footer-text" data-i18n="footer">Digital Signature Tool - Simple, Fast, Professional</p>
+            </footer>
+        </div>
+
+        <aside class="ad-sidebar ad-sidebar-right" id="rightAdSidebar">
+            <div class="ad-container">
+                <div class="ad-placeholder">
+                    <span>Advertisement</span>
+                </div>
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXX" data-ad-slot="0987654321" data-ad-format="vertical" data-full-width-responsive="true"></ins>
+            </div>
+        </aside>
+    </div>
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXX" crossorigin="anonymous"></script>
+    <script>
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                try {
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                } catch (e) {
+                    console.log('AdSense not loaded yet');
+                }
+            }, 2000);
+        });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script>window.__forceLang = 'en';</script>
+    <script src="/i18n.js"></script>
+    <script src="/signature.js"></script>
+</body>
+</html>

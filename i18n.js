@@ -1,10 +1,12 @@
 // i18n 国际化支持
 const i18n = {
     currentLanguage: 'en',
+    supported: ['zh','en','es','fr','ru','ar','ja','ko','pt','de'],
 
     // 语言包
     messages: {
         zh: {
+            // UI text
             title: '电子签名',
             prompt: '请在下方签名区域内写下你的签名',
             clear: '清除',
@@ -21,7 +23,10 @@ const i18n = {
             saveSuccess: '签名已保存',
             saveFail: '保存失败',
             exportSuccess: '导出成功',
-            exportFail: '导出失败'
+            exportFail: '导出失败',
+            // SEO text
+            metaTitle: '电子手写签名生成器 - 免费在线手写签名 PNG/PDF 导出',
+            metaDescription: '免费在线电子手写签名工具，手绘签名支持 PNG/PDF 导出，无需注册，浏览器本地运行。适用于合同、文档、发票等场景，支持多语言。'
         },
         en: {
             title: 'Digital Signature',
@@ -40,7 +45,9 @@ const i18n = {
             saveSuccess: 'Signature saved',
             saveFail: 'Save failed',
             exportSuccess: 'Export successful',
-            exportFail: 'Export failed'
+            exportFail: 'Export failed',
+            metaTitle: 'Handwritten Electronic Signature Maker – Free Online PNG/PDF',
+            metaDescription: 'Free online handwritten electronic signature generator. Draw your signature and export as PNG or PDF. No registration. 100% in‑browser. Great for documents and contracts.'
         },
         es: {
             title: 'Firma Digital',
@@ -59,7 +66,9 @@ const i18n = {
             saveSuccess: 'Firma guardada',
             saveFail: 'Error al guardar',
             exportSuccess: 'Exportación exitosa',
-            exportFail: 'Error en la exportación'
+            exportFail: 'Error en la exportación',
+            metaTitle: 'Generador de firma manuscrita – Gratis en línea PNG/PDF',
+            metaDescription: 'Cree firmas manuscritas en línea y expórtelas como PNG o PDF. Sin registro. Funciona en el navegador. Ideal para documentos y contratos.'
         },
         fr: {
             title: 'Signature Numérique',
@@ -78,7 +87,9 @@ const i18n = {
             saveSuccess: 'Signature enregistrée',
             saveFail: 'Échec de l\'enregistrement',
             exportSuccess: 'Exportation réussie',
-            exportFail: 'Échec de l\'exportation'
+            exportFail: 'Échec de l\'exportation',
+            metaTitle: 'Générateur de signature manuscrite – Gratuit en ligne PNG/PDF',
+            metaDescription: 'Générez une signature manuscrite en ligne et exportez-la en PNG ou PDF. Aucune inscription. 100% dans le navigateur. Parfait pour documents et contrats.'
         },
         ru: {
             title: 'Цифровая Подпись',
@@ -97,7 +108,9 @@ const i18n = {
             saveSuccess: 'Подпись сохранена',
             saveFail: 'Ошибка сохранения',
             exportSuccess: 'Экспорт успешен',
-            exportFail: 'Ошибка экспорта'
+            exportFail: 'Ошибка экспорта',
+            metaTitle: 'Создание рукописной электронной подписи — Бесплатно онлайн PNG/PDF',
+            metaDescription: 'Онлайн‑генератор рукописной электронной подписи. Рисуйте подпись и экспортируйте в PNG или PDF. Без регистрации. В браузере. Для документов и контрактов.'
         },
         ar: {
             title: 'التوقيع الرقمي',
@@ -116,7 +129,9 @@ const i18n = {
             saveSuccess: 'تم حفظ التوقيع',
             saveFail: 'فشل في الحفظ',
             exportSuccess: 'تم التصدير بنجاح',
-            exportFail: 'فشل في التصدير'
+            exportFail: 'فشل في التصدير',
+            metaTitle: 'مولّد التوقيع الإلكتروني اليدوي — مجاني عبر الإنترنت PNG/PDF',
+            metaDescription: 'أنشئ توقيعًا يدويًا إلكترونيًا عبر المتصفح وصدّره كملف PNG أو PDF. بدون تسجيل. مثالي للمستندات والعقود.'
         },
         ja: {
             title: 'デジタル署名',
@@ -135,7 +150,9 @@ const i18n = {
             saveSuccess: 'サインが保存されました',
             saveFail: '保存に失敗しました',
             exportSuccess: 'エクスポート成功',
-            exportFail: 'エクスポートに失敗しました'
+            exportFail: 'エクスポートに失敗しました',
+            metaTitle: '手書き電子サイン作成 – 無料オンライン PNG/PDF',
+            metaDescription: 'オンラインで手書きサインを作成し、PNG または PDF としてエクスポート。登録不要。ブラウザ内で動作。文書や契約に最適。'
         },
         ko: {
             title: '디지털 서명',
@@ -154,7 +171,9 @@ const i18n = {
             saveSuccess: '서명이 저장되었습니다',
             saveFail: '저장 실패',
             exportSuccess: '내보내기 성공',
-            exportFail: '내보내기 실패'
+            exportFail: '내보내기 실패',
+            metaTitle: '손글씨 전자 서명 생성기 – 무료 온라인 PNG/PDF',
+            metaDescription: '브라우저에서 손글씨 전자 서명을 만들고 PNG 또는 PDF로 내보내세요. 회원가입 불필요. 문서와 계약서에 적합.'
         },
         pt: {
             title: 'Assinatura Digital',
@@ -173,7 +192,9 @@ const i18n = {
             saveSuccess: 'Assinatura salva',
             saveFail: 'Falha ao salvar',
             exportSuccess: 'Exportação bem-sucedida',
-            exportFail: 'Falha na exportação'
+            exportFail: 'Falha na exportação',
+            metaTitle: 'Gerador de assinatura manuscrita – Grátis online PNG/PDF',
+            metaDescription: 'Gere assinaturas manuscritas online e exporte como PNG ou PDF. Sem cadastro. Em navegador. Ideal para documentos e contratos.'
         },
         de: {
             title: 'Digitale Signatur',
@@ -192,18 +213,29 @@ const i18n = {
             saveSuccess: 'Unterschrift gespeichert',
             saveFail: 'Speichern fehlgeschlagen',
             exportSuccess: 'Export erfolgreich',
-            exportFail: 'Export fehlgeschlagen'
+            exportFail: 'Export fehlgeschlagen',
+            metaTitle: 'Handschriftlicher E‑Signatur‑Generator – Kostenlos online PNG/PDF',
+            metaDescription: 'Online handschriftliche elektronische Signatur erstellen und als PNG oder PDF exportieren. Keine Registrierung. Im Browser. Für Dokumente und Verträge.'
         }
     },
 
     // 初始化
     init() {
-        // 从localStorage获取用户偏好语言
-        const savedLang = localStorage.getItem('signature-language') ||
-                         this.detectLanguage();
+        // 优先级: window.__forceLang > URL参数 > localStorage > 浏览器语言
+        const forced = typeof window !== 'undefined' ? window.__forceLang : null;
+        const fromQuery = this.getLangFromQuery();
+        const fromStorage = localStorage.getItem('signature-language');
+        const initial = forced || fromQuery || fromStorage || this.detectLanguage();
 
-        this.setLanguage(savedLang);
+        this.setLanguage(initial);
         this.bindLanguageSelector();
+    },
+
+    // 从URL ?lang= 获取语言
+    getLangFromQuery() {
+        const params = new URLSearchParams(window.location.search);
+        const lang = params.get('lang');
+        return this.messages[lang] ? lang : null;
     },
 
     // 智能检测用户语言
@@ -246,8 +278,11 @@ const i18n = {
             selector.value = lang;
         }
 
-        // 更新HTML lang属性
-        document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en-US';
+        // 更新HTML lang/dir、Meta、URL、hreflang
+        this.updateHtmlLangDir();
+        this.updateHeadMeta();
+        this.updateCanonicalAndAlternates();
+        this.updateUrlParam();
     },
 
     // 获取文本
@@ -270,12 +305,98 @@ const i18n = {
         });
     },
 
+    // 更新 <html lang> 和 dir
+    updateHtmlLangDir() {
+        const map = {
+            zh: 'zh-CN', en: 'en-US', es: 'es', fr: 'fr', ru: 'ru', ar: 'ar',
+            ja: 'ja', ko: 'ko', pt: 'pt', de: 'de'
+        };
+        const langCode = map[this.currentLanguage] || 'en-US';
+        document.documentElement.lang = langCode;
+        document.documentElement.dir = this.currentLanguage === 'ar' ? 'rtl' : 'ltr';
+    },
+
+    // 更新标题和描述等头部Meta
+    updateHeadMeta() {
+        const metaTitle = this.t('metaTitle') || this.t('title');
+        const metaDesc = this.t('metaDescription') || '';
+        // <title>
+        document.title = metaTitle;
+        const titleEl = document.querySelector('title[data-i18n]');
+        if (titleEl) titleEl.textContent = metaTitle;
+        // description
+        const descEl = document.getElementById('metaDescription') || document.querySelector('meta[name="description"]');
+        if (descEl) descEl.setAttribute('content', metaDesc);
+        // Open Graph & Twitter
+        const ogTitle = document.getElementById('ogTitle');
+        const ogDesc = document.getElementById('ogDescription');
+        const ogUrl = document.getElementById('ogUrl');
+        const twTitle = document.getElementById('twitterTitle');
+        const twDesc = document.getElementById('twitterDescription');
+        if (ogTitle) ogTitle.setAttribute('content', metaTitle);
+        if (ogDesc) ogDesc.setAttribute('content', metaDesc);
+        if (ogUrl) ogUrl.setAttribute('content', window.location.href);
+        if (twTitle) twTitle.setAttribute('content', metaTitle);
+        if (twDesc) twDesc.setAttribute('content', metaDesc);
+    },
+
+    // 更新 canonical 和 hreflang alternates
+    updateCanonicalAndAlternates() {
+        const origin = window.location.origin;
+        const path = window.location.pathname.replace(/index\.html$/i, '');
+        const base = origin + path;
+
+        // canonical 去掉查询参数
+        const canonical = document.getElementById('canonicalLink') || document.querySelector('link[rel="canonical"]');
+        if (canonical) canonical.setAttribute('href', base);
+
+        // 更新/补充 alternates (?lang=xx)；优先复用已有静态 link 元素
+        const head = document.head;
+        const langs = this.supported || Object.keys(this.messages);
+        langs.forEach(l => {
+            let el = document.querySelector(`link[rel="alternate"][hreflang="${l}"]`);
+            if (!el) {
+                el = document.createElement('link');
+                el.rel = 'alternate';
+                el.setAttribute('hreflang', l);
+                el.setAttribute('href', `${base}?lang=${l}`);
+                head.appendChild(el);
+            } else {
+                // 已存在静态链接则不覆盖其 href
+            }
+        });
+        // x-default
+        let xd = document.querySelector('link[rel="alternate"][hreflang="x-default"]');
+        if (!xd) {
+            xd = document.createElement('link');
+            xd.rel = 'alternate';
+            xd.setAttribute('hreflang', 'x-default');
+            head.appendChild(xd);
+        }
+        xd.setAttribute('href', base);
+    },
+
+    // 在URL中保持 ?lang= 参数（不刷新）
+    updateUrlParam() {
+        if (typeof window !== 'undefined' && window.__forceLang) return; // 静态快照不改写URL
+        const url = new URL(window.location.href);
+        url.searchParams.set('lang', this.currentLanguage);
+        window.history.replaceState({}, '', url.toString());
+    },
+
     // 绑定语言选择器事件
     bindLanguageSelector() {
         const selector = document.getElementById('languageSelector');
         if (selector) {
             selector.addEventListener('change', (e) => {
-                this.setLanguage(e.target.value);
+                const lang = e.target.value;
+                // 在静态快照页面时，切换直接跳转对应目录，保持正确的 canonical/hreflang
+                if (typeof window !== 'undefined' && window.__forceLang) {
+                    const origin = window.location.origin;
+                    window.location.href = `${origin}/${lang}/`;
+                    return;
+                }
+                this.setLanguage(lang);
             });
         }
     }

@@ -164,25 +164,24 @@ dianziqianming/
 
 ### 关键词策略
 **主要关键词**:
-- "digital signature tool" - 数字签名工具
-- "online signature generator" - 在线签名生成器
-- "free signature creator" - 免费签名创建器
-- "export signature PNG PDF" - 导出签名PNG PDF
-- "electronic signature maker" - 电子签名制作器
+- 中文: 手写签名, 电子手写签名, 在线签名, 签名生成器, 签名 PNG, 签名 PDF
+- English: digital signature tool, online signature generator, free signature creator, export signature PNG PDF, electronic signature maker
 
 ### 技术SEO
 - ✅ **结构化数据** - Schema.org标记
 - ✅ **语义化HTML** - 正确的标签使用
-- ✅ **多语言支持** - hreflang实现
+- ✅ **多语言支持** - `?lang=xx` + hreflang + `<html lang/dir>` 动态更新（阿拉伯语RTL）
 - ✅ **移动优先** - 响应式设计
 - ✅ **快速加载** - 性能优化
 - ✅ **安全HTTPS** - SSL证书
 
 ### 内容优化
-- ✅ **标题优化** - 包含主要关键词
-- ✅ **描述标签** - 吸引人的页面描述
+- ✅ **标题优化** - 每种语言的 `metaTitle`
+- ✅ **描述标签** - 每种语言的 `metaDescription`
 - ✅ **图片Alt** - 所有图片包含描述
 - ✅ **内部链接** - 良好的页面结构
+
+提示: 请将 `index.html` 中的 `<link rel="canonical">` 和 Open Graph/Twitter 中的域名替换为你的真实域名；运行时也会自动根据当前域名/路径生成 `canonical` 和 `hreflang`。
 
 ## 🔧 自定义配置 / Customization
 

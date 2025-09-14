@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>손글씨 전자 서명 생성기 – 무료 온라인 PNG/PDF</title>
+
+    <!-- SEO Meta Tags -->
+    <meta id="metaDescription" name="description" content="브라우저에서 손글씨 전자 서명을 만들고 PNG 또는 PDF로 내보내세요. 회원가입 불필요. 문서와 계약서에 적합.">
+    <meta name="keywords" content="손글씨 서명, 전자 서명, 온라인 서명, 서명 생성기, 서명 PNG, 서명 PDF, 무료 도구">
+    <meta name="author" content="디지털 서명 도구">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Korean">
+
+    <!-- Open Graph Meta Tags -->
+    <meta id="ogTitle" property="og:title" content="손글씨 전자 서명 생성기 – 무료 온라인 PNG/PDF">
+    <meta id="ogDescription" property="og:description" content="온라인에서 손글씨 서명을 만들고 PNG 또는 PDF로 내보내세요. 회원가입 불필요.">
+    <meta property="og:type" content="website">
+    <meta id="ogUrl" property="og:url" content="https://signaturesketch.tech/ko/">
+    <meta property="og:image" content="https://signaturesketch.tech/og-image.png">
+    <meta property="og:site_name" content="디지털 서명 도구">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta id="twitterTitle" name="twitter:title" content="손글씨 전자 서명 생성기 – 무료 온라인 PNG/PDF">
+    <meta id="twitterDescription" name="twitter:description" content="손글씨 전자 서명을 만들고 PNG/PDF로 내보내세요.">
+    <meta name="twitter:image" content="https://signaturesketch.tech/twitter-image.png">
+
+    <!-- Canonical URL & hreflang -->
+    <link id="canonicalLink" rel="canonical" href="https://signaturesketch.tech/ko/">
+    <link rel="alternate" hreflang="zh" href="https://signaturesketch.tech/zh/">
+    <link rel="alternate" hreflang="en" href="https://signaturesketch.tech/en/">
+    <link rel="alternate" hreflang="es" href="https://signaturesketch.tech/es/">
+    <link rel="alternate" hreflang="fr" href="https://signaturesketch.tech/fr/">
+    <link rel="alternate" hreflang="ru" href="https://signaturesketch.tech/ru/">
+    <link rel="alternate" hreflang="ar" href="https://signaturesketch.tech/ar/">
+    <link rel="alternate" hreflang="ja" href="https://signaturesketch.tech/ja/">
+    <link rel="alternate" hreflang="ko" href="https://signaturesketch.tech/ko/">
+    <link rel="alternate" hreflang="pt" href="https://signaturesketch.tech/pt/">
+    <link rel="alternate" hreflang="de" href="https://signaturesketch.tech/de/">
+    <link rel="alternate" hreflang="x-default" href="https://signaturesketch.tech/">
+
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="ad-sidebar ad-sidebar-left" id="leftAdSidebar">
+            <div class="ad-container">
+                <div class="ad-placeholder">
+                    <span>Advertisement</span>
+                </div>
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXX" data-ad-slot="1234567890" data-ad-format="vertical" data-full-width-responsive="true"></ins>
+            </div>
+        </aside>
+
+        <div class="main-wrapper">
+            <nav class="nav-bar">
+                <div class="nav-content">
+                    <h1 class="nav-title" data-i18n="title">디지털 서명</h1>
+                    <div class="nav-actions">
+                        <select class="language-selector" id="languageSelector">
+                            <option value="zh">中文</option>
+                            <option value="en">English</option>
+                            <option value="es">Español</option>
+                            <option value="fr">Français</option>
+                            <option value="ru">Русский</option>
+                            <option value="ar">العربية</option>
+                            <option value="ja">日本語</option>
+                            <option value="ko" selected>한국어</option>
+                            <option value="pt">Português</option>
+                            <option value="de">Deutsch</option>
+                        </select>
+                    </div>
+                </div>
+            </nav>
+
+            <main class="main-content">
+                <div class="signature-card">
+                    <div class="prompt-section">
+                        <h2 class="prompt-title" data-i18n="prompt">아래 영역에 서명을 작성해주세요</h2>
+                        <div class="action-buttons">
+                            <button class="btn btn-secondary" id="clearBtn" data-i18n="clear">지우기</button>
+                            <button class="btn btn-primary" id="saveBtn" data-i18n="save">서명 저장</button>
+                        </div>
+                    </div>
+
+                    <div class="canvas-container">
+                        <canvas id="signatureCanvas" class="signature-canvas"></canvas>
+                        <div class="canvas-placeholder" data-i18n="placeholder">클릭하여 서명 시작</div>
+                    </div>
+
+                    <div class="toolbar">
+                        <div class="tool-group">
+                            <label class="tool-label" data-i18n="color">색상:</label>
+                            <div class="color-palette">
+                                <div class="color-swatch active" data-color="#000000"></div>
+                                <div class="color-swatch" data-color="#FF0000"></div>
+                                <div class="color-swatch" data-color="#0066FF"></div>
+                                <div class="color-swatch" data-color="#00AA00"></div>
+                                <div class="color-swatch" data-color="#8A2BE2"></div>
+                                <input type="color" id="customColor" class="custom-color-picker" value="#000000">
+                            </div>
+                        </div>
+
+                        <div class="tool-group">
+                            <label class="tool-label" data-i18n="thickness">굵기:</label>
+                            <div class="thickness-control">
+                                <input type="range" id="thicknessSlider" min="2" max="20" value="5" class="thickness-slider">
+                                <span class="thickness-value" id="thicknessValue">5</span>
+                                <div class="thickness-preview" id="thicknessPreview"></div>
+                            </div>
+                        </div>
+
+                        <div class="tool-group">
+                            <label class="tool-label" data-i18n="export">내보내기:</label>
+                            <div class="export-options">
+                                <button class="btn btn-outline" id="exportPngBtn" data-i18n="exportPng">PNG 이미지</button>
+                                <button class="btn btn-outline" id="exportPdfBtn" data-i18n="exportPdf">PDF 문서</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <section class="seo-section" aria-labelledby="seoTitle">
+                <div class="seo-container">
+                    <h2 id="seoTitle">손글씨 전자 서명 온라인 생성 (PNG / PDF)</h2>
+                    <p>
+                        무료 <strong>손글씨 전자 서명</strong> 생성기. 브라우저에서 서명을 작성하고
+                        <strong>PNG</strong> 또는 <strong>PDF</strong>로 내보내세요. 회원가입 불필요. 계약서, 문서, 청구서 등에 적합.
+                    </p>
+                    <h3>핵심 기능</h3>
+                    <ul>
+                        <li>부드러운 필기: 마우스/터치 지원</li>
+                        <li>다국어 UI: 10개 언어</li>
+                        <li>유연한 내보내기: PNG & PDF</li>
+                        <li>로컬 처리: 더 안전한 개인 정보 보호</li>
+                    </ul>
+                    <h3>사용 사례</h3>
+                    <ul>
+                        <li>전자 계약 및 합의서</li>
+                        <li>기업/학교/기관의 서명 및 보관</li>
+                        <li>일상 문서 및 양식 서명</li>
+                    </ul>
+                    <h3>FAQ</h3>
+                    <p><strong>정말 무료인가요?</strong> 네, 무료로 사용할 수 있습니다.</p>
+                    <p><strong>문서에 붙이려면?</strong> PNG로 내보내 Word/WPS/Google Docs에 붙여넣거나, PDF로 내보내 인쇄/보관하세요.</p>
+                </div>
+            </section>
+
+            <footer class="footer">
+                <p class="footer-text" data-i18n="footer">디지털 서명 도구 - 간단, 빠름, 전문적</p>
+            </footer>
+        </div>
+
+        <aside class="ad-sidebar ad-sidebar-right" id="rightAdSidebar">
+            <div class="ad-container">
+                <div class="ad-placeholder">
+                    <span>Advertisement</span>
+                </div>
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXX" data-ad-slot="0987654321" data-ad-format="vertical" data-full-width-responsive="true"></ins>
+            </div>
+        </aside>
+    </div>
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXX" crossorigin="anonymous"></script>
+    <script>
+        window.addEventListener('load', () => { setTimeout(() => { try {(adsbygoogle = window.adsbygoogle || []).push({});(adsbygoogle = window.adsbygoogle || []).push({});} catch (e) {} }, 2000); });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script>window.__forceLang = 'ko';</script>
+    <script src="/i18n.js"></script>
+    <script src="/signature.js"></script>
+</body>
+</html>

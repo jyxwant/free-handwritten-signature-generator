@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Создание рукописной электронной подписи — Бесплатно онлайн PNG/PDF</title>
+
+    <!-- SEO Meta Tags -->
+    <meta id="metaDescription" name="description" content="Онлайн‑генератор рукописной электронной подписи. Рисуйте подпись и экспортируйте в PNG или PDF. Без регистрации. В браузере. Для документов и контрактов.">
+    <meta name="keywords" content="рукописная подпись, электронная подпись, онлайн подпись, генератор подписи, подпись PNG, подпись PDF, бесплатный инструмент">
+    <meta name="author" content="Инструмент цифровой подписи">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Russian">
+
+    <!-- Open Graph Meta Tags -->
+    <meta id="ogTitle" property="og:title" content="Создание рукописной электронной подписи — Бесплатно онлайн PNG/PDF">
+    <meta id="ogDescription" property="og:description" content="Создайте рукописную подпись онлайн и экспортируйте в PNG или PDF. Без регистрации.">
+    <meta property="og:type" content="website">
+    <meta id="ogUrl" property="og:url" content="https://signaturesketch.tech/ru/">
+    <meta property="og:image" content="https://signaturesketch.tech/og-image.png">
+    <meta property="og:site_name" content="Инструмент цифровой подписи">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta id="twitterTitle" name="twitter:title" content="Создание рукописной электронной подписи — Бесплатно онлайн PNG/PDF">
+    <meta id="twitterDescription" name="twitter:description" content="Онлайн‑генератор рукописной электронной подписи. Рисуйте подпись и экспортируйте в PNG или PDF.">
+    <meta name="twitter:image" content="https://signaturesketch.tech/twitter-image.png">
+
+    <!-- Canonical URL & hreflang -->
+    <link id="canonicalLink" rel="canonical" href="https://signaturesketch.tech/ru/">
+    <link rel="alternate" hreflang="zh" href="https://signaturesketch.tech/zh/">
+    <link rel="alternate" hreflang="en" href="https://signaturesketch.tech/en/">
+    <link rel="alternate" hreflang="es" href="https://signaturesketch.tech/es/">
+    <link rel="alternate" hreflang="fr" href="https://signaturesketch.tech/fr/">
+    <link rel="alternate" hreflang="ru" href="https://signaturesketch.tech/ru/">
+    <link rel="alternate" hreflang="ar" href="https://signaturesketch.tech/ar/">
+    <link rel="alternate" hreflang="ja" href="https://signaturesketch.tech/ja/">
+    <link rel="alternate" hreflang="ko" href="https://signaturesketch.tech/ko/">
+    <link rel="alternate" hreflang="pt" href="https://signaturesketch.tech/pt/">
+    <link rel="alternate" hreflang="de" href="https://signaturesketch.tech/de/">
+    <link rel="alternate" hreflang="x-default" href="https://signaturesketch.tech/">
+
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="ad-sidebar ad-sidebar-left" id="leftAdSidebar">
+            <div class="ad-container">
+                <div class="ad-placeholder">
+                    <span>Advertisement</span>
+                </div>
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXX" data-ad-slot="1234567890" data-ad-format="vertical" data-full-width-responsive="true"></ins>
+            </div>
+        </aside>
+
+        <div class="main-wrapper">
+            <nav class="nav-bar">
+                <div class="nav-content">
+                    <h1 class="nav-title" data-i18n="title">Цифровая Подпись</h1>
+                    <div class="nav-actions">
+                        <select class="language-selector" id="languageSelector">
+                            <option value="zh">中文</option>
+                            <option value="en">English</option>
+                            <option value="es">Español</option>
+                            <option value="fr">Français</option>
+                            <option value="ru" selected>Русский</option>
+                            <option value="ar">العربية</option>
+                            <option value="ja">日本語</option>
+                            <option value="ko">한국어</option>
+                            <option value="pt">Português</option>
+                            <option value="de">Deutsch</option>
+                        </select>
+                    </div>
+                </div>
+            </nav>
+
+            <main class="main-content">
+                <div class="signature-card">
+                    <div class="prompt-section">
+                        <h2 class="prompt-title" data-i18n="prompt">Пожалуйста, поставьте свою подпись в области ниже</h2>
+                        <div class="action-buttons">
+                            <button class="btn btn-secondary" id="clearBtn" data-i18n="clear">Очистить</button>
+                            <button class="btn btn-primary" id="saveBtn" data-i18n="save">Сохранить Подпись</button>
+                        </div>
+                    </div>
+
+                    <div class="canvas-container">
+                        <canvas id="signatureCanvas" class="signature-canvas"></canvas>
+                        <div class="canvas-placeholder" data-i18n="placeholder">Нажмите, чтобы начать подписание</div>
+                    </div>
+
+                    <div class="toolbar">
+                        <div class="tool-group">
+                            <label class="tool-label" data-i18n="color">Цвет:</label>
+                            <div class="color-palette">
+                                <div class="color-swatch active" data-color="#000000"></div>
+                                <div class="color-swatch" data-color="#FF0000"></div>
+                                <div class="color-swatch" data-color="#0066FF"></div>
+                                <div class="color-swatch" data-color="#00AA00"></div>
+                                <div class="color-swatch" data-color="#8A2BE2"></div>
+                                <input type="color" id="customColor" class="custom-color-picker" value="#000000">
+                            </div>
+                        </div>
+
+                        <div class="tool-group">
+                            <label class="tool-label" data-i18n="thickness">Толщина:</label>
+                            <div class="thickness-control">
+                                <input type="range" id="thicknessSlider" min="2" max="20" value="5" class="thickness-slider">
+                                <span class="thickness-value" id="thicknessValue">5</span>
+                                <div class="thickness-preview" id="thicknessPreview"></div>
+                            </div>
+                        </div>
+
+                        <div class="tool-group">
+                            <label class="tool-label" data-i18n="export">Экспорт:</label>
+                            <div class="export-options">
+                                <button class="btn btn-outline" id="exportPngBtn" data-i18n="exportPng">Изображение PNG</button>
+                                <button class="btn btn-outline" id="exportPdfBtn" data-i18n="exportPdf">Документ PDF</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <section class="seo-section" aria-labelledby="seoTitle">
+                <div class="seo-container">
+                    <h2 id="seoTitle">Онлайн‑генератор рукописной электронной подписи (PNG / PDF)</h2>
+                    <p>
+                        Бесплатный <strong>генератор рукописной электронной подписи</strong>: рисуйте подпись в браузере и экспортируйте в
+                        <strong>PNG</strong> или <strong>PDF</strong>. Без регистрации. Идеально для контрактов, документов и счетов.
+                    </p>
+                    <h3>Основные возможности</h3>
+                    <ul>
+                        <li>Плавное рисование: мышь или сенсор</li>
+                        <li>Мультиязычный интерфейс: 10 языков</li>
+                        <li>Гибкий экспорт: PNG и PDF</li>
+                        <li>Локальная обработка: больше приватности и безопасности</li>
+                    </ul>
+                    <h3>Сценарии использования</h3>
+                    <ul>
+                        <li>Электронные контракты и соглашения</li>
+                        <li>Подписание и архивирование в компаниях/школах/учреждениях</li>
+                        <li>Ежедневные подписи документов и форм</li>
+                    </ul>
+                    <h3>FAQ</h3>
+                    <p><strong>Это действительно бесплатно?</strong> Да, инструмент бесплатен.</p>
+                    <p><strong>Как вставить в документ?</strong> Экспортируйте PNG и вставьте в Word, WPS или Google Docs; либо экспортируйте PDF для печати/архивирования.</p>
+                </div>
+            </section>
+
+            <footer class="footer">
+                <p class="footer-text" data-i18n="footer">Инструмент Цифровой Подписи - Простой, Быстрый, Профессиональный</p>
+            </footer>
+        </div>
+
+        <aside class="ad-sidebar ad-sidebar-right" id="rightAdSidebar">
+            <div class="ad-container">
+                <div class="ad-placeholder">
+                    <span>Advertisement</span>
+                </div>
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXX" data-ad-slot="0987654321" data-ad-format="vertical" data-full-width-responsive="true"></ins>
+            </div>
+        </aside>
+    </div>
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXX" crossorigin="anonymous"></script>
+    <script>
+        window.addEventListener('load', () => { setTimeout(() => { try {(adsbygoogle = window.adsbygoogle || []).push({});(adsbygoogle = window.adsbygoogle || []).push({});} catch (e) {} }, 2000); });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script>window.__forceLang = 'ru';</script>
+    <script src="/i18n.js"></script>
+    <script src="/signature.js"></script>
+</body>
+</html>
