@@ -6,18 +6,17 @@
     <title>免费手写签名生成器（无需注册） | 透明 PNG</title>
 
     <!-- SEO Meta Tags -->
-    <meta id="metaDescription" name="description" content="最好用的免费手写签名生成器。在线绘制签名并下载透明 PNG，无需注册。安全、本地、移动端友好。">
-    
-    <meta name="keywords" content="手写签名生成器, 在线签名绘制, 无需注册签名制作, 透明签名png, 在线签名创建, 免费签名工具, 湿签名生成器">
-    
-    
+    <meta id="metaDescription" name="description" content="免费的手写签名生成器，直接在浏览器绘制并导出透明 PNG 或 PDF，无需注册，数据本地处理，移动端友好。">
+    <meta name="keywords" content="手写签名生成器, 在线签名绘制, 无需注册签名制作, 透明签名 PNG, 透明签名 PDF, 在线签名创建, 免费签名工具, 湿签名生成器">
+
     <meta name="author" content="Signature Sketch">
-<meta name="robots" content="index, follow">
+    <meta name="robots" content="index, follow">
     <meta name="language" content="Chinese">
 
     <!-- Open Graph Meta Tags -->
     <meta id="ogTitle" property="og:title" content="免费手写签名生成器（无需注册） | 透明 PNG">
     <meta id="ogDescription" property="og:description" content="在线绘制签名并下载透明 PNG 或 PDF，无需注册。">
+    <meta property="og:type" content="website">
     <meta id="ogUrl" property="og:url" content="https://signaturesketch.tech/zh/">
     <meta property="og:image" content="https://signaturesketch.tech/og-image.png">
     <meta property="og:site_name" content="Signature Sketch">
@@ -26,6 +25,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta id="twitterTitle" name="twitter:title" content="免费手写签名生成器（无需注册） | 透明 PNG">
     <meta id="twitterDescription" name="twitter:description" content="在线创建手写签名，无需注册。下载透明 PNG。">
+    <meta name="twitter:image" content="https://signaturesketch.tech/twitter-image.png">
 
     <!-- Canonical URL & hreflang -->
     <link id="canonicalLink" rel="canonical" href="https://signaturesketch.tech/zh/">
@@ -57,18 +57,18 @@
         <div class="main-wrapper">
             <nav class="nav-bar">
                 <div class="nav-content">
-                    <h1 class="nav-title" data-i18n="title">鐢靛瓙绛惧悕</h1>
+                    <h1 class="nav-title" data-i18n="title">手写签名生成器</h1>
                     <div class="nav-actions">
                         <select class="language-selector" id="languageSelector">
-                            <option value="zh" selected>涓枃</option>
+                            <option value="zh" selected>中文</option>
                             <option value="en">English</option>
-                            <option value="es">Espa帽ol</option>
-                            <option value="fr">Fran莽ais</option>
-                            <option value="ru">袪褍褋褋泻懈泄</option>
-                            <option value="ar">丕賱毓乇亘賷丞</option>
-                            <option value="ja">鏃ユ湰瑾?/option>
-                            <option value="ko">頃滉淡鞏?/option>
-                            <option value="pt">Portugu锚s</option>
+                            <option value="es">Español</option>
+                            <option value="fr">Français</option>
+                            <option value="ru">Русский</option>
+                            <option value="ar">العربية</option>
+                            <option value="ja">日本語</option>
+                            <option value="ko">한국어</option>
+                            <option value="pt">Português</option>
                             <option value="de">Deutsch</option>
                         </select>
                     </div>
@@ -78,21 +78,21 @@
             <main class="main-content">
                 <div class="signature-card">
                     <div class="prompt-section">
-                        <h2 class="prompt-title" data-i18n="prompt">璇峰湪涓嬫柟绛惧悕鍖哄煙鍐呭啓涓嬩綘鐨勭鍚?/h2>
+                        <h2 class="prompt-title" data-i18n="prompt">请在下方签名区域书写你的签名</h2>
                         <div class="action-buttons">
-                            <button class="btn btn-secondary" id="clearBtn" data-i18n="clear">娓呴櫎</button>
-                            <button class="btn btn-primary" id="saveBtn" data-i18n="save">淇濆瓨绛惧悕</button>
+                            <button class="btn btn-secondary" id="clearBtn" data-i18n="clear">清除</button>
+                            <button class="btn btn-primary" id="saveBtn" data-i18n="save">保存签名</button>
                         </div>
                     </div>
 
                     <div class="canvas-container">
                         <canvas id="signatureCanvas" class="signature-canvas"></canvas>
-                        <div class="canvas-placeholder" data-i18n="placeholder">鐐瑰嚮寮€濮嬬鍚?/div>
+                        <div class="canvas-placeholder" data-i18n="placeholder">点击开始签名</div>
                     </div>
 
                     <div class="toolbar">
                         <div class="tool-group">
-                            <label class="tool-label" data-i18n="color">棰滆壊:</label>
+                            <label class="tool-label" data-i18n="color">颜色:</label>
                             <div class="color-palette">
                                 <div class="color-swatch active" data-color="#000000"></div>
                                 <div class="color-swatch" data-color="#FF0000"></div>
@@ -104,7 +104,7 @@
                         </div>
 
                         <div class="tool-group">
-                            <label class="tool-label" data-i18n="thickness">绮楃粏:</label>
+                            <label class="tool-label" data-i18n="thickness">粗细:</label>
                             <div class="thickness-control">
                                 <input type="range" id="thicknessSlider" min="2" max="20" value="5" class="thickness-slider">
                                 <span class="thickness-value" id="thicknessValue">5</span>
@@ -113,10 +113,10 @@
                         </div>
 
                         <div class="tool-group">
-                            <label class="tool-label" data-i18n="export">瀵煎嚭:</label>
+                            <label class="tool-label" data-i18n="export">导出:</label>
                             <div class="export-options">
-                                <button class="btn btn-outline" id="exportPngBtn" data-i18n="exportPng">PNG鍥剧墖</button>
-                                <button class="btn btn-outline" id="exportPdfBtn" data-i18n="exportPdf">PDF鏂囨。</button>
+                                <button class="btn btn-outline" id="exportPngBtn" data-i18n="exportPng">PNG图片</button>
+                                <button class="btn btn-outline" id="exportPdfBtn" data-i18n="exportPdf">PDF文档</button>
                             </div>
                         </div>
                     </div>
@@ -125,32 +125,31 @@
 
             <section class="seo-section" aria-labelledby="seoTitle">
                 <div class="seo-container">
-                    <h2 id="seoTitle">鎵嬪啓鐢靛瓙绛惧悕鍦ㄧ嚎鐢熸垚鍣紙鏀寔 PNG / PDF 瀵煎嚭锛?/h2>
+                    <h2 id="seoTitle">手写电子签名在线生成器（支持 PNG / PDF 导出）</h2>
                     <p>
-                        鏈伐鍏锋槸涓€娆惧厤璐瑰湪绾?strong>鐢靛瓙鎵嬪啓绛惧悕</strong>鐢熸垚鍣紝鏀寔鍦ㄦ祻瑙堝櫒鍐呮湰鍦扮粯鍒剁鍚嶅苟涓€閿鍑?
-                        <strong>PNG</strong> 鍥剧墖鎴?<strong>PDF</strong> 鏂囨。銆傛棤闇€娉ㄥ唽鐧诲綍锛岄€傜敤浜庡悎鍚屻€佸崗璁€佸彂绁ㄣ€佽瘉鏄庣瓑澶氱鏂囨。鍦烘櫙銆?
+                        这是一款免费的 <strong>手写电子签名</strong> 在线生成器，可在浏览器本地绘制签名，一键导出 <strong>PNG</strong> 透明图片或 <strong>PDF</strong> 文档。无需注册，适用于合同、协议、发票、证明等多种文档场景。
                     </p>
-                    <h3>鏍稿績鐗规€?/h3>
+                    <h3>核心特性</h3>
                     <ul>
-                        <li>娴佺晠鎵嬪啓锛氶紶鏍?瑙﹀睆鍧囧彲浣跨敤</li>
-                        <li>澶氳瑷€鐣岄潰锛氭敮鎸佷腑鏂囥€佽嫳鏂囩瓑 10 绉嶈瑷€</li>
-                        <li>瀵煎嚭鐏垫椿锛氭敮鎸?PNG 涓?PDF 涓ょ鏍煎紡</li>
-                        <li>鏈湴杩愯锛氭棤闇€涓婁紶鏂囦欢锛屾洿瀹夊叏</li>
+                        <li>流畅书写：鼠标、触屏均可使用</li>
+                        <li>多语言界面：支持中文、英文等 10 种语言</li>
+                        <li>灵活导出：支持 PNG 和 PDF 两种格式</li>
+                        <li>本地运行：无需上传文件，更安全</li>
                     </ul>
-                    <h3>閫傜敤鍦烘櫙</h3>
+                    <h3>适用场景</h3>
                     <ul>
-                        <li>鐢靛瓙鍚堝悓涓庡崗璁鍚?/li>
-                        <li>浼佷笟/瀛︽牎/鏈烘瀯鐨勭洊绔犵瀛楃暀妗?/li>
-                        <li>鏃ュ父鏂囨。绛惧悕銆佽〃鏍肩缃?/li>
+                        <li>电子合同与协议签名</li>
+                        <li>企业/学校/机构的盖章签字留档</li>
+                        <li>日常文档签名、表格签名</li>
                     </ul>
-                    <h3>甯歌闂</h3>
-                    <p><strong>鏄惁鐪熺殑鍏嶈垂锛?/strong> 鏄紝宸ュ叿鍙厤璐逛娇鐢ㄣ€?/p>
-                    <p><strong>濡備綍鎻掑叆鍒版枃妗ｏ紵</strong> 瀵煎嚭 PNG 鍥剧墖鍚庡嵆鍙矘璐村埌 Word銆乄PS銆丟oogle Docs 绛夋枃妗ｄ腑锛涙垨瀵煎嚭 PDF 鐢ㄤ簬鎵撳嵃/褰掓。銆?/p>
+                    <h3>常见问题</h3>
+                    <p><strong>是否完全免费？</strong> 是的，工具免费使用。</p>
+                    <p><strong>如何插入到文档？</strong> 导出 PNG 图片后即可粘贴到 Word、WPS 或 Google Docs；或导出 PDF 用于打印/归档。</p>
                 </div>
             </section>
 
             <footer class="footer">
-                <p class="footer-text" data-i18n="footer">鐢靛瓙绛惧悕宸ュ叿 - 绠€鍗曘€佸揩閫熴€佷笓涓?/p>
+                <p class="footer-text" data-i18n="footer">电子签名工具 - 简单、快速、专业</p>
             </footer>
         </div>
 

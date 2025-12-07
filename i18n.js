@@ -7,8 +7,8 @@ const i18n = {
     messages: {
         zh: {
             // UI text
-            title: '电子签名',
-            prompt: '请在下方签名区域内写下你的签名',
+            title: '手写签名生成器',
+            prompt: '请在下方签名区域书写你的签名',
             clear: '清除',
             save: '保存签名',
             placeholder: '点击开始签名',
@@ -25,23 +25,23 @@ const i18n = {
             exportSuccess: '导出成功',
             exportFail: '导出失败',
             // SEO text
-            metaTitle: '电子手写签名生成器 - 免费在线手写签名 PNG/PDF 导出',
-            metaDescription: '免费在线电子手写签名工具，手绘签名支持 PNG/PDF 导出，无需注册，浏览器本地运行。适用于合同、文档、发票等场景，支持多语言。',
+            metaTitle: '免费手写签名生成器（无需注册） | 透明 PNG',
+            metaDescription: '免费的手写签名生成器，直接在浏览器绘制并导出透明 PNG 或 PDF，无需注册，数据本地处理，移动端友好。',
             // SEO section
             seoH2: '手写电子签名在线生成器（支持 PNG / PDF 导出）',
-            seoIntroHtml: '本工具是一款免费在线<strong>电子手写签名</strong>生成器，支持在浏览器内本地绘制签名并一键导出 <strong>PNG</strong> 图片或 <strong>PDF</strong> 文档。无需注册登录，适用于合同、协议、发票、证明等多种文档场景。',
+            seoIntroHtml: '这是一款免费的 <strong>手写电子签名</strong> 在线生成器，支持在浏览器本地绘制签名，一键导出 <strong>PNG</strong> 透明图片或 <strong>PDF</strong> 文档。无需注册，适用于合同、协议、发票、证明等多种文档场景。',
             seoFeaturesTitle: '核心特性',
-            seoFeatures1: '流畅手写：鼠标/触屏均可使用',
+            seoFeatures1: '流畅书写：鼠标/触屏均可使用',
             seoFeatures2: '多语言界面：支持中文、英文等 10 种语言',
-            seoFeatures3: '导出灵活：支持 PNG 与 PDF 两种格式',
+            seoFeatures3: '灵活导出：支持 PNG 和 PDF 两种格式',
             seoFeatures4: '本地运行：无需上传文件，更安全',
             seoUsecasesTitle: '适用场景',
             seoUsecase1: '电子合同与协议签名',
             seoUsecase2: '企业/学校/机构的盖章签字留档',
-            seoUsecase3: '日常文档签名、表格签署',
+            seoUsecase3: '日常文档签名、表格签名',
             seoFaqTitle: '常见问题',
-            seoFaq1Html: '<strong>是否真的免费？</strong> 是，工具可免费使用。',
-            seoFaq2Html: '<strong>如何插入到文档？</strong> 导出 PNG 图片后即可粘贴到 Word、WPS、Google Docs 等文档中；或导出 PDF 用于打印/归档。'
+            seoFaq1Html: '<strong>是否完全免费？</strong> 是的，工具免费使用。',
+            seoFaq2Html: '<strong>如何插入到文档？</strong> 导出 PNG 图片后即可粘贴到 Word、WPS 或 Google Docs；或导出 PDF 用于打印/归档。'
         },
         en: {
             title: 'Digital Signature',
