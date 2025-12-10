@@ -64,7 +64,7 @@
                 <div class="nav-content">
                     <h1 class="nav-title" data-i18n="title">Digitale Signatur</h1>
                     <div class="nav-actions">
-                        <select class="language-selector" id="languageSelector">
+                        <select class="language-selector" id="languageSelector" aria-label="Select language">
                             <option value="zh">中文</option>
                             <option value="en">English</option>
                             <option value="es">Español</option>
@@ -104,14 +104,14 @@
                                 <div class="color-swatch" data-color="#0066FF"></div>
                                 <div class="color-swatch" data-color="#00AA00"></div>
                                 <div class="color-swatch" data-color="#8A2BE2"></div>
-                                <input type="color" id="customColor" class="custom-color-picker" value="#000000">
+                                <input type="color" id="customColor" class="custom-color-picker" value="#000000" aria-label="Custom color picker">
                             </div>
                         </div>
 
                         <div class="tool-group">
                             <label class="tool-label" data-i18n="thickness">Dicke:</label>
                             <div class="thickness-control">
-                                <input type="range" id="thicknessSlider" min="2" max="20" value="5" class="thickness-slider">
+                                <input type="range" id="thicknessSlider" min="2" max="20" value="5" class="thickness-slider" aria-label="Adjust stroke thickness">
                                 <span class="thickness-value" id="thicknessValue">5</span>
                                 <div class="thickness-preview" id="thicknessPreview"></div>
                             </div>
@@ -174,7 +174,7 @@
         window.addEventListener('load', () => { setTimeout(() => { try {(adsbygoogle = window.adsbygoogle || []).push({});(adsbygoogle = window.adsbygoogle || []).push({});} catch (e) {} }, 2000); });
     </script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script>window.__forceLang = 'de';</script>
     <script src="/i18n.js"></script>
     <script src="/signature.js"></script>

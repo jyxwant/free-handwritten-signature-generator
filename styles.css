@@ -8,6 +8,7 @@
     --danger-color: #FF3B30;
     --text-primary: #1D1D1F;
     --text-secondary: #86868B;
+    --text-secondary-strong: #555555;
     --background-primary: #FFFFFF;
     --background-secondary: #F5F5F7;
     --background-tertiary: #FAFAFA;
@@ -92,7 +93,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--text-secondary);
+    color: var(--text-secondary-strong);
     font-size: 14px;
     text-align: center;
     margin-bottom: var(--spacing-md);
@@ -324,7 +325,7 @@ body {
 .tool-label {
     font-size: 14px;
     font-weight: 500;
-    color: var(--text-secondary);
+    color: var(--text-secondary-strong);
     margin-bottom: var(--spacing-xs);
 }
 
@@ -562,6 +563,7 @@ body {
     :root {
         --text-primary: #F2F2F7;
         --text-secondary: #8E8E93;
+        --text-secondary-strong: #D1D1D6;
         --background-primary: #1C1C1E;
         --background-secondary: #2C2C2E;
         --background-tertiary: #3A3A3C;
