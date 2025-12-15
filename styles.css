@@ -457,6 +457,21 @@ body {
     color: var(--text-secondary);
 }
 
+.footer-link {
+    margin-top: var(--spacing-xs);
+    font-size: 14px;
+}
+
+.footer-link a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer-link a:hover {
+    text-decoration: underline;
+}
+
 /* SEO 静态内容区 */
 .seo-section {
     padding: var(--spacing-xl) var(--spacing-xl) var(--spacing-xxl, 48px);
