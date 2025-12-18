@@ -12,6 +12,11 @@
     <meta name="robots" content="index, follow">
     <meta name="language" content="Spanish">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Generador de Firmas Manuscritas Gratis (Sin Registro)">
     <meta property="og:description" content="Dibuja tu firma online y descárgala como PNG transparente o PDF. No requiere registro.">
@@ -103,7 +108,7 @@
     
     <!-- Dependencies -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Local Styles (Updated path for subdirectory) -->
@@ -174,7 +179,7 @@
 
                     <div class="relative group">
                         <!-- Updated default selection for Spanish -->
-                        <select id="language-select" onchange="if(this.value === 'en') window.location.href = '/'; else window.location.href = '/' + this.value + '/';" class="appearance-none bg-transparent pl-3 pr-8 py-1.5 text-sm font-medium text-slate-600 hover:text-slate-900 cursor-pointer focus:outline-none transition-colors">
+                        <select id="language-select" aria-label="Select language" onchange="if(this.value === 'en') window.location.href = '/'; else window.location.href = '/' + this.value + '/';" class="appearance-none bg-transparent pl-3 pr-8 py-1.5 text-sm font-medium text-slate-600 hover:text-slate-900 cursor-pointer focus:outline-none transition-colors">
                             <option value="en">English</option>
                             <option value="zh">中文</option>
                             <option value="es" selected>Español</option>
@@ -186,7 +191,7 @@
                             <option value="pt">Português</option>
                             <option value="de">Deutsch</option>
                         </select>
-                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-slate-400 group-hover:text-slate-600 transition-colors">
+                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-slate-500 group-hover:text-slate-600 transition-colors">
                             <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                             </svg>
@@ -204,7 +209,7 @@
         <aside class="hidden xl:block w-40 flex-shrink-0 sticky top-24 h-fit order-first">
             <div class="bg-slate-100 border-2 border-dashed border-slate-300 rounded-xl min-h-[600px] flex items-center justify-center p-2">
                  <div class="text-center w-full">
-                    <span class="text-xs text-slate-400 uppercase tracking-widest block mb-2">Publicidad</span>
+                    <span class="text-xs text-slate-600 uppercase tracking-widest block mb-2">Publicidad</span>
                     <div class="w-full h-full overflow-hidden rounded">
                          <!-- Ad Placeholder -->
                          <div id="ad-slot-left"></div>
@@ -254,7 +259,7 @@
                         <div class="flex flex-wrap justify-center items-center gap-3">
                             <!-- Ink Color -->
                             <div class="flex items-center gap-3">
-                                <span class="text-xs font-semibold text-slate-400 uppercase tracking-widest" data-i18n="ink">Color</span>
+                                <span class="text-xs font-semibold text-slate-600 uppercase tracking-widest" data-i18n="ink">Color</span>
                                 <div class="flex gap-2 bg-white p-1 rounded-full border border-slate-200 shadow-sm items-center">
                                     <!-- Presets -->
                                     <button class="color-btn w-6 h-6 rounded-full transition-all duration-200 bg-black ring-2 ring-offset-1 ring-slate-400 scale-100" data-color="#000000" aria-label="Negro"></button>
@@ -264,7 +269,7 @@
                                     <!-- Custom Color Picker -->
                                     <div class="h-4 w-px bg-slate-200 mx-1"></div>
                                     <label class="w-6 h-6 rounded-full bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 cursor-pointer shadow-sm hover:scale-110 transition-transform ring-1 ring-slate-200 relative overflow-hidden group" title="Elige color personalizado">
-                                        <input type="color" id="custom-color-input" class="opacity-0 absolute inset-0 w-full h-full cursor-pointer">
+                                        <input type="color" id="custom-color-input" aria-label="Custom color" class="opacity-0 absolute inset-0 w-full h-full cursor-pointer">
                                         <div id="custom-color-ring" class="absolute inset-0 ring-2 ring-offset-1 ring-slate-400 rounded-full pointer-events-none hidden"></div>
                                     </label>
                                 </div>
@@ -275,8 +280,8 @@
     
                             <!-- Thickness -->
                             <div class="flex items-center gap-3">
-                                 <span class="text-xs font-semibold text-slate-400 uppercase tracking-widest" data-i18n="width">Grosor</span>
-                                 <input type="range" id="thickness-slider" min="1" max="8" step="0.5" value="2.5" class="w-24 h-1.5 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-slate-800 hover:accent-slate-700">
+                                 <span class="text-xs font-semibold text-slate-600 uppercase tracking-widest" data-i18n="width">Grosor</span>
+                                 <input type="range" id="thickness-slider" aria-label="Signature thickness" min="1" max="8" step="0.5" value="2.5" class="w-24 h-1.5 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-slate-800 hover:accent-slate-700">
                             </div>
                         </div>
     
@@ -317,7 +322,7 @@
                     </div>
                 </div>
     
-                <div class="flex justify-center items-center gap-2 text-xs text-slate-400">
+                <div class="flex justify-center items-center gap-2 text-xs text-slate-600">
                     <span class="w-2 h-2 rounded-full bg-green-500"></span>
                     Las firmas se generan localmente en tu dispositivo para máxima privacidad.
                 </div>
@@ -331,21 +336,21 @@
                         <div class="w-10 h-10 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center mb-4">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
                         </div>
-                        <h3 class="font-bold text-slate-900 mb-2">Optimizado para Móviles</h3>
+                        <h4 class="font-bold text-slate-900 mb-2">Optimizado para Móviles</h4>
                         <p class="text-sm text-slate-600">Lienzo perfectamente adaptable. Firma fácilmente con tu dedo en iPhone, iPad o dispositivos Android.</p>
                     </div>
                     <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
                         <div class="w-10 h-10 bg-green-50 text-green-600 rounded-lg flex items-center justify-center mb-4">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
                         </div>
-                        <h3 class="font-bold text-slate-900 mb-2">100% Privado</h3>
+                        <h4 class="font-bold text-slate-900 mb-2">100% Privado</h4>
                         <p class="text-sm text-slate-600">Tus datos nunca salen de tu navegador. Sin subidas al servidor, sin almacenamiento en bases de datos. Completamente seguro.</p>
                     </div>
                     <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
                         <div class="w-10 h-10 bg-purple-50 text-purple-600 rounded-lg flex items-center justify-center mb-4">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><path d="m9 15 2 2 4-4"/></svg>
                         </div>
-                        <h3 class="font-bold text-slate-900 mb-2">PNG Transparente</h3>
+                        <h4 class="font-bold text-slate-900 mb-2">PNG Transparente</h4>
                         <p class="text-sm text-slate-600">Las descargas incluyen automáticamente un fondo transparente, listo para pegar en Word, PDF o Google Docs.</p>
                     </div>
                 </div>
@@ -490,7 +495,7 @@
         <aside class="hidden xl:block w-40 flex-shrink-0 sticky top-24 h-fit order-last">
             <div class="bg-slate-100 border-2 border-dashed border-slate-300 rounded-xl min-h-[600px] flex items-center justify-center p-2">
                  <div class="text-center w-full">
-                    <span class="text-xs text-slate-400 uppercase tracking-widest block mb-2">Publicidad</span>
+                    <span class="text-xs text-slate-600 uppercase tracking-widest block mb-2">Publicidad</span>
                     <div class="w-full h-full overflow-hidden rounded">
                          <div id="ad-slot-right"></div>
                     </div>
@@ -515,7 +520,7 @@
                     </a>
                 </div>
                 
-                <p class="text-slate-400 text-xs mt-4">
+                <p class="text-slate-600 text-xs mt-4">
                     &copy; <span id="year"></span> Signature Sketch. Todos los derechos reservados.
                 </p>
             </div>
@@ -536,7 +541,7 @@
                     <div class="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4 border-b border-slate-100">
                         <div class="flex items-center justify-between">
                             <h3 class="text-xl font-bold text-slate-900" id="modal-title" data-i18n="modalTitle">Crear Firma de Email</h3>
-                            <button type="button" class="text-slate-400 hover:text-slate-500" id="close-modal-btn">
+                            <button type="button" class="text-slate-500 hover:text-slate-600" id="close-modal-btn">
                                 <span class="sr-only">Cerrar</span>
                                 <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -591,7 +596,7 @@
                                 <!-- Visual Preview Container -->
                                 <div class="rounded-xl border border-slate-200 bg-slate-50 p-4">
                                     <div class="flex justify-between items-center mb-2">
-                                        <span class="text-xs font-bold text-slate-400 uppercase tracking-wider" data-i18n="modalPreview">Vista Previa</span>
+                                        <span class="text-xs font-bold text-slate-600 uppercase tracking-wider" data-i18n="modalPreview">Vista Previa</span>
                                         <button type="button" id="copy-visual-btn" class="text-xs bg-white border border-slate-200 hover:border-blue-400 hover:text-blue-600 text-slate-600 px-3 py-1 rounded-md transition-colors shadow-sm flex items-center gap-1">
                                             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
                                             <span data-i18n="modalCopyVisual">Copiar para Gmail/Outlook</span>
@@ -607,7 +612,7 @@
                                 <!-- HTML Code Area -->
                                 <div class="flex-1 flex flex-col">
                                     <div class="flex justify-between items-center mb-2">
-                                        <span class="text-xs font-bold text-slate-400 uppercase tracking-wider" data-i18n="modalHtmlCode">Código HTML</span>
+                                        <span class="text-xs font-bold text-slate-600 uppercase tracking-wider" data-i18n="modalHtmlCode">Código HTML</span>
                                         <button type="button" id="copy-html-btn" class="text-xs text-blue-600 hover:text-blue-700 font-medium"><span data-i18n="modalCopyCode">Copiar Código</span></button>
                                     </div>
                                     <textarea id="email-html-code" readonly class="w-full flex-1 min-h-[120px] p-3 text-xs font-mono text-slate-600 bg-slate-100 rounded-lg border border-slate-200 outline-none focus:border-blue-300 resize-none"></textarea>
