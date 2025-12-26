@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO Optimization -->
-    <title>Free Handwritten Signature / Electronic Signature Maker Online (No Sign Up)</title>
-    <meta name="description" content="Create your handwritten signature online for free. The best electronic signature maker to generate transparent PNGs for PDFs and Word docs. No sign-up required.">
-    <meta name="keywords" content="handwritten signature generator, electronic signature maker, online signature creator, digital signature png, free signature maker, draw signature online, sign pdf online">
+    <title>Free Signature Maker No Sign Up - Create Transparent Signature PNG</title>
+    <meta name="description" content="The best free handwritten signature generator. No sign up required. Draw your signature online and download a transparent PNG instantly for Word, PDF, and Docs.">
+    <meta name="keywords" content="free signature maker no sign up, transparent signature png, create transparent signature, handwritten signature generator, draw signature online">
     <meta name="author" content="Signature Sketch">
     <meta name="robots" content="index, follow">
     <meta name="language" content="English">
@@ -171,6 +171,7 @@
                 <div class="flex items-center gap-6">
                     <!-- Navigation Links -->
                     <div class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600">
+                        <a href="/email-signature-generator/" class="hover:text-blue-600 transition-colors">Gmail Signature</a>
                         <a href="/guide.html" class="hover:text-blue-600 transition-colors">Guide</a>
                         <a href="/blog.html" class="hover:text-blue-600 transition-colors">Blog</a>
                     </div>
@@ -230,7 +231,7 @@
                     <span data-i18n="badge">Secure & Local</span>
                 </div>
                 
-                <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-slate-800 leading-tight" data-i18n="heroTitle">Free Handwritten Signature & Electronic Signature Maker</h1>
+                <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-slate-800 leading-tight" data-i18n="heroTitle">Free Signature Maker (No Sign Up) & Transparent PNG Creator</h1>
                 
                 <p class="text-lg text-slate-500 leading-relaxed" data-i18n="heroDesc">Create a legally-binding style handwritten signature in seconds. <br class="hidden md:inline" />
                     Free, no signup required, and processed 100% locally.</p>
@@ -250,23 +251,34 @@
                         </div>
                         
                         <canvas id="signature-canvas" class="touch-none w-full h-full block relative z-10"></canvas>
+                        
+                        <!-- Fullscreen Button -->
+                        <button id="fullscreen-btn" class="absolute top-3 right-3 z-20 p-2 bg-white/90 hover:bg-white border border-slate-200 rounded-lg shadow-sm hover:shadow-md transition-all group" title="Fullscreen Mode">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-slate-500 group-hover:text-blue-600 transition-colors">
+                                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                            </svg>
+                        </button>
                     </div>
     
                     <!-- Toolbar -->
-                    <div class="px-6 py-4 bg-slate-50 border-t border-slate-100 flex flex-col lg:flex-row justify-between items-center gap-y-4 gap-x-6">
+                    <div class="px-4 py-3 bg-slate-50 border-t border-slate-100">
                         
-                        <div class="flex flex-wrap justify-center items-center gap-6">
-                            <!-- Ink Color -->
-                            <div class="flex items-center gap-3">
-                                <span class="text-xs font-semibold text-slate-600 uppercase tracking-widest" data-i18n="ink">Ink</span>
-                                <div class="flex gap-2 bg-white p-1 rounded-full border border-slate-200 shadow-sm items-center">
-                                    <!-- Presets -->
+                        <!-- Single Row Layout -->
+                        <div class="flex flex-wrap items-center justify-between gap-3">
+                            <!-- Left: Tools Group -->
+                            <div class="flex flex-wrap items-center gap-2">
+                                <!-- Ink Color -->
+                                <div class="flex gap-1 bg-white p-1 rounded-full border border-slate-200 shadow-sm items-center">
+                                    <!-- Color Presets -->
                                     <button class="color-btn w-6 h-6 rounded-full transition-all duration-200 bg-black ring-2 ring-offset-1 ring-slate-400 scale-100" data-color="#000000" aria-label="Black"></button>
                                     <button class="color-btn w-6 h-6 rounded-full transition-all duration-200 bg-[#0047AB] opacity-70 hover:opacity-100 hover:scale-110" data-color="#0047AB" aria-label="Blue"></button>
                                     <button class="color-btn w-6 h-6 rounded-full transition-all duration-200 bg-red-600 opacity-70 hover:opacity-100 hover:scale-110" data-color="#DC2626" aria-label="Red"></button>
+                                    <button class="color-btn w-6 h-6 rounded-full transition-all duration-200 bg-green-600 opacity-70 hover:opacity-100 hover:scale-110" data-color="#16a34a" aria-label="Green"></button>
+                                    <button class="color-btn w-6 h-6 rounded-full transition-all duration-200 bg-purple-600 opacity-70 hover:opacity-100 hover:scale-110" data-color="#9333ea" aria-label="Purple"></button>
+                                    <button class="color-btn w-6 h-6 rounded-full transition-all duration-200 bg-teal-500 opacity-70 hover:opacity-100 hover:scale-110" data-color="#14b8a6" aria-label="Teal"></button>
                                     
                                     <!-- Custom Color Picker -->
-                                    <div class="h-4 w-px bg-slate-200 mx-1"></div>
+                                    <div class="h-4 w-px bg-slate-200 mx-0.5"></div>
                                     <label class="w-6 h-6 rounded-full bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 cursor-pointer shadow-sm hover:scale-110 transition-transform ring-1 ring-slate-200 relative overflow-hidden group" title="Choose custom color">
                                         <input type="color" id="custom-color-input" aria-label="Custom color" class="opacity-0 absolute inset-0 w-full h-full cursor-pointer">
                                         <div id="custom-color-ring" class="absolute inset-0 ring-2 ring-offset-1 ring-slate-400 rounded-full pointer-events-none hidden"></div>
@@ -274,54 +286,127 @@
                                 </div>
                             </div>
     
-                            <!-- Divider (hidden on mobile, visible on desktop) -->
-                            <div class="h-8 w-px bg-slate-200 hidden lg:block"></div>
-    
-                            <!-- Thickness -->
-                            <div class="flex items-center gap-3">
-                                 <span class="text-xs font-semibold text-slate-600 uppercase tracking-widest" data-i18n="width">Width</span>
-                                 <input type="range" id="thickness-slider" aria-label="Signature thickness" min="1" max="8" step="0.5" value="2.5" class="w-24 h-1.5 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-slate-800 hover:accent-slate-700">
-                            </div>
-                        </div>
-    
-                        <div class="flex flex-wrap justify-center items-center gap-3 w-full lg:w-auto">
-                            <button id="clear-btn" class="p-2 text-slate-500 hover:text-red-500 hover:bg-red-50 rounded-md transition-colors disabled:opacity-30" title="Clear Signature" data-i18n-clear-title="btnClearTitle" disabled>
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="m7 21-4.3-4.3c-1-1-1-2.5 0-3.4l9.6-9.6c1-1 2.5-1 3.4 0l5.6 5.6c1 1 1 2.5 0 3.4L13 21" />
-                                    <path d="M22 21H7" />
-                                    <path d="m5 11 9 9" />
-                                </svg>
-                            </button>
+                            <!-- Brush Size Buttons -->
+                            <div class="flex gap-1 bg-white p-1 rounded-full border border-slate-200 shadow-sm items-center">
+                                    <button class="size-btn w-6 h-6 rounded-full flex items-center justify-center transition-all opacity-70 hover:opacity-100" data-size="1" aria-label="Extra Small">
+                                        <span class="w-1 h-1 bg-slate-800 rounded-full"></span>
+                                    </button>
+                                    <button class="size-btn w-6 h-6 rounded-full flex items-center justify-center transition-all ring-2 ring-offset-1 ring-slate-400" data-size="2.5" aria-label="Small">
+                                        <span class="w-2 h-2 bg-slate-800 rounded-full"></span>
+                                    </button>
+                                    <button class="size-btn w-6 h-6 rounded-full flex items-center justify-center transition-all opacity-70 hover:opacity-100" data-size="4" aria-label="Medium">
+                                        <span class="w-3 h-3 bg-slate-800 rounded-full"></span>
+                                    </button>
+                                    <button class="size-btn w-6 h-6 rounded-full flex items-center justify-center transition-all opacity-70 hover:opacity-100" data-size="6" aria-label="Large">
+                                        <span class="w-4 h-4 bg-slate-800 rounded-full"></span>
+                                    </button>
+                                </div>
                             
-                            <div class="h-8 w-px bg-slate-200 mx-1 hidden sm:block"></div>
-    
-                            <button id="pdf-btn" class="flex-1 sm:flex-none flex items-center justify-center gap-2 px-3 py-2 text-slate-700 bg-white border border-slate-200 rounded-lg text-sm font-medium hover:bg-slate-50 hover:border-slate-300 transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-sm min-w-[80px]" disabled>
+                            <!-- Divider -->
+                            <div class="h-6 w-px bg-slate-200 hidden sm:block"></div>
+                            
+                            <!-- Drawing Tools -->
+                            <div class="flex items-center gap-1">
+                                <!-- Eraser -->
+                                <button id="eraser-btn" class="p-2 text-slate-500 hover:text-slate-700 hover:bg-white rounded-md transition-colors border border-transparent hover:border-slate-200" title="Eraser">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="m7 21-4.3-4.3c-1-1-1-2.5 0-3.4l9.6-9.6c1-1 2.5-1 3.4 0l5.6 5.6c1 1 1 2.5 0 3.4L13 21"/>
+                                        <path d="M22 21H7"/>
+                                        <path d="m5 11 9 9"/>
+                                    </svg>
+                                </button>
+                                
+                                <!-- Undo -->
+                                <button id="undo-btn" class="p-2 text-slate-400 hover:text-slate-600 hover:bg-white rounded-md transition-colors border border-transparent hover:border-slate-200 disabled:opacity-30 disabled:cursor-not-allowed" title="Undo" disabled>
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M3 7v6h6"/>
+                                        <path d="M21 17a9 9 0 0 0-9-9 9 9 0 0 0-6 2.3L3 13"/>
+                                    </svg>
+                                </button>
+                                
+                                <!-- Redo -->
+                                <button id="redo-btn" class="p-2 text-slate-400 hover:text-slate-600 hover:bg-white rounded-md transition-colors border border-transparent hover:border-slate-200 disabled:opacity-30 disabled:cursor-not-allowed" title="Redo" disabled>
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M21 7v6h-6"/>
+                                        <path d="M3 17a9 9 0 0 1 9-9 9 9 0 0 1 6 2.3l3 2.7"/>
+                                    </svg>
+                                </button>
+                                
+                                <!-- Clear -->
+                                <button id="clear-btn" class="p-2 text-slate-500 hover:text-red-500 hover:bg-red-50 rounded-md transition-colors disabled:opacity-30" title="Clear All" disabled>
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M3 6h18"/>
+                                        <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/>
+                                        <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            
+                            <!-- Divider -->
+                            <div class="h-6 w-px bg-slate-200 hidden sm:block"></div>
+                            
+                            <!-- Export Buttons -->
+                            <div class="flex items-center gap-2">
+                                <button id="pdf-btn" class="flex items-center justify-center gap-1.5 px-3 py-2 text-slate-700 bg-white border border-slate-200 rounded-lg text-sm font-medium hover:bg-slate-50 hover:border-slate-300 transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-sm" disabled>
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
                                     <polyline points="14 2 14 8 20 8" />
                                 </svg><span data-i18n="btnPdf">PDF</span>
                             </button>
 
-                            <!-- Create <span data-i18n="labelEmail">Email</span> Footer Button -->
-                            <button id="email-btn" class="flex-1 sm:flex-none flex items-center justify-center gap-2 px-3 py-2 text-slate-700 bg-white border border-slate-200 rounded-lg text-sm font-medium hover:bg-slate-50 hover:border-slate-300 transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-sm whitespace-nowrap" disabled>
+                                <button id="email-btn" class="flex items-center justify-center gap-1.5 px-3 py-2 text-slate-700 bg-white border border-slate-200 rounded-lg text-sm font-medium hover:bg-slate-50 hover:border-slate-300 transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-sm whitespace-nowrap" disabled>
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <rect width="20" height="16" x="2" y="4" rx="2"/>
                                     <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
                                 </svg><span data-i18n="btnEmail">Email Footer</span>
                             </button>
     
-                            <button id="download-btn" class="flex-1 sm:flex-none flex items-center justify-center gap-2 px-4 py-2 bg-slate-900 text-white rounded-lg text-sm font-medium hover:bg-slate-800 transition-all shadow-md hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed disabled:shadow-none whitespace-nowrap" disabled>
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                                    <polyline points="7 10 12 15 17 10" />
-                                    <line x1="12" x2="12" y1="15" y2="3" />
-                                </svg><span data-i18n="btnPng">PNG</span>
-                            </button>
+                                <button id="download-btn" class="flex items-center justify-center gap-2 px-4 py-2 bg-slate-900 text-white rounded-lg text-sm font-medium hover:bg-slate-800 transition-all shadow-md hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed disabled:shadow-none whitespace-nowrap" disabled>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                        <polyline points="7 10 12 15 17 10" />
+                                        <line x1="12" x2="12" y1="15" y2="3" />
+                                    </svg><span data-i18n="btnPng">PNG</span>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
+                
+                <!-- Name Input & Font Templates -->
+                <div class="w-full max-w-4xl mx-auto bg-white rounded-lg shadow-sm border border-slate-200/60 overflow-hidden p-4 mt-6">
+                    <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center mb-4">
+                        <div class="flex items-center gap-2 flex-1 w-full sm:w-auto">
+                            <span class="text-xs font-semibold text-slate-600 uppercase tracking-widest whitespace-nowrap" data-i18n="nameLabel">Name</span>
+                            <input type="text" id="name-input" class="flex-1 px-3 py-2 text-sm border border-slate-200 rounded-lg focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-colors" placeholder="Enter your name" data-i18n-placeholder="namePlaceholder">
+                        </div>
+                        <span class="text-xs text-slate-400 hidden sm:block" data-i18n="fontHint">Click a style to use as signature</span>
+                    </div>
+                    
+                    <!-- Font Templates Grid -->
+                    <div id="font-templates" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2">
+                        <button class="font-template-btn px-3 py-3 border border-slate-200 rounded-lg hover:border-blue-400 hover:bg-blue-50 transition-all text-center" data-font="'Brush Script MT', cursive" style="font-family: 'Brush Script MT', cursive;">
+                            <span class="text-lg text-slate-700">Your Name</span>
+                        </button>
+                        <button class="font-template-btn px-3 py-3 border border-slate-200 rounded-lg hover:border-blue-400 hover:bg-blue-50 transition-all text-center" data-font="'Segoe Script', cursive" style="font-family: 'Segoe Script', cursive;">
+                            <span class="text-lg text-slate-700">Your Name</span>
+                        </button>
+                        <button class="font-template-btn px-3 py-3 border border-slate-200 rounded-lg hover:border-blue-400 hover:bg-blue-50 transition-all text-center" data-font="'Lucida Handwriting', cursive" style="font-family: 'Lucida Handwriting', cursive;">
+                            <span class="text-lg text-slate-700">Your Name</span>
+                        </button>
+                        <button class="font-template-btn px-3 py-3 border border-slate-200 rounded-lg hover:border-blue-400 hover:bg-blue-50 transition-all text-center" data-font="Georgia, serif" style="font-family: Georgia, serif; font-style: italic;">
+                            <span class="text-lg text-slate-700 italic">Your Name</span>
+                        </button>
+                        <button class="font-template-btn px-3 py-3 border border-slate-200 rounded-lg hover:border-blue-400 hover:bg-blue-50 transition-all text-center" data-font="'Times New Roman', serif" style="font-family: 'Times New Roman', serif;">
+                            <span class="text-lg text-slate-700">Your Name</span>
+                        </button>
+                        <button class="font-template-btn px-3 py-3 border border-slate-200 rounded-lg hover:border-blue-400 hover:bg-blue-50 transition-all text-center" data-font="'Courier New', monospace" style="font-family: 'Courier New', monospace;">
+                            <span class="text-lg text-slate-700">Your Name</span>
+                        </button>
+                    </div>
+                </div>
     
-                <div class="flex justify-center items-center gap-2 text-xs text-slate-600">
+                <div class="flex justify-center items-center gap-2 text-xs text-slate-600 mt-6">
                     <span class="w-2 h-2 rounded-full bg-green-500"></span>
                     Signatures are generated locally on your device for maximum privacy.
                 </div>
@@ -360,7 +445,7 @@
                     <!-- Intro Text -->
                     <div class="bg-white rounded-2xl p-8 md:p-10 border border-slate-100 shadow-sm">
                         <!-- 修改 H2 -->
-                        <h2 id="seoTitle" class="text-3xl font-bold mb-6 text-slate-900">Online Electronic Signature Maker (Create Transparent PNG)</h2>
+                        <h2 id="seoTitle" class="text-3xl font-bold mb-6 text-slate-900">How to Create a Transparent Signature Online</h2>
 
                         <div class="space-y-4 text-slate-600 leading-relaxed">
                             <p>
@@ -485,6 +570,11 @@
                                     <h4 class="text-base font-semibold text-slate-900 mb-3" data-i18n="faqQ4">Is my signature saved?</h4>
                                     <p class="text-sm text-slate-600 leading-relaxed" data-i18n="faqA4">No. The signature exists only in your browser's temporary memory. Once you refresh the page, it is deleted forever. We do not have servers.</p>
                                 </div>
+                                
+                                <div class="pb-6 border-b border-slate-100 last:border-0 last:pb-0">
+                                    <h4 class="text-base font-semibold text-slate-900 mb-3" data-i18n="faqQ5">How to make a signature transparent?</h4>
+                                    <p class="text-sm text-slate-600 leading-relaxed" data-i18n="faqA5">You don't need Photoshop. Our tool automatically creates a transparent signature PNG. Just draw, and the background is removed instantly, ready for Word or Google Docs.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -527,6 +617,85 @@
             </div>
         </div>
     </footer>
+
+    <!-- Fullscreen Signature Modal -->
+    <div id="fullscreen-modal" class="fixed inset-0 z-[70] hidden">
+        <!-- Light Backdrop -->
+        <div class="fixed inset-0 bg-[#F8FAFC] transition-opacity" id="fullscreen-backdrop"></div>
+        
+        <!-- Fullscreen Container -->
+        <div class="fixed inset-0 flex flex-col">
+            <!-- Header -->
+            <div class="flex items-center justify-between px-4 py-3 bg-white border-b border-slate-200 shadow-sm">
+                <button id="fullscreen-close-btn" class="p-2 text-slate-500 hover:text-slate-700 hover:bg-slate-100 rounded-lg transition-colors">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m7 7 10 10M7 17 17 7"/>
+                    </svg>
+                </button>
+                <h3 class="text-slate-800 font-semibold text-lg" data-i18n="fullscreenTitle">Sign Here</h3>
+                <button id="fullscreen-done-btn" class="px-4 py-2 bg-slate-900 hover:bg-slate-800 text-white rounded-lg font-medium transition-colors shadow-md" data-i18n="fullscreenDone">Done</button>
+            </div>
+            
+            <!-- Canvas Area -->
+            <div id="fullscreen-canvas-container" class="flex-1 relative bg-white m-4 rounded-xl border border-slate-200 shadow-lg overflow-hidden">
+                <div id="fullscreen-placeholder" class="absolute inset-0 flex items-center justify-center pointer-events-none select-none">
+                    <span class="text-slate-300 font-serif italic text-xl" data-i18n="fullscreenPlaceholder">Draw your signature here</span>
+                </div>
+                <canvas id="fullscreen-canvas" class="touch-none w-full h-full block cursor-crosshair"></canvas>
+            </div>
+            
+            <!-- Toolbar -->
+            <div class="px-4 py-3 bg-white border-t border-slate-200">
+                <div class="flex items-center justify-center gap-4">
+                    <!-- Colors -->
+                    <div class="flex gap-1 bg-slate-50 p-1.5 rounded-full border border-slate-200 items-center">
+                        <button class="fs-color-btn w-7 h-7 rounded-full bg-black ring-2 ring-offset-1 ring-slate-400" data-color="#000000"></button>
+                        <button class="fs-color-btn w-7 h-7 rounded-full bg-[#0047AB] opacity-70 hover:opacity-100 transition-opacity" data-color="#0047AB"></button>
+                        <button class="fs-color-btn w-7 h-7 rounded-full bg-red-600 opacity-70 hover:opacity-100 transition-opacity" data-color="#DC2626"></button>
+                    </div>
+                    
+                    <div class="h-6 w-px bg-slate-200"></div>
+                    
+                    <!-- Drawing Tools -->
+                    <div class="flex items-center gap-1">
+                        <!-- Eraser -->
+                        <button id="fs-eraser-btn" class="p-2 text-slate-500 hover:text-slate-700 hover:bg-slate-100 rounded-lg transition-colors" title="Eraser">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="m7 21-4.3-4.3c-1-1-1-2.5 0-3.4l9.6-9.6c1-1 2.5-1 3.4 0l5.6 5.6c1 1 1 2.5 0 3.4L13 21"/>
+                                <path d="M22 21H7"/>
+                                <path d="m5 11 9 9"/>
+                            </svg>
+                        </button>
+                        
+                        <!-- Undo -->
+                        <button id="fs-undo-btn" class="p-2 text-slate-400 hover:text-slate-600 hover:bg-slate-100 rounded-lg transition-colors disabled:opacity-30" title="Undo" disabled>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M3 7v6h6"/>
+                                <path d="M21 17a9 9 0 0 0-9-9 9 9 0 0 0-6 2.3L3 13"/>
+                            </svg>
+                        </button>
+                        
+                        <!-- Redo -->
+                        <button id="fs-redo-btn" class="p-2 text-slate-400 hover:text-slate-600 hover:bg-slate-100 rounded-lg transition-colors disabled:opacity-30" title="Redo" disabled>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 7v6h-6"/>
+                                <path d="M3 17a9 9 0 0 1 9-9 9 9 0 0 1 6 2.3l3 2.7"/>
+                            </svg>
+                        </button>
+                        
+                        <!-- Clear -->
+                        <button id="fs-clear-btn" class="p-2 text-slate-500 hover:text-red-500 hover:bg-red-50 rounded-lg transition-colors" title="Clear All">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M3 6h18"/>
+                                <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/>
+                                <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- <span data-i18n="labelEmail">Email</span> Footer Modal -->
     <div id="email-modal" class="fixed inset-0 z-[60] hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">

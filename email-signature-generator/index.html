@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Optimization -->
+    <title>Free Gmail Signature Maker & Email Signature Generator (No Sign Up)</title>
+    <meta name="description" content="Create professional Gmail signatures and email footers in seconds. Free online email signature generator with handwritten signature support. No sign up required.">
+    <meta name="keywords" content="gmail signature maker, email signature generator, free email signature, gmail signature template, outlook signature maker, professional email signature">
+    <meta name="author" content="Signature Sketch">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Free Gmail Signature Maker - Create Professional Email Signatures">
+    <meta property="og:description" content="Design beautiful email signatures for Gmail, Outlook, and Apple Mail. Add your handwritten signature. 100% free, no registration.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://signaturesketch.tech/email-signature-generator/">
+    <meta property="og:image" content="https://signaturesketch.tech/og-image.png">
+    <meta property="og:site_name" content="Signature Sketch">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Free Gmail Signature Maker - No Sign Up Required">
+    <meta name="twitter:description" content="Create professional email signatures with your handwritten signature. Works with Gmail, Outlook, Yahoo Mail.">
+    <meta name="twitter:image" content="https://signaturesketch.tech/twitter-image.png">
+
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon.png">
+    <link rel="shortcut icon" type="image/png" href="/icon.png">
+    <link rel="apple-touch-icon" href="/icon.png">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://signaturesketch.tech/email-signature-generator/">
+
+    <!-- Structured Data: SoftwareApplication -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Gmail Signature Maker",
+      "alternateName": "Email Signature Generator",
+      "description": "A free online tool to create professional email signatures with handwritten signature support for Gmail, Outlook, and more.",
+      "url": "https://signaturesketch.tech/email-signature-generator/",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web Browser",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "featureList": [
+        "Gmail signature creation",
+        "Handwritten signature upload",
+        "Real-time preview",
+        "One-click copy for Gmail",
+        "No sign-up required"
+      ]
+    }
+    </script>
+    
+    <!-- Structured Data: FAQ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "How do I add a signature to Gmail?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Use our free Gmail signature maker to design your signature, then click 'Copy for Gmail'. In Gmail, go to Settings > See all settings > General > Signature, paste your signature, and click Save."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Can I add a handwritten signature to my Gmail?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes! You can either upload an image of your handwritten signature, or use our signature drawing tool on the homepage to create one. Then add it to your email signature here."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Is this email signature maker really free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, 100% free with no hidden costs or sign-up required. Your data stays in your browser and is never uploaded to any server."
+        }
+      }]
+    }
+    </script>
+    
+    <!-- Dependencies -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Local Styles -->
+    <link rel="stylesheet" href="../style.css">
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#2563eb',
+                            700: '#0369a1',
+                            900: '#0c4a6e',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-[#F8FAFC] text-slate-900 font-sans flex flex-col min-h-screen">
+
+    <!-- Header -->
+    <nav class="w-full bg-white/80 backdrop-blur-md border-b border-slate-200/60 sticky top-0 z-50 supports-[backdrop-filter]:bg-white/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center gap-3">
+                    <a href="/" class="flex items-center gap-3 group">
+                        <!-- Logo SVG -->
+                        <div class="relative flex-shrink-0">
+                            <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg" class="shadow-sm rounded-xl group-hover:scale-105 transition-transform">
+                                <rect width="38" height="38" rx="10" fill="#2563EB"/>
+                                <path d="M26.5 11.5L28.5 13.5L16.5 25.5H13.5V22.5L25.5 11.5Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M13.5 29C13.5 29 16 31.5 20 31.5C24 31.5 27.5 27.5 27.5 27.5" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h1 class="text-lg md:text-xl font-bold text-slate-800 tracking-tight group-hover:text-blue-600 transition-colors">
+                            Signature Sketch
+                        </h1>
+                    </a>
+                </div>
+                
+                <div class="flex items-center gap-6">
+                    <!-- Navigation Links -->
+                    <div class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600">
+                        <a href="/" class="hover:text-blue-600 transition-colors">Signature Maker</a>
+                        <a href="/guide.html" class="hover:text-blue-600 transition-colors">Guide</a>
+                        <a href="/blog.html" class="hover:text-blue-600 transition-colors">Blog</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Layout -->
+    <div class="flex-1 flex justify-center max-w-[1600px] mx-auto w-full px-4 sm:px-6 lg:px-8 py-12 gap-10">
+        
+        <!-- Left Ad Sidebar -->
+        <aside class="hidden xl:block w-40 flex-shrink-0 sticky top-24 h-fit order-first">
+            <div class="bg-slate-100 border-2 border-dashed border-slate-300 rounded-xl min-h-[600px] flex items-center justify-center p-2">
+                 <div class="text-center w-full">
+                    <span class="text-xs text-slate-600 uppercase tracking-widest block mb-2">Advertisement</span>
+                    <div class="w-full h-full overflow-hidden rounded">
+                         <div id="ad-slot-left"></div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Center Content -->
+        <main class="flex-1 max-w-5xl w-full flex flex-col items-center">
+            
+            <!-- Hero -->
+            <div class="text-center space-y-6 mb-12 max-w-3xl">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-slate-200 text-slate-600 text-xs font-semibold uppercase tracking-wider shadow-sm">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-600">
+                        <rect width="20" height="16" x="2" y="4" rx="2"/>
+                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                    </svg>
+                    <span>Works with Gmail, Outlook & More</span>
+                </div>
+                
+                <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-slate-800 leading-tight">Free Gmail Signature Maker</h1>
+                
+                <p class="text-lg text-slate-500 leading-relaxed">Create professional email signatures in seconds. <br class="hidden md:inline" />
+                    Add your handwritten signature, contact info, and social links. No signup required.</p>
+            </div>
+
+            <!-- Email Signature Generator Tool -->
+            <div class="w-full max-w-5xl mx-auto">
+                
+                <div class="bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-slate-200/60 overflow-hidden">
+                    
+                    <div class="grid lg:grid-cols-2 divide-y lg:divide-y-0 lg:divide-x divide-slate-100">
+                        
+                        <!-- Left: Form -->
+                        <div class="p-6 lg:p-8 space-y-6">
+                            <h2 class="text-lg font-bold text-slate-800 flex items-center gap-2">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-600">
+                                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="9" cy="7" r="4"/>
+                                    <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                </svg>
+                                Your Information
+                            </h2>
+                            
+                            <div class="space-y-4">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label for="sig-name" class="block text-xs font-medium text-slate-700 uppercase tracking-wide mb-1.5">Full Name *</label>
+                                        <input type="text" id="sig-name" class="w-full rounded-lg border-slate-200 border px-4 py-2.5 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none transition-all" placeholder="John Doe">
+                                    </div>
+                                    <div>
+                                        <label for="sig-title" class="block text-xs font-medium text-slate-700 uppercase tracking-wide mb-1.5">Job Title</label>
+                                        <input type="text" id="sig-title" class="w-full rounded-lg border-slate-200 border px-4 py-2.5 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none transition-all" placeholder="Product Manager">
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <label for="sig-company" class="block text-xs font-medium text-slate-700 uppercase tracking-wide mb-1.5">Company</label>
+                                    <input type="text" id="sig-company" class="w-full rounded-lg border-slate-200 border px-4 py-2.5 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none transition-all" placeholder="Acme Corporation">
+                                </div>
+
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label for="sig-email" class="block text-xs font-medium text-slate-700 uppercase tracking-wide mb-1.5">Email</label>
+                                        <input type="email" id="sig-email" class="w-full rounded-lg border-slate-200 border px-4 py-2.5 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none transition-all" placeholder="john@example.com">
+                                    </div>
+                                    <div>
+                                        <label for="sig-phone" class="block text-xs font-medium text-slate-700 uppercase tracking-wide mb-1.5">Phone</label>
+                                        <input type="text" id="sig-phone" class="w-full rounded-lg border-slate-200 border px-4 py-2.5 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none transition-all" placeholder="+1 (555) 000-0000">
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <label for="sig-website" class="block text-xs font-medium text-slate-700 uppercase tracking-wide mb-1.5">Website</label>
+                                    <input type="text" id="sig-website" class="w-full rounded-lg border-slate-200 border px-4 py-2.5 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none transition-all" placeholder="www.example.com">
+                                </div>
+                            </div>
+                            
+                            <!-- Signature Upload Section -->
+                            <div class="pt-4 border-t border-slate-100">
+                                <h3 class="text-sm font-bold text-slate-800 mb-3 flex items-center gap-2">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-600">
+                                        <path d="M12 20h9"/>
+                                        <path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/>
+                                    </svg>
+                                    Add Handwritten Signature (Optional)
+                                </h3>
+                                
+                                <div class="space-y-3">
+                                    <!-- Upload Area -->
+                                    <div id="upload-area" class="relative border-2 border-dashed border-slate-200 rounded-xl p-4 hover:border-blue-400 hover:bg-blue-50/50 transition-all cursor-pointer group">
+                                        <input type="file" id="signature-upload" accept="image/*" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer">
+                                        <div class="flex flex-col items-center gap-2 text-center">
+                                            <div class="w-10 h-10 rounded-full bg-slate-100 group-hover:bg-blue-100 flex items-center justify-center transition-colors">
+                                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-slate-500 group-hover:text-blue-600 transition-colors">
+                                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                                    <polyline points="17 8 12 3 7 8"/>
+                                                    <line x1="12" x2="12" y1="3" y2="15"/>
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <p class="text-sm font-medium text-slate-700">Upload signature image</p>
+                                                <p class="text-xs text-slate-500">PNG, JPG or GIF (transparent PNG recommended)</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Signature Preview -->
+                                    <div id="signature-preview-container" class="hidden">
+                                        <div class="flex items-center justify-between p-3 bg-slate-50 rounded-lg border border-slate-200">
+                                            <div class="flex items-center gap-3">
+                                                <img id="signature-preview-img" src="" alt="Signature" class="h-10 object-contain">
+                                                <span class="text-sm text-slate-600">Signature uploaded</span>
+                                            </div>
+                                            <button id="remove-signature" class="p-1.5 text-slate-400 hover:text-red-500 hover:bg-red-50 rounded-lg transition-colors">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Create Signature Link -->
+                                    <div class="flex items-center gap-2 text-sm">
+                                        <span class="text-slate-500">Don't have a signature?</span>
+                                        <a href="/" class="text-blue-600 hover:text-blue-700 font-medium hover:underline">Create one free</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Right: Preview -->
+                        <div class="p-6 lg:p-8 bg-slate-50/50 flex flex-col">
+                            <div class="flex items-center justify-between mb-4">
+                                <h2 class="text-lg font-bold text-slate-800 flex items-center gap-2">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-600">
+                                        <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/>
+                                        <circle cx="12" cy="12" r="3"/>
+                                    </svg>
+                                    Live Preview
+                                </h2>
+                            </div>
+                            
+                            <!-- Preview Box -->
+                            <div class="flex-1 bg-white rounded-xl border border-slate-200 p-6 shadow-sm mb-4">
+                                <div id="email-signature-output" class="min-h-[180px]">
+                                    <!-- Signature preview rendered by JS -->
+                                    <table cellpadding="0" cellspacing="0" border="0" style="font-family: Arial, sans-serif; font-size: 14px; line-height: 1.4; color: #334155;">
+                                        <tr id="sig-row-image" style="display: none;">
+                                            <td style="padding-bottom: 12px;">
+                                                <img id="preview-sig-img" src="" alt="Signature" height="50" style="display: block; border: 0; max-height: 50px; width: auto;">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding-bottom: 4px;">
+                                                <strong id="preview-name" style="color: #0f172a; font-size: 16px;">Your Name</strong>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td id="preview-title-row" style="color: #64748b; padding-bottom: 8px;">
+                                                <span id="preview-title">Job Title</span> <span id="preview-company-divider" style="color: #cbd5e1;">|</span> <span id="preview-company">Company</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="border-top: 1px solid #e2e8f0; padding-top: 8px;">
+                                                <table cellpadding="0" cellspacing="0" border="0">
+                                                    <tr id="preview-phone-row">
+                                                        <td style="padding-right: 12px; padding-bottom: 2px;">
+                                                            <span style="color: #64748b;">P:</span> <a id="preview-phone" href="tel:" style="color: #2563eb; text-decoration: none;">Phone</a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr id="preview-email-row">
+                                                        <td style="padding-right: 12px; padding-bottom: 2px;">
+                                                            <span style="color: #64748b;">E:</span> <a id="preview-email" href="mailto:" style="color: #2563eb; text-decoration: none;">email@example.com</a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr id="preview-website-row">
+                                                        <td style="padding-bottom: 2px;">
+                                                            <span style="color: #64748b;">W:</span> <a id="preview-website" href="" style="color: #2563eb; text-decoration: none;">www.example.com</a>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            
+                            <!-- Action Buttons -->
+                            <div class="space-y-3">
+                                <button id="copy-gmail-btn" class="w-full flex items-center justify-center gap-2 px-6 py-3 bg-slate-900 text-white rounded-xl text-sm font-semibold hover:bg-slate-800 transition-all shadow-lg hover:shadow-xl">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect width="14" height="14" x="8" y="8" rx="2" ry="2"/>
+                                        <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>
+                                    </svg>
+                                    Copy for Gmail
+                                </button>
+                                
+                                <button id="copy-html-btn" class="w-full flex items-center justify-center gap-2 px-6 py-2.5 text-slate-700 bg-white border border-slate-200 rounded-xl text-sm font-medium hover:bg-slate-50 hover:border-slate-300 transition-all">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="16 18 22 12 16 6"/>
+                                        <polyline points="8 6 2 12 8 18"/>
+                                    </svg>
+                                    Copy HTML Code
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Privacy Notice -->
+                <div class="flex justify-center items-center gap-2 text-xs text-slate-600 mt-6">
+                    <span class="w-2 h-2 rounded-full bg-green-500"></span>
+                    Your data stays in your browser. Nothing is uploaded to any server.
+                </div>
+            </div>
+            
+            <!-- How to Add Section -->
+            <section class="w-full max-w-5xl mx-auto mt-20">
+                
+                <!-- How to Add to Gmail -->
+                <div class="bg-white rounded-2xl p-8 md:p-10 border border-slate-100 shadow-sm mb-10">
+                    <h2 class="text-2xl font-bold mb-6 text-slate-900 flex items-center gap-3">
+                        <div class="w-10 h-10 bg-red-100 text-red-600 rounded-xl flex items-center justify-center">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect width="20" height="16" x="2" y="4" rx="2"/>
+                                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                            </svg>
+                        </div>
+                        How to Add Signature to Gmail
+                    </h2>
+                    
+                    <ol class="space-y-4 text-slate-600">
+                        <li class="flex gap-4">
+                            <span class="flex-shrink-0 w-8 h-8 bg-blue-100 text-blue-700 rounded-full flex items-center justify-center font-bold text-sm">1</span>
+                            <div>
+                                <p class="font-medium text-slate-800">Create your signature above</p>
+                                <p class="text-sm">Fill in your details and optionally upload your handwritten signature.</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <span class="flex-shrink-0 w-8 h-8 bg-blue-100 text-blue-700 rounded-full flex items-center justify-center font-bold text-sm">2</span>
+                            <div>
+                                <p class="font-medium text-slate-800">Click "Copy for Gmail"</p>
+                                <p class="text-sm">This copies your formatted signature to clipboard.</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <span class="flex-shrink-0 w-8 h-8 bg-blue-100 text-blue-700 rounded-full flex items-center justify-center font-bold text-sm">3</span>
+                            <div>
+                                <p class="font-medium text-slate-800">Open Gmail Settings</p>
+                                <p class="text-sm">Click the gear icon > "See all settings" > scroll to "Signature" section.</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <span class="flex-shrink-0 w-8 h-8 bg-blue-100 text-blue-700 rounded-full flex items-center justify-center font-bold text-sm">4</span>
+                            <div>
+                                <p class="font-medium text-slate-800">Paste and Save</p>
+                                <p class="text-sm">Click in the signature box, press Ctrl+V (or Cmd+V on Mac), then scroll down and click "Save Changes".</p>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+                
+                <!-- Features Grid -->
+                <div class="grid md:grid-cols-3 gap-6 mb-16">
+                    <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-10 h-10 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center mb-4">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-900 mb-2">Handwritten Signature</h4>
+                        <p class="text-sm text-slate-600">Add a personal touch with your own handwritten signature image for a more authentic look.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-10 h-10 bg-green-50 text-green-600 rounded-lg flex items-center justify-center mb-4">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-900 mb-2">100% Private</h4>
+                        <p class="text-sm text-slate-600">Everything runs locally in your browser. Your contact information is never sent to any server.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-10 h-10 bg-purple-50 text-purple-600 rounded-lg flex items-center justify-center mb-4">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-900 mb-2">Works Everywhere</h4>
+                        <p class="text-sm text-slate-600">Compatible with Gmail, Outlook, Yahoo Mail, Apple Mail, and any other email client that supports HTML signatures.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Section -->
+                <div class="bg-white rounded-2xl p-8 border border-slate-100 shadow-sm">
+                    <div class="flex items-center gap-3 mb-6">
+                        <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        <h3 class="text-2xl font-bold text-slate-900">Frequently Asked Questions</h3>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <div class="pb-6 border-b border-slate-100">
+                            <h4 class="text-base font-semibold text-slate-900 mb-3">How do I add a handwritten signature to Gmail?</h4>
+                            <p class="text-sm text-slate-600 leading-relaxed">First, create your handwritten signature using our <a href="/" class="text-blue-600 hover:underline">free signature maker</a>. Download the transparent PNG, then upload it here. Your signature will appear in the preview and will be included when you copy for Gmail.</p>
+                        </div>
+                        
+                        <div class="pb-6 border-b border-slate-100">
+                            <h4 class="text-base font-semibold text-slate-900 mb-3">Why isn't my signature image showing in Gmail?</h4>
+                            <p class="text-sm text-slate-600 leading-relaxed">Gmail requires signature images to be hosted online. For the image to display, you'll need to either: (1) use an image hosting service and paste the URL, or (2) insert the image directly in Gmail's signature editor after pasting the text.</p>
+                        </div>
+                        
+                        <div class="pb-6 border-b border-slate-100">
+                            <h4 class="text-base font-semibold text-slate-900 mb-3">Can I use this signature in Outlook?</h4>
+                            <p class="text-sm text-slate-600 leading-relaxed">Yes! Click "Copy for Gmail" (it works for all email clients), then paste into Outlook's signature settings. In Outlook, go to File > Options > Mail > Signatures.</p>
+                        </div>
+                        
+                        <div class="pb-6 border-b border-slate-100 last:border-0 last:pb-0">
+                            <h4 class="text-base font-semibold text-slate-900 mb-3">Is this really free with no hidden costs?</h4>
+                            <p class="text-sm text-slate-600 leading-relaxed">Absolutely! This tool is 100% free. No sign-up, no email required, no watermarks, no limits. We believe professional email signatures should be accessible to everyone.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Right Ad Sidebar -->
+        <aside class="hidden xl:block w-40 flex-shrink-0 sticky top-24 h-fit order-last">
+            <div class="bg-slate-100 border-2 border-dashed border-slate-300 rounded-xl min-h-[600px] flex items-center justify-center p-2">
+                 <div class="text-center w-full">
+                    <span class="text-xs text-slate-600 uppercase tracking-widest block mb-2">Advertisement</span>
+                    <div class="w-full h-full overflow-hidden rounded">
+                         <div id="ad-slot-right"></div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+      
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
+            <div class="flex flex-col items-center justify-center space-y-4">
+                <p class="text-slate-500 text-sm font-medium flex items-center gap-1">
+                    <span>Email Signature Generator <span class="text-slate-300">&mdash;</span> Free & Professional</span>
+                </p>
+                
+                <div class="flex items-center gap-6 text-sm">
+                    <a href="/" class="text-slate-600 hover:text-blue-600 transition-colors">Signature Maker</a>
+                    <a href="https://github.com/jyxwant/free-handwritten-signature-generator" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-slate-600 hover:text-primary-600 transition-colors">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                        <span>Open Source</span>
+                    </a>
+                </div>
+                
+                <p class="text-slate-600 text-xs mt-4">
+                    &copy; <span id="year"></span> Signature Sketch. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Year
+        const yearSpan = document.getElementById('year');
+        if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+        
+        // Input elements
+        const inputs = {
+            name: document.getElementById('sig-name'),
+            title: document.getElementById('sig-title'),
+            company: document.getElementById('sig-company'),
+            email: document.getElementById('sig-email'),
+            phone: document.getElementById('sig-phone'),
+            website: document.getElementById('sig-website')
+        };
+        
+        // Preview elements
+        const preview = {
+            name: document.getElementById('preview-name'),
+            title: document.getElementById('preview-title'),
+            company: document.getElementById('preview-company'),
+            companyDivider: document.getElementById('preview-company-divider'),
+            titleRow: document.getElementById('preview-title-row'),
+            phone: document.getElementById('preview-phone'),
+            phoneRow: document.getElementById('preview-phone-row'),
+            email: document.getElementById('preview-email'),
+            emailRow: document.getElementById('preview-email-row'),
+            website: document.getElementById('preview-website'),
+            websiteRow: document.getElementById('preview-website-row'),
+            sigImg: document.getElementById('preview-sig-img'),
+            sigRow: document.getElementById('sig-row-image')
+        };
+        
+        // Signature upload
+        const signatureUpload = document.getElementById('signature-upload');
+        const uploadArea = document.getElementById('upload-area');
+        const previewContainer = document.getElementById('signature-preview-container');
+        const previewImg = document.getElementById('signature-preview-img');
+        const removeBtn = document.getElementById('remove-signature');
+        
+        let signatureDataUrl = '';
+        
+        // Update preview in real-time
+        function updatePreview() {
+            const name = inputs.name.value || 'Your Name';
+            const title = inputs.title.value;
+            const company = inputs.company.value;
+            const email = inputs.email.value;
+            const phone = inputs.phone.value;
+            const website = inputs.website.value;
+            
+            preview.name.textContent = name;
+            
+            // Title & Company
+            if (title || company) {
+                preview.titleRow.style.display = '';
+                preview.title.textContent = title || '';
+                preview.company.textContent = company || '';
+                preview.companyDivider.style.display = (title && company) ? '' : 'none';
+            } else {
+                preview.titleRow.style.display = 'none';
+            }
+            
+            // Phone
+            if (phone) {
+                preview.phoneRow.style.display = '';
+                preview.phone.textContent = phone;
+                preview.phone.href = 'tel:' + phone;
+            } else {
+                preview.phoneRow.style.display = 'none';
+            }
+            
+            // Email
+            if (email) {
+                preview.emailRow.style.display = '';
+                preview.email.textContent = email;
+                preview.email.href = 'mailto:' + email;
+            } else {
+                preview.emailRow.style.display = 'none';
+            }
+            
+            // Website
+            if (website) {
+                preview.websiteRow.style.display = '';
+                preview.website.textContent = website;
+                preview.website.href = 'https://' + website.replace(/^https?:\/\//, '');
+            } else {
+                preview.websiteRow.style.display = 'none';
+            }
+            
+            // Signature image
+            if (signatureDataUrl) {
+                preview.sigRow.style.display = '';
+                preview.sigImg.src = signatureDataUrl;
+            } else {
+                preview.sigRow.style.display = 'none';
+            }
+        }
+        
+        // Bind input events
+        Object.values(inputs).forEach(input => {
+            if (input) input.addEventListener('input', updatePreview);
+        });
+        
+        // Signature upload handler
+        if (signatureUpload) {
+            signatureUpload.addEventListener('change', (e) => {
+                const file = e.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = (event) => {
+                        signatureDataUrl = event.target.result;
+                        previewImg.src = signatureDataUrl;
+                        uploadArea.classList.add('hidden');
+                        previewContainer.classList.remove('hidden');
+                        updatePreview();
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+        }
+        
+        // Remove signature
+        if (removeBtn) {
+            removeBtn.addEventListener('click', () => {
+                signatureDataUrl = '';
+                signatureUpload.value = '';
+                uploadArea.classList.remove('hidden');
+                previewContainer.classList.add('hidden');
+                updatePreview();
+            });
+        }
+        
+        // Copy for Gmail
+        const copyGmailBtn = document.getElementById('copy-gmail-btn');
+        const emailSignatureOutput = document.getElementById('email-signature-output');
+        
+        if (copyGmailBtn) {
+            copyGmailBtn.addEventListener('click', async () => {
+                try {
+                    const selection = window.getSelection();
+                    const range = document.createRange();
+                    range.selectNodeContents(emailSignatureOutput);
+                    selection.removeAllRanges();
+                    selection.addRange(range);
+                    
+                    if (navigator.clipboard && navigator.clipboard.write) {
+                        const type = "text/html";
+                        const blob = new Blob([emailSignatureOutput.innerHTML], { type });
+                        const data = [new ClipboardItem({ [type]: blob })];
+                        await navigator.clipboard.write(data);
+                    } else {
+                        document.execCommand('copy');
+                    }
+                    
+                    selection.removeAllRanges();
+                    
+                    const originalText = copyGmailBtn.innerHTML;
+                    copyGmailBtn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Copied!';
+                    copyGmailBtn.classList.add('bg-green-600');
+                    
+                    setTimeout(() => {
+                        copyGmailBtn.innerHTML = originalText;
+                        copyGmailBtn.classList.remove('bg-green-600');
+                    }, 2000);
+                } catch (err) {
+                    console.error('Copy failed', err);
+                }
+            });
+        }
+        
+        // Copy HTML
+        const copyHtmlBtn = document.getElementById('copy-html-btn');
+        
+        if (copyHtmlBtn) {
+            copyHtmlBtn.addEventListener('click', async () => {
+                try {
+                    await navigator.clipboard.writeText(emailSignatureOutput.innerHTML);
+                    
+                    const originalText = copyHtmlBtn.innerHTML;
+                    copyHtmlBtn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Copied!';
+                    
+                    setTimeout(() => {
+                        copyHtmlBtn.innerHTML = originalText;
+                    }, 2000);
+                } catch (err) {
+                    console.error('Copy failed', err);
+                }
+            });
+        }
+        
+        // Initial preview update
+        updatePreview();
+    });
+    </script>
+    
+    <script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>

@@ -20,6 +20,30 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://signaturesketch.tech/de/"/>
   </url>
 
+  <!-- Email Signature Generator -->
+  <url>
+    <loc>https://signaturesketch.tech/email-signature-generator/</loc>
+    <lastmod>2025-12-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Guide -->
+  <url>
+    <loc>https://signaturesketch.tech/guide.html</loc>
+    <lastmod>2025-12-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Blog -->
+  <url>
+    <loc>https://signaturesketch.tech/blog.html</loc>
+    <lastmod>2025-12-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <!-- zh -->
   <url>
     <loc>https://signaturesketch.tech/zh/</loc>
