@@ -44,6 +44,38 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- Privacy Policy -->
+  <url>
+    <loc>https://signaturesketch.tech/privacy-policy.html</loc>
+    <lastmod>2025-12-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Terms of Service -->
+  <url>
+    <loc>https://signaturesketch.tech/terms-of-service.html</loc>
+    <lastmod>2025-12-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- About Us -->
+  <url>
+    <loc>https://signaturesketch.tech/about.html</loc>
+    <lastmod>2025-12-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Contact -->
+  <url>
+    <loc>https://signaturesketch.tech/contact.html</loc>
+    <lastmod>2025-12-31</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
   <!-- zh -->
   <url>
     <loc>https://signaturesketch.tech/zh/</loc>
