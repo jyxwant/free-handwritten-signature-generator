@@ -31,9 +31,23 @@
   <!-- Guide -->
   <url>
     <loc>https://signaturesketch.tech/guide.html</loc>
-    <lastmod>2025-12-26</lastmod>
+    <lastmod>2026-01-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://signaturesketch.tech/guide.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://signaturesketch.tech/zh/guide.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://signaturesketch.tech/guide.html"/>
+  </url>
+
+  <!-- Guide (Chinese) -->
+  <url>
+    <loc>https://signaturesketch.tech/zh/guide.html</loc>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://signaturesketch.tech/guide.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://signaturesketch.tech/zh/guide.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://signaturesketch.tech/guide.html"/>
   </url>
 
   <!-- Blog -->

@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ultimate Guide to Digital Signatures - Signature Sketch</title>
-    <meta name="description" content="Learn how to create professional digital signatures, the difference between electronic and digital signatures, and how to use them in PDF, Word, and Google Docs.">
+    <title>数字签名终极指南 - Signature Sketch</title>
+    <meta name="description" content="学习如何创建专业的数字签名，了解电子签名和数字签名的区别，以及如何在 PDF、Word 和 Google Docs 中使用它们。">
+    <meta name="keywords" content="数字签名指南, 电子签名教程, PDF签名, Word签名, 在线签名">
     <link rel="icon" type="image/png" href="/icon.png">
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://signaturesketch.tech/guide.html">
+    <link rel="canonical" href="https://signaturesketch.tech/zh/guide.html">
     
     <!-- Hreflang Tags -->
-    <link rel="alternate" hreflang="en" href="https://signaturesketch.tech/guide.html">
     <link rel="alternate" hreflang="zh" href="https://signaturesketch.tech/zh/guide.html">
+    <link rel="alternate" hreflang="en" href="https://signaturesketch.tech/guide.html">
     <link rel="alternate" hreflang="x-default" href="https://signaturesketch.tech/guide.html">
     
     <!-- Dependencies -->
@@ -20,7 +21,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Local Styles -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
 
     <!-- Tailwind Config -->
     <script>
@@ -28,7 +29,7 @@
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
+                        sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
                     },
                     colors: {
                         primary: {
@@ -48,9 +49,9 @@
         }
     </script>
     <style>
-        /* Custom enhancements for typography */
-        .prose p { margin-bottom: 1.5em; line-height: 1.8; color: #334155; }
-        .prose h2 { color: #0f172a; font-weight: 700; margin-top: 2.5em; margin-bottom: 1em; letter-spacing: -0.025em; }
+        /* Typography enhancements for Chinese */
+        .prose p { margin-bottom: 1.5em; line-height: 1.8; color: #334155; text-align: justify; }
+        .prose h2 { color: #0f172a; font-weight: 700; margin-top: 2.5em; margin-bottom: 1em; letter-spacing: -0.01em; }
         .prose h3 { color: #1e293b; font-weight: 600; margin-top: 2em; margin-bottom: 0.75em; }
         .prose strong { color: #0f172a; font-weight: 600; }
         .bg-grid-pattern {
@@ -66,7 +67,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center gap-3">
-                    <a href="/" class="flex items-center gap-3 group">
+                    <a href="/zh/" class="flex items-center gap-3 group">
                         <!-- Logo SVG -->
                         <div class="relative flex-shrink-0">
                             <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg" class="shadow-sm rounded-xl group-hover:scale-105 transition-transform duration-300">
@@ -84,8 +85,8 @@
                 <div class="flex items-center gap-6">
                     <!-- Navigation Links -->
                     <div class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600">
-                        <a href="guide.html" class="text-blue-600 font-semibold transition-colors">Guide</a>
-                        <a href="blog.html" class="hover:text-blue-600 transition-colors">Blog</a>
+                        <a href="/zh/guide.html" class="text-blue-600 font-semibold transition-colors">指南</a>
+                        <a href="/blog.html" class="hover:text-blue-600 transition-colors">博客</a>
                     </div>
 
                     <div class="h-4 w-px bg-slate-200 hidden md:block"></div>
@@ -93,12 +94,12 @@
                     <!-- Language Selector -->
                     <div class="relative group">
                         <button class="flex items-center gap-1.5 text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">
-                            <span>English</span>
+                            <span>中文</span>
                             <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </button>
                         <div class="absolute right-0 mt-2 w-32 bg-white rounded-lg shadow-lg border border-slate-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                            <a href="/guide.html" class="block px-4 py-2 text-sm text-blue-600 bg-blue-50 font-medium">English</a>
-                            <a href="/zh/guide.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-blue-600">中文</a>
+                            <a href="/guide.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-blue-600">English</a>
+                            <a href="/zh/guide.html" class="block px-4 py-2 text-sm text-blue-600 bg-blue-50 font-medium">中文</a>
                         </div>
                     </div>
                 </div>
@@ -115,13 +116,13 @@
                 <main class="lg:w-2/3">
                     <article class="prose prose-slate prose-lg max-w-none">
                         
-                        <!-- Header Section with Metadata (Human touch) -->
+                        <!-- Header Section with Metadata -->
                         <div class="mb-10 border-b border-slate-100 pb-10">
                             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-blue-600 text-xs font-bold uppercase tracking-wide mb-4">
                                 <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
-                                User Guide
+                                使用指南
                             </div>
-                            <h1 class="text-4xl md:text-5xl font-bold text-slate-900 mt-2 mb-6 tracking-tight leading-tight">The Ultimate Guide to Creating Digital Signatures Online</h1>
+                            <h1 class="text-3xl md:text-5xl font-bold text-slate-900 mt-2 mb-6 tracking-tight leading-tight">在线创建数字签名终极指南</h1>
                             
                             <!-- Author/Date Meta -->
                             <div class="flex items-center gap-4">
@@ -129,105 +130,105 @@
                                     SS
                                 </div>
                                 <div class="flex flex-col text-sm">
-                                    <span class="font-semibold text-slate-900">Signature Sketch Team</span>
-                                    <span class="text-slate-500">Updated Jan 12, 2026 · 5 min read</span>
+                                    <span class="font-semibold text-slate-900">Signature Sketch 团队</span>
+                                    <span class="text-slate-500">更新于 2026年1月12日 · 阅读需 5 分钟</span>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Lead Paragraph -->
                         <p class="text-xl text-slate-600 leading-relaxed font-normal mb-8">
-                            Everything you need to know about creating, using, and securing your handwritten signature in the digital age—without a scanner.
+                            关于在数字时代创建、使用和保护您的手写签名，您需要知道的一切——无需打印机和扫描仪。
                         </p>
 
                         <!-- Hero Image -->
                         <div class="w-full mb-12 rounded-2xl overflow-hidden border border-slate-200 shadow-soft">
-                            <img src="/guide-hero.png" alt="Digital Signature Creation Guide - Signature Sketch" class="w-full h-auto object-cover">
+                            <img src="/guide-hero.png" alt="数字签名创建指南 - Signature Sketch" class="w-full h-auto object-cover">
                         </div>
 
-                        <h2>Why Do You Need a Digital Signature?</h2>
+                        <h2>为什么需要数字签名？</h2>
                         <p>
-                            In today's remote-first world, printing, signing, and scanning documents is a relic of the past. A digital handwritten signature allows you to sign contracts, agreements, and letters instantly from your computer or phone.
+                            在当今远程办公的时代，打印、签名、扫描文档已经成为过去式。数字手写签名让您可以在电脑或手机上即时签署合同、协议和信函。
                         </p>
                         <p>
-                            Using a tool like <strong>Signature Sketch</strong> ensures that your signature looks professional and authentic, without the jagged lines often caused by scanning low-quality paper.
+                            使用 <strong>Signature Sketch</strong> 这样的工具可以确保您的签名看起来专业且真实，避免扫描低质量纸张时常见的锯齿状线条。
                         </p>
 
-                        <h3>Key Benefits</h3>
-                        <!-- Replaced standard UL with Grid Cards for better visuals -->
+                        <h3>核心优势</h3>
+                        <!-- Grid Cards -->
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6 not-prose">
                             <div class="bg-slate-50 p-5 rounded-xl border border-slate-100">
                                 <div class="flex items-center gap-2 mb-2">
                                     <div class="p-1.5 bg-blue-100 rounded-lg text-blue-600">
                                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                                     </div>
-                                    <span class="font-bold text-slate-900">Speed</span>
+                                    <span class="font-bold text-slate-900">速度快</span>
                                 </div>
-                                <p class="text-sm text-slate-600 leading-relaxed">Sign documents in seconds, not minutes. No printer required.</p>
+                                <p class="text-sm text-slate-600 leading-relaxed">几秒钟内完成文档签署，告别繁琐的打印扫描流程。</p>
                             </div>
                             <div class="bg-slate-50 p-5 rounded-xl border border-slate-100">
                                 <div class="flex items-center gap-2 mb-2">
                                     <div class="p-1.5 bg-purple-100 rounded-lg text-purple-600">
                                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                                     </div>
-                                    <span class="font-bold text-slate-900">Professionalism</span>
+                                    <span class="font-bold text-slate-900">更专业</span>
                                 </div>
-                                <p class="text-sm text-slate-600 leading-relaxed">Transparent backgrounds look cleaner on PDFs and contracts.</p>
+                                <p class="text-sm text-slate-600 leading-relaxed">透明背景在 PDF 上显示更清晰整洁，无白底遮挡。</p>
                             </div>
                             <div class="bg-slate-50 p-5 rounded-xl border border-slate-100">
                                 <div class="flex items-center gap-2 mb-2">
                                     <div class="p-1.5 bg-green-100 rounded-lg text-green-600">
                                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                                     </div>
-                                    <span class="font-bold text-slate-900">Cost</span>
+                                    <span class="font-bold text-slate-900">省成本</span>
                                 </div>
-                                <p class="text-sm text-slate-600 leading-relaxed">Save money on paper, expensive ink cartridges, and postage.</p>
+                                <p class="text-sm text-slate-600 leading-relaxed">节省纸张、墨水和邮费开支，降低办公耗材成本。</p>
                             </div>
                             <div class="bg-slate-50 p-5 rounded-xl border border-slate-100">
                                 <div class="flex items-center gap-2 mb-2">
                                     <div class="p-1.5 bg-teal-100 rounded-lg text-teal-600">
                                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"></path></svg>
                                     </div>
-                                    <span class="font-bold text-slate-900">Environment</span>
+                                    <span class="font-bold text-slate-900">环保</span>
                                 </div>
-                                <p class="text-sm text-slate-600 leading-relaxed">Go fully paperless and significantly reduce your carbon footprint.</p>
+                                <p class="text-sm text-slate-600 leading-relaxed">实现无纸化办公，减少碳足迹，对地球更友好。</p>
                             </div>
                         </div>
 
-                        <h2>How to Create a Perfect Signature</h2>
+                        <h2>如何创建完美签名</h2>
                         <p>
-                            Creating a digital signature that looks like your real one can be tricky with a mouse. Here are some tips to get the best result using our free generator:
+                            用鼠标创建一个看起来像真实签名的数字签名可能有些棘手。以下是使用我们免费生成器获得最佳效果的技巧：
                         </p>
                         
                         <ol class="space-y-4 marker:text-blue-600 marker:font-bold">
                             <li class="pl-2">
-                                <strong>Use a Touchscreen if Possible:</strong> While mice work, using your finger on a smartphone or tablet (iPad) yields the most natural results.
+                                <strong>尽量使用触摸屏：</strong> 虽然鼠标可以使用，但在智能手机或平板电脑（如 iPad）上用手指绘制效果最自然流畅。
                             </li>
                             <li class="pl-2">
-                                <strong>Adjust the Width:</strong> A real pen has varying thickness. Use the "Width" slider to match your preferred pen style (e.g., ballpoint vs. marker).
+                                <strong>调整笔画宽度：</strong> 真实的笔有粗细变化。使用"宽度"滑块来匹配您喜欢的笔式风格（如细圆珠笔 vs 粗马克笔）。
                             </li>
                             <li class="pl-2">
-                                <strong>Choose the Right Color:</strong> 
+                                <strong>选择合适的颜色：</strong> 
                                 <ul class="mt-2 space-y-2 list-none pl-0">
                                     <li class="flex items-center gap-2">
                                         <span class="w-2 h-2 rounded-full bg-black"></span>
-                                        <span class="text-slate-700"><strong>Black:</strong> Best for formal contracts and government forms.</span>
+                                        <span class="text-slate-700"><strong>黑色：</strong> 最适合正式合同和政府表格。</span>
                                     </li>
                                     <li class="flex items-center gap-2">
                                         <span class="w-2 h-2 rounded-full bg-blue-600"></span>
-                                        <span class="text-slate-700"><strong>Blue:</strong> Used to distinguish an original from a photocopy.</span>
+                                        <span class="text-slate-700"><strong>蓝色：</strong> 常用于区分原件和复印件。</span>
                                     </li>
                                     <li class="flex items-center gap-2">
                                         <span class="w-2 h-2 rounded-full bg-red-500"></span>
-                                        <span class="text-slate-700"><strong>Red:</strong> Typically reserved for grading or internal approvals.</span>
+                                        <span class="text-slate-700"><strong>红色：</strong> 通常用于批改或特定内部审批。</span>
                                     </li>
                                 </ul>
                             </li>
                         </ol>
 
-                        <h2>Where Can You Use These Signatures?</h2>
+                        <h2>签名的使用场景</h2>
                         <p>
-                            Once you download your transparent PNG from Signature Sketch, you can use it in almost any digital document software:
+                            从 Signature Sketch 下载透明 PNG 后，您可以在几乎任何数字文档软件中使用它：
                         </p>
                         
                         <!-- Styled List for Applications -->
@@ -238,7 +239,7 @@
                                 </div>
                                 <div>
                                     <h4 class="font-bold text-slate-900 mb-1">Adobe Acrobat (PDF)</h4>
-                                    <p class="text-sm text-slate-600">Open your PDF, click "Fill & Sign," and choose "Add Signature." Upload the PNG file here. It will float perfectly over the signature line.</p>
+                                    <p class="text-sm text-slate-600">打开您的 PDF，点击"填写并签名"，选择"添加签名"。上传您在这里创建的 PNG 文件，它将完美地浮动在签名行上方。</p>
                                 </div>
                             </div>
 
@@ -248,7 +249,7 @@
                                 </div>
                                 <div>
                                     <h4 class="font-bold text-slate-900 mb-1">Microsoft Word</h4>
-                                    <p class="text-sm text-slate-600">Go to Insert > Pictures > This Device. Select your signature. Right-click the image and select "Wrap Text" > "In Front of Text" to move it freely.</p>
+                                    <p class="text-sm text-slate-600">前往 插入 > 图片 > 本设备。选择您的签名图片。右键点击图片，选择"文字环绕" > "浮于文字上方"即可自由移动。</p>
                                 </div>
                             </div>
 
@@ -257,8 +258,8 @@
                                     <svg class="w-6 h-6 text-[#EA4335]" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
                                 </div>
                                 <div>
-                                    <h4 class="font-bold text-slate-900 mb-1">Email Signatures</h4>
-                                    <p class="text-sm text-slate-600">Use our specific "Email Footer" tool to generate an HTML signature block that includes your photo, contact info, and handwritten signature.</p>
+                                    <h4 class="font-bold text-slate-900 mb-1">邮件签名 (Gmail/Outlook)</h4>
+                                    <p class="text-sm text-slate-600">您可以使用我们专门的"Email 页脚"工具生成包含照片、联系信息和手写签名的 HTML 签名块。</p>
                                 </div>
                             </div>
                         </div>
@@ -266,19 +267,19 @@
                         <!-- Improved Alert Box -->
                         <div class="bg-blue-50/50 border border-blue-100 p-6 my-10 rounded-2xl flex gap-4 items-start shadow-sm">
                             <div class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 mt-1">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"></path></svg>
                             </div>
                             <div>
-                                <h4 class="text-slate-900 font-bold text-lg mb-2">Is it Legally Binding?</h4>
+                                <h4 class="text-slate-900 font-bold text-lg mb-2">⚖️ 是否具有法律效力？</h4>
                                 <p class="text-slate-600 text-sm leading-relaxed m-0">
-                                    In many jurisdictions (like the US under the ESIGN Act and the EU under eIDAS), electronic signatures are legally binding for most business transactions. However, this tool creates a <em>visual representation</em> of your signature. For high-stakes legal documents (wills, real estate deeds), you may need a certified digital signature platform with audit trails.
+                                    在许多司法管辖区（如美国的 ESIGN 法案和欧盟的 eIDAS），电子签名对于大多数商业交易具有法律约束力。但是，此工具创建的是您签名的<em>视觉表示</em>。对于高风险的法律文件（遗嘱、房地产契约），您可能需要具有审计追踪功能的认证数字签名平台。
                                 </p>
                             </div>
                         </div>
 
-                        <h2>Start Signing Today</h2>
+                        <h2>立即开始签名</h2>
                         <p>
-                            Ready to modernize your workflow? Scroll up to the navigation bar and click on <strong>Signature Sketch</strong> to start drawing your signature now. It's free, secure, and requires no account.
+                            准备好让您的工作流程现代化了吗？点击下方或顶部的 <strong>Signature Sketch</strong> 按钮，立即开始绘制您的签名。完全免费、安全，无需注册账号。
                         </p>
 
                     </article>
@@ -293,19 +294,19 @@
                             <div class="inline-flex items-center justify-center w-12 h-12 bg-blue-50 rounded-xl mb-4 text-blue-600">
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg>
                             </div>
-                            <h3 class="font-bold text-slate-900 text-xl mb-2">Create Your Signature</h3>
-                            <p class="text-slate-500 text-sm">Draw, customize, and download your professional signature in seconds.</p>
+                            <h3 class="font-bold text-slate-900 text-xl mb-2">创建您的签名</h3>
+                            <p class="text-slate-500 text-sm">绘制、自定义并在几秒钟内下载您的专业签名。</p>
                         </div>
-                        <a href="/" class="flex items-center justify-center gap-2 w-full py-3 px-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-all hover:shadow-lg hover:shadow-blue-500/20">
-                            <span>Try It Free</span>
+                        <a href="/zh/" class="flex items-center justify-center gap-2 w-full py-3 px-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-all hover:shadow-lg hover:shadow-blue-500/20">
+                            <span>立即尝试 (免费)</span>
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                         </a>
-                        <p class="text-center text-xs text-slate-400 mt-4">No registration required • Secure & Private</p>
+                        <p class="text-center text-xs text-slate-400 mt-4">无需注册 • 安全隐私</p>
                     </div>
 
                     <!-- Placeholder Ad Block - Styled to look intentional -->
                     <div class="bg-slate-50 border border-slate-200 rounded-xl p-8 flex flex-col items-center justify-center text-center space-y-3">
-                        <span class="text-xs font-semibold text-slate-400 uppercase tracking-widest">Sponsored</span>
+                        <span class="text-xs font-semibold text-slate-400 uppercase tracking-widest">广告赞助</span>
                         <div class="w-16 h-16 bg-slate-200 rounded-lg animate-pulse"></div>
                         <div class="h-4 w-3/4 bg-slate-200 rounded animate-pulse"></div>
                         <div class="h-4 w-1/2 bg-slate-200 rounded animate-pulse"></div>
@@ -314,20 +315,20 @@
                     <!-- Popular Articles -->
                     <div>
                         <h3 class="font-bold text-slate-900 text-lg mb-4 flex items-center gap-2">
-                            <span>Popular Articles</span>
+                            <span>热门文章</span>
                         </h3>
                         <div class="bg-white border border-slate-200 rounded-xl overflow-hidden">
                             <a href="#" class="block p-4 hover:bg-slate-50 transition-colors border-b border-slate-100 group">
-                                <span class="text-xs font-medium text-blue-600 mb-1 block">Legal</span>
-                                <h4 class="font-medium text-slate-800 group-hover:text-blue-700 transition-colors leading-snug">Electronic vs. Digital Signatures: What's the Difference?</h4>
+                                <span class="text-xs font-medium text-blue-600 mb-1 block">法律知识</span>
+                                <h4 class="font-medium text-slate-800 group-hover:text-blue-700 transition-colors leading-snug">电子签名 vs 数字签名：有什么区别？</h4>
                             </a>
                             <a href="#" class="block p-4 hover:bg-slate-50 transition-colors border-b border-slate-100 group">
-                                <span class="text-xs font-medium text-green-600 mb-1 block">Tutorial</span>
-                                <h4 class="font-medium text-slate-800 group-hover:text-blue-700 transition-colors leading-snug">How to Add a Signature to Google Docs</h4>
+                                <span class="text-xs font-medium text-green-600 mb-1 block">教程</span>
+                                <h4 class="font-medium text-slate-800 group-hover:text-blue-700 transition-colors leading-snug">如何在 Google Docs 中添加签名</h4>
                             </a>
                             <a href="#" class="block p-4 hover:bg-slate-50 transition-colors group">
-                                <span class="text-xs font-medium text-purple-600 mb-1 block">Tips</span>
-                                <h4 class="font-medium text-slate-800 group-hover:text-blue-700 transition-colors leading-snug">5 Tips for a Better Digital Signature</h4>
+                                <span class="text-xs font-medium text-purple-600 mb-1 block">技巧</span>
+                                <h4 class="font-medium text-slate-800 group-hover:text-blue-700 transition-colors leading-snug">5 个让数字签名更好看的技巧</h4>
                             </a>
                         </div>
                     </div>
@@ -352,20 +353,20 @@
                 </div>
 
                 <div class="flex items-center gap-8 text-sm font-medium text-slate-500">
-                    <a href="#" class="hover:text-slate-900 transition-colors">Privacy</a>
-                    <a href="#" class="hover:text-slate-900 transition-colors">Terms</a>
-                    <a href="#" class="hover:text-slate-900 transition-colors">Contact</a>
+                    <a href="#" class="hover:text-slate-900 transition-colors">隐私政策</a>
+                    <a href="#" class="hover:text-slate-900 transition-colors">服务条款</a>
+                    <a href="#" class="hover:text-slate-900 transition-colors">联系我们</a>
                 </div>
                 
                 <div class="flex items-center gap-6 text-sm">
                     <a href="https://github.com/jyxwant/free-handwritten-signature-generator" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-slate-500 hover:text-slate-900 transition-colors py-2 px-4 rounded-full border border-slate-200 hover:border-slate-300 hover:bg-slate-50">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
-                        <span>Open Source on GitHub</span>
+                        <span>GitHub 开源项目</span>
                     </a>
                 </div>
                 
                 <p class="text-slate-400 text-xs">
-                    &copy; <span id="year"></span> Signature Sketch. All rights reserved.
+                    &copy; <span id="year"></span> Signature Sketch. 保留所有权利。
                 </p>
             </div>
         </div>
