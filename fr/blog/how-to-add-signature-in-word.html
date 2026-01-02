@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment Ajouter une Signature dans Word (Méthode Simple Sans Scanner) - Signature Sketch</title>
+    <meta name="description" content="Apprenez comment ajouter une signature dans Word sans numérisation. Guide étape par étape pour les signatures PNG transparentes, le canevas de dessin et plus encore.">
+    <meta name="keywords" content="ajouter signature word, insérer signature word, signature numérique word, signature document word, signature transparente png">
+    <link rel="icon" type="image/png" href="/icon.png">
+    
+    <link rel="canonical" href="https://signaturesketch.tech/fr/blog/how-to-add-signature-in-word.html">
+    <link rel="alternate" hreflang="en" href="https://signaturesketch.tech/blog/how-to-add-signature-in-word.html">
+    <link rel="alternate" hreflang="zh" href="https://signaturesketch.tech/zh/blog/how-to-add-signature-in-word.html">
+    <link rel="alternate" hreflang="fr" href="https://signaturesketch.tech/fr/blog/how-to-add-signature-in-word.html">
+    
+    <meta property="og:title" content="Comment Ajouter une Signature dans Word (Méthode Simple)">
+    <meta property="og:description" content="Méthodes professionnelles pour ajouter des signatures dans Word sans numérisation.">
+    <meta property="og:type" content="article">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../style.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        primary: { 50: '#f0f9ff', 100: '#e0f2fe', 500: '#0ea5e9', 600: '#2563eb', 700: '#0369a1', 900: '#0c4a6e' }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .prose p { margin-bottom: 1.5em; line-height: 1.8; color: #334155; }
+        .prose h2 { color: #0f172a; font-weight: 700; margin-top: 2.5em; margin-bottom: 1em; font-size: 1.5rem; padding-bottom: 0.5rem; border-bottom: 1px solid #e2e8f0; }
+        .prose h3 { color: #1e293b; font-weight: 600; margin-top: 2em; margin-bottom: 0.75em; font-size: 1.25rem; }
+        .prose strong { color: #0f172a; font-weight: 600; }
+        .prose ul, .prose ol { margin: 1.25em 0; padding-left: 1.5em; }
+        .prose li { margin: 0.5em 0; line-height: 1.7; }
+        .prose a { color: #2563eb; text-decoration: underline; }
+        .prose table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.875rem; }
+        .prose th { background: #f8fafc; font-weight: 600; text-align: left; padding: 0.75rem 1rem; border: 1px solid #e2e8f0; }
+        .prose td { padding: 0.75rem 1rem; border: 1px solid #e2e8f0; }
+        .prose hr { border: 0; height: 1px; background: #e2e8f0; margin: 2.5rem 0; }
+    </style>
+</head>
+<body class="bg-[#F8FAFC] text-slate-900 font-sans flex flex-col min-h-screen">
+
+    <!-- Header -->
+    <nav class="w-full bg-white/80 backdrop-blur-md border-b border-slate-200/60 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="/fr/" class="flex items-center gap-3 group">
+                    <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg" class="shadow-sm rounded-xl">
+                        <rect width="38" height="38" rx="10" fill="#2563EB"/>
+                        <path d="M26.5 11.5L28.5 13.5L16.5 25.5H13.5V22.5L25.5 11.5Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M13.5 29C13.5 29 16 31.5 20 31.5C24 31.5 27.5 27.5 27.5 27.5" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <h1 class="text-lg md:text-xl font-bold text-slate-800">Signature Sketch</h1>
+                </a>
+                <div class="flex items-center gap-6">
+                    <div class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600">
+                        <a href="#" class="hover:text-blue-600">Guide</a>
+                        <a href="../blog.html" class="text-blue-600 font-semibold">Blog</a>
+                    </div>
+                    <div class="h-4 w-px bg-slate-200 hidden md:block"></div>
+                    <div class="relative group">
+                        <button class="flex items-center gap-1.5 text-sm font-medium text-slate-600 hover:text-blue-600">
+                            <span>Français</span>
+                            <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="absolute right-0 mt-2 w-32 bg-white rounded-lg shadow-lg border border-slate-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
+                            <a href="/blog/how-to-add-signature-in-word.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-50">English</a>
+                            <a href="/zh/blog/how-to-add-signature-in-word.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-50">中文</a>
+                            <a href="/fr/blog/how-to-add-signature-in-word.html" class="block px-4 py-2 text-sm text-blue-600 bg-blue-50 font-medium">Français</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="flex-1 w-full bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="flex flex-col lg:flex-row gap-12">
+                
+                <!-- Article -->
+                <main class="lg:w-2/3">
+                    <nav class="mb-8">
+                        <a href="../blog.html" class="text-blue-600 hover:underline text-sm inline-flex items-center gap-2">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
+                            Retour au Blog
+                        </a>
+                    </nav>
+
+                    <header class="mb-10 border-b border-slate-100 pb-10">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-semibold rounded-full uppercase tracking-wide">Tutoriel</span>
+                            <span class="text-slate-400 text-sm">Janvier 2026</span>
+                        </div>
+                        <h1 class="text-3xl md:text-4xl font-bold text-slate-900 leading-tight mb-6">Comment Ajouter une Signature dans Word (Méthode Simple Sans Scanner)</h1>
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-blue-500 to-blue-600 flex items-center justify-center text-white font-bold text-sm">SS</div>
+                            <div class="text-sm">
+                                <span class="font-semibold text-slate-900">Équipe Signature Sketch</span>
+                                <span class="text-slate-500 block">Lecture 5 min</span>
+                            </div>
+                        </div>
+                    </header>
+
+                    <article class="prose max-w-none">
+                        <p class="text-xl text-slate-600 leading-relaxed">
+                            Ajouter une signature à un document Word devrait prendre quelques secondes, pas plusieurs minutes. Pourtant, la plupart des tutoriels vous envoient sur un chemin frustrant : imprimer le document, signer à la main, numériser, et espérer que la qualité soit acceptable. <strong>Il existe une meilleure méthode.</strong>
+                        </p>
+                        <p>
+                            Ce guide vous montre <strong>comment ajouter une signature dans Word</strong> avec des méthodes modernes qui ne nécessitent pas de scanner, produisent des résultats professionnels et fonctionnent sur Windows et Mac.
+                        </p>
+
+                        <hr>
+
+                        <h2>Pourquoi les Méthodes Traditionnelles Échouent</h2>
+                        <p>Avant d'aborder les solutions, examinons les deux plus grands problèmes que les gens rencontrent lorsqu'ils essaient d'<strong>ajouter une signature sur Word</strong>.</p>
+
+                        <h3>Problème #1 : Dessiner avec une Souris Donne un Résultat Terrible</h3>
+                        <p>La fonction de dessin intégrée de Word vous permet de griffonner votre signature avec une souris ou un trackpad. Le résultat ? Des lignes tremblantes et inégales qui ressemblent à un sismographe pendant un tremblement de terre.</p>
+                        <p><strong>La réalité</strong> : À moins d'avoir un appareil tactile avec un stylet, dessiner directement dans Word produit des signatures qui crient "non professionnel".</p>
+
+                        <h3>Problème #2 : Les Signatures Numérisées Ont un Fond Blanc Laid</h3>
+                        <p>L'approche classique — numériser votre signature papier et l'insérer comme image — crée un nouveau problème : la signature vient avec un fond rectangulaire blanc.</p>
+                        <p>Sur un document blanc, cela peut être acceptable. Mais dès que vous la placez sur une ligne de signature, un fond coloré ou un formulaire pré-imprimé... ce cadre blanc devient terriblement visible.</p>
+
+                        <hr>
+
+                        <h2>La Meilleure Méthode : Signature PNG Transparente</h2>
+                        <p>La façon la plus propre et la plus professionnelle d'<strong>ajouter une signature dans Word</strong> est d'utiliser une image PNG transparente. Voici pourquoi cette méthode gagne :</p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6 not-prose">
+                            <div class="bg-slate-50 p-5 rounded-xl border border-slate-100">
+                                <div class="flex items-center gap-2 mb-2">
+                                    <div class="p-1.5 bg-blue-100 rounded-lg text-blue-600">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    </div>
+                                    <span class="font-bold text-slate-900">Pas de fond blanc</span>
+                                </div>
+                                <p class="text-sm text-slate-600">Votre signature flotte proprement sur n'importe quel contenu</p>
+                            </div>
+                            <div class="bg-slate-50 p-5 rounded-xl border border-slate-100">
+                                <div class="flex items-center gap-2 mb-2">
+                                    <div class="p-1.5 bg-green-100 rounded-lg text-green-600">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    </div>
+                                    <span class="font-bold text-slate-900">Pas de scanner nécessaire</span>
+                                </div>
+                                <p class="text-sm text-slate-600">Créez-la numériquement en quelques secondes</p>
+                            </div>
+                            <div class="bg-slate-50 p-5 rounded-xl border border-slate-100">
+                                <div class="flex items-center gap-2 mb-2">
+                                    <div class="p-1.5 bg-purple-100 rounded-lg text-purple-600">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+                                    </div>
+                                    <span class="font-bold text-slate-900">Réutilisable à l'infini</span>
+                                </div>
+                                <p class="text-sm text-slate-600">Enregistrez une fois, utilisez sans limite</p>
+                            </div>
+                            <div class="bg-slate-50 p-5 rounded-xl border border-slate-100">
+                                <div class="flex items-center gap-2 mb-2">
+                                    <div class="p-1.5 bg-amber-100 rounded-lg text-amber-600">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"></path></svg>
+                                    </div>
+                                    <span class="font-bold text-slate-900">Fonctionne partout</span>
+                                </div>
+                                <p class="text-sm text-slate-600">Word, PDF, signatures email, etc.</p>
+                            </div>
+                        </div>
+
+                        <h3>Étape 1 : Créez Votre Signature en Ligne</h3>
+                        <p>Utilisez un générateur de signature en ligne gratuit (comme <a href="/fr/" class="text-blue-600 hover:underline">Signature Sketch</a>) pour créer votre signature. Vous avez deux options :</p>
+                        <ul>
+                            <li><strong>Option A : Tapez votre signature</strong> — Entrez votre nom, choisissez une police manuscrite, ajustez l'inclinaison et l'épaisseur</li>
+                            <li><strong>Option B : Dessinez votre signature</strong> — Utilisez votre souris, trackpad ou écran tactile. Le canevas dédié produit de bien meilleurs résultats que l'outil intégré de Word</li>
+                        </ul>
+
+                        <h3>Étape 2 : Téléchargez en PNG Transparent</h3>
+                        <p>C'est l'étape cruciale que la plupart des gens oublient. Lors de l'enregistrement de votre signature :</p>
+                        <ul>
+                            <li><strong>Choisissez le format PNG</strong> (pas JPG — JPG ne supporte pas la transparence)</li>
+                            <li><strong>Assurez-vous que "fond transparent" est sélectionné</strong></li>
+                            <li>Enregistrez le fichier dans un endroit facile à trouver</li>
+                        </ul>
+
+                        <h3>Étape 3 : Insérez dans Votre Document Word</h3>
+                        <ol>
+                            <li>Ouvrez votre document Word</li>
+                            <li>Cliquez où vous voulez que la signature apparaisse</li>
+                            <li>Allez dans <strong>Insertion</strong> → <strong>Images</strong> → <strong>Cet appareil</strong></li>
+                            <li>Sélectionnez votre fichier de signature PNG transparent</li>
+                            <li>Cliquez sur <strong>Insérer</strong></li>
+                        </ol>
+
+                        <h3>Étape 4 : Positionnez et Redimensionnez</h3>
+                        <ol>
+                            <li>Cliquez sur l'image de signature insérée</li>
+                            <li>Allez dans <strong>Format de l'image</strong> → <strong>Habillage du texte</strong> → <strong>Devant le texte</strong></li>
+                            <li>Faites glisser la signature pour la positionner précisément sur la ligne de signature</li>
+                            <li>Utilisez les poignées d'angle pour redimensionner (maintenez <strong>Maj</strong> pour garder les proportions)</li>
+                        </ol>
+
+                        <hr>
+
+                        <h2>4 Méthodes Alternatives</h2>
+
+                        <h3>Méthode 1 : Canevas de Dessin de Word</h3>
+                        <p><em>Idéal pour : Utilisateurs avec appareils tactiles ou stylets</em></p>
+                        <ol>
+                            <li>Allez dans <strong>Insertion</strong> → <strong>Formes</strong> → <strong>Forme libre</strong></li>
+                            <li>Dessinez votre signature avec votre doigt ou stylet</li>
+                            <li>Ajustez la couleur et l'épaisseur du trait si nécessaire</li>
+                        </ol>
+
+                        <h3>Méthode 2 : Image de Signature Numérisée</h3>
+                        <p><em>Idéal pour : Utilisateurs qui veulent leur signature manuscrite exacte</em></p>
+                        <p>Signez sur papier blanc, numérisez, puis utilisez <strong>Format de l'image</strong> → <strong>Supprimer l'arrière-plan</strong> de Word pour éliminer le cadre blanc.</p>
+
+                        <h3>Méthode 3 : Fonction Ligne de Signature de Word</h3>
+                        <p><em>Idéal pour : Documents formels nécessitant une vérification de signature</em></p>
+                        <p>Allez dans <strong>Insertion</strong> → <strong>Ligne de signature</strong> → <strong>Ligne de signature Microsoft Office</strong>. Note : <strong>Non disponible sur Mac</strong>.</p>
+
+                        <h3>Méthode 4 : Texte Automatique pour Réutilisation Rapide</h3>
+                        <p>Enregistrez votre signature comme Texte Automatique : Sélectionnez-la, allez dans <strong>Insertion</strong> → <strong>QuickPart</strong> → <strong>Enregistrer la sélection dans la galerie</strong>.</p>
+
+                        <hr>
+
+                        <h2>Comparaison des Formats de Fichier</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Format</th>
+                                    <th>Transparence</th>
+                                    <th>Idéal Pour</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>PNG</td><td>✅ Oui</td><td>Documents numériques, tout fond</td></tr>
+                                <tr><td>JPG</td><td>❌ Non</td><td>Non recommandé pour les signatures</td></tr>
+                                <tr><td>GIF</td><td>✅ Oui</td><td>Signatures simples (couleurs limitées)</td></tr>
+                            </tbody>
+                        </table>
+                        <p><strong>Choisissez toujours PNG</strong> pour les images de signature.</p>
+
+                        <hr>
+
+                        <h2>Questions Fréquentes</h2>
+
+                        <h3>Une signature numérique dans Word est-elle juridiquement valable ?</h3>
+                        <p><strong>Oui, dans la plupart des cas.</strong> Dans l'Union Européenne, le <a href="https://digital-strategy.ec.europa.eu/en/policies/eidas-regulation" target="_blank" rel="noopener" class="text-blue-600 hover:underline">règlement eIDAS</a> reconnaît les signatures électroniques comme légalement équivalentes aux signatures manuscrites. En France, les articles 1366 et 1367 du <a href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000032042456" target="_blank" rel="noopener" class="text-blue-600 hover:underline">Code civil</a> encadrent également les signatures électroniques.</p>
+
+                        <h3>Comment ajouter une signature dans Word sur Mac ?</h3>
+                        <p>Les utilisateurs Mac ont une limitation : <strong>la fonction Ligne de signature de Word n'est pas disponible sur Mac</strong> (<a href="https://support.microsoft.com/en-us/office/insert-a-signature-in-a-word-document-f3b3f74c-2355-4d53-be89-ae9c50022730" target="_blank" rel="noopener" class="text-blue-600 hover:underline">Microsoft confirme</a>). Utilisez plutôt la méthode PNG transparent — elle fonctionne de manière identique sur Mac.</p>
+
+                        <h3>Pourquoi ma signature est-elle floue ?</h3>
+                        <p>Causes courantes : image source basse résolution, image trop agrandie, compression JPG ou mise à l'échelle de l'affichage. Utilisez le format PNG et commencez avec une signature plus grande.</p>
+
+                        <hr>
+
+                        <h2>Conclusion</h2>
+                        <p>Ajouter une signature dans Word ne nécessite pas d'imprimer, de numériser ou de lutter avec des outils de dessin maladroits. La méthode PNG transparent vous donne une signature propre et professionnelle qui fonctionne sur n'importe quel document, n'importe quel fond et n'importe quel appareil.</p>
+
+                        <div class="bg-blue-50 border border-blue-100 p-6 rounded-2xl my-8">
+                            <h4 class="font-bold text-slate-900 mb-2">Récapitulatif Rapide :</h4>
+                            <ol class="text-slate-700 m-0">
+                                <li>Créez votre signature avec un générateur en ligne</li>
+                                <li>Téléchargez en PNG transparent</li>
+                                <li>Insérez via <strong>Insertion</strong> → <strong>Images</strong></li>
+                                <li>Réglez l'habillage sur <strong>Devant le texte</strong></li>
+                                <li>Positionnez et redimensionnez selon vos besoins</li>
+                            </ol>
+                        </div>
+
+                    </article>
+
+                    <!-- CTA -->
+                    <div class="mt-12 pt-8 border-t border-slate-200">
+                        <div class="bg-slate-900 rounded-2xl p-8 text-center text-white">
+                            <h2 class="text-xl font-bold mb-3">Prêt à Créer Votre Signature ?</h2>
+                            <p class="text-slate-300 mb-6">Créez une signature manuscrite professionnelle en quelques secondes.</p>
+                            <a href="/fr/" class="inline-block bg-white text-slate-900 hover:bg-slate-100 font-bold py-3 px-6 rounded-xl transition-colors">Aller au Générateur</a>
+                        </div>
+                    </div>
+                </main>
+
+                <!-- Sidebar -->
+                <aside class="lg:w-1/3 space-y-8">
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm sticky top-24">
+                        <div class="text-center mb-6">
+                            <div class="inline-flex items-center justify-center w-12 h-12 bg-blue-50 rounded-xl mb-4 text-blue-600">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg>
+                            </div>
+                            <h3 class="font-bold text-slate-900 text-xl mb-2">Créez Votre Signature</h3>
+                            <p class="text-slate-500 text-sm">Dessinez, personnalisez et téléchargez votre signature professionnelle en quelques secondes.</p>
+                        </div>
+                        <a href="/fr/" class="flex items-center justify-center gap-2 w-full py-3 px-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-all">
+                            <span>Essayer Gratuitement</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </a>
+                        <p class="text-center text-xs text-slate-400 mt-4">Pas d'inscription • Sécurisé & Privé</p>
+                    </div>
+
+                    <div class="bg-slate-50 border border-slate-200 rounded-xl p-8 flex flex-col items-center justify-center text-center space-y-3">
+                        <span class="text-xs font-semibold text-slate-400 uppercase tracking-widest">Sponsorisé</span>
+                        <div class="w-16 h-16 bg-slate-200 rounded-lg animate-pulse"></div>
+                        <div class="h-4 w-3/4 bg-slate-200 rounded animate-pulse"></div>
+                    </div>
+
+                    <div>
+                        <h3 class="font-bold text-slate-900 text-lg mb-4">Articles Connexes</h3>
+                        <div class="bg-white border border-slate-200 rounded-xl overflow-hidden">
+                            <a href="#" class="block p-4 hover:bg-slate-50 border-b border-slate-100 group">
+                                <span class="text-xs font-medium text-blue-600 mb-1 block">Guide</span>
+                                <h4 class="font-medium text-slate-800 group-hover:text-blue-700">Le Guide Ultime des Signatures Numériques</h4>
+                            </a>
+                            <a href="#" class="block p-4 hover:bg-slate-50 group">
+                                <span class="text-xs font-medium text-green-600 mb-1 block">Tutoriel</span>
+                                <h4 class="font-medium text-slate-800 group-hover:text-blue-700">Comment Ajouter une Signature dans Google Docs</h4>
+                            </a>
+                        </div>
+                    </div>
+                </aside>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
+            <div class="flex flex-col items-center justify-center space-y-4">
+                <p class="text-slate-500 text-sm">Outil de Signature Numérique • Simple, Rapide, Professionnel</p>
+                <a href="https://github.com/jyxwant/free-handwritten-signature-generator" target="_blank" class="flex items-center gap-2 text-slate-600 hover:text-blue-600 text-sm">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                    Open Source
+                </a>
+                <p class="text-slate-400 text-xs">&copy; <span id="year"></span> Signature Sketch. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

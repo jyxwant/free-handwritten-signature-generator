@@ -53,9 +53,73 @@
   <!-- Blog -->
   <url>
     <loc>https://signaturesketch.tech/blog.html</loc>
-    <lastmod>2025-12-26</lastmod>
+    <lastmod>2026-01-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://signaturesketch.tech/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://signaturesketch.tech/zh/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://signaturesketch.tech/fr/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://signaturesketch.tech/blog.html"/>
+  </url>
+
+  <!-- Blog (Chinese) -->
+  <url>
+    <loc>https://signaturesketch.tech/zh/blog.html</loc>
+    <lastmod>2026-01-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://signaturesketch.tech/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://signaturesketch.tech/zh/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://signaturesketch.tech/fr/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://signaturesketch.tech/blog.html"/>
+  </url>
+
+  <!-- Blog (French) -->
+  <url>
+    <loc>https://signaturesketch.tech/fr/blog.html</loc>
+    <lastmod>2026-01-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://signaturesketch.tech/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://signaturesketch.tech/zh/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://signaturesketch.tech/fr/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://signaturesketch.tech/blog.html"/>
+  </url>
+
+  <!-- Blog Article: How to Add Signature in Word (English) -->
+  <url>
+    <loc>https://signaturesketch.tech/blog/how-to-add-signature-in-word.html</loc>
+    <lastmod>2026-01-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://signaturesketch.tech/blog/how-to-add-signature-in-word.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://signaturesketch.tech/zh/blog/how-to-add-signature-in-word.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://signaturesketch.tech/fr/blog/how-to-add-signature-in-word.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://signaturesketch.tech/blog/how-to-add-signature-in-word.html"/>
+  </url>
+
+  <!-- Blog Article: How to Add Signature in Word (Chinese) -->
+  <url>
+    <loc>https://signaturesketch.tech/zh/blog/how-to-add-signature-in-word.html</loc>
+    <lastmod>2026-01-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://signaturesketch.tech/blog/how-to-add-signature-in-word.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://signaturesketch.tech/zh/blog/how-to-add-signature-in-word.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://signaturesketch.tech/fr/blog/how-to-add-signature-in-word.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://signaturesketch.tech/blog/how-to-add-signature-in-word.html"/>
+  </url>
+
+  <!-- Blog Article: How to Add Signature in Word (French) -->
+  <url>
+    <loc>https://signaturesketch.tech/fr/blog/how-to-add-signature-in-word.html</loc>
+    <lastmod>2026-01-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://signaturesketch.tech/blog/how-to-add-signature-in-word.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://signaturesketch.tech/zh/blog/how-to-add-signature-in-word.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://signaturesketch.tech/fr/blog/how-to-add-signature-in-word.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://signaturesketch.tech/blog/how-to-add-signature-in-word.html"/>
   </url>
 
   <!-- Privacy Policy -->

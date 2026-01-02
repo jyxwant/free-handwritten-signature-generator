@@ -69,7 +69,15 @@
                     <div class="h-4 w-px bg-slate-200 hidden md:block"></div>
 
                     <div class="relative group">
-                        <span class="text-sm font-medium text-slate-600">English</span>
+                        <button class="flex items-center gap-1.5 text-sm font-medium text-slate-600 hover:text-blue-600">
+                            <span>English</span>
+                            <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="absolute right-0 mt-2 w-32 bg-white rounded-lg shadow-lg border border-slate-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
+                            <a href="/blog.html" class="block px-4 py-2 text-sm text-blue-600 bg-blue-50 font-medium">English</a>
+                            <a href="/zh/blog.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-50">中文</a>
+                            <a href="/fr/blog.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-50">Français</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -91,7 +99,7 @@
             <!-- Blog Grid -->
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
-                <!-- Blog Post Card 1 -->
+                <!-- Blog Post Card 1: How to Add Signature in Word -->
                 <article class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-shadow flex flex-col">
                     <div class="h-48 bg-blue-50 flex items-center justify-center">
                         <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg>
@@ -99,15 +107,15 @@
                     <div class="p-6 flex-1 flex flex-col">
                         <div class="flex items-center gap-2 mb-3">
                             <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-semibold rounded-full uppercase tracking-wide">Tutorial</span>
-                            <span class="text-slate-400 text-xs">Oct 24, 2023</span>
+                            <span class="text-slate-400 text-xs">Jan 2026</span>
                         </div>
                         <h2 class="text-xl font-bold text-slate-900 mb-2">
-                            <a href="guide.html" class="hover:text-blue-600 transition-colors">The Ultimate Guide to Digital Signatures</a>
+                            <a href="blog/how-to-add-signature-in-word.html" class="hover:text-blue-600 transition-colors">How to Add a Signature in Word (The Easy Way)</a>
                         </h2>
                         <p class="text-slate-500 text-sm mb-4 flex-1">
-                            Everything you need to know about creating, using, and securing your handwritten signature in the digital age.
+                            Learn professional methods to add signatures in Word without scanning. Transparent PNG, drawing canvas, and more.
                         </p>
-                        <a href="guide.html" class="text-blue-600 font-medium text-sm hover:underline inline-flex items-center gap-1">
+                        <a href="blog/how-to-add-signature-in-word.html" class="text-blue-600 font-medium text-sm hover:underline inline-flex items-center gap-1">
                             Read Article <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
                         </a>
                     </div>
