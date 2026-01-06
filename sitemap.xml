@@ -42,7 +42,7 @@
   <!-- Guide (Chinese) -->
   <url>
     <loc>https://signaturesketch.tech/zh/guide.html</loc>
-    <lastmod>2026-01-01</lastmod>
+    <lastmod>2026-01-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://signaturesketch.tech/guide.html"/>
@@ -53,7 +53,7 @@
   <!-- Blog -->
   <url>
     <loc>https://signaturesketch.tech/blog.html</loc>
-    <lastmod>2026-01-02</lastmod>
+    <lastmod>2026-01-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://signaturesketch.tech/blog.html"/>
@@ -290,7 +290,7 @@
   <!-- ko -->
   <url>
     <loc>https://signaturesketch.tech/ko/</loc>
-    <lastmod>2025-12-18</lastmod>
+    <lastmod>2026-01-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://signaturesketch.tech/"/>
@@ -309,7 +309,7 @@
   <!-- pt -->
   <url>
     <loc>https://signaturesketch.tech/pt/</loc>
-    <lastmod>2025-12-18</lastmod>
+    <lastmod>2026-01-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://signaturesketch.tech/"/>
