@@ -132,6 +132,16 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://signaturesketch.tech/blog/how-to-insert-signature-in-google-docs.html"/>
   </url>
 
+  <!-- Blog Article: Comment faire une signature électronique (French only) -->
+  <url>
+    <loc>https://signaturesketch.tech/fr/blog/comment-faire-une-signature-electronique.html</loc>
+    <lastmod>2026-01-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://signaturesketch.tech/fr/blog/comment-faire-une-signature-electronique.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://signaturesketch.tech/fr/blog/comment-faire-une-signature-electronique.html"/>
+  </url>
+
   <!-- Privacy Policy -->
   <url>
     <loc>https://signaturesketch.tech/privacy-policy.html</loc>
