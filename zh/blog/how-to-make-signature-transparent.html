@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6903593415712702" crossorigin="anonymous"></script>
+    <title>如何在线制作透明背景签名（无需 Photoshop） - Signature Sketch</title>
+    <meta name="description" content="不想用 PS 抠图？教你如何在线制作透明背景的 PNG 电子签名，解决文档签名有白底的尴尬问题。免费、快速、专业。">
+    <meta name="keywords" content="透明背景签名, 在线制作透明签名, 电子签名去底, PNG签名制作, 签名生成器">
+    <meta name="robots" content="index, nofollow">
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon.png?v=2">
+    <link rel="apple-touch-icon" href="/icon.png?v=2">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://signaturesketch.tech/zh/blog/how-to-make-signature-transparent.html">
+    
+    <!-- Hreflang Tags -->
+    <link rel="alternate" hreflang="en" href="https://signaturesketch.tech/blog/how-to-make-signature-transparent.html">
+    <link rel="alternate" hreflang="zh" href="https://signaturesketch.tech/zh/blog/how-to-make-signature-transparent.html">
+    <link rel="alternate" hreflang="fr" href="https://signaturesketch.tech/fr/blog/comment-faire-une-signature-transparente.html">
+    <link rel="alternate" hreflang="x-default" href="https://signaturesketch.tech/blog/how-to-make-signature-transparent.html">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="如何在线制作透明背景签名（无需 Photoshop）">
+    <meta property="og:description" content="签名图片有白底很难看？教你3种方法快速制作透明 PNG 签名。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://signaturesketch.tech/blog/how-to-make-signature-transparent.html">
+    <meta property="og:image" content="https://signaturesketch.tech/blog/how-to-make-signature-transparent.jpg">
+    
+    <!-- Dependencies -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Use system fonts for better Chinese support, fallback to Inter for numbers/English -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { 
+                        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Microsoft YaHei', 'sans-serif'] 
+                    },
+                    colors: {
+                        primary: { 50: '#f0f9ff', 100: '#e0f2fe', 500: '#0ea5e9', 600: '#2563eb', 700: '#0369a1', 900: '#0c4a6e' }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .prose p { margin-bottom: 1.5em; line-height: 1.8; color: #334155; text-align: justify; }
+        .prose h2 { color: #0f172a; font-weight: 700; margin-top: 2.5em; margin-bottom: 1em; font-size: 1.5rem; padding-bottom: 0.5rem; border-bottom: 1px solid #e2e8f0; }
+        .prose h3 { color: #1e293b; font-weight: 600; margin-top: 2em; margin-bottom: 0.75em; font-size: 1.25rem; }
+        .prose strong { color: #0f172a; font-weight: 600; }
+        .prose ul, .prose ol { margin: 1.25em 0; padding-left: 1.5em; }
+        .prose li { margin: 0.5em 0; line-height: 1.7; }
+        .prose a { color: #2563eb; text-decoration: underline; }
+        .prose a:hover { color: #1d4ed8; }
+        .prose blockquote { border-left: 4px solid #2563eb; padding-left: 1rem; margin: 1.5rem 0; color: #64748b; font-style: italic; }
+        .prose hr { border: 0; height: 1px; background: #e2e8f0; margin: 2.5rem 0; }
+    </style>
+</head>
+<body class="bg-[#F8FAFC] text-slate-900 font-sans flex flex-col min-h-screen">
+
+    <!-- Header -->
+    <nav class="w-full bg-white/80 backdrop-blur-md border-b border-slate-200/60 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="/zh/" class="flex items-center gap-3 group">
+                    <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg" class="shadow-sm rounded-xl">
+                        <rect width="38" height="38" rx="10" fill="#2563EB"/>
+                        <path d="M26.5 11.5L28.5 13.5L16.5 25.5H13.5V22.5L25.5 11.5Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M13.5 29C13.5 29 16 31.5 20 31.5C24 31.5 27.5 27.5 27.5 27.5" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span class="text-lg md:text-xl font-bold text-slate-800">Signature Sketch</span>
+                </a>
+                <div class="flex items-center gap-6">
+                    <div class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600">
+                        <a href="../guide.html" class="hover:text-blue-600">指南</a>
+                        <a href="../blog.html" class="text-blue-600 font-semibold">博客</a>
+                    </div>
+                    <div class="h-4 w-px bg-slate-200 hidden md:block"></div>
+                    <div class="relative group">
+                        <button class="flex items-center gap-1.5 text-sm font-medium text-slate-600 hover:text-blue-600">
+                            <span>简体中文</span>
+                            <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="absolute right-0 mt-2 w-32 bg-white rounded-lg shadow-lg border border-slate-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
+                            <a href="/blog/how-to-make-signature-transparent.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-50">English</a>
+                            <a href="/zh/blog/how-to-make-signature-transparent.html" class="block px-4 py-2 text-sm text-blue-600 bg-blue-50 font-medium">中文</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="flex-1 w-full bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="flex flex-col lg:flex-row gap-12">
+                
+                <!-- Main Article -->
+                <main class="lg:w-2/3">
+                    <nav class="mb-8">
+                        <a href="../blog.html" class="text-blue-600 hover:underline text-sm inline-flex items-center gap-2">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
+                            返回博客
+                        </a>
+                    </nav>
+
+                    <header class="mb-10 border-b border-slate-100 pb-10">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-semibold rounded-full uppercase tracking-wide">教程指南</span>
+                            <span class="text-slate-400 text-sm">2026年1月</span>
+                        </div>
+                        <h1 class="text-3xl md:text-4xl font-bold text-slate-900 leading-tight mb-6">如何在线制作透明背景签名（无需 Photoshop）</h1>
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-blue-500 to-blue-600 flex items-center justify-center text-white font-bold text-sm">SS</div>
+                            <div class="text-sm">
+                                <span class="font-semibold text-slate-900">Signature Sketch 团队</span>
+                                <span class="text-slate-500 block">5 分钟阅读</span>
+                            </div>
+                        </div>
+                    </header>
+
+                    <article class="prose max-w-none">
+                        <p class="text-xl text-slate-600 leading-relaxed">
+                            你是不是也遇到过这种情况：好不容易在纸上签好了名，拍照上传到 Word 或 PDF 里，结果发现签名后面带着一个难看的“白底框”，直接挡住了文档里的文字和横线？
+                        </p>
+                        <p>
+                            这种带白底的签名不仅显得非常不专业，还会破坏文件的排版。如果你正在寻找<strong>透明签名制作工具</strong>，或者想知道如何不学复杂的 PS 也能<strong>把签名变成透明背景</strong>，那么这篇教程就是为你准备的。
+                        </p>
+
+                        <hr>
+
+                        <h2>核心问题：JPG vs. PNG</h2>
+                        <p>为什么你的签名会有那个烦人的白色背景？根本原因在于图片格式。</p>
+                        <p>大多数扫描仪和手机相机默认保存为 <strong>JPG (JPEG)</strong> 格式。JPG 格式根本不支持“透明度”。即便你是在白纸上签的名，电脑也会把这张纸的白色部分识别为“白色的像素”。当你把这张图盖在文档的横线上时，它当然会把横线挡住。</p>
+                        <p>正确的解决方案是使用 <strong>PNG</strong> 格式。PNG 支持一种叫“Alpha 通道”的技术，它可以告诉电脑：<em>“保留黑色的笔迹，把剩下的白色背景变透明。”</em></p>
+
+                        <figure class="my-8">
+                            <img src="/blog/how-to-make-signature-transparent-1.jpeg" alt="JPG白底签名与透明PNG签名效果对比图" class="w-full rounded-xl border border-slate-200 shadow-sm" loading="lazy">
+                            <figcaption class="text-center text-sm text-slate-500 mt-3">左图：JPG（有白框遮挡） vs. 右图：透明 PNG（专业融合）</figcaption>
+                        </figure>
+
+                        <div class="bg-red-50 border border-red-100 p-6 rounded-xl my-6">
+                            <p class="text-red-800 m-0 font-medium">⚠️ <strong>千万别用 Word 的“设置透明色”功能：</strong> 很多人会建议用 Word 自带的去底工具，但这绝对是个坑。它通常会在笔迹周围留下锯齿状的白边（毛边），打印出来非常模糊且廉价。</p>
+                        </div>
+
+                        <h2>制作透明签名的 3 种方法</h2>
+
+                        <h3>方法 1：最佳方案（使用在线生成器）</h3>
+                        <p>最快、最清晰的方法根本<strong>不是扫描纸质签名</strong>，而是直接创建数字化签名。这样生成的线条是 100% 纯净的，且背景天生就是透明的。</p>
+                        
+                        <div class="bg-blue-50 border border-blue-100 p-6 rounded-xl my-6">
+                            <h4 class="text-blue-900 font-bold text-lg mb-2">使用 Signature Sketch（免费工具）</h4>
+                            <ol class="list-decimal ml-5 space-y-2 text-blue-800">
+                                <li>打开我们的 <a href="/zh/" class="text-blue-600 font-bold hover:underline">在线签名生成器</a>。</li>
+                                <li>用鼠标/手指<strong>手写</strong>，或者选择手写字体<strong>输入</strong>你的名字。</li>
+                                <li>调整颜色（商务黑、深蓝或自定义）。</li>
+                                <li>点击<strong>下载</strong>按钮。</li>
+                            </ol>
+                            <p class="mt-4 text-sm text-blue-700">系统会自动生成一张高清、透明背景的 PNG 图片，你可以直接插入任何文档。</p>
+                        </div>
+
+                        <h3>方法 2：对现有照片进行“抠图”</h3>
+                        <p>如果你必须要用某一张特定的纸质签名，你可以使用背景移除工具。</p>
+                        <ol>
+                            <li>找一张干净的白纸，在光线充足的地方签上名。</li>
+                            <li>拍照（尽量不要有阴影）。</li>
+                            <li>上传到 <em>Remove.bg</em> 或 <em>Adobe Express</em> 等在线抠图网站。</li>
+                            <li>下载处理后的图片。</li>
+                        </ol>
+                        <p><strong>缺点：</strong> 如果拍照光线不好，这种方法很容易导致签名的笔画断裂、边缘模糊，或者把淡色的笔迹误删掉。</p>
+
+                        <h3>方法 3：使用 Photoshop（高难度）</h3>
+                        <p>如果你电脑装了 PS 且愿意花 15 分钟折腾：</p>
+                        <ol>
+                            <li>在 Photoshop 中打开扫描件。</li>
+                            <li>点击菜单栏 <strong>选择 (Select)</strong> → <strong>色彩范围 (Color Range)</strong>。</li>
+                            <li>用吸管吸取白色的背景部分。</li>
+                            <li>反选选区 (Ctrl/Cmd + Shift + I)，这样就选中了文字。</li>
+                            <li>复制文字，新建一个透明底的画布，粘贴并保存为 PNG。</li>
+                        </ol>
+
+                        <hr>
+
+                        <h2>为什么要用透明背景签名？</h2>
+                        <p>拥有一张<strong>透明 PNG 签名</strong>文件是现代办公的必备技能：</p>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6 not-prose">
+                            <div class="bg-slate-50 p-5 rounded-xl border border-slate-100">
+                                <div class="flex items-center gap-2 mb-2">
+                                    <div class="p-1.5 bg-indigo-100 rounded-lg text-indigo-600">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                                    </div>
+                                    <span class="font-bold text-slate-900">适配邮件暗黑模式</span>
+                                </div>
+                                <p class="text-sm text-slate-600">如果收件人开启了手机的“深色模式”，带白底的签名会变成一块突兀的白补丁。透明签名则能完美融入任何背景色。</p>
+                            </div>
+                            <div class="bg-slate-50 p-5 rounded-xl border border-slate-100">
+                                <div class="flex items-center gap-2 mb-2">
+                                    <div class="p-1.5 bg-orange-100 rounded-lg text-orange-600">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                                    </div>
+                                    <span class="font-bold text-slate-900">PDF 和合同签署</span>
+                                </div>
+                                <p class="text-sm text-slate-600">你可以把透明签名直接拖拽到合同的签字横线上，既显得真实，又不会遮挡住横线或下方的文字。</p>
+                            </div>
+                        </div>
+
+                        <figure class="my-8">
+                            <img src="/blog/how-to-make-signature-transparent-2.jpeg" alt="透明签名在邮件暗黑模式下的显示效果" class="w-full rounded-xl border border-slate-200 shadow-sm" loading="lazy">
+                            <figcaption class="text-center text-sm text-slate-500 mt-3">透明 PNG 在亮色和暗色模式下都完美适配</figcaption>
+                        </figure>
+
+                        <hr>
+
+                        <h2>总结</h2>
+                        <p>别再费劲去扫描仪扫描，或者用复杂的修图软件抠图了。制作<strong>透明背景签名</strong>最简单的方法就是直接生成数字化版本。它更清晰、更快捷，而且在任何文档上看起来都更专业。</p>
+                        <p>准备好提升你的职业形象了吗？现在就试试我们的免费工具，几秒钟搞定你的专属电子签名。</p>
+
+                    </article>
+
+                    <!-- CTA -->
+                    <div class="mt-12 pt-8 border-t border-slate-200">
+                        <div class="bg-slate-900 rounded-2xl p-8 text-center text-white">
+                            <h2 class="text-xl font-bold mb-3">立即创建你的透明签名</h2>
+                            <p class="text-slate-300 mb-6">无需注册，无需抠图。画好即用，永久免费。</p>
+                            <a href="/zh/" class="inline-block bg-white text-slate-900 hover:bg-slate-100 font-bold py-3 px-6 rounded-xl transition-colors">开始制作</a>
+                        </div>
+                    </div>
+                </main>
+
+                <!-- Sidebar -->
+                <aside class="lg:w-1/3 space-y-8">
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm sticky top-24">
+                        <div class="text-center mb-6">
+                            <div class="inline-flex items-center justify-center w-12 h-12 bg-blue-50 rounded-xl mb-4 text-blue-600">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg>
+                            </div>
+                            <h3 class="font-bold text-slate-900 text-xl mb-2">需要透明 PNG 签名？</h3>
+                            <p class="text-slate-500 text-sm">在这里手写绘制，即刻下载无背景的高清图片。</p>
+                        </div>
+                        <a href="/zh/" class="flex items-center justify-center gap-2 w-full py-3 px-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-all">
+                            <span>免费创建</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </a>
+                        <p class="text-center text-xs text-slate-400 mt-4">无需注册 • 隐私安全保护</p>
+                    </div>
+
+                    <div class="bg-slate-50 border border-slate-200 rounded-xl p-8 flex flex-col items-center justify-center text-center space-y-3">
+                        <span class="text-xs font-semibold text-slate-400 uppercase tracking-widest">广告</span>
+                        <div class="w-16 h-16 bg-slate-200 rounded-lg animate-pulse"></div>
+                        <div class="h-4 w-3/4 bg-slate-200 rounded animate-pulse"></div>
+                    </div>
+
+                    <div>
+                        <h3 class="font-bold text-slate-900 text-lg mb-4">相关教程</h3>
+                        <div class="bg-white border border-slate-200 rounded-xl overflow-hidden">
+                            <a href="/zh/blog/how-to-insert-signature-in-google-docs.html" class="block p-4 hover:bg-slate-50 border-b border-slate-100 group">
+                                <span class="text-xs font-medium text-blue-600 mb-1 block">Google Docs</span>
+                                <h4 class="font-medium text-slate-800 group-hover:text-blue-700">如何在 Google Docs 中插入手写签名</h4>
+                            </a>
+                            <a href="/zh/blog/how-to-add-signature-in-word.html" class="block p-4 hover:bg-slate-50 group">
+                                <span class="text-xs font-medium text-blue-600 mb-1 block">Word 教程</span>
+                                <h4 class="font-medium text-slate-800 group-hover:text-blue-700">如何在 Word 文档中添加电子签名</h4>
+                            </a>
+                        </div>
+                    </div>
+                </aside>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
+            <div class="flex flex-col items-center justify-center space-y-4">
+                <p class="text-slate-500 text-sm">数字签名工具 • 简单、快速、专业</p>
+                <a href="https://github.com/jyxwant/free-handwritten-signature-generator" target="_blank" rel="nofollow" class="flex items-center gap-2 text-slate-600 hover:text-blue-600 text-sm">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                    开源代码
+                </a>
+                <p class="text-slate-400 text-xs">&copy; <span id="year"></span> Signature Sketch. 保留所有权利。</p>
+            </div>
+        </div>
+    </footer>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>

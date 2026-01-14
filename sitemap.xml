@@ -53,36 +53,90 @@
   <!-- Blog -->
   <url>
     <loc>https://signaturesketch.tech/blog.html</loc>
-    <lastmod>2026-01-10</lastmod>
+    <lastmod>2026-01-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://signaturesketch.tech/blog.html"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://signaturesketch.tech/zh/blog.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://signaturesketch.tech/fr/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://signaturesketch.tech/es/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://signaturesketch.tech/ko/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://signaturesketch.tech/ru/blog.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://signaturesketch.tech/blog.html"/>
   </url>
 
   <!-- Blog (Chinese) -->
   <url>
     <loc>https://signaturesketch.tech/zh/blog.html</loc>
-    <lastmod>2026-01-10</lastmod>
+    <lastmod>2026-01-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://signaturesketch.tech/blog.html"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://signaturesketch.tech/zh/blog.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://signaturesketch.tech/fr/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://signaturesketch.tech/es/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://signaturesketch.tech/ko/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://signaturesketch.tech/ru/blog.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://signaturesketch.tech/blog.html"/>
   </url>
 
   <!-- Blog (French) -->
   <url>
     <loc>https://signaturesketch.tech/fr/blog.html</loc>
-    <lastmod>2026-01-10</lastmod>
+    <lastmod>2026-01-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://signaturesketch.tech/blog.html"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://signaturesketch.tech/zh/blog.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://signaturesketch.tech/fr/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://signaturesketch.tech/es/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://signaturesketch.tech/ko/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://signaturesketch.tech/ru/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://signaturesketch.tech/blog.html"/>
+  </url>
+
+  <!-- Blog (Spanish) -->
+  <url>
+    <loc>https://signaturesketch.tech/es/blog.html</loc>
+    <lastmod>2026-01-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://signaturesketch.tech/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://signaturesketch.tech/zh/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://signaturesketch.tech/fr/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://signaturesketch.tech/es/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://signaturesketch.tech/ko/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://signaturesketch.tech/ru/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://signaturesketch.tech/blog.html"/>
+  </url>
+
+  <!-- Blog (Korean) -->
+  <url>
+    <loc>https://signaturesketch.tech/ko/blog.html</loc>
+    <lastmod>2026-01-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://signaturesketch.tech/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://signaturesketch.tech/zh/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://signaturesketch.tech/fr/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://signaturesketch.tech/es/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://signaturesketch.tech/ko/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://signaturesketch.tech/ru/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://signaturesketch.tech/blog.html"/>
+  </url>
+
+  <!-- Blog (Russian) -->
+  <url>
+    <loc>https://signaturesketch.tech/ru/blog.html</loc>
+    <lastmod>2026-01-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://signaturesketch.tech/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://signaturesketch.tech/zh/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://signaturesketch.tech/fr/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://signaturesketch.tech/es/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://signaturesketch.tech/ko/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://signaturesketch.tech/ru/blog.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://signaturesketch.tech/blog.html"/>
   </url>
 
@@ -140,6 +194,96 @@
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://signaturesketch.tech/fr/blog/comment-faire-une-signature-electronique.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://signaturesketch.tech/fr/blog/comment-faire-une-signature-electronique.html"/>
+  </url>
+
+  <!-- Blog Article: How to Make Signature Transparent (English) -->
+  <url>
+    <loc>https://signaturesketch.tech/blog/how-to-make-signature-transparent.html</loc>
+    <lastmod>2026-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://signaturesketch.tech/blog/how-to-make-signature-transparent.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://signaturesketch.tech/zh/blog/how-to-make-signature-transparent.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://signaturesketch.tech/fr/blog/comment-faire-une-signature-transparente.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://signaturesketch.tech/es/blog/como-hacer-firma-transparente.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://signaturesketch.tech/ko/blog/tumyeong-baegyeong-seomyeong-mandeulgi.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://signaturesketch.tech/ru/blog/kak-sdelat-podpis-prozrachnoy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://signaturesketch.tech/blog/how-to-make-signature-transparent.html"/>
+  </url>
+
+  <!-- Blog Article: How to Make Signature Transparent (Chinese) -->
+  <url>
+    <loc>https://signaturesketch.tech/zh/blog/how-to-make-signature-transparent.html</loc>
+    <lastmod>2026-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://signaturesketch.tech/blog/how-to-make-signature-transparent.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://signaturesketch.tech/zh/blog/how-to-make-signature-transparent.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://signaturesketch.tech/fr/blog/comment-faire-une-signature-transparente.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://signaturesketch.tech/es/blog/como-hacer-firma-transparente.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://signaturesketch.tech/ko/blog/tumyeong-baegyeong-seomyeong-mandeulgi.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://signaturesketch.tech/ru/blog/kak-sdelat-podpis-prozrachnoy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://signaturesketch.tech/blog/how-to-make-signature-transparent.html"/>
+  </url>
+
+  <!-- Blog Article: Comment faire une signature transparente (French) -->
+  <url>
+    <loc>https://signaturesketch.tech/fr/blog/comment-faire-une-signature-transparente.html</loc>
+    <lastmod>2026-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://signaturesketch.tech/blog/how-to-make-signature-transparent.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://signaturesketch.tech/zh/blog/how-to-make-signature-transparent.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://signaturesketch.tech/fr/blog/comment-faire-une-signature-transparente.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://signaturesketch.tech/es/blog/como-hacer-firma-transparente.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://signaturesketch.tech/ko/blog/tumyeong-baegyeong-seomyeong-mandeulgi.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://signaturesketch.tech/ru/blog/kak-sdelat-podpis-prozrachnoy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://signaturesketch.tech/blog/how-to-make-signature-transparent.html"/>
+  </url>
+
+  <!-- Blog Article: Cómo hacer firma transparente (Spanish) -->
+  <url>
+    <loc>https://signaturesketch.tech/es/blog/como-hacer-firma-transparente.html</loc>
+    <lastmod>2026-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://signaturesketch.tech/blog/how-to-make-signature-transparent.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://signaturesketch.tech/zh/blog/how-to-make-signature-transparent.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://signaturesketch.tech/fr/blog/comment-faire-une-signature-transparente.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://signaturesketch.tech/es/blog/como-hacer-firma-transparente.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://signaturesketch.tech/ko/blog/tumyeong-baegyeong-seomyeong-mandeulgi.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://signaturesketch.tech/ru/blog/kak-sdelat-podpis-prozrachnoy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://signaturesketch.tech/blog/how-to-make-signature-transparent.html"/>
+  </url>
+
+  <!-- Blog Article: 투명 배경 서명 만들기 (Korean) -->
+  <url>
+    <loc>https://signaturesketch.tech/ko/blog/tumyeong-baegyeong-seomyeong-mandeulgi.html</loc>
+    <lastmod>2026-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://signaturesketch.tech/blog/how-to-make-signature-transparent.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://signaturesketch.tech/zh/blog/how-to-make-signature-transparent.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://signaturesketch.tech/fr/blog/comment-faire-une-signature-transparente.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://signaturesketch.tech/es/blog/como-hacer-firma-transparente.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://signaturesketch.tech/ko/blog/tumyeong-baegyeong-seomyeong-mandeulgi.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://signaturesketch.tech/ru/blog/kak-sdelat-podpis-prozrachnoy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://signaturesketch.tech/blog/how-to-make-signature-transparent.html"/>
+  </url>
+
+  <!-- Blog Article: Как сделать подпись прозрачной (Russian) -->
+  <url>
+    <loc>https://signaturesketch.tech/ru/blog/kak-sdelat-podpis-prozrachnoy.html</loc>
+    <lastmod>2026-01-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://signaturesketch.tech/blog/how-to-make-signature-transparent.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://signaturesketch.tech/zh/blog/how-to-make-signature-transparent.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://signaturesketch.tech/fr/blog/comment-faire-une-signature-transparente.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://signaturesketch.tech/es/blog/como-hacer-firma-transparente.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://signaturesketch.tech/ko/blog/tumyeong-baegyeong-seomyeong-mandeulgi.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://signaturesketch.tech/ru/blog/kak-sdelat-podpis-prozrachnoy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://signaturesketch.tech/blog/how-to-make-signature-transparent.html"/>
   </url>
 
   <!-- Privacy Policy -->
