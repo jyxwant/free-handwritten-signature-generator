@@ -245,20 +245,7 @@ Follow these best practices to ensure your digital signature looks authentic:
 
 ## Frequently Asked Questions
 
-### Is a digital signature in Word legally binding?
 
-**Short answer**: Yes, in most cases.
-
-In the United States, the [ESIGN Act (Electronic Signatures in Global and National Commerce Act)](https://www.ftc.gov/legal-library/browse/statutes/electronic-signatures-global-national-commerce-act) and [UETA (Uniform Electronic Transactions Act)](https://www.uniformlaws.org/committees/community-home?CommunityKey=2c04b76c-2b7d-4399-977e-d5876ba7e034) laws recognize electronic signatures as legally equivalent to handwritten signatures for most documents. 
-
-The European Union's [eIDAS regulation](https://digital-strategy.ec.europa.eu/en/policies/eidas-regulation) provides similar recognition across EU member states.
-
-However, some documents still require "wet signatures" (physical ink on paper):
-- Certain real estate documents
-- Wills and trusts (varies by jurisdiction)
-- Some government forms
-
-For legally sensitive documents, consider using a dedicated e-signature platform that provides audit trails and identity verification.
 
 ### How do I add a signature in Word on Mac?
 
@@ -339,9 +326,7 @@ Once you have your signature file saved, you'll never need to repeat the process
 ## References
 
 - Microsoft Support. "Insert a signature in a Word document." [support.microsoft.com](https://support.microsoft.com/en-us/office/insert-a-signature-in-a-word-document-f3b3f74c-2355-4d53-be89-ae9c50022730)
-- U.S. Federal Trade Commission. "Electronic Signatures in Global and National Commerce Act (ESIGN)." [ftc.gov](https://www.ftc.gov/legal-library/browse/statutes/electronic-signatures-global-national-commerce-act)
-- Uniform Law Commission. "Uniform Electronic Transactions Act (UETA)." [uniformlaws.org](https://www.uniformlaws.org/committees/community-home?CommunityKey=2c04b76c-2b7d-4399-977e-d5876ba7e034)
-- European Commission. "eIDAS Regulation." [digital-strategy.ec.europa.eu](https://digital-strategy.ec.europa.eu/en/policies/eidas-regulation)
+
 
 ---
 

@@ -4,7 +4,7 @@
   <!-- Root -->
   <url>
     <loc>https://signaturesketch.tech/</loc>
-    <lastmod>2026-01-10</lastmod>
+    <lastmod>2026-01-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://signaturesketch.tech/"/>
@@ -31,7 +31,7 @@
   <!-- Guide -->
   <url>
     <loc>https://signaturesketch.tech/guide.html</loc>
-    <lastmod>2026-01-10</lastmod>
+    <lastmod>2026-01-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://signaturesketch.tech/guide.html"/>
@@ -42,7 +42,7 @@
   <!-- Guide (Chinese) -->
   <url>
     <loc>https://signaturesketch.tech/zh/guide.html</loc>
-    <lastmod>2026-01-10</lastmod>
+    <lastmod>2026-01-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://signaturesketch.tech/guide.html"/>
@@ -143,7 +143,7 @@
   <!-- Blog Article: How to Add Signature in Word (English) -->
   <url>
     <loc>https://signaturesketch.tech/blog/how-to-add-signature-in-word.html</loc>
-    <lastmod>2026-01-10</lastmod>
+    <lastmod>2026-01-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://signaturesketch.tech/blog/how-to-add-signature-in-word.html"/>
@@ -155,7 +155,7 @@
   <!-- Blog Article: How to Add Signature in Word (Chinese) -->
   <url>
     <loc>https://signaturesketch.tech/zh/blog/how-to-add-signature-in-word.html</loc>
-    <lastmod>2026-01-10</lastmod>
+    <lastmod>2026-01-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://signaturesketch.tech/blog/how-to-add-signature-in-word.html"/>
@@ -321,7 +321,7 @@
   <!-- zh -->
   <url>
     <loc>https://signaturesketch.tech/zh/</loc>
-    <lastmod>2026-01-10</lastmod>
+    <lastmod>2026-01-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://signaturesketch.tech/"/>
@@ -508,4 +508,3 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://signaturesketch.tech/de/"/>
   </url>
 </urlset>
-
