@@ -116,6 +116,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Signature Style Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Satisfy&family=Sacramento&family=Permanent+Marker&family=Kaushan+Script&family=Alex+Brush&display=swap" rel="stylesheet">
     
     <!-- Local Styles -->
     <link rel="stylesheet" href="style.css">
@@ -377,42 +379,35 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                
-                <!-- Name Input & Font Templates -->
-                <div class="w-full max-w-4xl mx-auto bg-white rounded-lg shadow-sm border border-slate-200/60 overflow-hidden p-4 mt-6">
-                    <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center mb-4">
-                        <div class="flex items-center gap-2 flex-1 w-full sm:w-auto">
-                            <span class="text-xs font-semibold text-slate-600 uppercase tracking-widest whitespace-nowrap" data-i18n="nameLabel">Name</span>
-                            <input type="text" id="name-input" class="flex-1 px-3 py-2 text-sm border border-slate-200 rounded-lg focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-colors" placeholder="Enter your name" data-i18n-placeholder="namePlaceholder">
-                        </div>
-                        <span class="text-xs text-slate-400 hidden sm:block" data-i18n="fontHint">Click a style to use as signature</span>
-                    </div>
                     
-                    <!-- Font Templates Grid -->
-                    <div id="font-templates" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2">
-                        <button class="font-template-btn px-3 py-3 border border-slate-200 rounded-lg hover:border-blue-400 hover:bg-blue-50 transition-all text-center" data-font="'Brush Script MT', cursive" style="font-family: 'Brush Script MT', cursive;">
-                            <span class="text-lg text-slate-700">Your Name</span>
-                        </button>
-                        <button class="font-template-btn px-3 py-3 border border-slate-200 rounded-lg hover:border-blue-400 hover:bg-blue-50 transition-all text-center" data-font="'Segoe Script', cursive" style="font-family: 'Segoe Script', cursive;">
-                            <span class="text-lg text-slate-700">Your Name</span>
-                        </button>
-                        <button class="font-template-btn px-3 py-3 border border-slate-200 rounded-lg hover:border-blue-400 hover:bg-blue-50 transition-all text-center" data-font="'Lucida Handwriting', cursive" style="font-family: 'Lucida Handwriting', cursive;">
-                            <span class="text-lg text-slate-700">Your Name</span>
-                        </button>
-                        <button class="font-template-btn px-3 py-3 border border-slate-200 rounded-lg hover:border-blue-400 hover:bg-blue-50 transition-all text-center" data-font="Georgia, serif" style="font-family: Georgia, serif; font-style: italic;">
-                            <span class="text-lg text-slate-700 italic">Your Name</span>
-                        </button>
-                        <button class="font-template-btn px-3 py-3 border border-slate-200 rounded-lg hover:border-blue-400 hover:bg-blue-50 transition-all text-center" data-font="'Times New Roman', serif" style="font-family: 'Times New Roman', serif;">
-                            <span class="text-lg text-slate-700">Your Name</span>
-                        </button>
-                        <button class="font-template-btn px-3 py-3 border border-slate-200 rounded-lg hover:border-blue-400 hover:bg-blue-50 transition-all text-center" data-font="'Courier New', monospace" style="font-family: 'Courier New', monospace;">
-                            <span class="text-lg text-slate-700">Your Name</span>
-                        </button>
+                    <!-- Font Signature Templates (Integrated) -->
+                    <div class="px-4 py-4 bg-white border-t border-slate-100">
+                        <div class="flex flex-col sm:flex-row gap-3 items-start sm:items-center mb-4">
+                            <div class="flex items-center gap-2 flex-1 w-full sm:w-auto">
+                                <span class="text-xs font-semibold text-slate-600 uppercase tracking-widest whitespace-nowrap" data-i18n="nameLabel">Name</span>
+                                <input type="text" id="multi-name-input" class="flex-1 px-3 py-1.5 text-sm border border-slate-200 rounded-lg focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-colors" placeholder="Enter your name" data-i18n-placeholder="namePlaceholder">
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="text-xs text-slate-400">Color:</span>
+                                <input type="color" id="multi-color-picker" value="#000000" class="w-7 h-7 rounded border-none cursor-pointer">
+                                <button id="refresh-signatures-btn" class="p-1.5 text-slate-400 hover:text-blue-500 hover:bg-blue-50 rounded transition-colors" title="Refresh">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8"/>
+                                        <path d="M21 3v5h-5"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <p class="text-[10px] text-slate-400 mb-3">Tip: If fonts don't render correctly, click the refresh button on the right</p>
+                        
+                        <!-- Multi-language Signature Templates Grid -->
+                        <div id="multi-language-templates" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-2">
+                            <!-- JS will dynamically insert Canvas signatures here -->
+                        </div>
                     </div>
                 </div>
     
-                <div class="flex justify-center items-center gap-2 text-xs text-slate-600 mt-6">
+                <div class="flex justify-center items-center gap-2 text-xs text-slate-600 mt-4">
                     <span class="w-2 h-2 rounded-full bg-green-500"></span>
                     Signatures are generated locally on your device for maximum privacy.
                 </div>
@@ -823,6 +818,84 @@
             </div>
         </div>
     </div>
+
+    <!-- Multi-language Signature Generator -->
+    <script>
+    const multiInput = document.getElementById('multi-name-input');
+    const multiColor = document.getElementById('multi-color-picker');
+    const multiGrid = document.getElementById('multi-language-templates');
+    const refreshBtn = document.getElementById('refresh-signatures-btn');
+
+    // Define different font styles with distinct visual differences
+    const styles = [
+        { name: 'Elegant', font: 'Great Vibes' },
+        { name: 'Classic', font: 'Satisfy' },
+        { name: 'Formal', font: 'Sacramento' },
+        { name: 'Marker', font: 'Permanent Marker' },
+        { name: 'Bold', font: 'Kaushan Script' },
+        { name: 'Brush', font: 'Alex Brush' }
+    ];
+
+    function renderMultiSignatures() {
+        const text = multiInput.value || "Your Name";
+        const color = multiColor.value;
+        multiGrid.innerHTML = ''; // Clear
+
+        styles.forEach(style => {
+            const wrapper = document.createElement('div');
+            wrapper.className = "group relative border border-slate-100 rounded-lg p-1.5 hover:border-blue-300 transition-all cursor-pointer bg-slate-50/50";
+            
+            const canvas = document.createElement('canvas');
+            canvas.width = 200;
+            canvas.height = 50;
+            canvas.className = "w-full h-auto";
+            const ctx = canvas.getContext('2d');
+
+            // Drawing logic
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = color;
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.font = `28px "${style.font}"`;
+            
+            // Render text
+            ctx.fillText(text, canvas.width/2, canvas.height/2);
+
+            // Click canvas to auto-download transparent PNG of this style
+            wrapper.onclick = () => {
+                const link = document.createElement('a');
+                link.download = `signature-${style.name}.png`;
+                link.href = canvas.toDataURL('image/png');
+                link.click();
+            };
+
+            wrapper.appendChild(canvas);
+            
+            // Bottom label
+            const label = document.createElement('div');
+            label.className = "text-[9px] text-slate-400 text-center uppercase tracking-tight leading-tight";
+            label.innerText = style.name;
+            wrapper.appendChild(label);
+            
+            multiGrid.appendChild(wrapper);
+        });
+    }
+
+    // Listen to input and color changes
+    multiInput.addEventListener('input', renderMultiSignatures);
+    multiColor.addEventListener('input', renderMultiSignatures);
+    refreshBtn.addEventListener('click', renderMultiSignatures);
+
+    // Initial render
+    renderMultiSignatures();
+    
+    // Re-render when fonts are ready
+    document.fonts.ready.then(() => {
+        renderMultiSignatures();
+        setTimeout(renderMultiSignatures, 300);
+        setTimeout(renderMultiSignatures, 1000);
+    });
+    </script>
 
     <!-- Logic -->
     <script src="script.js"></script>

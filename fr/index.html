@@ -113,6 +113,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Satisfy&family=Sacramento&family=Permanent+Marker&family=Kaushan+Script&family=Alex+Brush&display=swap" rel="stylesheet">
     
     <!-- Local Styles -->
     <link rel="stylesheet" href="../style.css">
@@ -369,43 +370,33 @@
                     </div>
                 </div>
                 
-                <!-- Name Input & Font Templates -->
-                <div class="w-full max-w-4xl mx-auto bg-white rounded-lg shadow-sm border border-slate-200/60 overflow-hidden p-4 mt-6">
-                    <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center mb-4">
+                <!-- Font Signature Templates (Integrated) -->
+                <div class="px-4 py-4 bg-white border-t border-slate-100">
+                    <div class="flex flex-col sm:flex-row gap-3 items-start sm:items-center mb-4">
                         <div class="flex items-center gap-2 flex-1 w-full sm:w-auto">
-                            <span class="text-xs font-semibold text-slate-600 uppercase tracking-widest whitespace-nowrap" data-i18n="nameLabel">Nom</span>
-                            <input type="text" id="name-input" class="flex-1 px-3 py-2 text-sm border border-slate-200 rounded-lg focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-colors" placeholder="Entrez votre nom" data-i18n-placeholder="namePlaceholder">
+                            <span class="text-xs font-semibold text-slate-600 uppercase tracking-widest whitespace-nowrap">Nom</span>
+                            <input type="text" id="multi-name-input" class="flex-1 px-3 py-1.5 text-sm border border-slate-200 rounded-lg focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-colors" placeholder="Entrez votre nom">
                         </div>
-                        <span class="text-xs text-slate-400 hidden sm:block" data-i18n="fontHint">Cliquez sur un style pour l'utiliser comme signature</span>
+                        <div class="flex items-center gap-2">
+                            <span class="text-xs text-slate-400">Couleur:</span>
+                            <input type="color" id="multi-color-picker" value="#000000" class="w-7 h-7 rounded border-none cursor-pointer">
+                            <button id="refresh-signatures-btn" class="p-1.5 text-slate-400 hover:text-blue-500 hover:bg-blue-50 rounded transition-colors" title="Actualiser">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8"/>
+                                    <path d="M21 3v5h-5"/>
+                                </svg>
+                            </button>
+                        </div>
                     </div>
-                    
-                    <!-- Font Templates Grid -->
-                    <div id="font-templates" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2">
-                        <button class="font-template-btn px-3 py-3 border border-slate-200 rounded-lg hover:border-blue-400 hover:bg-blue-50 transition-all text-center" data-font="'Brush Script MT', cursive" style="font-family: 'Brush Script MT', cursive;">
-                            <span class="text-lg text-slate-700">Votre Nom</span>
-                        </button>
-                        <button class="font-template-btn px-3 py-3 border border-slate-200 rounded-lg hover:border-blue-400 hover:bg-blue-50 transition-all text-center" data-font="'Segoe Script', cursive" style="font-family: 'Segoe Script', cursive;">
-                            <span class="text-lg text-slate-700">Votre Nom</span>
-                        </button>
-                        <button class="font-template-btn px-3 py-3 border border-slate-200 rounded-lg hover:border-blue-400 hover:bg-blue-50 transition-all text-center" data-font="'Lucida Handwriting', cursive" style="font-family: 'Lucida Handwriting', cursive;">
-                            <span class="text-lg text-slate-700">Votre Nom</span>
-                        </button>
-                        <button class="font-template-btn px-3 py-3 border border-slate-200 rounded-lg hover:border-blue-400 hover:bg-blue-50 transition-all text-center" data-font="Georgia, serif" style="font-family: Georgia, serif; font-style: italic;">
-                            <span class="text-lg text-slate-700 italic">Votre Nom</span>
-                        </button>
-                        <button class="font-template-btn px-3 py-3 border border-slate-200 rounded-lg hover:border-blue-400 hover:bg-blue-50 transition-all text-center" data-font="'Times New Roman', serif" style="font-family: 'Times New Roman', serif;">
-                            <span class="text-lg text-slate-700">Votre Nom</span>
-                        </button>
-                        <button class="font-template-btn px-3 py-3 border border-slate-200 rounded-lg hover:border-blue-400 hover:bg-blue-50 transition-all text-center" data-font="'Courier New', monospace" style="font-family: 'Courier New', monospace;">
-                            <span class="text-lg text-slate-700">Votre Nom</span>
-                        </button>
+                    <p class="text-[10px] text-slate-400 mb-3">Astuce: Si la police ne s'affiche pas correctement, cliquez sur le bouton d'actualisation</p>
+                    <div id="multi-language-templates" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-2">
                     </div>
                 </div>
+            </div>
     
-                <div class="flex justify-center items-center gap-2 text-xs text-slate-600 mt-6">
-                    <span class="w-2 h-2 rounded-full bg-green-500"></span>
-                    Les signatures sont générées localement sur votre appareil pour une confidentialité maximale.
-                </div>
+            <div class="flex justify-center items-center gap-2 text-xs text-slate-600 mt-6">
+                <span class="w-2 h-2 rounded-full bg-green-500"></span>
+                Les signatures sont générées localement sur votre appareil pour une confidentialité maximale.
             </div>
 
             <!-- Mobile Ad Container (visible on mobile/tablet, hidden on xl screens where sidebar ads show) -->
@@ -803,6 +794,75 @@
             </div>
         </div>
     </div>
+
+    <!-- Multi-Language Signature Generator -->
+    <script>
+    (function() {
+        const styles = [
+            { name: 'Élégante', font: 'Great Vibes' },
+            { name: 'Décontracté', font: 'Satisfy' },
+            { name: 'Classique', font: 'Sacramento' },
+            { name: 'Marqueur', font: 'Permanent Marker' },
+            { name: 'Artistique', font: 'Kaushan Script' },
+            { name: 'Pinceau', font: 'Alex Brush' }
+        ];
+
+        const multiInput = document.getElementById('multi-name-input');
+        const multiColor = document.getElementById('multi-color-picker');
+        const templatesContainer = document.getElementById('multi-language-templates');
+        const refreshBtn = document.getElementById('refresh-signatures-btn');
+
+        function renderMultiSignatures() {
+            const name = multiInput.value || 'Votre Nom';
+            const color = multiColor.value;
+
+            templatesContainer.innerHTML = styles.map(style => `
+                <button class="font-sig-btn group relative px-2 py-2 border border-slate-200 rounded-lg hover:border-blue-400 hover:bg-blue-50 transition-all text-center overflow-hidden" data-font="${style.font}">
+                    <canvas class="sig-canvas w-full" height="50" data-name="${name}" data-font="${style.font}" data-color="${color}"></canvas>
+                    <span class="absolute bottom-0.5 left-0 right-0 text-[9px] text-slate-400 group-hover:text-blue-500 transition-colors">${style.name}</span>
+                </button>
+            `).join('');
+
+            templatesContainer.querySelectorAll('.sig-canvas').forEach(canvas => {
+                const ctx = canvas.getContext('2d');
+                const dpr = window.devicePixelRatio || 1;
+                const rect = canvas.getBoundingClientRect();
+                canvas.width = rect.width * dpr;
+                canvas.height = 50 * dpr;
+                ctx.scale(dpr, dpr);
+                ctx.clearRect(0, 0, rect.width, 50);
+                ctx.fillStyle = canvas.dataset.color;
+                ctx.font = `28px '${canvas.dataset.font}', cursive`;
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillText(canvas.dataset.name, rect.width / 2, 25);
+            });
+
+            templatesContainer.querySelectorAll('.font-sig-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const canvas = btn.querySelector('.sig-canvas');
+                    if (canvas) {
+                        const link = document.createElement('a');
+                        link.download = `signature-${btn.dataset.font}.png`;
+                        link.href = canvas.toDataURL('image/png');
+                        link.click();
+                    }
+                });
+            });
+        }
+
+        multiInput.addEventListener('input', renderMultiSignatures);
+        multiColor.addEventListener('input', renderMultiSignatures);
+        refreshBtn.addEventListener('click', renderMultiSignatures);
+
+        renderMultiSignatures();
+        document.fonts.ready.then(() => {
+            renderMultiSignatures();
+            setTimeout(renderMultiSignatures, 300);
+            setTimeout(renderMultiSignatures, 1000);
+        });
+    })();
+    </script>
 
     <!-- Logic -->
     <script src="../script.js"></script>
