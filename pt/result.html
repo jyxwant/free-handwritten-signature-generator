@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6903593415712702" crossorigin="anonymous"></script>
+    
+    <!-- SEO -->
+    <title>Baixar sua Assinatura - Signature Sketch</title>
+    <meta name="description" content="Baixe sua assinatura PNG transparente. Pronta para Word, PDF e Google Docs.">
+    <meta name="robots" content="noindex, follow">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="192x192" href="https://signaturesketch.tech/icon.png?v=2">
+    <link rel="icon" type="image/png" sizes="48x48" href="https://signaturesketch.tech/icon.png?v=2">
+    <link rel="shortcut icon" href="https://signaturesketch.tech/icon.png?v=2">
+    
+    <!-- Dependencies -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-[#F8FAFC] text-slate-900 font-sans flex flex-col min-h-screen">
+
+    <!-- Header -->
+    <nav class="w-full bg-white/80 backdrop-blur-md border-b border-slate-200/60 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center gap-3">
+                    <a href="/pt/" class="flex items-center gap-3 group">
+                        <div class="relative flex-shrink-0">
+                            <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg" class="shadow-sm rounded-xl group-hover:scale-105 transition-transform">
+                                <rect width="38" height="38" rx="10" fill="#2563EB"/>
+                                <path d="M26.5 11.5L28.5 13.5L16.5 25.5H13.5V22.5L25.5 11.5Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M13.5 29C13.5 29 16 31.5 20 31.5C24 31.5 27.5 27.5 27.5 27.5" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <span class="text-lg md:text-xl font-bold text-slate-800 tracking-tight group-hover:text-blue-600 transition-colors">
+                            Signature Sketch
+                        </span>
+                    </a>
+                </div>
+                
+                <div class="flex items-center gap-6">
+                    <div class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600">
+                        <a href="/email-signature-generator/" class="hover:text-blue-600 transition-colors">Assinatura Gmail</a>
+                        <a href="/guide.html" class="hover:text-blue-600 transition-colors">Guia</a>
+                        <a href="/blog.html" class="hover:text-blue-600 transition-colors">Blog</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-1 max-w-5xl w-full mx-auto px-4 py-12">
+        
+        <div class="text-center mb-10">
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-slate-100 text-slate-600 text-xs font-medium uppercase tracking-wider mb-4">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m9 12 2 2 4-4" />
+                    <circle cx="12" cy="12" r="10" />
+                </svg>
+                <span>Pronto para Download</span>
+            </div>
+            <h1 class="text-2xl md:text-3xl font-semibold text-slate-800 mb-2">Sua Assinatura está Pronta</h1>
+            <p class="text-slate-500 text-sm">Visualize e baixe seu arquivo de assinatura abaixo.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6">
+            
+            <!-- Left: Preview Area -->
+            <div class="bg-white rounded-lg border border-slate-200 p-6 flex flex-col items-center justify-center">
+                <span class="text-xs text-slate-400 uppercase tracking-widest mb-4">Visualização</span>
+                
+                <!-- Checkered background to show transparency -->
+                <div class="w-full h-56 rounded border border-slate-200 flex items-center justify-center overflow-hidden relative" 
+                     style="background-image: linear-gradient(45deg, #f5f5f5 25%, transparent 25%), linear-gradient(-45deg, #f5f5f5 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #f5f5f5 75%), linear-gradient(-45deg, transparent 75%, #f5f5f5 75%); background-size: 16px 16px; background-position: 0 0, 0 8px, 8px -8px, -8px 0px;">
+                    
+                    <img id="result-image" src="" alt="Sua Assinatura" class="max-w-full max-h-full object-contain p-4" />
+                
+                </div>
+                
+                <div class="mt-4">
+                    <a href="/pt/" class="text-sm text-slate-500 hover:text-slate-700 flex items-center gap-1">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m12 19-7-7 7-7"/>
+                            <path d="M19 12H5"/>
+                        </svg>
+                        Redesenhar Assinatura
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right: Actions & Tutorial -->
+            <div class="space-y-5">
+                
+                <!-- Download Action Area -->
+                <div class="bg-white rounded-lg border border-slate-200 p-5">
+                    <p class="text-xs text-slate-500 uppercase tracking-wider mb-4 font-medium">Formato de Download</p>
+                    
+                    <div class="flex gap-3">
+                        <button id="download-png-btn" class="flex-1 py-3.5 bg-slate-800 text-white rounded-lg font-semibold hover:bg-slate-700 transition-colors flex items-center justify-center gap-2">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                <polyline points="7 10 12 15 17 10"/>
+                                <line x1="12" y1="15" x2="12" y2="3"/>
+                            </svg>
+                            PNG
+                        </button>
+                        <button id="download-pdf-btn" class="flex-1 py-3.5 bg-white text-slate-700 border border-slate-300 rounded-lg font-semibold hover:bg-slate-50 hover:border-slate-400 transition-colors flex items-center justify-center gap-2">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/>
+                                <polyline points="14 2 14 8 20 8"/>
+                            </svg>
+                            PDF
+                        </button>
+                    </div>
+
+                    <p class="text-xs text-center text-slate-400 mt-3">Grátis para uso pessoal e comercial.</p>
+                </div>
+
+                <!-- Tutorial Guide -->
+                <div class="bg-slate-50 rounded-lg p-5 border border-slate-200">
+                    <h3 class="font-semibold text-slate-700 mb-3 text-sm">Como usar sua assinatura</h3>
+                    <ul class="text-sm text-slate-600 space-y-2.5">
+                        <li class="flex items-start gap-2">
+                            <span class="text-slate-400 mt-0.5">1.</span>
+                            <div>
+                                <strong class="text-slate-700">Word / Google Docs</strong>
+                                <span class="text-slate-500"> - Inserir > Imagem > Upload</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-slate-400 mt-0.5">2.</span>
+                            <div>
+                                <strong class="text-slate-700">PDF</strong>
+                                <span class="text-slate-500"> - Use Preencher e Assinar no Adobe Reader</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-slate-400 mt-0.5">3.</span>
+                            <div>
+                                <strong class="text-slate-700">Email</strong>
+                                <span class="text-slate-500"> - Adicione como imagem nas configurações de assinatura</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <a href="/guide.html" class="inline-block mt-3 text-sm text-slate-600 hover:text-slate-800">Ver guia completo &rarr;</a>
+                </div>
+
+                <!-- Cross-sell: Email Signature Generator -->
+                <div class="bg-white rounded-lg p-5 border border-slate-200">
+                    <h3 class="font-semibold text-slate-700 mb-2 text-sm">Criar Assinatura de Email</h3>
+                    <p class="text-sm text-slate-500 mb-3">Transforme isso em um rodapé de email profissional com suas informações de contato.</p>
+                    <a href="/email-signature-generator/" class="inline-flex items-center gap-2 px-4 py-2 bg-slate-100 text-slate-700 rounded-lg text-sm font-medium hover:bg-slate-200 transition-colors">
+                        Começar
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Ad Slot -->
+                <div class="bg-slate-50 border border-slate-200 rounded-lg p-4 text-center">
+                   <p class="text-[10px] text-slate-400 mb-2 uppercase tracking-wider">Publicidade</p>
+                   <div class="h-28 bg-slate-100 rounded flex items-center justify-center">
+                       <div id="ad-slot-result"></div>
+                   </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
+            <div class="flex flex-col items-center justify-center space-y-4">
+                <p class="text-slate-500 text-sm font-medium">
+                    Ferramenta de Assinatura Digital <span class="text-slate-300">&mdash;</span> Simples, Rápida, Profissional
+                </p>
+                
+                <div class="flex flex-wrap items-center justify-center gap-3 text-sm text-slate-600">
+                    <a href="/privacy-policy.html" class="hover:text-blue-600 transition-colors">Política de Privacidade</a>
+                    <span class="text-slate-300">|</span>
+                    <a href="/terms-of-service.html" class="hover:text-blue-600 transition-colors">Termos de Serviço</a>
+                    <span class="text-slate-300">|</span>
+                    <a href="/about.html" class="hover:text-blue-600 transition-colors">Sobre Nós</a>
+                    <span class="text-slate-300">|</span>
+                    <a href="/contact.html" class="hover:text-blue-600 transition-colors">Contato</a>
+                </div>
+
+                <p class="text-slate-600 text-xs mt-4">
+                    &copy; <span id="year"></span> Signature Sketch. Todos os direitos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Logic Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const imgElement = document.getElementById('result-image');
+            const yearSpan = document.getElementById('year');
+            const dataURL = localStorage.getItem('pt_generatedSignature');
+
+            // Set year
+            if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+
+            // Check if signature data exists
+            if (!dataURL) {
+                alert('Nenhuma assinatura encontrada. Redirecionando para a página inicial.');
+                window.location.href = '/pt/';
+                return;
+            }
+
+            // Display image
+            imgElement.src = dataURL;
+
+            // Show download success feedback
+            function showDownloadSuccess(btn) {
+                const originalHTML = btn.innerHTML;
+                const originalClasses = btn.className;
+                btn.innerHTML = `
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="m9 12 2 2 4-4" />
+                        <circle cx="12" cy="12" r="10" />
+                    </svg>
+                    Concluído
+                `;
+                btn.className = btn.className.replace('bg-slate-800', 'bg-slate-600').replace('bg-white text-slate-700 border border-slate-300', 'bg-slate-600 text-white border border-slate-600');
+                
+                setTimeout(() => {
+                    btn.innerHTML = originalHTML;
+                    btn.className = originalClasses;
+                }, 2000);
+            }
+
+            // PNG Download
+            document.getElementById('download-png-btn').addEventListener('click', () => {
+                const link = document.createElement('a');
+                link.download = `signature_${Date.now()}.png`;
+                link.href = dataURL;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                showDownloadSuccess(document.getElementById('download-png-btn'));
+            });
+
+            // PDF Download
+            document.getElementById('download-pdf-btn').addEventListener('click', () => {
+                const { jsPDF } = window.jspdf;
+                
+                // Create temp image to get dimensions
+                const img = new Image();
+                img.onload = () => {
+                    const padding = 10;
+                    const pxToMm = 0.264583;
+                    const imgWidth = img.width;
+                    const imgHeight = img.height;
+                    const pdfWidth = (imgWidth * pxToMm) + (padding * 2);
+                    const pdfHeight = (imgHeight * pxToMm) + (padding * 2);
+
+                    const pdf = new jsPDF({
+                        orientation: pdfWidth > pdfHeight ? 'landscape' : 'portrait',
+                        unit: 'mm',
+                        format: [pdfWidth, pdfHeight]
+                    });
+
+                    pdf.addImage(dataURL, 'PNG', padding, padding, imgWidth * pxToMm, imgHeight * pxToMm);
+                    pdf.save(`signature_${Date.now()}.pdf`);
+                    showDownloadSuccess(document.getElementById('download-pdf-btn'));
+                };
+                img.src = dataURL;
+            });
+        });
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>

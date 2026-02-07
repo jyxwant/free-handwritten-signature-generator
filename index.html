@@ -861,12 +861,15 @@
             // Render text
             ctx.fillText(text, canvas.width/2, canvas.height/2);
 
-            // Click canvas to auto-download transparent PNG of this style
+            // Click canvas to save to localStorage and redirect to result page
             wrapper.onclick = () => {
-                const link = document.createElement('a');
-                link.download = `signature-${style.name}.png`;
-                link.href = canvas.toDataURL('image/png');
-                link.click();
+                const dataURL = canvas.toDataURL('image/png');
+                localStorage.setItem('en_generatedSignature', dataURL);
+                // Also save the name input
+                if (multiInput.value) {
+                    localStorage.setItem('en_savedNameInput', multiInput.value);
+                }
+                window.location.href = '/result.html';
             };
 
             wrapper.appendChild(canvas);

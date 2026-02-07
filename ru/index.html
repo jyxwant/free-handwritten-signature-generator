@@ -836,10 +836,16 @@
             ctx.fillText(text, canvas.width/2, canvas.height/2);
 
             wrapper.onclick = () => {
-                const link = document.createElement('a');
-                link.download = `signature-${style.name}.png`;
-                link.href = canvas.toDataURL('image/png');
-                link.click();
+                const dataURL = canvas.toDataURL('image/png');
+                const langs = ['zh', 'es', 'fr', 'ru', 'ar', 'ja', 'ko', 'pt', 'de'];
+                const seg = window.location.pathname.split('/');
+                const lang = seg.find(s => langs.includes(s)) || 'en';
+                localStorage.setItem(lang + '_generatedSignature', dataURL);
+                if (multiInput.value) {
+                    localStorage.setItem(lang + '_savedNameInput', multiInput.value);
+                }
+                const prefix = lang === 'en' ? '' : '/' + lang;
+                window.location.href = prefix + '/result.html';
             };
 
             wrapper.appendChild(canvas);

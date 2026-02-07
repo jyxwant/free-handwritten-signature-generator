@@ -85,12 +85,25 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- 3. 基础设置 ---
     if(yearSpan) yearSpan.textContent = new Date().getFullYear();
     
+    // 获取当前语言路径前缀
+    const supportedLanguages = ['zh', 'es', 'fr', 'ru', 'ar', 'ja', 'ko', 'pt', 'de'];
+    const pathSegments = window.location.pathname.split('/');
+    const currentLang = pathSegments.find(s => supportedLanguages.includes(s)) || 'en';
+    const langPrefix = currentLang === 'en' ? '' : '/' + currentLang;
+    
+    // 获取结果页路径
+    function getResultPageUrl() {
+        return langPrefix + '/result.html';
+    }
+    
+    // 获取带语言前缀的 localStorage 键名（语言隔离）
+    function getStorageKey(key) {
+        return currentLang + '_' + key;
+    }
+    
     // 语言选择器逻辑
     const languageSelect = document.getElementById('language-select');
     if (languageSelect) {
-        const supportedLanguages = ['zh', 'es', 'fr', 'ru', 'ar', 'ja', 'ko', 'pt', 'de'];
-        const pathSegments = window.location.pathname.split('/');
-        const currentLang = pathSegments.find(s => supportedLanguages.includes(s)) || 'en';
         languageSelect.value = currentLang;
 
         languageSelect.addEventListener('change', (e) => {
@@ -108,7 +121,55 @@ document.addEventListener('DOMContentLoaded', () => {
         resizeCanvas();
         window.addEventListener('resize', resizeCanvas);
         saveToHistory();
+        
+        // 恢复之前保存的签名（用户从结果页返回时）
+        restoreSavedSignature();
     }
+    
+    // 恢复保存的签名和姓名输入
+    function restoreSavedSignature() {
+        const savedSignature = localStorage.getItem(getStorageKey('generatedSignature'));
+        const savedName = localStorage.getItem(getStorageKey('savedNameInput'));
+        
+        // 在函数内部获取元素，避免变量提升问题
+        const nameInput = document.getElementById('multi-name-input');
+        
+        // 恢复姓名输入框
+        if (savedName && nameInput) {
+            nameInput.value = savedName;
+            // 触发 input 事件来刷新字体签名模板
+            nameInput.dispatchEvent(new Event('input'));
+        }
+        
+        // 恢复画布签名
+        if (savedSignature && canvas && ctx) {
+            const img = new Image();
+            img.onload = () => {
+                const dpr = window.devicePixelRatio || 1;
+                const canvasWidth = canvas.width / dpr;
+                const canvasHeight = canvas.height / dpr;
+                
+                // 计算居中位置
+                const scale = Math.min(
+                    (canvasWidth - 40) / img.width,
+                    (canvasHeight - 40) / img.height,
+                    1
+                );
+                const newWidth = img.width * scale;
+                const newHeight = img.height * scale;
+                const x = (canvasWidth - newWidth) / 2;
+                const y = (canvasHeight - newHeight) / 2;
+                
+                ctx.drawImage(img, x, y, newWidth, newHeight);
+                updateSignatureState(true);
+                saveToHistory();
+            };
+            img.src = savedSignature;
+        }
+    }
+    
+    // 获取多语言输入框引用（在底部脚本定义的）
+    const multiInput = document.getElementById('multi-name-input');
 
     // --- 4. 核心功能：画布交互 ---
 
@@ -319,44 +380,70 @@ document.addEventListener('DOMContentLoaded', () => {
             ctx.clearRect(0, 0, canvas.width / dpr, canvas.height / dpr);
             updateSignatureState(false);
             saveToHistory();
+            
+            // 同时清除姓名输入框
+            const nameInput = document.getElementById('multi-name-input');
+            if (nameInput) {
+                nameInput.value = '';
+                nameInput.dispatchEvent(new Event('input'));
+            }
+            
+            // 清除当前语言的 localStorage 数据
+            localStorage.removeItem(getStorageKey('generatedSignature'));
+            localStorage.removeItem(getStorageKey('savedNameInput'));
         });
     }
 
-    // 下载PNG
+    // 下载PNG - 改为跳转到结果页
     if (downloadBtn) {
         downloadBtn.addEventListener('click', () => {
+            // 检查画布是否为空
+            const bounds = getSignatureBounds(canvas);
+            if (!bounds) {
+                alert("Please draw your signature first.");
+                return;
+            }
+            
+            // 获取裁剪后的签名图片数据
             const dataUrl = getTrimmedSignature(canvas);
-            const link = document.createElement('a');
-            link.download = `signature_${Date.now()}.png`;
-            link.href = dataUrl;
-            link.click();
+            
+            try {
+                // 存入 localStorage（带语言前缀）
+                localStorage.setItem(getStorageKey('generatedSignature'), dataUrl);
+                // 同时保存姓名输入框内容
+                if (multiInput && multiInput.value) {
+                    localStorage.setItem(getStorageKey('savedNameInput'), multiInput.value);
+                }
+                // 跳转到结果页
+                window.location.href = getResultPageUrl();
+            } catch (err) {
+                console.error("Storage failed", err);
+                alert("Unable to process signature. Please try again.");
+            }
         });
     }
 
-    // 下载PDF
+    // 下载PDF - 也跳转到结果页
     if (pdfBtn) {
         pdfBtn.addEventListener('click', () => {
             const bounds = getSignatureBounds(canvas);
-            if (!bounds) return;
-
-            const { jsPDF } = window.jspdf;
-            const trimmedImg = getTrimmedSignature(canvas);
+            if (!bounds) {
+                alert("Please draw your signature first.");
+                return;
+            }
             
-            const padding = 10;
-            const pxToMm = 0.264583;
-            const imgWidth = bounds.width;
-            const imgHeight = bounds.height;
-            const pdfWidth = (imgWidth * pxToMm) + (padding * 2);
-            const pdfHeight = (imgHeight * pxToMm) + (padding * 2);
-
-            const pdf = new jsPDF({
-                orientation: pdfWidth > pdfHeight ? 'landscape' : 'portrait',
-                unit: 'mm',
-                format: [pdfWidth, pdfHeight]
-            });
-
-            pdf.addImage(trimmedImg, 'PNG', padding, padding, imgWidth * pxToMm, imgHeight * pxToMm);
-            pdf.save(`signature_${Date.now()}.pdf`);
+            const dataUrl = getTrimmedSignature(canvas);
+            
+            try {
+                localStorage.setItem(getStorageKey('generatedSignature'), dataUrl);
+                if (multiInput && multiInput.value) {
+                    localStorage.setItem(getStorageKey('savedNameInput'), multiInput.value);
+                }
+                window.location.href = getResultPageUrl();
+            } catch (err) {
+                console.error("Storage failed", err);
+                alert("Unable to process signature. Please try again.");
+            }
         });
     }
 
