@@ -121,9 +121,6 @@ document.addEventListener('DOMContentLoaded', () => {
         resizeCanvas();
         window.addEventListener('resize', resizeCanvas);
         saveToHistory();
-        
-        // 恢复之前保存的签名（用户从结果页返回时）
-        restoreSavedSignature();
     }
     
     // 恢复保存的签名和姓名输入
