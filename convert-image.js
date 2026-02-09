@@ -2,8 +2,8 @@ const fs = require('fs');
 const path = require('path');
 
 // 简单的 JPEG 到 WebP 转换（使用 Canvas API 如果可用）
-const inputPath = 'blog/Generated Image February 08, 2026 - 10_44AM.jpeg';
-const outputPath = 'blog/how-to-make-signature-transparent-comparison.webp';
+const inputPath = 'blog/Generated Image February 09, 2026 - 9_03PM.jpeg';
+const outputPath = 'blog/blue-ink-signature-comparison.webp';
 
 console.log('Note: Node.js does not have built-in WebP conversion.');
 console.log('Please use one of these methods:');
@@ -14,7 +14,7 @@ console.log('3. Use ImageMagick: magick convert input.jpeg output.webp');
 console.log('');
 console.log('For now, I will rename the file to a simpler name:');
 
-const newJpegPath = 'blog/signature-transparent-comparison.jpg';
+const newJpegPath = 'blog/blue-ink-signature-comparison.jpg';
 fs.copyFileSync(inputPath, newJpegPath);
 console.log(`Copied to: ${newJpegPath}`);
 console.log('');

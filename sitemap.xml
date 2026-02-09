@@ -186,6 +186,16 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://signaturesketch.tech/blog/how-to-insert-signature-in-google-docs.html"/>
   </url>
 
+  <!-- Blog Article: Wet Blue Ink Signature Generator (English) -->
+  <url>
+    <loc>https://signaturesketch.tech/blog/wet-blue-ink-signature.html</loc>
+    <lastmod>2026-02-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://signaturesketch.tech/blog/wet-blue-ink-signature.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://signaturesketch.tech/blog/wet-blue-ink-signature.html"/>
+  </url>
+
   <!-- Blog Article: Comment faire une signature électronique (French only) -->
   <url>
     <loc>https://signaturesketch.tech/fr/blog/comment-faire-une-signature-electronique.html</loc>
