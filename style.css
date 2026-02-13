@@ -54,10 +54,6 @@ input[type="range"]::-moz-range-thumb:hover {
     background: #334155;
 }
 
-/* Ad Slots */
-ins.adsbygoogle {
-    display: block;
-}
 
 /* Fullscreen Mode */
 #fullscreen-modal {
