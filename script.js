@@ -959,7 +959,5 @@ document.addEventListener('DOMContentLoaded', () => {
         return tempCanvas.toDataURL('image/png');
     }
 
-    try {
-        (window.adsbygoogle = window.adsbygoogle || []).push({});
-    } catch (e) {}
+    // AdSense push removed - ads are now lazy-loaded via setTimeout in HTML
 });
