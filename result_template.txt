@@ -5,7 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6903593415712702" crossorigin="anonymous"></script>
+    <script>
+    // Delay AdSense loading for better page performance
+    setTimeout(function() {
+        var s = document.createElement('script');
+        s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6903593415712702';
+        s.crossOrigin = 'anonymous';
+        s.async = true;
+        document.head.appendChild(s);
+    }, 3000);
+    </script>
     
     <!-- SEO -->
     <title>TITLE_TEXT - Signature Sketch</title>
@@ -18,21 +27,7 @@
     <link rel="shortcut icon" href="https://signaturesketch.tech/icon.png?v=2">
     
     <!-- Dependencies -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dist/tailwind.css">
     <link rel="stylesheet" href="../style.css">
-    
-    <!-- Tailwind Config -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
 </head>

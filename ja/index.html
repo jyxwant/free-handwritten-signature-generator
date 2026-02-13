@@ -5,7 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6903593415712702" crossorigin="anonymous"></script>
+    <script>
+    // Delay AdSense loading for better page performance
+    setTimeout(function() {
+        var s = document.createElement('script');
+        s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6903593415712702';
+        s.crossOrigin = 'anonymous';
+        s.async = true;
+        document.head.appendChild(s);
+    }, 3000);
+    </script>
     
     <!-- SEO Optimization -->
     <title>無料の手書き署名・電子サイン作成ツール (登録不要) | 電子署名画像ジェネレーター</title>
@@ -18,9 +27,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    <link rel="preconnect" href="https://cdn.tailwindcss.com">
-
-    <!-- Open Graph Meta Tags -->
+<!-- Open Graph Meta Tags -->
     <meta property="og:title" content="無料の手書き署名ジェネレーター (登録不要)">
     <meta property="og:description" content="オンラインで手書き署名を作成し、透明PNGまたはPDFとしてダウンロード。登録は一切不要です。">
     <meta property="og:type" content="website">
@@ -110,46 +117,13 @@
     </script>
     
     <!-- Dependencies -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <!-- Japanese Signature Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&family=Yuji+Mai&family=Klee+One&family=Shippori+Mincho&family=Kaisei+Decol&family=Dela+Gothic+One&display=swap" rel="stylesheet">
     
     <!-- Local Styles -->
+    <link rel="stylesheet" href="../dist/tailwind.css">
     <link rel="stylesheet" href="../style.css">
-
-    <!-- Tailwind Config -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                    colors: {
-                        primary: {
-                            50: '#f0f9ff',
-                            100: '#e0f2fe',
-                            500: '#0ea5e9',
-                            600: '#2563eb',
-                            700: '#0369a1',
-                            900: '#0c4a6e',
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-    <script type="importmap">
-    {
-      "imports": {
-        "react": "https://esm.sh/react@^19.2.3",
-        "react/": "https://esm.sh/react@^19.2.3/",
-        "lucide-react": "https://esm.sh/lucide-react@^0.561.0"
-      }
-    }
-    </script>
 </head>
 <body class="bg-[#F8FAFC] text-slate-900 font-sans flex flex-col min-h-screen">
 
@@ -382,11 +356,11 @@
                         <div class="flex flex-col sm:flex-row gap-3 items-start sm:items-center mb-4">
                             <div class="flex items-center gap-2 flex-1 w-full sm:w-auto">
                                 <span class="text-xs font-semibold text-slate-600 uppercase tracking-widest whitespace-nowrap">氏名</span>
-                                <input type="text" id="multi-name-input" class="flex-1 px-3 py-1.5 text-sm border border-slate-200 rounded-lg focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-colors" placeholder="お名前を入力">
+                                <input type="text" id="multi-name-input" aria-label="Enter your name for signature" class="flex-1 px-3 py-1.5 text-sm border border-slate-200 rounded-lg focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-colors" placeholder="お名前を入力">
                             </div>
                             <div class="flex items-center gap-2">
                                 <span class="text-xs text-slate-400">色:</span>
-                                <input type="color" id="multi-color-picker" value="#000000" class="w-7 h-7 rounded border-none cursor-pointer">
+                                <input type="color" id="multi-color-picker" aria-label="Signature color" value="#000000" class="w-7 h-7 rounded border-none cursor-pointer">
                                 <button id="refresh-signatures-btn" class="p-1.5 text-slate-400 hover:text-blue-500 hover:bg-blue-50 rounded transition-colors" title="再生成">
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                         <path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8"/>
@@ -395,7 +369,7 @@
                                 </button>
                             </div>
                         </div>
-                        <p class="text-[10px] text-slate-400 mb-3">ヒント：フォントが正しく表示されない場合は、右側の更新ボタンをクリックしてください</p>
+                        <p class="text-[10px] text-slate-600 mb-3">ヒント：フォントが正しく表示されない場合は、右側の更新ボタンをクリックしてください</p>
                         
                         <!-- Japanese Signature Templates Grid -->
                         <div id="multi-language-templates" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-2">
@@ -413,7 +387,7 @@
             <div class="xl:hidden w-full max-w-4xl mx-auto mt-8">
                 <div class="bg-slate-100 border-2 border-dashed border-slate-300 rounded-xl min-h-[100px] flex items-center justify-center p-4">
                     <div class="text-center w-full">
-                        <span class="text-xs text-slate-500 uppercase tracking-widest">Advertisement</span>
+                        <span class="text-xs text-slate-600 uppercase tracking-widest">Advertisement</span>
                         <div id="ad-slot-mobile" class="w-full mt-2">
                             <!-- Mobile Ad Placeholder -->
                         </div>
@@ -429,21 +403,21 @@
                         <div class="w-10 h-10 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center mb-4">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
                         </div>
-                        <h4 class="font-bold text-slate-900 mb-2">スマホ対応</h4>
+                        <h3 class="font-bold text-slate-900 mb-2 text-base">スマホ対応</h3>
                         <p class="text-sm text-slate-600">完全にレスポンシブなキャンバス。iPhone、iPad、Androidデバイスで指を使って簡単に署名できます。</p>
                     </div>
                     <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
                         <div class="w-10 h-10 bg-green-50 text-green-600 rounded-lg flex items-center justify-center mb-4">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
                         </div>
-                        <h4 class="font-bold text-slate-900 mb-2">100% プライバシー保護</h4>
+                        <h3 class="font-bold text-slate-900 mb-2 text-base">100% プライバシー保護</h3>
                         <p class="text-sm text-slate-600">データはブラウザから出ません。サーバーへのアップロードや保存は一切なく、完全に安全です。</p>
                     </div>
                     <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
                         <div class="w-10 h-10 bg-purple-50 text-purple-600 rounded-lg flex items-center justify-center mb-4">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><path d="m9 15 2 2 4-4"/></svg>
                         </div>
-                        <h4 class="font-bold text-slate-900 mb-2">背景透過 PNG</h4>
+                        <h3 class="font-bold text-slate-900 mb-2 text-base">背景透過 PNG</h3>
                         <p class="text-sm text-slate-600">自動的に背景が透明な状態でダウンロードされ、WordやPDF、Google Docsにそのまま貼り付け可能です。</p>
                     </div>
                 </div>
@@ -479,7 +453,7 @@
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
                                             </svg>
                                         </span>
-                                        <h4 class="text-lg font-semibold text-slate-900 mb-2" data-i18n="step2Title">カスタマイズ</h4>
+                                        <h3 class="text-lg font-semibold text-slate-900 mb-2" data-i18n="step2Title">カスタマイズ</h3>
                                         <p class="text-slate-600 leading-relaxed"><span data-i18n="step2Desc">インクの色（黒、青、赤）と線の太さを調整して、自分のスタイルに合わせます。</span></p>
                                     </li>
                                     
@@ -489,7 +463,7 @@
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/>
                                             </svg>
                                         </span>
-                                        <h4 class="text-lg font-semibold text-slate-900 mb-2" data-i18n="step1Title">描く</h4>
+                                        <h3 class="text-lg font-semibold text-slate-900 mb-2" data-i18n="step1Title">描く</h3>
                                         <p class="text-slate-600 leading-relaxed"><span data-i18n="step1Desc">マウス、トラックパッド、またはタッチスクリーン（スマホ/タブレット）を使って、上のボックスに署名を描きます。</span></p>
                                     </li>
                                     
@@ -499,7 +473,7 @@
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
                                             </svg>
                                         </span>
-                                        <h4 class="text-lg font-semibold text-slate-900 mb-2" data-i18n="step3Title">ダウンロード</h4>
+                                        <h3 class="text-lg font-semibold text-slate-900 mb-2" data-i18n="step3Title">ダウンロード</h3>
                                         <p class="text-slate-600 leading-relaxed"><span data-i18n="step3Desc">「PNG」をクリックして背景透過で保存するか、「PDF」をクリックして印刷可能な形式で保存します。</span></p>
                                     </li>
                                 </ol>
@@ -559,22 +533,22 @@
                             
                             <div class="space-y-6">
                                 <div class="pb-6 border-b border-slate-100 last:border-0 last:pb-0">
-                                    <h4 class="text-base font-semibold text-slate-900 mb-3" data-i18n="faqQ1">WordやGoogle DocsでPNG署名を使うには？</h4>
+                                    <h3 class="text-base font-semibold text-slate-900 mb-3" data-i18n="faqQ1">WordやGoogle DocsでPNG署名を使うには？</h3>
                                     <p class="text-sm text-slate-600 leading-relaxed" data-i18n="faqA1">PNGファイルをダウンロードしたら、文書を開き、「挿入」>「画像」を選択して署名ファイルを選びます。背景が透明なので、紙に直接書いたように見えます。サイズを調整して署名欄に合わせてください。</p>
                                 </div>
                                 
                                 <div class="pb-6 border-b border-slate-100 last:border-0 last:pb-0">
-                                    <h4 class="text-base font-semibold text-slate-900 mb-3" data-i18n="faqQ2">法的効力はありますか？</h4>
+                                    <h3 class="text-base font-semibold text-slate-900 mb-3" data-i18n="faqQ2">法的効力はありますか？</h3>
                                     <p class="text-sm text-slate-600 leading-relaxed" data-i18n="faqA2">多くの国や地域で、文書上の手書き電子署名（e-signature）は、インクによる署名と同等の法的効力を持ちます。ただし、厳格な監査証跡や証明書が必要な重要な法的文書（デジタル署名）には、専用のソフトウェアが必要な場合があります。日常的な契約書、請求書、手紙にはこのツールが最適です。</p>
                                 </div>
                                 
                                 <div class="pb-6 border-b border-slate-100 last:border-0 last:pb-0">
-                                    <h4 class="text-base font-semibold text-slate-900 mb-3" data-i18n="faqQ3">紙の署名をスキャンするより良い理由は？</h4>
+                                    <h3 class="text-base font-semibold text-slate-900 mb-3" data-i18n="faqQ3">紙の署名をスキャンするより良い理由は？</h3>
                                     <p class="text-sm text-slate-600 leading-relaxed" data-i18n="faqA3">紙の署名をスキャンすると、背景が灰色になったり影ができたりして、デジタル文書上ではプロらしく見えません。当<strong class="text-slate-900">オンライン署名作成ツール</strong>なら、鮮明で滑らかな線と、完全に透明な背景を持つデジタル署名を毎回作成できます。</p>
                                 </div>
                                 
                                 <div class="pb-6 border-b border-slate-100 last:border-0 last:pb-0">
-                                    <h4 class="text-base font-semibold text-slate-900 mb-3" data-i18n="faqQ4">署名は保存されますか？</h4>
+                                    <h3 class="text-base font-semibold text-slate-900 mb-3" data-i18n="faqQ4">署名は保存されますか？</h3>
                                     <p class="text-sm text-slate-600 leading-relaxed" data-i18n="faqA4">いいえ。署名はブラウザの一時メモリにのみ存在します。ページを更新すると、完全に削除されます。サーバーはありません。</p>
                                 </div>
                             </div>
@@ -863,7 +837,7 @@
             wrapper.appendChild(canvas);
             
             const label = document.createElement('div');
-            label.className = "text-[9px] text-slate-400 text-center uppercase tracking-tight leading-tight";
+            label.className = "text-[9px] text-slate-600 text-center uppercase tracking-tight leading-tight";
             label.innerText = style.name;
             wrapper.appendChild(label);
             

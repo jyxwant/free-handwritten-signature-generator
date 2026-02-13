@@ -1,5 +1,12 @@
 {
+  "scripts": {
+    "build:css": "tailwindcss -i src/input.css -o dist/tailwind.css --minify",
+    "watch:css": "tailwindcss -i src/input.css -o dist/tailwind.css --watch"
+  },
   "dependencies": {
     "sharp": "^0.34.5"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.19"
   }
 }

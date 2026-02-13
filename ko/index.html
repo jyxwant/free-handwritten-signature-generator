@@ -5,7 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6903593415712702" crossorigin="anonymous"></script>
+    <script>
+    // Delay AdSense loading for better page performance
+    setTimeout(function() {
+        var s = document.createElement('script');
+        s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6903593415712702';
+        s.crossOrigin = 'anonymous';
+        s.async = true;
+        document.head.appendChild(s);
+    }, 3000);
+    </script>
     
     <!-- SEO Optimization (기존 내용 유지) -->
     <title>무료 자필 서명 생성기 (회원가입 없음) | 투명 배경 PNG</title>
@@ -18,9 +27,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    <link rel="preconnect" href="https://cdn.tailwindcss.com">
-
-    <!-- Open Graph Meta Tags -->
+<!-- Open Graph Meta Tags -->
     <meta property="og:title" content="무료 자필 서명 생성기 (회원가입 없음)">
     <meta property="og:description" content="온라인에서 서명을 그리고 투명 PNG 또는 PDF로 다운로드하세요. 회원가입이 필요 없습니다.">
     <meta property="og:type" content="website">
@@ -110,46 +117,13 @@
     </script>
     
     <!-- Dependencies -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <!-- Korean Signature Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Gaegu&family=Jua&family=Poor+Story&family=Hi+Melody&family=Single+Day&display=swap" rel="stylesheet">
     
     <!-- Local Styles -->
+    <link rel="stylesheet" href="../dist/tailwind.css">
     <link rel="stylesheet" href="../style.css">
-
-    <!-- Tailwind Config -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                    colors: {
-                        primary: {
-                            50: '#f0f9ff',
-                            100: '#e0f2fe',
-                            500: '#0ea5e9',
-                            600: '#2563eb',
-                            700: '#0369a1',
-                            900: '#0c4a6e',
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-    <script type="importmap">
-    {
-      "imports": {
-        "react": "https://esm.sh/react@^19.2.3",
-        "react/": "https://esm.sh/react@^19.2.3/",
-        "lucide-react": "https://esm.sh/lucide-react@^0.561.0"
-      }
-    }
-    </script>
 </head>
 <body class="bg-[#F8FAFC] text-slate-900 font-sans flex flex-col min-h-screen">
 
@@ -375,11 +349,11 @@
                         <div class="flex flex-col sm:flex-row gap-3 items-start sm:items-center mb-4">
                             <div class="flex items-center gap-2 flex-1 w-full sm:w-auto">
                                 <span class="text-xs font-semibold text-slate-600 uppercase tracking-widest whitespace-nowrap">이름</span>
-                                <input type="text" id="multi-name-input" class="flex-1 px-3 py-1.5 text-sm border border-slate-200 rounded-lg focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-colors" placeholder="이름을 입력하세요">
+                                <input type="text" id="multi-name-input" aria-label="Enter your name for signature" class="flex-1 px-3 py-1.5 text-sm border border-slate-200 rounded-lg focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-colors" placeholder="이름을 입력하세요">
                             </div>
                             <div class="flex items-center gap-2">
                                 <span class="text-xs text-slate-400">색상:</span>
-                                <input type="color" id="multi-color-picker" value="#000000" class="w-7 h-7 rounded border-none cursor-pointer">
+                                <input type="color" id="multi-color-picker" aria-label="Signature color" value="#000000" class="w-7 h-7 rounded border-none cursor-pointer">
                                 <button id="refresh-signatures-btn" class="p-1.5 text-slate-400 hover:text-blue-500 hover:bg-blue-50 rounded transition-colors" title="새로고침">
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                         <path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8"/>
@@ -388,7 +362,7 @@
                                 </button>
                             </div>
                         </div>
-                        <p class="text-[10px] text-slate-400 mb-3">팁: 글꼴이 제대로 표시되지 않으면 오른쪽 새로고침 버튼을 클릭하세요</p>
+                        <p class="text-[10px] text-slate-600 mb-3">팁: 글꼴이 제대로 표시되지 않으면 오른쪽 새로고침 버튼을 클릭하세요</p>
                         
                         <!-- Korean Signature Templates Grid -->
                         <div id="multi-language-templates" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-2">
@@ -406,7 +380,7 @@
             <div class="xl:hidden w-full max-w-4xl mx-auto mt-8">
                 <div class="bg-slate-100 border-2 border-dashed border-slate-300 rounded-xl min-h-[100px] flex items-center justify-center p-4">
                     <div class="text-center w-full">
-                        <span class="text-xs text-slate-500 uppercase tracking-widest">Advertisement</span>
+                        <span class="text-xs text-slate-600 uppercase tracking-widest">Advertisement</span>
                         <div id="ad-slot-mobile" class="w-full mt-2">
                             <!-- Mobile Ad Placeholder -->
                         </div>
@@ -422,21 +396,21 @@
                         <div class="w-10 h-10 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center mb-4">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
                         </div>
-                        <h4 class="font-bold text-slate-900 mb-2">모바일 최적화</h4>
+                        <h3 class="font-bold text-slate-900 mb-2 text-base">모바일 최적화</h3>
                         <p class="text-sm text-slate-600">완벽하게 반응하는 캔버스. iPhone, iPad 또는 Android 기기에서 손가락으로 쉽게 서명하세요.</p>
                     </div>
                     <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
                         <div class="w-10 h-10 bg-green-50 text-green-600 rounded-lg flex items-center justify-center mb-4">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
                         </div>
-                        <h4 class="font-bold text-slate-900 mb-2">100% 비공개</h4>
+                        <h3 class="font-bold text-slate-900 mb-2 text-base">100% 비공개</h3>
                         <p class="text-sm text-slate-600">데이터가 브라우저를 절대 떠나지 않습니다. 서버 업로드나 데이터베이스 저장이 없어 완전히 안전합니다.</p>
                     </div>
                     <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
                         <div class="w-10 h-10 bg-purple-50 text-purple-600 rounded-lg flex items-center justify-center mb-4">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><path d="m9 15 2 2 4-4"/></svg>
                         </div>
-                        <h4 class="font-bold text-slate-900 mb-2">투명 PNG</h4>
+                        <h3 class="font-bold text-slate-900 mb-2 text-base">투명 PNG</h3>
                         <p class="text-sm text-slate-600">다운로드 시 배경이 투명하게 자동 생성되어 Word, PDF 또는 Google Docs에 바로 붙여넣을 수 있습니다.</p>
                     </div>
                 </div>
@@ -472,7 +446,7 @@
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
                                             </svg>
                                         </span>
-                                        <h4 class="text-lg font-semibold text-slate-900 mb-2" data-i18n="step2Title">사용자 지정</h4>
+                                        <h3 class="text-lg font-semibold text-slate-900 mb-2" data-i18n="step2Title">사용자 지정</h3>
                                         <p class="text-slate-600 leading-relaxed"><span data-i18n="step2Desc">잉크 색상(검정, 파랑, 빨강)과 획 두께를 자신의 스타일에 맞게 조정하세요.</span></p>
                                     </li>
                                     
@@ -482,7 +456,7 @@
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/>
                                             </svg>
                                         </span>
-                                        <h4 class="text-lg font-semibold text-slate-900 mb-2" data-i18n="step1Title">그리기</h4>
+                                        <h3 class="text-lg font-semibold text-slate-900 mb-2" data-i18n="step1Title">그리기</h3>
                                         <p class="text-slate-600 leading-relaxed"><span data-i18n="step1Desc">마우스, 트랙패드 또는 터치스크린(모바일/태블릿)을 사용하여 위의 캔버스 상자에 서명을 그리세요.</span></p>
                                     </li>
                                     
@@ -492,7 +466,7 @@
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
                                             </svg>
                                         </span>
-                                        <h4 class="text-lg font-semibold text-slate-900 mb-2" data-i18n="step3Title">다운로드</h4>
+                                        <h3 class="text-lg font-semibold text-slate-900 mb-2" data-i18n="step3Title">다운로드</h3>
                                         <p class="text-slate-600 leading-relaxed"><span data-i18n="step3Desc">"PNG 다운로드"를 클릭하여 배경이 투명한 서명을 저장하거나, "PDF"를 클릭하여 인쇄 가능한 형식으로 저장하세요.</span></p>
                                     </li>
                                 </ol>
@@ -552,22 +526,22 @@
                             
                             <div class="space-y-6">
                                 <div class="pb-6 border-b border-slate-100 last:border-0 last:pb-0">
-                                    <h4 class="text-base font-semibold text-slate-900 mb-3" data-i18n="faqQ1">Word나 Google Docs에서 PNG 서명을 어떻게 사용하나요?</h4>
+                                    <h3 class="text-base font-semibold text-slate-900 mb-3" data-i18n="faqQ1">Word나 Google Docs에서 PNG 서명을 어떻게 사용하나요?</h3>
                                     <p class="text-sm text-slate-600 leading-relaxed" data-i18n="faqA1">PNG 파일을 다운로드한 후 문서를 열고 "삽입" > "이미지"를 클릭하여 서명 파일을 선택하세요. 배경이 투명하기 때문에 종이에 직접 서명한 것처럼 보입니다. 서명란에 완벽하게 맞도록 크기를 조정할 수 있습니다.</p>
                                 </div>
                                 
                                 <div class="pb-6 border-b border-slate-100 last:border-0 last:pb-0">
-                                    <h4 class="text-base font-semibold text-slate-900 mb-3" data-i18n="faqQ2">법적 효력이 있나요?</h4>
+                                    <h3 class="text-base font-semibold text-slate-900 mb-3" data-i18n="faqQ2">법적 효력이 있나요?</h3>
                                     <p class="text-sm text-slate-600 leading-relaxed" data-i18n="faqA2">많은 관할권에서 문서의 자필 전자 서명(e-signature)은 잉크 서명과 동일한 효력을 갖습니다. 하지만 감사 추적 및 인증서가 필요한 매우 민감한 법적 문서(디지털 서명)의 경우 전문 소프트웨어가 필요할 수 있습니다. 일상적인 계약서, 청구서 및 편지에는 이 도구가 완벽합니다.</p>
                                 </div>
                                 
                                 <div class="pb-6 border-b border-slate-100 last:border-0 last:pb-0">
-                                    <h4 class="text-base font-semibold text-slate-900 mb-3" data-i18n="faqQ3">종이 서명을 스캔하는 것보다 왜 더 좋은가요?</h4>
+                                    <h3 class="text-base font-semibold text-slate-900 mb-3" data-i18n="faqQ3">종이 서명을 스캔하는 것보다 왜 더 좋은가요?</h3>
                                     <p class="text-sm text-slate-600 leading-relaxed" data-i18n="faqA3">종이 서명을 스캔하면 배경이 회색이거나 그림자가 생겨 디지털 문서에서 전문적이지 않게 보일 수 있습니다. 저희 <strong class="text-slate-900">온라인 서명 생성기</strong>는 매번 깨끗하고 선명한 디지털 잉크 라인과 완벽하게 투명한 배경을 생성합니다.</p>
                                 </div>
                                 
                                 <div class="pb-6 border-b border-slate-100 last:border-0 last:pb-0">
-                                    <h4 class="text-base font-semibold text-slate-900 mb-3" data-i18n="faqQ4">서명이 저장되나요?</h4>
+                                    <h3 class="text-base font-semibold text-slate-900 mb-3" data-i18n="faqQ4">서명이 저장되나요?</h3>
                                     <p class="text-sm text-slate-600 leading-relaxed" data-i18n="faqA4">아니요. 서명은 브라우저의 임시 메모리에만 존재합니다. 페이지를 새로 고치면 영구적으로 삭제됩니다. 저희는 서버를 가지고 있지 않습니다.</p>
                                 </div>
                             </div>
@@ -856,7 +830,7 @@
             wrapper.appendChild(canvas);
             
             const label = document.createElement('div');
-            label.className = "text-[9px] text-slate-400 text-center uppercase tracking-tight leading-tight";
+            label.className = "text-[9px] text-slate-600 text-center uppercase tracking-tight leading-tight";
             label.innerText = style.name;
             wrapper.appendChild(label);
             

@@ -5,7 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6903593415712702" crossorigin="anonymous"></script>
+    <script>
+    // Delay AdSense loading for better page performance
+    setTimeout(function() {
+        var s = document.createElement('script');
+        s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6903593415712702';
+        s.crossOrigin = 'anonymous';
+        s.async = true;
+        document.head.appendChild(s);
+    }, 3000);
+    </script>
     <title>How to Insert a Signature in Google Docs (Better Than the Drawing Tool) - Signature Sketch</title>
     <meta name="description" content="Stop using the shaky Drawing tool. Learn how to insert a professional, transparent signature in Google Docs using the PNG import method.">
     <meta name="keywords" content="insert signature in google docs, how to add signature in google docs, google docs signature, electronic signature google docs, digital signature google docs">
@@ -27,23 +36,10 @@
     <meta property="og:url" content="https://signaturesketch.tech/blog/how-to-insert-signature-in-google-docs.html">
     
     <!-- Dependencies -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <!-- Assuming your CSS is in the parent directory, adjusting path -->
+    <link rel="stylesheet" href="../dist/tailwind.css">
     <link rel="stylesheet" href="../style.css">
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: { sans: ['Inter', 'sans-serif'] },
-                    colors: {
-                        primary: { 50: '#f0f9ff', 100: '#e0f2fe', 500: '#0ea5e9', 600: '#2563eb', 700: '#0369a1', 900: '#0c4a6e' }
-                    }
-                }
-            }
-        }
-    </script>
     <style>
         .prose p { margin-bottom: 1.5em; line-height: 1.8; color: #334155; }
         .prose h2 { color: #0f172a; font-weight: 700; margin-top: 2.5em; margin-bottom: 1em; font-size: 1.5rem; padding-bottom: 0.5rem; border-bottom: 1px solid #e2e8f0; }

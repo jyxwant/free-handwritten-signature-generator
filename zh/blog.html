@@ -5,7 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6903593415712702" crossorigin="anonymous"></script>
+    <script>
+    // Delay AdSense loading for better page performance
+    setTimeout(function() {
+        var s = document.createElement('script');
+        s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6903593415712702';
+        s.crossOrigin = 'anonymous';
+        s.async = true;
+        document.head.appendChild(s);
+    }, 3000);
+    </script>
     <title>博客 - Signature Sketch</title>
     <meta name="description" content="关于数字签名、效率提升和无纸化办公的见解、技巧和新闻。">
     <link rel="icon" type="image/png" sizes="192x192" href="/icon.png?v=2">
@@ -15,23 +24,9 @@
     <link rel="alternate" hreflang="en" href="https://signaturesketch.tech/blog.html">
     <link rel="alternate" hreflang="zh" href="https://signaturesketch.tech/zh/blog.html">
     <link rel="alternate" hreflang="fr" href="https://signaturesketch.tech/fr/blog.html">
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../dist/tailwind.css">
     <link rel="stylesheet" href="../style.css">
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: { sans: ['Inter', 'sans-serif'] },
-                    colors: {
-                        primary: { 50: '#f0f9ff', 100: '#e0f2fe', 500: '#0ea5e9', 600: '#2563eb', 700: '#0369a1', 900: '#0c4a6e' }
-                    }
-                }
-            }
-        }
-    </script>
 </head>
 <body class="bg-[#F8FAFC] text-slate-900 font-sans flex flex-col min-h-screen">
 

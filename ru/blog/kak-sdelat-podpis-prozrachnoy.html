@@ -5,7 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6903593415712702" crossorigin="anonymous"></script>
+    <script>
+    // Delay AdSense loading for better page performance
+    setTimeout(function() {
+        var s = document.createElement('script');
+        s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6903593415712702';
+        s.crossOrigin = 'anonymous';
+        s.async = true;
+        document.head.appendChild(s);
+    }, 3000);
+    </script>
     <title>Как сделать прозрачный фон у подписи онлайн (Без Фотошопа) - Signature Sketch</title>
     <meta name="description" content="Узнайте, как создать электронную подпись с прозрачным фоном в формате PNG. Бесплатно, без Photoshop и сканирования. Идеально для Word, PDF и электронной почты.">
     <meta name="keywords" content="прозрачная подпись онлайн, сделать подпись пнг, убрать фон с подписи, генератор подписи, электронная подпись для документов">
@@ -33,26 +42,10 @@
     <meta property="og:image" content="https://signaturesketch.tech/blog/how-to-make-signature-transparent.jpg">
     
     <!-- Dependencies -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Roboto is excellent for Cyrillic support -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+<!-- Roboto is excellent for Cyrillic support -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../dist/tailwind.css">
     <link rel="stylesheet" href="../../style.css">
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: { 
-                        // Prioritize Roboto for Russian text
-                        sans: ['Roboto', 'Arial', 'Helvetica', 'sans-serif'] 
-                    },
-                    colors: {
-                        primary: { 50: '#f0f9ff', 100: '#e0f2fe', 500: '#0ea5e9', 600: '#2563eb', 700: '#0369a1', 900: '#0c4a6e' }
-                    }
-                }
-            }
-        }
-    </script>
     <style>
         .prose p { margin-bottom: 1.5em; line-height: 1.8; color: #334155; }
         .prose h2 { color: #0f172a; font-weight: 700; margin-top: 2.5em; margin-bottom: 1em; font-size: 1.5rem; padding-bottom: 0.5rem; border-bottom: 1px solid #e2e8f0; }

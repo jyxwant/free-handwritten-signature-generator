@@ -5,7 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6903593415712702" crossorigin="anonymous"></script>
+    <script>
+    // Delay AdSense loading for better page performance
+    setTimeout(function() {
+        var s = document.createElement('script');
+        s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6903593415712702';
+        s.crossOrigin = 'anonymous';
+        s.async = true;
+        document.head.appendChild(s);
+    }, 3000);
+    </script>
     <title>数字签名终极指南 - Signature Sketch</title>
     <meta name="description" content="学习如何创建专业的数字签名，了解电子签名和数字签名的区别，以及如何在 PDF、Word 和 Google Docs 中使用它们。完整指南涵盖最佳实践、安全性考虑，以及在各种文档格式中添加签名的详细步骤。适合个人用户和企业办公使用，提升工作效率，实现无纸化办公。">
     <meta name="keywords" content="数字签名指南, 电子签名教程, PDF签名, Word签名, 在线签名">
@@ -21,37 +30,11 @@
     <link rel="alternate" hreflang="x-default" href="https://signaturesketch.tech/guide.html">
     
     <!-- Dependencies -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     
     <!-- Local Styles -->
+    <link rel="stylesheet" href="../dist/tailwind.css">
     <link rel="stylesheet" href="../style.css">
-
-    <!-- Tailwind Config -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
-                    },
-                    colors: {
-                        primary: {
-                            50: '#f0f9ff',
-                            100: '#e0f2fe',
-                            500: '#0ea5e9',
-                            600: '#2563eb',
-                            700: '#0369a1',
-                            900: '#0c4a6e',
-                        }
-                    },
-                    boxShadow: {
-                        'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
-                    }
-                }
-            }
-        }
-    </script>
     <style>
         /* Typography enhancements for Chinese */
         .prose p { margin-bottom: 1.5em; line-height: 1.8; color: #334155; text-align: justify; }
@@ -242,7 +225,7 @@
                                     <span class="text-[#FF0000] font-bold text-lg">PDF</span>
                                 </div>
                                 <div>
-                                    <h4 class="font-bold text-slate-900 mb-1">Adobe Acrobat (PDF)</h4>
+                                    <h4 class="font-bold text-slate-900 mb-1">Adobe Acrobat (PDF)</h3>
                                     <p class="text-sm text-slate-600">打开您的 PDF，点击"填写并签名"，选择"添加签名"。上传您在这里创建的 PNG 文件，它将完美地浮动在签名行上方。</p>
                                 </div>
                             </div>
@@ -252,7 +235,7 @@
                                     <span class="text-[#2B579A] font-bold text-lg">W</span>
                                 </div>
                                 <div>
-                                    <h4 class="font-bold text-slate-900 mb-1">Microsoft Word</h4>
+                                    <h4 class="font-bold text-slate-900 mb-1">Microsoft Word</h3>
                                     <p class="text-sm text-slate-600">前往 插入 > 图片 > 本设备。选择您的签名图片。右键点击图片，选择"文字环绕" > "浮于文字上方"即可自由移动。</p>
                                 </div>
                             </div>
@@ -262,7 +245,7 @@
                                     <svg class="w-6 h-6 text-[#EA4335]" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
                                 </div>
                                 <div>
-                                    <h4 class="font-bold text-slate-900 mb-1">邮件签名 (Gmail/Outlook)</h4>
+                                    <h4 class="font-bold text-slate-900 mb-1">邮件签名 (Gmail/Outlook)</h3>
                                     <p class="text-sm text-slate-600">您可以使用我们专门的"Email 页脚"工具生成包含照片、联系信息和手写签名的 HTML 签名块。</p>
                                 </div>
                             </div>

@@ -5,7 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6903593415712702" crossorigin="anonymous"></script>
+    <script>
+    // Delay AdSense loading for better page performance
+    setTimeout(function() {
+        var s = document.createElement('script');
+        s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6903593415712702';
+        s.crossOrigin = 'anonymous';
+        s.async = true;
+        document.head.appendChild(s);
+    }, 3000);
+    </script>
     <title>Блог - Signature Sketch</title>
     <meta name="description" content="Советы, инструкции и новости о цифровых подписях, продуктивности и безбумажной работе.">
     <link rel="icon" type="image/png" sizes="192x192" href="/icon.png?v=2">
@@ -19,23 +28,9 @@
     <link rel="alternate" hreflang="es" href="https://signaturesketch.tech/es/blog.html">
     <link rel="alternate" hreflang="ko" href="https://signaturesketch.tech/ko/blog.html">
     <link rel="alternate" hreflang="x-default" href="https://signaturesketch.tech/blog.html">
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../dist/tailwind.css">
     <link rel="stylesheet" href="../style.css">
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: { sans: ['Roboto', 'Arial', 'Helvetica', 'sans-serif'] },
-                    colors: {
-                        primary: { 50: '#f0f9ff', 100: '#e0f2fe', 500: '#0ea5e9', 600: '#2563eb', 700: '#0369a1', 900: '#0c4a6e' }
-                    }
-                }
-            }
-        }
-    </script>
 </head>
 <body class="bg-[#F8FAFC] text-slate-900 font-sans flex flex-col min-h-screen">
 

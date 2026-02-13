@@ -5,7 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6903593415712702" crossorigin="anonymous"></script>
+    <script>
+    // Delay AdSense loading for better page performance
+    setTimeout(function() {
+        var s = document.createElement('script');
+        s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6903593415712702';
+        s.crossOrigin = 'anonymous';
+        s.async = true;
+        document.head.appendChild(s);
+    }, 3000);
+    </script>
     <title>포토샵 없이 온라인에서 투명 배경 서명 만드는 방법 - Signature Sketch</title>
     <meta name="description" content="문서에 서명을 넣을 때 생기는 흰색 배경 때문에 고민이신가요? 포토샵 없이 무료로 투명한 PNG 서명을 만드는 3가지 방법을 알려드립니다.">
     <meta name="keywords" content="투명 배경 서명, 온라인 도장 만들기, 전자 서명 만들기, 서명 배경 제거, PNG 서명, 무료 서명 생성기">
@@ -33,24 +42,11 @@
     <meta property="og:image" content="https://signaturesketch.tech/blog/how-to-make-signature-transparent.jpg">
     
     <!-- Dependencies -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../dist/tailwind.css">
     <link rel="stylesheet" href="../../style.css">
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: { sans: ['"Noto Sans KR"', 'Inter', 'sans-serif'] },
-                    colors: {
-                        primary: { 50: '#f0f9ff', 100: '#e0f2fe', 500: '#0ea5e9', 600: '#2563eb', 700: '#0369a1', 900: '#0c4a6e' }
-                    }
-                }
-            }
-        }
-    </script>
 </head>
 <body class="bg-[#F8FAFC] text-slate-900 font-sans flex flex-col min-h-screen" style="word-break: keep-all;">
 

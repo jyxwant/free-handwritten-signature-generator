@@ -5,7 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6903593415712702" crossorigin="anonymous"></script>
+    <script>
+    // Delay AdSense loading for better page performance
+    setTimeout(function() {
+        var s = document.createElement('script');
+        s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6903593415712702';
+        s.crossOrigin = 'anonymous';
+        s.async = true;
+        document.head.appendChild(s);
+    }, 3000);
+    </script>
     <title>Comment faire une signature électronique gratuite en 2025 (Guide complet) - Signature Sketch</title>
     <meta name="description" content="Comment faire une signature électronique gratuite en 3 étapes simples. Apprenez à créer une signature numérique PNG sans fond pour vos PDF et documents.">
     <meta name="keywords" content="comment faire une signature électronique, comment créer une signature électronique, comment faire une signature numérique, signature électronique gratuite, signature manuscrite, PNG sans fond">
@@ -28,23 +37,10 @@
     <meta property="og:image" content="https://signaturesketch.tech/images/blog/signature-tuto-fr.jpg">
     
     <!-- Dependencies -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <!-- Adjust CSS path if necessary -->
+    <link rel="stylesheet" href="../../dist/tailwind.css">
     <link rel="stylesheet" href="../../style.css">
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: { sans: ['Inter', 'sans-serif'] },
-                    colors: {
-                        primary: { 50: '#f0f9ff', 100: '#e0f2fe', 500: '#0ea5e9', 600: '#2563eb', 700: '#0369a1', 900: '#0c4a6e' }
-                    }
-                }
-            }
-        }
-    </script>
     <style>
         .prose p { margin-bottom: 1.5em; line-height: 1.8; color: #334155; }
         .prose h2 { color: #0f172a; font-weight: 700; margin-top: 2.5em; margin-bottom: 1em; font-size: 1.5rem; padding-bottom: 0.5rem; border-bottom: 1px solid #e2e8f0; }
@@ -281,7 +277,7 @@
                         
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6 not-prose">
                             <div class="bg-slate-50 p-5 rounded-xl border border-slate-100">
-                                <h4 class="font-bold text-slate-900 mb-2">Méthode 1 : Scanner</h4>
+                                <h3 class="font-bold text-slate-900 mb-2 text-base">Méthode 1 : Scanner</h4>
                                 <ol class="text-sm text-slate-600 list-decimal pl-4 space-y-1">
                                     <li>Signez sur papier blanc</li>
                                     <li>Photographiez</li>
@@ -289,7 +285,7 @@
                                 </ol>
                             </div>
                             <div class="bg-slate-50 p-5 rounded-xl border border-slate-100">
-                                <h4 class="font-bold text-slate-900 mb-2">Méthode 2 : En ligne (Recommandé)</h4>
+                                <h3 class="font-bold text-slate-900 mb-2 text-base">Méthode 2 : En ligne (Recommandé)</h3>
                                 <p class="text-sm text-slate-600">Utilisez <a href="https://signaturesketch.tech/fr/" class="text-blue-600 underline">Signature Sketch</a> pour dessiner directement. Le fichier sortira automatiquement en <strong>PNG transparent</strong> haute qualité.</p>
                             </div>
                         </div>

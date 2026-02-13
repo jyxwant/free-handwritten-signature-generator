@@ -5,7 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6903593415712702" crossorigin="anonymous"></script>
+    <script>
+    // Delay AdSense loading for better page performance
+    setTimeout(function() {
+        var s = document.createElement('script');
+        s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6903593415712702';
+        s.crossOrigin = 'anonymous';
+        s.async = true;
+        document.head.appendChild(s);
+    }, 3000);
+    </script>
     <title>Ultimate Guide to Digital Signatures - Signature Sketch</title>
     <meta name="description" content="Learn how to create professional digital signatures, the difference between electronic and digital signatures, and how to use them in PDF, Word, and Google Docs.">
     <link rel="icon" type="image/png" sizes="192x192" href="/icon.png?v=2">
@@ -20,37 +29,11 @@
     <link rel="alternate" hreflang="x-default" href="https://signaturesketch.tech/guide.html">
     
     <!-- Dependencies -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     
     <!-- Local Styles -->
+    <link rel="stylesheet" href="dist/tailwind.css">
     <link rel="stylesheet" href="style.css">
-
-    <!-- Tailwind Config -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                    colors: {
-                        primary: {
-                            50: '#f0f9ff',
-                            100: '#e0f2fe',
-                            500: '#0ea5e9',
-                            600: '#2563eb',
-                            700: '#0369a1',
-                            900: '#0c4a6e',
-                        }
-                    },
-                    boxShadow: {
-                        'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
-                    }
-                }
-            }
-        }
-    </script>
     <style>
         /* Custom enhancements for typography */
         .prose p { margin-bottom: 1.5em; line-height: 1.8; color: #334155; }
@@ -241,7 +224,7 @@
                                     <span class="text-[#FF0000] font-bold text-lg">PDF</span>
                                 </div>
                                 <div>
-                                    <h4 class="font-bold text-slate-900 mb-1">Adobe Acrobat (PDF)</h4>
+                                    <h4 class="font-bold text-slate-900 mb-1">Adobe Acrobat (PDF)</h3>
                                     <p class="text-sm text-slate-600">Open your PDF, click "Fill & Sign," and choose "Add Signature." Upload the PNG file here. It will float perfectly over the signature line.</p>
                                 </div>
                             </div>
@@ -251,7 +234,7 @@
                                     <span class="text-[#2B579A] font-bold text-lg">W</span>
                                 </div>
                                 <div>
-                                    <h4 class="font-bold text-slate-900 mb-1">Microsoft Word</h4>
+                                    <h4 class="font-bold text-slate-900 mb-1">Microsoft Word</h3>
                                     <p class="text-sm text-slate-600">Go to Insert > Pictures > This Device. Select your signature. Right-click the image and select "Wrap Text" > "In Front of Text" to move it freely.</p>
                                 </div>
                             </div>
@@ -261,7 +244,7 @@
                                     <svg class="w-6 h-6 text-[#EA4335]" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
                                 </div>
                                 <div>
-                                    <h4 class="font-bold text-slate-900 mb-1">Email Signatures</h4>
+                                    <h4 class="font-bold text-slate-900 mb-1">Email Signatures</h3>
                                     <p class="text-sm text-slate-600">Use our specific "Email Footer" tool to generate an HTML signature block that includes your photo, contact info, and handwritten signature.</p>
                                 </div>
                             </div>

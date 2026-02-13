@@ -5,7 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6903593415712702" crossorigin="anonymous"></script>
+    <script>
+    // Delay AdSense loading for better page performance
+    setTimeout(function() {
+        var s = document.createElement('script');
+        s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6903593415712702';
+        s.crossOrigin = 'anonymous';
+        s.async = true;
+        document.head.appendChild(s);
+    }, 3000);
+    </script>
     <title>Comment Ajouter une Signature dans Word (Méthode Simple Sans Scanner) - Signature Sketch</title>
     <meta name="description" content="Apprenez comment ajouter une signature dans Word sans numérisation. Guide étape par étape pour les signatures PNG transparentes, le canevas de dessin et plus encore.">
     <meta name="keywords" content="ajouter signature word, insérer signature word, signature numérique word, signature document word, signature transparente png">
@@ -21,23 +30,9 @@
     <meta property="og:title" content="Comment Ajouter une Signature dans Word (Méthode Simple)">
     <meta property="og:description" content="Méthodes professionnelles pour ajouter des signatures dans Word sans numérisation.">
     <meta property="og:type" content="article">
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../dist/tailwind.css">
     <link rel="stylesheet" href="../../style.css">
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: { sans: ['Inter', 'sans-serif'] },
-                    colors: {
-                        primary: { 50: '#f0f9ff', 100: '#e0f2fe', 500: '#0ea5e9', 600: '#2563eb', 700: '#0369a1', 900: '#0c4a6e' }
-                    }
-                }
-            }
-        }
-    </script>
     <style>
         .prose p { margin-bottom: 1.5em; line-height: 1.8; color: #334155; }
         .prose h2 { color: #0f172a; font-weight: 700; margin-top: 2.5em; margin-bottom: 1em; font-size: 1.5rem; padding-bottom: 0.5rem; border-bottom: 1px solid #e2e8f0; }
@@ -275,7 +270,7 @@
                         <p>Ajouter une signature dans Word ne nécessite pas d'imprimer, de numériser ou de lutter avec des outils de dessin maladroits. La méthode PNG transparent vous donne une signature propre et professionnelle qui fonctionne sur n'importe quel document, n'importe quel fond et n'importe quel appareil.</p>
 
                         <div class="bg-blue-50 border border-blue-100 p-6 rounded-2xl my-8">
-                            <h4 class="font-bold text-slate-900 mb-2">Récapitulatif Rapide :</h4>
+                            <h3 class="font-bold text-slate-900 mb-2 text-base">Récapitulatif Rapide :</h4>
                             <ol class="text-slate-700 m-0">
                                 <li>Créez votre signature avec un générateur en ligne</li>
                                 <li>Téléchargez en PNG transparent</li>

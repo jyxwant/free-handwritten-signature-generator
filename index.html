@@ -5,7 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6903593415712702" crossorigin="anonymous"></script>
+    <script>
+    // Delay AdSense loading for better page performance
+    setTimeout(function() {
+        var s = document.createElement('script');
+        s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6903593415712702';
+        s.crossOrigin = 'anonymous';
+        s.async = true;
+        document.head.appendChild(s);
+    }, 3000);
+    </script>
     
     <!-- SEO Optimization -->
     <title>Free Handwritten Signature Generator - Transparent PNG</title>
@@ -18,9 +27,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    <link rel="preconnect" href="https://cdn.tailwindcss.com">
-
-    <!-- Open Graph Meta Tags -->
+<!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Free Handwritten Signature Generator (No Sign Up)">
     <meta property="og:description" content="Draw your signature online and download as transparent PNG or PDF. No registration required.">
     <meta property="og:type" content="website">
@@ -113,46 +120,13 @@
     </script>
     
     <!-- Dependencies -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <!-- Signature Style Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Satisfy&family=Sacramento&family=Permanent+Marker&family=Kaushan+Script&family=Alex+Brush&display=swap" rel="stylesheet">
     
     <!-- Local Styles -->
+    <link rel="stylesheet" href="dist/tailwind.css">
     <link rel="stylesheet" href="style.css">
-
-    <!-- Tailwind Config -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                    colors: {
-                        primary: {
-                            50: '#f0f9ff',
-                            100: '#e0f2fe',
-                            500: '#0ea5e9',
-                            600: '#2563eb',
-                            700: '#0369a1',
-                            900: '#0c4a6e',
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-<script type="importmap">
-{
-  "imports": {
-    "react": "https://esm.sh/react@^19.2.3",
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "lucide-react": "https://esm.sh/lucide-react@^0.561.0"
-  }
-}
-</script>
 </head>
 <body class="bg-[#F8FAFC] text-slate-900 font-sans flex flex-col min-h-screen">
 
@@ -385,11 +359,11 @@
                         <div class="flex flex-col sm:flex-row gap-3 items-start sm:items-center mb-4">
                             <div class="flex items-center gap-2 flex-1 w-full sm:w-auto">
                                 <span class="text-xs font-semibold text-slate-600 uppercase tracking-widest whitespace-nowrap" data-i18n="nameLabel">Name</span>
-                                <input type="text" id="multi-name-input" class="flex-1 px-3 py-1.5 text-sm border border-slate-200 rounded-lg focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-colors" placeholder="Enter your name" data-i18n-placeholder="namePlaceholder">
+                                <input type="text" id="multi-name-input" aria-label="Enter your name for signature" class="flex-1 px-3 py-1.5 text-sm border border-slate-200 rounded-lg focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-colors" placeholder="Enter your name" data-i18n-placeholder="namePlaceholder">
                             </div>
                             <div class="flex items-center gap-2">
                                 <span class="text-xs text-slate-400">Color:</span>
-                                <input type="color" id="multi-color-picker" value="#000000" class="w-7 h-7 rounded border-none cursor-pointer">
+                                <input type="color" id="multi-color-picker" aria-label="Signature color" value="#000000" class="w-7 h-7 rounded border-none cursor-pointer">
                                 <button id="refresh-signatures-btn" class="p-1.5 text-slate-400 hover:text-blue-500 hover:bg-blue-50 rounded transition-colors" title="Refresh">
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                         <path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8"/>
@@ -398,7 +372,7 @@
                                 </button>
                             </div>
                         </div>
-                        <p class="text-[10px] text-slate-400 mb-3">Tip: If fonts don't render correctly, click the refresh button on the right</p>
+                        <p class="text-[10px] text-slate-600 mb-3">Tip: If fonts don't render correctly, click the refresh button on the right</p>
                         
                         <!-- Multi-language Signature Templates Grid -->
                         <div id="multi-language-templates" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-2">
@@ -417,7 +391,7 @@
             <div class="xl:hidden w-full max-w-4xl mx-auto mt-8">
                 <div class="bg-slate-100 border-2 border-dashed border-slate-300 rounded-xl min-h-[100px] flex items-center justify-center p-4">
                     <div class="text-center w-full">
-                        <span class="text-xs text-slate-500 uppercase tracking-widest">Advertisement</span>
+                        <span class="text-xs text-slate-600 uppercase tracking-widest">Advertisement</span>
                         <div id="ad-slot-mobile" class="w-full mt-2">
                             <!-- Mobile Ad Placeholder -->
                         </div>
@@ -433,21 +407,21 @@
                         <div class="w-10 h-10 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center mb-4">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
                         </div>
-                        <h4 class="font-bold text-slate-900 mb-2">Mobile Optimized</h4>
+                        <h3 class="font-bold text-slate-900 mb-2 text-base">Mobile Optimized</h3>
                         <p class="text-sm text-slate-600">Perfectly responsive canvas. Sign easily with your finger on i<span data-i18n="labelPhone">Phone</span>, iPad, or Android devices.</p>
                     </div>
                     <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
                         <div class="w-10 h-10 bg-green-50 text-green-600 rounded-lg flex items-center justify-center mb-4">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
                         </div>
-                        <h4 class="font-bold text-slate-900 mb-2">100% Private</h4>
+                        <h3 class="font-bold text-slate-900 mb-2 text-base">100% Private</h3>
                         <p class="text-sm text-slate-600">Your data never leaves your browser. No server uploads, no database storage. Completely secure.</p>
                     </div>
                     <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
                         <div class="w-10 h-10 bg-purple-50 text-purple-600 rounded-lg flex items-center justify-center mb-4">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><path d="m9 15 2 2 4-4"/></svg>
                         </div>
-                        <h4 class="font-bold text-slate-900 mb-2">Transparent PNG</h4>
+                        <h3 class="font-bold text-slate-900 mb-2 text-base">Transparent PNG</h3>
                         <p class="text-sm text-slate-600">Downloads automatically feature a transparent background, ready to paste into Word, PDF, or Google Docs.</p>
                     </div>
                 </div>
@@ -487,7 +461,7 @@
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
                                             </svg>
                                         </span>
-                                        <h4 class="text-lg font-semibold text-slate-900 mb-2" data-i18n="step2Title">Customize</h4>
+                                        <h3 class="text-lg font-semibold text-slate-900 mb-2" data-i18n="step2Title">Customize</h3>
                                         <p class="text-slate-600 leading-relaxed"><span data-i18n="step2Desc">Adjust the ink color (black, blue, red) and stroke thickness to match your style.</span></p>
                                     </li>
                                     
@@ -497,7 +471,7 @@
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/>
                                             </svg>
                                         </span>
-                                        <h4 class="text-lg font-semibold text-slate-900 mb-2" data-i18n="step1Title">Draw</h4>
+                                        <h3 class="text-lg font-semibold text-slate-900 mb-2" data-i18n="step1Title">Draw</h3>
                                         <p class="text-slate-600 leading-relaxed"><span data-i18n="step1Desc">Use your mouse, trackpad, or touchscreen (mobile/tablet) to draw your signature in the canvas box above.</span></p>
                                     </li>
                                     
@@ -507,7 +481,7 @@
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
                                             </svg>
                                         </span>
-                                        <h4 class="text-lg font-semibold text-slate-900 mb-2" data-i18n="step3Title">Download</h4>
+                                        <h3 class="text-lg font-semibold text-slate-900 mb-2" data-i18n="step3Title">Download</h3>
                                         <p class="text-slate-600 leading-relaxed"><span data-i18n="step3Desc">Click "PNG Image" to save your signature with a transparent background, or "PDF Document" for a printable format.</span></p>
                                     </li>
                                 </ol>
@@ -567,24 +541,24 @@
                             
                             <div class="space-y-6">
                                 <div class="pb-6 border-b border-slate-100 last:border-0 last:pb-0">
-                                    <h4 class="text-base font-semibold text-slate-900 mb-3" data-i18n="faqQ1">How can I use the PNG signature in Word or Google Docs?</h4>
+                                    <h3 class="text-base font-semibold text-slate-900 mb-3" data-i18n="faqQ1">How can I use the PNG signature in Word or Google Docs?</h3>
                                     <p class="text-sm text-slate-600 leading-relaxed" data-i18n="faqA1">Once you download the PNG file, simply open your document, click "Insert" > "Image", and select your signature file. Because it has a transparent background, it will look like you signed directly on the paper. You can resize it to fit the signature line perfectly.</p>
                                 </div>
                                 
 
                                 
                                 <div class="pb-6 border-b border-slate-100 last:border-0 last:pb-0">
-                                    <h4 class="text-base font-semibold text-slate-900 mb-3" data-i18n="faqQ3">Why is it better than scanning a paper signature?</h4>
+                                    <h3 class="text-base font-semibold text-slate-900 mb-3" data-i18n="faqQ3">Why is it better than scanning a paper signature?</h3>
                                     <p class="text-sm text-slate-600 leading-relaxed" data-i18n="faqA3">Scanning a paper signature often results in a gray, shadowy background that looks unprofessional on digital documents. Our <strong class="text-slate-900">online signature creator</strong> produces a crisp, clean digital ink line with a perfectly transparent background every time.</p>
                                 </div>
                                 
                                 <div class="pb-6 border-b border-slate-100 last:border-0 last:pb-0">
-                                    <h4 class="text-base font-semibold text-slate-900 mb-3" data-i18n="faqQ4">Is my signature saved?</h4>
+                                    <h3 class="text-base font-semibold text-slate-900 mb-3" data-i18n="faqQ4">Is my signature saved?</h3>
                                     <p class="text-sm text-slate-600 leading-relaxed" data-i18n="faqA4">No. The signature exists only in your browser's temporary memory. Once you refresh the page, it is deleted forever. We do not have servers.</p>
                                 </div>
                                 
                                 <div class="pb-6 border-b border-slate-100 last:border-0 last:pb-0">
-                                    <h4 class="text-base font-semibold text-slate-900 mb-3" data-i18n="faqQ5">How to make a signature transparent?</h4>
+                                    <h3 class="text-base font-semibold text-slate-900 mb-3" data-i18n="faqQ5">How to make a signature transparent?</h3>
                                     <p class="text-sm text-slate-600 leading-relaxed" data-i18n="faqA5">You don't need Photoshop. Our tool automatically creates a transparent signature PNG. Just draw, and the background is removed instantly, ready for Word or Google Docs.</p>
                                 </div>
                             </div>
@@ -897,7 +871,7 @@
             
             // Bottom label
             const label = document.createElement('div');
-            label.className = "text-[9px] text-slate-400 text-center uppercase tracking-tight leading-tight";
+            label.className = "text-[9px] text-slate-600 text-center uppercase tracking-tight leading-tight";
             label.innerText = style.name;
             wrapper.appendChild(label);
             

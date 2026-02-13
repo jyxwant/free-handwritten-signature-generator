@@ -5,7 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6903593415712702" crossorigin="anonymous"></script>
+    <script>
+    // Delay AdSense loading for better page performance
+    setTimeout(function() {
+        var s = document.createElement('script');
+        s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6903593415712702';
+        s.crossOrigin = 'anonymous';
+        s.async = true;
+        document.head.appendChild(s);
+    }, 3000);
+    </script>
     
     <!-- SEO -->
     <title>署名をダウンロード - Signature Sketch</title>
@@ -18,23 +27,9 @@
     <link rel="shortcut icon" href="https://signaturesketch.tech/icon.png?v=2">
     
     <!-- Dependencies -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../dist/tailwind.css">
     <link rel="stylesheet" href="../style.css">
-    
-    <!-- Tailwind Config -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
 </head>
 <body class="bg-[#F8FAFC] text-slate-900 font-sans flex flex-col min-h-screen">
 
@@ -264,31 +259,37 @@
                 showDownloadSuccess(document.getElementById('download-png-btn'));
             });
 
-            // PDF Download
+            // PDF Download (lazy-loaded)
             document.getElementById('download-pdf-btn').addEventListener('click', () => {
-                const { jsPDF } = window.jspdf;
-                
-                // Create temp image to get dimensions
-                const img = new Image();
-                img.onload = () => {
-                    const padding = 10;
-                    const pxToMm = 0.264583;
-                    const imgWidth = img.width;
-                    const imgHeight = img.height;
-                    const pdfWidth = (imgWidth * pxToMm) + (padding * 2);
-                    const pdfHeight = (imgHeight * pxToMm) + (padding * 2);
-
-                    const pdf = new jsPDF({
-                        orientation: pdfWidth > pdfHeight ? 'landscape' : 'portrait',
-                        unit: 'mm',
-                        format: [pdfWidth, pdfHeight]
-                    });
-
-                    pdf.addImage(dataURL, 'PNG', padding, padding, imgWidth * pxToMm, imgHeight * pxToMm);
-                    pdf.save(`signature_${Date.now()}.pdf`);
-                    showDownloadSuccess(document.getElementById('download-pdf-btn'));
-                };
-                img.src = dataURL;
+                function doGeneratePdf() {
+                    const { jsPDF } = window.jspdf;
+                    const img = new Image();
+                    img.onload = () => {
+                        const padding = 10;
+                        const pxToMm = 0.264583;
+                        const imgWidth = img.width;
+                        const imgHeight = img.height;
+                        const pdfWidth = (imgWidth * pxToMm) + (padding * 2);
+                        const pdfHeight = (imgHeight * pxToMm) + (padding * 2);
+                        const pdf = new jsPDF({
+                            orientation: pdfWidth > pdfHeight ? 'landscape' : 'portrait',
+                            unit: 'mm',
+                            format: [pdfWidth, pdfHeight]
+                        });
+                        pdf.addImage(dataURL, 'PNG', padding, padding, imgWidth * pxToMm, imgHeight * pxToMm);
+                        pdf.save(`signature_${Date.now()}.pdf`);
+                        showDownloadSuccess(document.getElementById('download-pdf-btn'));
+                    };
+                    img.src = dataURL;
+                }
+                if (window.jspdf) {
+                    doGeneratePdf();
+                } else {
+                    var s = document.createElement('script');
+                    s.src = 'https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js';
+                    s.onload = doGeneratePdf;
+                    document.head.appendChild(s);
+                }
             });
         });
     </script>

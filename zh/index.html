@@ -5,7 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6903593415712702" crossorigin="anonymous"></script>
+    <script>
+    // Delay AdSense loading for better page performance
+    setTimeout(function() {
+        var s = document.createElement('script');
+        s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6903593415712702';
+        s.crossOrigin = 'anonymous';
+        s.async = true;
+        document.head.appendChild(s);
+    }, 3000);
+    </script>
     
     <!-- SEO Optimization (保留原中文设置) -->
     <title>免费手写签名生成器 (无需注册) | 透明背景 PNG</title>
@@ -18,9 +27,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    <link rel="preconnect" href="https://cdn.tailwindcss.com">
-
-    <!-- Open Graph Meta Tags -->
+<!-- Open Graph Meta Tags -->
     <meta property="og:title" content="免费手写签名生成器 (无需注册)">
     <meta property="og:description" content="在线绘制您的签名并下载为透明 PNG 或 PDF。无需注册。">
     <meta property="og:type" content="website">
@@ -110,46 +117,13 @@
     </script>
     
     <!-- Dependencies -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <!-- Chinese Signature Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Zhi+Mang+Xing&family=Liu+Jian+Mao+Cao&family=Long+Cang&family=ZCOOL+XiaoWei&family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
     
     <!-- Local Styles -->
+    <link rel="stylesheet" href="../dist/tailwind.css">
     <link rel="stylesheet" href="../style.css">
-
-    <!-- Tailwind Config -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                    colors: {
-                        primary: {
-                            50: '#f0f9ff',
-                            100: '#e0f2fe',
-                            500: '#0ea5e9',
-                            600: '#2563eb',
-                            700: '#0369a1',
-                            900: '#0c4a6e',
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-    <script type="importmap">
-    {
-      "imports": {
-        "react": "https://esm.sh/react@^19.2.3",
-        "react/": "https://esm.sh/react@^19.2.3/",
-        "lucide-react": "https://esm.sh/lucide-react@^0.561.0"
-      }
-    }
-    </script>
 </head>
 <body class="bg-[#F8FAFC] text-slate-900 font-sans flex flex-col min-h-screen">
 
@@ -375,11 +349,11 @@
                         <div class="flex flex-col sm:flex-row gap-3 items-start sm:items-center mb-4">
                             <div class="flex items-center gap-2 flex-1 w-full sm:w-auto">
                                 <span class="text-xs font-semibold text-slate-600 uppercase tracking-widest whitespace-nowrap">姓名</span>
-                                <input type="text" id="multi-name-input" class="flex-1 px-3 py-1.5 text-sm border border-slate-200 rounded-lg focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-colors" placeholder="输入您的姓名">
+                                <input type="text" id="multi-name-input" aria-label="Enter your name for signature" class="flex-1 px-3 py-1.5 text-sm border border-slate-200 rounded-lg focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-colors" placeholder="输入您的姓名">
                             </div>
                             <div class="flex items-center gap-2">
                                 <span class="text-xs text-slate-400">颜色:</span>
-                                <input type="color" id="multi-color-picker" value="#000000" class="w-7 h-7 rounded border-none cursor-pointer">
+                                <input type="color" id="multi-color-picker" aria-label="Signature color" value="#000000" class="w-7 h-7 rounded border-none cursor-pointer">
                                 <button id="refresh-signatures-btn" class="p-1.5 text-slate-400 hover:text-blue-500 hover:bg-blue-50 rounded transition-colors" title="重新生成">
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                         <path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8"/>
@@ -388,7 +362,7 @@
                                 </button>
                             </div>
                         </div>
-                        <p class="text-[10px] text-slate-400 mb-3">提示：若字体显示异常，请点击右侧刷新按钮重新生成</p>
+                        <p class="text-[10px] text-slate-600 mb-3">提示：若字体显示异常，请点击右侧刷新按钮重新生成</p>
                         
                         <!-- Chinese Signature Templates Grid -->
                         <div id="multi-language-templates" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-2">
@@ -407,7 +381,7 @@
             <div class="xl:hidden w-full max-w-4xl mx-auto mt-8">
                 <div class="bg-slate-100 border-2 border-dashed border-slate-300 rounded-xl min-h-[100px] flex items-center justify-center p-4">
                     <div class="text-center w-full">
-                        <span class="text-xs text-slate-500 uppercase tracking-widest">Advertisement</span>
+                        <span class="text-xs text-slate-600 uppercase tracking-widest">Advertisement</span>
                         <div id="ad-slot-mobile" class="w-full mt-2">
                             <!-- Mobile Ad Placeholder -->
                         </div>
@@ -423,21 +397,21 @@
                         <div class="w-10 h-10 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center mb-4">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
                         </div>
-                        <h4 class="font-bold text-slate-900 mb-2">移动端优化</h4>
+                        <h3 class="font-bold text-slate-900 mb-2 text-base">移动端优化</h3>
                         <p class="text-sm text-slate-600">完美响应的画布。在 iPhone、iPad 或安卓设备上用手指轻松签名。</p>
                     </div>
                     <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
                         <div class="w-10 h-10 bg-green-50 text-green-600 rounded-lg flex items-center justify-center mb-4">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
                         </div>
-                        <h4 class="font-bold text-slate-900 mb-2">100% 隐私保护</h4>
+                        <h3 class="font-bold text-slate-900 mb-2 text-base">100% 隐私保护</h3>
                         <p class="text-sm text-slate-600">您的数据从未离开浏览器。无服务器上传，无数据库存储，绝对安全。</p>
                     </div>
                     <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
                         <div class="w-10 h-10 bg-purple-50 text-purple-600 rounded-lg flex items-center justify-center mb-4">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><path d="m9 15 2 2 4-4"/></svg>
                         </div>
-                        <h4 class="font-bold text-slate-900 mb-2">透明背景 PNG</h4>
+                        <h3 class="font-bold text-slate-900 mb-2 text-base">透明背景 PNG</h3>
                         <p class="text-sm text-slate-600">下载自动生成透明背景，可直接粘贴到 Word、PDF 或 Google Docs 中。</p>
                     </div>
                 </div>
@@ -475,7 +449,7 @@
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
                                             </svg>
                                         </span>
-                                        <h4 class="text-lg font-semibold text-slate-900 mb-2" data-i18n="step2Title">自定义</h4>
+                                        <h3 class="text-lg font-semibold text-slate-900 mb-2" data-i18n="step2Title">自定义</h3>
                                         <p class="text-slate-600 leading-relaxed"><span data-i18n="step2Desc">调整墨水颜色（黑色、蓝色、红色）和笔触粗细以符合您的风格。</span></p>
                                     </li>
                                     
@@ -485,7 +459,7 @@
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/>
                                             </svg>
                                         </span>
-                                        <h4 class="text-lg font-semibold text-slate-900 mb-2" data-i18n="step1Title">绘制</h4>
+                                        <h3 class="text-lg font-semibold text-slate-900 mb-2" data-i18n="step1Title">绘制</h3>
                                         <p class="text-slate-600 leading-relaxed"><span data-i18n="step1Desc">使用鼠标、触控板或触摸屏（手机/平板）在上方画布框中绘制您的签名。</span></p>
                                     </li>
                                     
@@ -495,7 +469,7 @@
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
                                             </svg>
                                         </span>
-                                        <h4 class="text-lg font-semibold text-slate-900 mb-2" data-i18n="step3Title">下载</h4>
+                                        <h3 class="text-lg font-semibold text-slate-900 mb-2" data-i18n="step3Title">下载</h3>
                                         <p class="text-slate-600 leading-relaxed"><span data-i18n="step3Desc">点击“下载 PNG”保存带有透明背景的签名，或“PDF”以保存为可打印格式。</span></p>
                                     </li>
                                 </ol>
@@ -555,19 +529,19 @@
                             
                             <div class="space-y-6">
                                 <div class="pb-6 border-b border-slate-100 last:border-0 last:pb-0">
-                                    <h4 class="text-base font-semibold text-slate-900 mb-3" data-i18n="faqQ1">如何在 Word 或 Google Docs 中使用 PNG 签名？</h4>
+                                    <h3 class="text-base font-semibold text-slate-900 mb-3" data-i18n="faqQ1">如何在 Word 或 Google Docs 中使用 PNG 签名？</h3>
                                     <p class="text-sm text-slate-600 leading-relaxed" data-i18n="faqA1">下载 PNG 文件后，只需打开您的文档，点击“插入” > “图片”，然后选择您的签名文件。由于它是透明背景，它看起来就像直接签在纸上一样。您可以调整大小以完美适应签名栏。</p>
                                 </div>
                                 
 
                                 
                                 <div class="pb-6 border-b border-slate-100 last:border-0 last:pb-0">
-                                    <h4 class="text-base font-semibold text-slate-900 mb-3" data-i18n="faqQ3">为什么比扫描纸质签名更好？</h4>
+                                    <h3 class="text-base font-semibold text-slate-900 mb-3" data-i18n="faqQ3">为什么比扫描纸质签名更好？</h3>
                                     <p class="text-sm text-slate-600 leading-relaxed" data-i18n="faqA3">扫描纸质签名通常会导致背景发灰、有阴影，在数字文档上看起来不专业。我们的<strong class="text-slate-900">在线签名制作工具</strong>每次都能生成清晰、线条流畅且背景完美透明的数字笔迹。</p>
                                 </div>
                                 
                                 <div class="pb-6 border-b border-slate-100 last:border-0 last:pb-0">
-                                    <h4 class="text-base font-semibold text-slate-900 mb-3" data-i18n="faqQ4">我的签名会被保存吗？</h4>
+                                    <h3 class="text-base font-semibold text-slate-900 mb-3" data-i18n="faqQ4">我的签名会被保存吗？</h3>
                                     <p class="text-sm text-slate-600 leading-relaxed" data-i18n="faqA4">不会。签名仅存在于您浏览器的临时内存中。一旦刷新页面，它将被永久删除。我们没有服务器。</p>
                                 </div>
                             </div>
@@ -857,7 +831,7 @@
             wrapper.appendChild(canvas);
             
             const label = document.createElement('div');
-            label.className = "text-[9px] text-slate-400 text-center uppercase tracking-tight leading-tight";
+            label.className = "text-[9px] text-slate-600 text-center uppercase tracking-tight leading-tight";
             label.innerText = style.name;
             wrapper.appendChild(label);
             

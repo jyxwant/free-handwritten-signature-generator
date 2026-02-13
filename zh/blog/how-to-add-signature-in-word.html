@@ -5,7 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6903593415712702" crossorigin="anonymous"></script>
+    <script>
+    // Delay AdSense loading for better page performance
+    setTimeout(function() {
+        var s = document.createElement('script');
+        s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6903593415712702';
+        s.crossOrigin = 'anonymous';
+        s.async = true;
+        document.head.appendChild(s);
+    }, 3000);
+    </script>
     <title>如何在 Word 中添加签名（无需扫描的简单方法） - Signature Sketch</title>
     <meta name="description" content="学习如何在 Word 中添加签名，无需扫描。透明 PNG 签名、绘图画布等多种方法，适用于 Windows 和 Mac。">
     <meta name="keywords" content="Word添加签名, Word插入签名, 电子签名Word, Word文档签名, 透明签名图片">
@@ -21,23 +30,9 @@
     <meta property="og:title" content="如何在 Word 中添加签名（简单方法）">
     <meta property="og:description" content="在 Word 中添加签名的专业方法，无需扫描。透明 PNG、绘图画布等多种方法。">
     <meta property="og:type" content="article">
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../dist/tailwind.css">
     <link rel="stylesheet" href="../../style.css">
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: { sans: ['Inter', 'sans-serif'] },
-                    colors: {
-                        primary: { 50: '#f0f9ff', 100: '#e0f2fe', 500: '#0ea5e9', 600: '#2563eb', 700: '#0369a1', 900: '#0c4a6e' }
-                    }
-                }
-            }
-        }
-    </script>
     <style>
         .prose p { margin-bottom: 1.5em; line-height: 1.8; color: #334155; }
         .prose h2 { color: #0f172a; font-weight: 700; margin-top: 2.5em; margin-bottom: 1em; font-size: 1.5rem; padding-bottom: 0.5rem; border-bottom: 1px solid #e2e8f0; }
@@ -272,7 +267,7 @@
                         <p>在 Word 中添加签名不需要打印、扫描或与笨拙的绘图工具作斗争。透明 PNG 方法可以为你提供干净、专业的签名，适用于任何文档、任何背景和任何设备。</p>
 
                         <div class="bg-blue-50 border border-blue-100 p-6 rounded-2xl my-8">
-                            <h4 class="font-bold text-slate-900 mb-2">快速回顾：</h4>
+                            <h3 class="font-bold text-slate-900 mb-2 text-base">快速回顾：</h4>
                             <ol class="text-slate-700 m-0">
                                 <li>使用在线生成器创建签名</li>
                                 <li>下载为透明 PNG</li>

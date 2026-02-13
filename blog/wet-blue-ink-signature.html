@@ -5,7 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6903593415712702" crossorigin="anonymous"></script>
+    <script>
+    // Delay AdSense loading for better page performance
+    setTimeout(function() {
+        var s = document.createElement('script');
+        s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6903593415712702';
+        s.crossOrigin = 'anonymous';
+        s.async = true;
+        document.head.appendChild(s);
+    }, 3000);
+    </script>
     
     <!-- 1. SEO Meta Tags (Strict Keyword Targeting) -->
     <title>Wet Blue Ink Signature Generator: Create Realistic Signatures Online</title>
@@ -81,18 +90,7 @@
     </script>
 
     <!-- Dependencies -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: { sans: ['Inter', 'sans-serif'] },
-                }
-            }
-        }
-    </script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Custom Typography & UI Styles -->
     <style>
@@ -184,6 +182,7 @@
         .comparison-table th { background: #f1f5f9; padding: 1rem; text-align: left; font-weight: 700; color: #0f172a; }
         .comparison-table td { padding: 1rem; border-top: 1px solid #e2e8f0; color: #334155; }
     </style>
+    <link rel="stylesheet" href="../dist/tailwind.css">
 </head>
 <body class="bg-white text-slate-900 font-sans flex flex-col min-h-screen">
 

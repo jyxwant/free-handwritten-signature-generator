@@ -5,7 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6903593415712702" crossorigin="anonymous"></script>
+    <script>
+    // Delay AdSense loading for better page performance
+    setTimeout(function() {
+        var s = document.createElement('script');
+        s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6903593415712702';
+        s.crossOrigin = 'anonymous';
+        s.async = true;
+        document.head.appendChild(s);
+    }, 3000);
+    </script>
     
     <!-- SEO Optimization -->
     <title>Free Gmail Signature Maker & Email Signature Generator (No Sign Up)</title>
@@ -17,9 +26,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdn.tailwindcss.com">
-
-    <!-- Open Graph Meta Tags -->
+<!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Free Gmail Signature Maker - Create Professional Email Signatures">
     <meta property="og:description" content="Design beautiful email signatures for Gmail, Outlook, and Apple Mail. Add your handwritten signature. 100% free, no registration.">
     <meta property="og:type" content="website">
@@ -97,34 +104,11 @@
     </script>
     
     <!-- Dependencies -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     
     <!-- Local Styles -->
+    <link rel="stylesheet" href="../dist/tailwind.css">
     <link rel="stylesheet" href="../style.css">
-
-    <!-- Tailwind Config -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                    colors: {
-                        primary: {
-                            50: '#f0f9ff',
-                            100: '#e0f2fe',
-                            500: '#0ea5e9',
-                            600: '#2563eb',
-                            700: '#0369a1',
-                            900: '#0c4a6e',
-                        }
-                    }
-                }
-            }
-        }
-    </script>
 </head>
 <body class="bg-[#F8FAFC] text-slate-900 font-sans flex flex-col min-h-screen">
 
@@ -439,21 +423,21 @@
                         <div class="w-10 h-10 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center mb-4">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
                         </div>
-                        <h4 class="font-bold text-slate-900 mb-2">Handwritten Signature</h4>
+                        <h3 class="font-bold text-slate-900 mb-2 text-base">Handwritten Signature</h3>
                         <p class="text-sm text-slate-600">Add a personal touch with your own handwritten signature image for a more authentic look.</p>
                     </div>
                     <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
                         <div class="w-10 h-10 bg-green-50 text-green-600 rounded-lg flex items-center justify-center mb-4">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
                         </div>
-                        <h4 class="font-bold text-slate-900 mb-2">100% Private</h4>
+                        <h3 class="font-bold text-slate-900 mb-2 text-base">100% Private</h3>
                         <p class="text-sm text-slate-600">Everything runs locally in your browser. Your contact information is never sent to any server.</p>
                     </div>
                     <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
                         <div class="w-10 h-10 bg-purple-50 text-purple-600 rounded-lg flex items-center justify-center mb-4">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                         </div>
-                        <h4 class="font-bold text-slate-900 mb-2">Works Everywhere</h4>
+                        <h3 class="font-bold text-slate-900 mb-2 text-base">Works Everywhere</h3>
                         <p class="text-sm text-slate-600">Compatible with Gmail, Outlook, Yahoo Mail, Apple Mail, and any other email client that supports HTML signatures.</p>
                     </div>
                 </div>
@@ -469,22 +453,22 @@
                     
                     <div class="space-y-6">
                         <div class="pb-6 border-b border-slate-100">
-                            <h4 class="text-base font-semibold text-slate-900 mb-3">How do I add a handwritten signature to Gmail?</h4>
+                            <h3 class="text-base font-semibold text-slate-900 mb-3">How do I add a handwritten signature to Gmail?</h3>
                             <p class="text-sm text-slate-600 leading-relaxed">First, create your handwritten signature using our <a href="/" class="text-blue-600 hover:underline">free signature maker</a>. Download the transparent PNG, then upload it here. Your signature will appear in the preview and will be included when you copy for Gmail.</p>
                         </div>
                         
                         <div class="pb-6 border-b border-slate-100">
-                            <h4 class="text-base font-semibold text-slate-900 mb-3">Why isn't my signature image showing in Gmail?</h4>
+                            <h3 class="text-base font-semibold text-slate-900 mb-3">Why isn't my signature image showing in Gmail?</h3>
                             <p class="text-sm text-slate-600 leading-relaxed">Gmail requires signature images to be hosted online. For the image to display, you'll need to either: (1) use an image hosting service and paste the URL, or (2) insert the image directly in Gmail's signature editor after pasting the text.</p>
                         </div>
                         
                         <div class="pb-6 border-b border-slate-100">
-                            <h4 class="text-base font-semibold text-slate-900 mb-3">Can I use this signature in Outlook?</h4>
+                            <h3 class="text-base font-semibold text-slate-900 mb-3">Can I use this signature in Outlook?</h3>
                             <p class="text-sm text-slate-600 leading-relaxed">Yes! Click "Copy for Gmail" (it works for all email clients), then paste into Outlook's signature settings. In Outlook, go to File > Options > Mail > Signatures.</p>
                         </div>
                         
                         <div class="pb-6 border-b border-slate-100 last:border-0 last:pb-0">
-                            <h4 class="text-base font-semibold text-slate-900 mb-3">Is this really free with no hidden costs?</h4>
+                            <h3 class="text-base font-semibold text-slate-900 mb-3">Is this really free with no hidden costs?</h3>
                             <p class="text-sm text-slate-600 leading-relaxed">Absolutely! This tool is 100% free. No sign-up, no email required, no watermarks, no limits. We believe professional email signatures should be accessible to everyone.</p>
                         </div>
                     </div>

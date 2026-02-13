@@ -1,3 +1,4 @@
 {
-  "version": 2
+  "version": 2,
+  "buildCommand": "npx tailwindcss -i src/input.css -o dist/tailwind.css --minify"
 }
