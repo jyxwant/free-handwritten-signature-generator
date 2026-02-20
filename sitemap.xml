@@ -140,6 +140,16 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://signaturesketch.tech/blog.html"/>
   </url>
 
+  <!-- Blog Article: How to Sign a PDF Online (English) -->
+  <url>
+    <loc>https://signaturesketch.tech/blog/how-to-sign-a-pdf-online.html</loc>
+    <lastmod>2026-02-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://signaturesketch.tech/blog/how-to-sign-a-pdf-online.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://signaturesketch.tech/blog/how-to-sign-a-pdf-online.html"/>
+  </url>
+
   <!-- Blog Article: How to Add Signature in Word (English) -->
   <url>
     <loc>https://signaturesketch.tech/blog/how-to-add-signature-in-word.html</loc>
