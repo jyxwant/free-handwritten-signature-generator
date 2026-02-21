@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 1. SEO Meta Tags -->
+    <title>How to Create a Digital Signature on Your Phone (iPhone & Android) - Signature Sketch</title>
+    <meta name="description" content="Learn how to create a professional handwritten digital signature on your iPhone or Android phone. No app download needed. Free, fast, and works with any document.">
+    <meta name="keywords" content="digital signature on phone, create signature on iphone, sign documents on android, mobile signature generator, electronic signature phone, handwritten signature mobile">
+    <meta name="author" content="Signature Sketch Team">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon.png?v=2">
+    <link rel="apple-touch-icon" href="/icon.png?v=2">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://signaturesketch.tech/blog/how-to-create-digital-signature-on-phone.html">
+
+    <!-- Hreflang Tags -->
+    <link rel="alternate" hreflang="en" href="https://signaturesketch.tech/blog/how-to-create-digital-signature-on-phone.html">
+    <link rel="alternate" hreflang="x-default" href="https://signaturesketch.tech/blog/how-to-create-digital-signature-on-phone.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="How to Create a Digital Signature on Your Phone (iPhone & Android)">
+    <meta property="og:description" content="Your phone is the best signature tool you already own. Learn how to create a professional handwritten signature on mobile in seconds.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://signaturesketch.tech/blog/how-to-create-digital-signature-on-phone.html">
+    <meta property="og:image" content="https://signaturesketch.tech/blog/digital-signature-on-phone-guide.webp">
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "How to Create a Digital Signature on Your Phone (iPhone & Android)",
+      "image": "https://signaturesketch.tech/blog/digital-signature-on-phone-guide.webp",
+      "author": {
+        "@type": "Organization",
+        "name": "Signature Sketch Team"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Signature Sketch",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://signaturesketch.tech/icon.png"
+        }
+      },
+      "datePublished": "2026-02-21",
+      "dateModified": "2026-02-21",
+      "description": "A complete guide to creating professional handwritten digital signatures on iPhone and Android. Covers browser-based tools, built-in markup features, and best practices for mobile signing."
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Can I create a digital signature on my phone without downloading an app?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Browser-based tools like Signature Sketch work directly in Safari or Chrome on your phone. You draw your signature with your finger, download the transparent PNG, and use it on any document. No app installation required."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Is a signature created on a phone legally valid?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Under the US ESIGN Act, EU eIDAS regulation, and similar laws worldwide, electronic signatures created on any device — including phones — are legally binding for most business and personal documents."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Does a finger signature look professional enough?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely. The key is to sign quickly and naturally, just like you would with a pen. A fast, confident finger stroke produces a signature that looks authentic. Using a tool with transparent PNG output ensures it blends cleanly into any document."
+        }
+      }, {
+        "@type": "Question",
+        "name": "What is the best way to sign a PDF on iPhone?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The best method is to create a transparent signature PNG using Signature Sketch in Safari, then open the PDF in the Files app or Markup tool and insert the signature image. Alternatively, you can use the built-in Markup signature feature directly."
+        }
+      }]
+    }
+    </script>
+
+    <!-- Dependencies -->
+    <style>
+        .article-body { font-size: 1.125rem; line-height: 1.85; color: #334155; max-width: 65ch; }
+        .article-body p { margin-bottom: 2em; }
+        .article-body h2 { font-size: 1.875rem; font-weight: 800; color: #0f172a; margin-top: 3.5em; margin-bottom: 1em; letter-spacing: -0.025em; line-height: 1.3; border-bottom: 1px solid #f1f5f9; padding-bottom: 0.5em; }
+        .article-body h3 { font-size: 1.4rem; font-weight: 700; color: #1e293b; margin-top: 2.5em; margin-bottom: 0.8em; display: flex; align-items: center; }
+        .article-body ul, .article-body ol { margin-bottom: 2.5em; padding-left: 1rem; }
+        .article-body li { margin-bottom: 0.75em; position: relative; padding-left: 1.5em; }
+        .article-body ul li::before { content: ""; position: absolute; left: 0; top: 0.7em; width: 6px; height: 6px; background: #2563eb; border-radius: 50%; }
+        .article-body ol { counter-reset: item; }
+        .article-body ol li { list-style: none; }
+        .article-body ol li::before { content: counter(item) "."; counter-increment: item; position: absolute; left: 0; font-weight: 700; color: #2563eb; }
+        .article-body a { color: #2563eb; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; text-decoration-color: #dbeafe; transition: all 0.2s; }
+        .article-body a:hover { background: #eff6ff; text-decoration-color: #2563eb; }
+        .lead-paragraph { font-size: 1.35rem; line-height: 1.6; color: #475569; font-weight: 400; margin-bottom: 3em; border-left: 4px solid #2563eb; padding-left: 1.5rem; }
+        .callout { background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 0.75rem; padding: 2rem; margin: 3rem 0; }
+        .comparison-table { width: 100%; border-collapse: separate; border-spacing: 0; border: 1px solid #e2e8f0; border-radius: 0.75rem; overflow: hidden; margin: 2.5rem 0; font-size: 0.95rem; }
+        .comparison-table th { background: #f1f5f9; padding: 1rem; text-align: left; font-weight: 700; color: #0f172a; }
+        .comparison-table td { padding: 1rem; border-top: 1px solid #e2e8f0; color: #334155; }
+    </style>
+    <link rel="stylesheet" href="/dist/tailwind.css">
+</head>
+<body class="bg-white text-slate-900 font-sans flex flex-col min-h-screen">
+
+    <!-- Header -->
+    <nav class="w-full bg-white border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="/" class="flex items-center gap-3 group">
+                    <div class="relative flex-shrink-0">
+                        <svg width="32" height="32" viewBox="0 0 38 38" fill="none" class="rounded-lg">
+                            <rect width="38" height="38" rx="8" fill="#2563EB"/>
+                            <path d="M26.5 11.5L28.5 13.5L16.5 25.5H13.5V22.5L25.5 11.5Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M13.5 29C13.5 29 16 31.5 20 31.5C24 31.5 27.5 27.5 27.5 27.5" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <span class="text-lg font-bold text-slate-900 tracking-tight">Signature Sketch</span>
+                </a>
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="/" class="text-sm font-medium text-slate-600 hover:text-slate-900">Home</a>
+                    <a href="/blog.html" class="text-sm font-medium text-blue-600">Blog</a>
+                    <a href="/" class="px-4 py-2 text-sm font-medium text-white bg-slate-900 rounded-lg hover:bg-slate-800 shadow-sm transition-colors">Create Signature</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content Layout -->
+    <div class="flex-1 w-full bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+
+                <!-- Main Article (8 cols) -->
+                <main class="lg:col-span-8">
+
+                    <!-- Breadcrumbs -->
+                    <nav class="flex items-center gap-3 text-sm text-slate-500 mb-10 overflow-x-auto whitespace-nowrap" aria-label="Breadcrumb">
+                        <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                        <svg class="w-3 h-3 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                        <a href="/blog.html" class="hover:text-blue-600 transition-colors">Blog</a>
+                        <svg class="w-3 h-3 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                        <span class="text-slate-900 font-medium">Digital Signature on Phone</span>
+                    </nav>
+
+                    <!-- H1 Tag -->
+                    <header class="mb-14 max-w-3xl">
+                        <h1 class="text-3xl md:text-5xl font-extrabold text-slate-900 leading-[1.1] mb-8 tracking-tight">
+                            How to Create a Digital Signature on Your Phone <span class="text-blue-600">(iPhone & Android)</span>
+                        </h1>
+
+                        <div class="flex items-center gap-4 py-6 border-y border-slate-100">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center text-slate-700 font-bold border border-slate-200 text-sm">SS</div>
+                                <div>
+                                    <div class="text-sm font-bold text-slate-900">Signature Sketch Team</div>
+                                    <div class="text-xs text-slate-500 mt-1">Published: February 21, 2026</div>
+                                </div>
+                            </div>
+                            <div class="h-8 w-px bg-slate-200 mx-2 hidden sm:block"></div>
+                            <div class="text-sm text-slate-500 font-medium px-3 py-1 bg-slate-50 rounded-full border border-slate-100">
+                                9 min read
+                            </div>
+                        </div>
+                    </header>
+
+                    <!-- Key Takeaways -->
+                    <div class="bg-blue-50/50 border border-blue-100 rounded-xl p-8 mb-16">
+                        <h3 class="text-blue-900 font-bold text-xs uppercase tracking-widest mb-6 flex items-center gap-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                            Quick Summary
+                        </h3>
+                        <div class="space-y-4">
+                            <div class="flex gap-4 items-start">
+                                <div class="w-6 h-6 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center flex-shrink-0 mt-0.5 font-bold text-xs">1</div>
+                                <p class="text-slate-800 text-base leading-relaxed m-0"><strong>No App Needed:</strong> You can create a professional signature directly in your phone's browser — no download, no account.</p>
+                            </div>
+                            <div class="flex gap-4 items-start">
+                                <div class="w-6 h-6 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center flex-shrink-0 mt-0.5 font-bold text-xs">2</div>
+                                <p class="text-slate-800 text-base leading-relaxed m-0"><strong>Your Finger Works:</strong> A quick, natural finger stroke on a touchscreen produces a surprisingly realistic handwritten signature.</p>
+                            </div>
+                            <div class="flex gap-4 items-start">
+                                <div class="w-6 h-6 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center flex-shrink-0 mt-0.5 font-bold text-xs">3</div>
+                                <p class="text-slate-800 text-base leading-relaxed m-0"><strong>Use Everywhere:</strong> Save the transparent PNG once and reuse it on PDFs, Word docs, Google Docs, emails, and more.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Article Body -->
+                    <article class="article-body">
+
+                        <!-- Lead Paragraph -->
+                        <p class="lead-paragraph">
+                            You are sitting in a café, on a train, or just on your couch — and someone emails you a document that needs your signature right now. You do not have a laptop, a printer, or a scanner. All you have is your phone. Good news: that is all you need.
+                        </p>
+
+                        <p>
+                            Your phone's touchscreen is actually one of the best signature tools available. Your finger captures the natural pressure and speed of your handwriting in a way that a mouse never can. In this guide, we will show you how to create a professional digital signature on your iPhone or Android in under 30 seconds.
+                        </p>
+
+                        <!-- Hero Image -->
+                        <figure class="my-14">
+                            <div class="w-full bg-slate-50 border border-slate-200 rounded-xl overflow-hidden shadow-sm">
+                                <img src="digital-signature-on-phone-guide.webp" alt="Person creating a handwritten digital signature on a smartphone screen using their finger, with a transparent PNG signature shown next to the phone" class="w-full h-auto" loading="lazy">
+                                <figcaption class="p-4 text-center text-sm text-slate-500 bg-white border-t border-slate-100">
+                                    Your finger + your phone = a professional digital signature
+                                </figcaption>
+                            </div>
+                        </figure>
+
+                        <!-- H2: Why Your Phone -->
+                        <h2 id="why-phone">Why Your Phone Is Actually the Best Signature Tool</h2>
+                        <p>
+                            Most people assume they need a computer to create a digital signature. But your phone has two advantages that a laptop does not:
+                        </p>
+                        <ul>
+                            <li><strong>Touchscreen input:</strong> Drawing with your finger on glass is far more natural than dragging a mouse on a desk. The result looks like a real pen signature.</li>
+                            <li><strong>Always with you:</strong> You can sign a document the moment you receive it — no need to wait until you get home or find a computer.</li>
+                            <li><strong>Pressure sensitivity:</strong> Modern phone screens detect varying pressure, creating natural thick-and-thin strokes that look authentic.</li>
+                        </ul>
+                        <p>
+                            The key is using the right tool. Most built-in phone features (like Markup on iPhone) work in a pinch, but a dedicated browser-based generator gives you a transparent PNG that works everywhere.
+                        </p>
+
+                        <!-- H2: Method 1 - Browser Tool -->
+                        <h2 id="method-browser">Method 1: Browser-Based Generator (Recommended)</h2>
+                        <p>
+                            This is the fastest and most versatile method. It works on any phone with a browser — iPhone, Android, even tablets.
+                        </p>
+
+                        <h3>Step 1: Open Signature Sketch</h3>
+                        <p>
+                            Open Safari (iPhone) or Chrome (Android) and go to <a href="/">signaturesketch.tech</a>. The tool loads instantly — no app to download, no account to create.
+                        </p>
+
+                        <h3>Step 2: Turn Your Phone Sideways</h3>
+                        <p>
+                            Rotate your phone to landscape mode. This gives you a wider canvas that matches the proportions of a signature line on a document. The canvas will automatically resize.
+                        </p>
+
+                        <h3>Step 3: Sign With Your Finger</h3>
+                        <p>
+                            Sign your name on the canvas using your finger. Here is the most important tip: <strong>sign quickly</strong>. A fast, confident stroke looks natural. A slow, careful drawing looks fake. Pretend you are signing a receipt at a restaurant.
+                        </p>
+
+                        <div class="callout">
+                            <h3 style="margin-top:0; font-size: 1.25rem;">Pro tip: Use your thumb or index finger</h3>
+                            <ul style="margin-bottom: 0;">
+                                <li><strong>Index finger:</strong> Best for precise, smaller signatures. Hold the phone with your other hand.</li>
+                                <li><strong>Thumb:</strong> Works well if you are signing one-handed. Produces a slightly bolder stroke.</li>
+                                <li><strong>Stylus:</strong> If you have an Apple Pencil or any capacitive stylus, the result will be even more realistic — but it is not necessary.</li>
+                            </ul>
+                        </div>
+
+                        <h3>Step 4: Choose Your Color</h3>
+                        <p>
+                            Select black for standard documents or blue for contracts and legal papers. <a href="wet-blue-ink-signature.html">Blue ink signals originality</a> and is preferred by banks and legal institutions.
+                        </p>
+
+                        <h3>Step 5: Download the PNG</h3>
+                        <p>
+                            Tap <strong>"Download PNG"</strong>. The signature saves to your phone's photo library or downloads folder as a transparent PNG. You can now use this image on any document, on any device, forever.
+                        </p>
+
+                        <!-- H2: Method 2 - iPhone Markup -->
+                        <h2 id="method-iphone">Method 2: iPhone Built-in Markup</h2>
+                        <p>
+                            If you need to sign a PDF that is already on your iPhone, you can use the built-in Markup tool without any third-party app:
+                        </p>
+                        <ol>
+                            <li>Open the PDF in the <strong>Files</strong> app or <strong>Mail</strong> attachment.</li>
+                            <li>Tap the <strong>Markup</strong> icon (pen tip in a circle).</li>
+                            <li>Tap the <strong>"+"</strong> button → <strong>Add Signature</strong>.</li>
+                            <li>Sign with your finger on the popup canvas.</li>
+                            <li>Drag and resize the signature onto the signature line.</li>
+                            <li>Tap <strong>Done</strong> to save.</li>
+                        </ol>
+                        <p>
+                            <strong>Limitation:</strong> The Markup signature is stored locally and only works within Apple's ecosystem. It cannot be exported as a transparent PNG for use in Word, Google Docs, or other platforms. For cross-platform use, Method 1 is better.
+                        </p>
+
+                        <!-- H2: Method 3 - Android -->
+                        <h2 id="method-android">Method 3: Android Built-in Options</h2>
+                        <p>
+                            Android does not have a universal built-in signature tool like iPhone's Markup, but you have several options:
+                        </p>
+                        <ul>
+                            <li><strong>Google Drive:</strong> Open a PDF in Google Drive → tap the edit/annotate icon → use the pen tool to draw your signature.</li>
+                            <li><strong>Adobe Acrobat Reader (Free):</strong> Open any PDF → tap "Fill & Sign" → draw or add an image signature.</li>
+                            <li><strong>Samsung Notes (Samsung phones):</strong> Draw your signature, export as image, then insert into documents.</li>
+                        </ul>
+                        <p>
+                            Again, for the most professional result with a transparent background, the browser-based method (Method 1) works identically on Android and produces a reusable PNG file.
+                        </p>
+
+                        <!-- H2: Comparison Table -->
+                        <h2 id="comparison">Phone Signature Methods Compared</h2>
+
+                        <table class="comparison-table">
+                            <thead>
+                                <tr>
+                                    <th>Method</th>
+                                    <th>Works On</th>
+                                    <th>Transparent BG</th>
+                                    <th>Reusable</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Signature Sketch (Browser)</strong></td>
+                                    <td>iPhone, Android, Any</td>
+                                    <td class="text-green-600 font-bold">✓ Yes</td>
+                                    <td class="text-green-600 font-bold">✓ Yes</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>iPhone Markup</strong></td>
+                                    <td>iPhone / iPad only</td>
+                                    <td>✗ No (white bg)</td>
+                                    <td>Limited (Apple only)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Adobe Acrobat Reader</strong></td>
+                                    <td>iPhone, Android</td>
+                                    <td>✗ No</td>
+                                    <td>Within app only</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Google Drive Annotate</strong></td>
+                                    <td>Android (limited iOS)</td>
+                                    <td>✗ No</td>
+                                    <td>✗ No</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <!-- H2: Tips -->
+                        <h2 id="tips">Tips for a Better Phone Signature</h2>
+                        <ul>
+                            <li><strong>Clean your screen:</strong> Fingerprints and smudges can cause your finger to skip. A quick wipe makes a big difference.</li>
+                            <li><strong>Sign fast:</strong> Speed equals confidence. A slow signature looks hesitant and shaky. A quick one looks natural.</li>
+                            <li><strong>Use landscape mode:</strong> A wider canvas gives your signature room to breathe and matches document proportions.</li>
+                            <li><strong>Try 2-3 times:</strong> Your first attempt might feel awkward. By the third try, you will have a signature you are happy with.</li>
+                            <li><strong>Save it permanently:</strong> Once you have a good signature PNG, save it to your cloud storage (iCloud, Google Drive, Dropbox). You will never need to create it again.</li>
+                        </ul>
+
+                        <!-- H2: Where to Use -->
+                        <h2 id="where-to-use">Where Can You Use Your Phone Signature?</h2>
+                        <p>
+                            Once you have your transparent PNG signature saved, you can use it on virtually any document:
+                        </p>
+                        <ul>
+                            <li><strong>PDFs:</strong> Insert via Adobe Reader, Preview, or any PDF editor. <a href="how-to-sign-a-pdf-online.html">See our PDF signing guide</a>.</li>
+                            <li><strong>Microsoft Word:</strong> Insert → Picture → select your signature PNG. <a href="how-to-add-signature-in-word.html">Full Word guide here</a>.</li>
+                            <li><strong>Google Docs:</strong> Insert → Image → Upload from phone. <a href="how-to-insert-signature-in-google-docs.html">Full Google Docs guide here</a>.</li>
+                            <li><strong>Emails:</strong> Attach the image or paste it inline as part of your email signature.</li>
+                            <li><strong>Online forms:</strong> Many web portals accept image uploads for signature fields.</li>
+                        </ul>
+
+                        <!-- H2: Legal -->
+                        <h2 id="legal">Is a Phone Signature Legally Valid?</h2>
+                        <p>
+                            Yes. The device you use to create a signature does not affect its legal validity. Under the US ESIGN Act, EU eIDAS regulation, and equivalent laws in most countries, an electronic signature is legally binding regardless of whether it was created on a phone, tablet, or computer.
+                        </p>
+                        <p>
+                            What matters legally is <strong>intent to sign</strong> and <strong>consent</strong>, not the hardware. A signature drawn with your finger on a phone screen carries the same legal weight as one drawn with a mouse on a desktop.
+                        </p>
+
+                        <!-- FAQ -->
+                        <h2>Frequently Asked Questions</h2>
+
+                        <div class="space-y-8 mt-8">
+                            <div>
+                                <h3 style="margin-top: 0; font-size: 1.25rem;">Do I need a stylus for a good signature?</h3>
+                                <p style="margin-bottom: 0;">No. Your finger works perfectly well. A stylus (like Apple Pencil) can add more detail, but for a standard signature, your finger produces a natural, authentic result. The key is signing quickly rather than slowly tracing each letter.</p>
+                            </div>
+
+                            <div>
+                                <h3 style="margin-top: 0; font-size: 1.25rem;">Can I use the same signature on my computer later?</h3>
+                                <p style="margin-bottom: 0;">Yes. If you create a transparent PNG using the browser method, you can AirDrop it to your Mac, email it to yourself, or save it to cloud storage. The same PNG file works on any device and any application.</p>
+                            </div>
+
+                            <div>
+                                <h3 style="margin-top: 0; font-size: 1.25rem;">What if my signature looks too messy?</h3>
+                                <p style="margin-bottom: 0;">Real signatures are messy. That is actually what makes them look authentic. If your signature is too neat and perfect, it looks like a font — not a real person's handwriting. Embrace the imperfections.</p>
+                            </div>
+
+                            <div>
+                                <h3 style="margin-top: 0; font-size: 1.25rem;">Is it safe to create my signature online?</h3>
+                                <p style="margin-bottom: 0;">With Signature Sketch, yes. The signature is drawn and processed entirely in your browser. Nothing is uploaded to any server. Your signature data never leaves your device.</p>
+                            </div>
+                        </div>
+
+                        <!-- Final CTA -->
+                        <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-10 mt-16 text-center shadow-lg border border-blue-100 relative overflow-hidden">
+                            <div class="absolute top-0 right-0 w-64 h-64 bg-blue-100 rounded-full blur-3xl opacity-30 -mr-32 -mt-32"></div>
+                            <div class="absolute bottom-0 left-0 w-64 h-64 bg-indigo-100 rounded-full blur-3xl opacity-30 -ml-32 -mb-32"></div>
+
+                            <div class="relative z-10 max-w-2xl mx-auto">
+                                <div class="inline-flex items-center justify-center w-14 h-14 bg-blue-600 rounded-xl mb-5 shadow-lg">
+                                    <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/></svg>
+                                </div>
+
+                                <h2 class="text-slate-900 text-3xl font-extrabold mb-4 tracking-tight" style="color: #0f172a !important; border: none !important; margin-top: 0; padding-bottom: 0;">
+                                    Try It on Your Phone Now
+                                </h2>
+
+                                <p class="text-slate-600 text-base mb-8 leading-relaxed max-w-xl mx-auto" style="margin-bottom: 2rem;">
+                                    Open this link on your phone, draw your signature with your finger, and download the transparent PNG in seconds.
+                                </p>
+
+                                <a href="/" class="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3.5 px-8 rounded-lg transition-all shadow-md hover:shadow-xl text-base group relative z-20">
+                                    <span class="text-white">Open Signature Generator</span>
+                                    <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                                </a>
+
+                                <div class="mt-6 flex flex-wrap items-center justify-center gap-6 text-sm text-slate-600">
+                                    <div class="flex items-center gap-1.5">
+                                        <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                        <span>Works on Any Phone</span>
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+                                        <span>100% Private</span>
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                                        <span>No App Download</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </article>
+                </main>
+
+                <!-- Sidebar (4 cols) -->
+                <aside class="lg:col-span-4 space-y-10">
+                    <div class="space-y-10">
+
+                        <!-- CTA Widget -->
+                        <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all">
+                            <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-600 mb-5">
+                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                            </div>
+                            <h3 class="font-bold text-slate-900 text-xl mb-3">Sign on Your Phone</h3>
+                            <p class="text-base text-slate-500 mb-6 leading-relaxed">
+                                Open the generator on your phone and draw your signature with your finger.
+                            </p>
+                            <a href="/" class="flex items-center justify-center gap-2 w-full py-3.5 px-4 bg-slate-900 hover:bg-slate-800 text-white font-semibold rounded-xl transition-all shadow-md text-sm group">
+                                <span>Open Generator</span>
+                                <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                            </a>
+                        </div>
+
+                        <!-- Table of Contents -->
+                        <div class="bg-slate-50 rounded-xl p-8 border border-slate-200">
+                            <h4 class="font-bold text-slate-900 text-xs uppercase tracking-widest mb-6">Contents</h4>
+                            <ul class="space-y-4">
+                                <li>
+                                    <a href="#why-phone" class="flex items-center gap-3 text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors group">
+                                        <span class="w-6 h-6 rounded bg-white border border-slate-200 text-slate-400 flex items-center justify-center text-xs group-hover:border-blue-200 group-hover:text-blue-600">1</span>
+                                        Why Your Phone Is Best
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#method-browser" class="flex items-center gap-3 text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors group">
+                                        <span class="w-6 h-6 rounded bg-white border border-slate-200 text-slate-400 flex items-center justify-center text-xs group-hover:border-blue-200 group-hover:text-blue-600">2</span>
+                                        Browser Method (Best)
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#method-iphone" class="flex items-center gap-3 text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors group">
+                                        <span class="w-6 h-6 rounded bg-white border border-slate-200 text-slate-400 flex items-center justify-center text-xs group-hover:border-blue-200 group-hover:text-blue-600">3</span>
+                                        iPhone Markup
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#method-android" class="flex items-center gap-3 text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors group">
+                                        <span class="w-6 h-6 rounded bg-white border border-slate-200 text-slate-400 flex items-center justify-center text-xs group-hover:border-blue-200 group-hover:text-blue-600">4</span>
+                                        Android Options
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#comparison" class="flex items-center gap-3 text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors group">
+                                        <span class="w-6 h-6 rounded bg-white border border-slate-200 text-slate-400 flex items-center justify-center text-xs group-hover:border-blue-200 group-hover:text-blue-600">5</span>
+                                        Method Comparison
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#tips" class="flex items-center gap-3 text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors group">
+                                        <span class="w-6 h-6 rounded bg-white border border-slate-200 text-slate-400 flex items-center justify-center text-xs group-hover:border-blue-200 group-hover:text-blue-600">6</span>
+                                        Tips for Better Signatures
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#legal" class="flex items-center gap-3 text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors group">
+                                        <span class="w-6 h-6 rounded bg-white border border-slate-200 text-slate-400 flex items-center justify-center text-xs group-hover:border-blue-200 group-hover:text-blue-600">7</span>
+                                        Legal Validity
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Related Articles -->
+                        <div class="bg-white rounded-xl p-8 border border-slate-200">
+                            <h4 class="font-bold text-slate-900 text-sm mb-6">Related Articles</h4>
+                            <div class="space-y-5">
+                                <a href="how-to-sign-a-pdf-online.html" class="block group">
+                                    <div class="text-xs text-orange-600 font-semibold mb-1.5">Guide</div>
+                                    <div class="text-sm font-medium text-slate-800 group-hover:text-blue-600 transition-colors leading-snug">How to Sign a PDF Online for Free</div>
+                                </a>
+                                <div class="h-px bg-slate-100"></div>
+                                <a href="how-to-make-signature-transparent.html" class="block group">
+                                    <div class="text-xs text-purple-600 font-semibold mb-1.5">Guide</div>
+                                    <div class="text-sm font-medium text-slate-800 group-hover:text-blue-600 transition-colors leading-snug">How to Make Signature Transparent</div>
+                                </a>
+                                <div class="h-px bg-slate-100"></div>
+                                <a href="how-to-add-signature-in-word.html" class="block group">
+                                    <div class="text-xs text-blue-600 font-semibold mb-1.5">Tutorial</div>
+                                    <div class="text-sm font-medium text-slate-800 group-hover:text-blue-600 transition-colors leading-snug">How to Add a Signature in Word</div>
+                                </a>
+                                <div class="h-px bg-slate-100"></div>
+                                <a href="wet-blue-ink-signature.html" class="block group">
+                                    <div class="text-xs text-blue-600 font-semibold mb-1.5">Tutorial</div>
+                                    <div class="text-sm font-medium text-slate-800 group-hover:text-blue-600 transition-colors leading-snug">Wet Blue Ink Signature Generator</div>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </aside>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-slate-50 border-t border-slate-200 mt-20">
+        <div class="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
+            <div class="text-center space-y-4">
+                <div class="flex items-center justify-center gap-2 text-slate-600">
+                    <svg width="24" height="24" viewBox="0 0 38 38" fill="none" class="rounded-lg">
+                        <rect width="38" height="38" rx="8" fill="#2563EB"/>
+                        <path d="M26.5 11.5L28.5 13.5L16.5 25.5H13.5V22.5L25.5 11.5Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M13.5 29C13.5 29 16 31.5 20 31.5C24 31.5 27.5 27.5 27.5 27.5" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span class="font-bold text-slate-900">Signature Sketch</span>
+                </div>
+                <p class="text-slate-500 text-sm">Free Digital Signature Generator • No Sign-up Required</p>
+                <div class="flex items-center justify-center gap-6 text-sm pt-4">
+                    <a href="/privacy-policy.html" class="text-slate-500 hover:text-blue-600 transition-colors">Privacy</a>
+                    <span class="text-slate-300">•</span>
+                    <a href="/terms-of-service.html" class="text-slate-500 hover:text-blue-600 transition-colors">Terms</a>
+                    <span class="text-slate-300">•</span>
+                    <a href="/contact.html" class="text-slate-500 hover:text-blue-600 transition-colors">Contact</a>
+                </div>
+                <p class="text-slate-400 text-xs mt-4">&copy; <span id="year"></span> Signature Sketch. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
