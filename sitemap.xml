@@ -140,6 +140,16 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://signaturesketch.tech/blog.html"/>
   </url>
 
+  <!-- Blog Article: How to Create Email Signature (English) -->
+  <url>
+    <loc>https://signaturesketch.tech/blog/how-to-create-email-signature.html</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://signaturesketch.tech/blog/how-to-create-email-signature.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://signaturesketch.tech/blog/how-to-create-email-signature.html"/>
+  </url>
+
   <!-- Blog Article: How to Sign a PDF Online (English) -->
   <url>
     <loc>https://signaturesketch.tech/blog/how-to-sign-a-pdf-online.html</loc>
