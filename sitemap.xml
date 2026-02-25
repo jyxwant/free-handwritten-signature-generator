@@ -226,6 +226,16 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://signaturesketch.tech/blog/wet-blue-ink-signature.html"/>
   </url>
 
+  <!-- Blog Article: Cursive Signature Generator (English) -->
+  <url>
+    <loc>https://signaturesketch.tech/blog/cursive-signature-generator.html</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://signaturesketch.tech/blog/cursive-signature-generator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://signaturesketch.tech/blog/cursive-signature-generator.html"/>
+  </url>
+
   <!-- Blog Article: Comment faire une signature électronique (French only) -->
   <url>
     <loc>https://signaturesketch.tech/fr/blog/comment-faire-une-signature-electronique.html</loc>
