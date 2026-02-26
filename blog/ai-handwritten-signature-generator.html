@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6903593415712702" crossorigin="anonymous"></script>
+    
+    <!-- SEO Meta Tags -->
+    <title>Free AI Handwritten Signature Generator: Turn Text to Realistic Signature</title>
+    <meta name="description" content="Generate a realistic handwritten signature from text using AI. Free online tool with no sign-up. Create professional signatures that look hand-drawn, not typed.">
+    <meta name="keywords" content="handwritten signature generator ai, text to handwritten signature generator, realistic handwritten signature generator, ai signature maker, free signature generator online">
+    <meta name="author" content="Signature Sketch Team">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon.png?v=2">
+    <link rel="apple-touch-icon" href="/icon.png?v=2">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://signaturesketch.tech/blog/ai-handwritten-signature-generator.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Free AI Handwritten Signature Generator: Turn Text to Realistic Signature">
+    <meta property="og:description" content="Generate a realistic handwritten signature from text using AI. Free, no sign-up, transparent PNG download.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://signaturesketch.tech/blog/ai-handwritten-signature-generator.html">
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Free AI Handwritten Signature Generator: Turn Text to Realistic Signature",
+      "author": { "@type": "Organization", "name": "Signature Sketch Team" },
+      "publisher": { "@type": "Organization", "name": "Signature Sketch", "logo": { "@type": "ImageObject", "url": "https://signaturesketch.tech/icon.png" } },
+      "datePublished": "2026-02-26",
+      "dateModified": "2026-02-26",
+      "description": "How to use AI-powered tools to generate realistic handwritten signatures from typed text. Compare methods, understand privacy, and create your signature for free."
+    }
+    </script>
+    
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Can AI generate a realistic handwritten signature?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Modern AI signature generators use handwriting-style fonts with natural variation in stroke weight, slant, and spacing to produce signatures that closely mimic real pen-on-paper writing." }
+      }, {
+        "@type": "Question",
+        "name": "Is an AI-generated signature legally valid?",
+        "acceptedAnswer": { "@type": "Answer", "text": "In most cases, yes. Under the US ESIGN Act and EU eIDAS regulation, any electronic mark made with intent to sign is legally binding for standard business transactions." }
+      }, {
+        "@type": "Question",
+        "name": "Is my data safe when using an AI signature generator?",
+        "acceptedAnswer": { "@type": "Answer", "text": "It depends on the tool. Signature Sketch processes everything locally in your browser. Your name and signature image never leave your device or get uploaded to any server." }
+      }]
+    }
+    </script>
+
+    <!-- Dependencies -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'] } } } }
+    </script>
+
+    <!-- Custom Typography & UI Styles -->
+    <style>
+        .article-body { font-size: 1.125rem; line-height: 1.85; color: #334155; max-width: 65ch; }
+        .article-body p { margin-bottom: 2em; }
+        .article-body h2 { font-size: 1.875rem; font-weight: 800; color: #0f172a; margin-top: 3.5em; margin-bottom: 1em; letter-spacing: -0.025em; line-height: 1.3; border-bottom: 1px solid #f1f5f9; padding-bottom: 0.5em; }
+        .article-body h3 { font-size: 1.4rem; font-weight: 700; color: #1e293b; margin-top: 2.5em; margin-bottom: 0.8em; display: flex; align-items: center; }
+        .article-body ul, .article-body ol { margin-bottom: 2.5em; padding-left: 1rem; }
+        .article-body li { margin-bottom: 0.75em; position: relative; padding-left: 1.5em; }
+        .article-body ul li::before { content: ""; position: absolute; left: 0; top: 0.7em; width: 6px; height: 6px; background: #2563eb; border-radius: 50%; }
+        .article-body ol { counter-reset: item; }
+        .article-body ol li { list-style: none; }
+        .article-body ol li::before { content: counter(item) "."; counter-increment: item; position: absolute; left: 0; font-weight: 700; color: #2563eb; }
+        .article-body a { color: #2563eb; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; text-decoration-color: #dbeafe; transition: all 0.2s; }
+        .article-body a:hover { background: #eff6ff; text-decoration-color: #2563eb; }
+        .lead-paragraph { font-size: 1.35rem; line-height: 1.6; color: #475569; font-weight: 400; margin-bottom: 3em; border-left: 4px solid #2563eb; padding-left: 1.5rem; }
+        .callout { background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 0.75rem; padding: 2rem; margin: 3rem 0; }
+        .comparison-table { width: 100%; border-collapse: separate; border-spacing: 0; border: 1px solid #e2e8f0; border-radius: 0.75rem; overflow: hidden; margin: 2.5rem 0; font-size: 0.95rem; }
+        .comparison-table th { background: #f1f5f9; padding: 1rem; text-align: left; font-weight: 700; color: #0f172a; }
+        .comparison-table td { padding: 1rem; border-top: 1px solid #e2e8f0; color: #334155; }
+    </style>
+</head>
+<body class="bg-white text-slate-900 font-sans flex flex-col min-h-screen">
+
+    <!-- Header -->
+    <nav class="w-full bg-white border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="/" class="flex items-center gap-3 group">
+                    <div class="relative flex-shrink-0">
+                        <svg width="32" height="32" viewBox="0 0 38 38" fill="none" class="rounded-lg">
+                            <rect width="38" height="38" rx="8" fill="#2563EB"/>
+                            <path d="M26.5 11.5L28.5 13.5L16.5 25.5H13.5V22.5L25.5 11.5Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M13.5 29C13.5 29 16 31.5 20 31.5C24 31.5 27.5 27.5 27.5 27.5" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <span class="text-lg font-bold text-slate-900 tracking-tight">Signature Sketch</span>
+                </a>
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="/" class="text-sm font-medium text-slate-600 hover:text-slate-900">Home</a>
+                    <a href="/blog.html" class="text-sm font-medium text-blue-600">Blog</a>
+                    <a href="/" class="px-4 py-2 text-sm font-medium text-white bg-slate-900 rounded-lg hover:bg-slate-800 shadow-sm transition-colors">Create Signature</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content Layout -->
+    <div class="flex-1 w-full bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+                
+                <!-- Main Article (8 cols) -->
+                <main class="lg:col-span-8">
+                    
+                    <!-- Breadcrumbs -->
+                    <nav class="flex items-center gap-3 text-sm text-slate-500 mb-10 overflow-x-auto whitespace-nowrap">
+                        <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                        <svg class="w-3 h-3 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                        <a href="/blog.html" class="hover:text-blue-600 transition-colors">Blog</a>
+                        <svg class="w-3 h-3 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                        <span class="text-slate-900 font-medium">AI Handwritten Signature Generator</span>
+                    </nav>
+
+                    <!-- H1 Tag -->
+                    <header class="mb-14 max-w-3xl">
+                        <h1 class="text-3xl md:text-5xl font-extrabold text-slate-900 leading-[1.1] mb-8 tracking-tight">
+                            Free AI Handwritten Signature Generator: <span class="text-blue-600">Turn Text to Realistic Signature</span>
+                        </h1>
+                        
+                        <div class="flex items-center gap-4 py-6 border-y border-slate-100">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center text-slate-700 font-bold border border-slate-200 text-sm">SS</div>
+                                <div>
+                                    <div class="text-sm font-bold text-slate-900">Signature Sketch Team</div>
+                                    <div class="text-xs text-slate-500 mt-1">Updated: February 26, 2026</div>
+                                </div>
+                            </div>
+                            <div class="h-8 w-px bg-slate-200 mx-2 hidden sm:block"></div>
+                            <div class="text-sm text-slate-500 font-medium px-3 py-1 bg-slate-50 rounded-full border border-slate-100">9 min read</div>
+                        </div>
+                    </header>
+
+                    <!-- Hero Image -->
+                    <div class="mb-14 rounded-2xl overflow-hidden border border-slate-200">
+                        <img src="ai-handwritten-signature-guide.webp" alt="AI handwritten signature generator turning typed text into a realistic pen-style signature" class="w-full h-auto" loading="eager">
+                    </div>
+
+                    <!-- Key Takeaways -->
+                    <div class="bg-blue-50/50 border border-blue-100 rounded-xl p-8 mb-16">
+                        <h3 class="text-blue-900 font-bold text-xs uppercase tracking-widest mb-6 flex items-center gap-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                            Quick Summary
+                        </h3>
+                        <div class="space-y-4">
+                            <div class="flex gap-4 items-start">
+                                <div class="w-6 h-6 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center flex-shrink-0 mt-0.5 font-bold text-xs">1</div>
+                                <p class="text-slate-800 text-base leading-relaxed m-0"><strong>How it works:</strong> Type your name, and AI-powered algorithms render it in a realistic handwriting style with natural stroke variation.</p>
+                            </div>
+                            <div class="flex gap-4 items-start">
+                                <div class="w-6 h-6 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center flex-shrink-0 mt-0.5 font-bold text-xs">2</div>
+                                <p class="text-slate-800 text-base leading-relaxed m-0"><strong>Why it matters:</strong> Standard computer fonts look fake. AI generators add imperfections that make signatures look authentically hand-drawn.</p>
+                            </div>
+                            <div class="flex gap-4 items-start">
+                                <div class="w-6 h-6 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center flex-shrink-0 mt-0.5 font-bold text-xs">3</div>
+                                <p class="text-slate-800 text-base leading-relaxed m-0"><strong>Privacy first:</strong> The best tools process everything locally in your browser. Your name never gets uploaded to a server.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Article Body -->
+                    <article class="article-body">
+                        
+                        <p class="lead-paragraph">
+                            You need a signature for a contract, but your handwriting looks like a doctor's prescription after an earthquake. You Google "signature generator" and find tools that render your name in <strong>Comic Sans with a slight slant</strong>. That is not a signature. That is a crime against typography.
+                        </p>
+
+                        <p>
+                            The new generation of <strong>AI handwritten signature generators</strong> solves this problem. Instead of slapping your name into a basic cursive font, these tools use intelligent algorithms to simulate the natural imperfections of real handwriting: varying pressure, inconsistent letter spacing, and organic ink flow.
+                        </p>
+
+                        <p>
+                            The result? A digital signature that looks like you actually picked up a pen. In this guide, we will explain how these tools work, which ones are worth using, and how to create your own realistic signature in under 30 seconds.
+                        </p>
+
+                        <h2 id="how-ai-signatures-work">How AI Signature Generators Actually Work</h2>
+                        <p>
+                            Let us demystify the "AI" label. When most tools say "AI handwritten signature," they are using one or more of these techniques:
+                        </p>
+
+                        <h3>1. Handwriting-Trained Font Rendering</h3>
+                        <p>
+                            The most common approach. Designers create fonts by tracing real handwriting samples. The generator then renders your text using these fonts, applying randomized variations in letter size, baseline position, and kerning to avoid the "copy-paste" look of standard fonts.
+                        </p>
+
+                        <h3>2. Stroke Simulation</h3>
+                        <p>
+                            More advanced tools simulate actual pen strokes. They model how ink flows from a pen tip: thicker on downstrokes (more pressure), thinner on upstrokes (less pressure). This creates the <strong>thick-thin variation</strong> that makes handwriting look real.
+                        </p>
+
+                        <h3>3. Neural Network Generation</h3>
+                        <p>
+                            The cutting edge. Some tools use neural networks trained on thousands of handwriting samples to generate entirely new letterforms. Each time you type your name, the output is slightly different, just like real handwriting.
+                        </p>
+
+                        <div class="callout">
+                            <h3 style="margin-top:0; font-size: 1.25rem;">The key difference from regular fonts</h3>
+                            <p style="margin-bottom: 0;">A standard cursive font like <em>Lucida Handwriting</em> renders every "a" identically. An AI-powered generator introduces <strong>controlled randomness</strong>: the "a" in "Sarah" looks slightly different from the "a" in "Amanda." This subtle variation is what makes the signature pass the eye test.</p>
+                        </div>
+
+                        <h2 id="typed-vs-drawn">Typed vs. Drawn: Which Looks More Realistic?</h2>
+                        <p>
+                            This is the most important decision when creating your signature. Both methods have their place.
+                        </p>
+
+                        <table class="comparison-table">
+                            <thead>
+                                <tr>
+                                    <th>Method</th>
+                                    <th>Realism</th>
+                                    <th>Speed</th>
+                                    <th>Best For</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Type (AI Font)</strong></td>
+                                    <td>⭐⭐⭐⭐</td>
+                                    <td>5 seconds</td>
+                                    <td>People with bad handwriting, bulk documents</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Draw (Freehand)</strong></td>
+                                    <td>⭐⭐⭐⭐⭐</td>
+                                    <td>15-30 seconds</td>
+                                    <td>Important contracts, personal branding</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <p>
+                            <strong>Our recommendation:</strong> Use <strong>Type mode</strong> for everyday documents (invoices, internal approvals, email signatures). Switch to <strong>Draw mode</strong> for high-stakes documents where you want maximum authenticity.
+                        </p>
+
+                        <h2 id="step-by-step">How to Generate Your AI Signature (Step-by-Step)</h2>
+
+                        <h3>Step 1: Open Signature Sketch</h3>
+                        <p>
+                            Go to <a href="/">Signature Sketch</a>. No account needed. No app to install. It runs entirely in your browser.
+                        </p>
+
+                        <h3>Step 2: Switch to Type Mode</h3>
+                        <p>
+                            Click the <strong>Type</strong> tab. Enter your full name or just your initials.
+                        </p>
+
+                        <h3>Step 3: Choose Your Handwriting Style</h3>
+                        <p>
+                            Browse the available font styles. Each one is designed to mimic a different handwriting personality:
+                        </p>
+                        <ul>
+                            <li><strong>Elegant Script:</strong> Flowing, connected letters with decorative loops. Best for formal documents.</li>
+                            <li><strong>Casual Brush:</strong> Loose, artistic strokes. Great for creative professionals.</li>
+                            <li><strong>Clean Cursive:</strong> Readable but stylish. The safe choice for business use.</li>
+                        </ul>
+
+                        <h3>Step 4: Customize Color and Size</h3>
+                        <p>
+                            Select your ink color. We recommend <strong>blue (#0047AB)</strong> for contracts (it signals originality, as we explained in our <a href="wet-blue-ink-signature.html">blue ink signature guide</a>). Black works for everything else.
+                        </p>
+
+                        <h3>Step 5: Download Transparent PNG</h3>
+                        <p>
+                            Click <strong>Download</strong>. You get a high-resolution PNG with a transparent background. This means your signature will float cleanly over any document without a white box.
+                        </p>
+                        <p>
+                            Need help inserting it? We have guides for <a href="how-to-add-signature-in-word.html">Word</a>, <a href="how-to-insert-signature-in-google-docs.html">Google Docs</a>, and <a href="how-to-sign-a-pdf-online.html">PDF</a>.
+                        </p>
+
+                        <h2 id="privacy">Privacy: Where Does Your Data Go?</h2>
+                        <p>
+                            This is the question nobody asks but everyone should. When you type your name into a signature generator, <strong>where does that data go?</strong>
+                        </p>
+                        <p>
+                            Many online tools upload your input to their servers for processing. This means your name, and potentially your signature image, are stored on someone else's computer. For a signature, that is a serious concern.
+                        </p>
+
+                        <div class="callout">
+                            <h3 style="margin-top:0; font-size: 1.25rem;">How Signature Sketch handles privacy</h3>
+                            <ul style="margin-bottom: 0;">
+                                <li><strong>100% local processing.</strong> Your name is rendered in your browser using client-side JavaScript. Nothing is sent to any server.</li>
+                                <li><strong>No cookies or tracking</strong> related to your signature content.</li>
+                                <li><strong>No account required.</strong> We do not collect your email, name, or any personal data.</li>
+                                <li><strong>Open source.</strong> You can <a href="https://github.com/jyxwant/free-handwritten-signature-generator" target="_blank">inspect the code yourself</a>.</li>
+                            </ul>
+                        </div>
+
+                        <h2 id="realistic-tips">5 Ways to Make Your AI Signature Look More Realistic</h2>
+
+                        <h3>Tip 1: Avoid Perfect Alignment</h3>
+                        <p>
+                            Real signatures are never perfectly horizontal. If your tool allows it, add a slight upward or downward tilt. This small detail tricks the brain into perceiving authenticity.
+                        </p>
+
+                        <h3>Tip 2: Use Blue Ink</h3>
+                        <p>
+                            Black signatures on a white document look like they could be printed text. Blue ink immediately signals "this was signed by a human." It is a psychological shortcut that adds credibility.
+                        </p>
+
+                        <h3>Tip 3: Simplify Your Name</h3>
+                        <p>
+                            The most professional signatures do not spell out every letter. Use a clear first initial, a recognizable last name start, and let the rest dissolve into a confident stroke. Think CEO, not calligraphy student.
+                        </p>
+
+                        <h3>Tip 4: Download at High Resolution</h3>
+                        <p>
+                            A pixelated signature screams "fake." Always download at the highest resolution available. When you resize it in your document, it should remain crisp.
+                        </p>
+
+                        <h3>Tip 5: Always Use Transparent PNG</h3>
+                        <p>
+                            This cannot be overstated. A signature with a white background box looks amateur. <a href="how-to-make-signature-transparent.html">Transparent PNG</a> is the only acceptable format for professional use.
+                        </p>
+
+                        <h2 id="faq">Frequently Asked Questions</h2>
+                        
+                        <div class="space-y-8 mt-8">
+                            <div>
+                                <h3 style="margin-top: 0; font-size: 1.25rem;">Can AI generate a signature that looks like my real handwriting?</h3>
+                                <p style="margin-bottom: 0;">Not exactly. AI generators create a <em>new</em> handwriting style, not a copy of yours. If you want your exact handwriting, use the Draw mode to sign freehand. The Type mode creates a professional-looking signature that is uniquely generated but not a replica of your personal penmanship.</p>
+                            </div>
+                            
+                            <div>
+                                <h3 style="margin-top: 0; font-size: 1.25rem;">Is an AI-generated signature legally binding?</h3>
+                                <p style="margin-bottom: 0;">Yes, for the vast majority of business documents. The US ESIGN Act (2000) and EU eIDAS regulation recognize electronic signatures as legally valid when there is clear intent to sign. Exceptions include wills, certain real estate transactions, and specific government forms.</p>
+                            </div>
+
+                            <div>
+                                <h3 style="margin-top: 0; font-size: 1.25rem;">What is the difference between an electronic signature and a digital signature?</h3>
+                                <p style="margin-bottom: 0;">An <strong>electronic signature</strong> is any electronic mark indicating intent to sign (including an image of your handwriting). A <strong>digital signature</strong> is a cryptographic mechanism that verifies the signer's identity and document integrity. For most everyday use, an electronic signature (like the one you create with our tool) is sufficient.</p>
+                            </div>
+
+                            <div>
+                                <h3 style="margin-top: 0; font-size: 1.25rem;">Can someone forge my signature if I use a generator?</h3>
+                                <p style="margin-bottom: 0;">The risk is no higher than with a scanned paper signature. In fact, it may be lower: a generated signature is a static image, while your real handwriting has consistent patterns that a skilled forger could study. For high-security needs, consider using a digital signature with cryptographic verification.</p>
+                            </div>
+                        </div>
+
+                        <!-- Final CTA -->
+                        <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-10 mt-16 text-center shadow-lg border border-blue-100 relative overflow-hidden">
+                            <div class="absolute top-0 right-0 w-64 h-64 bg-blue-100 rounded-full blur-3xl opacity-30 -mr-32 -mt-32"></div>
+                            <div class="absolute bottom-0 left-0 w-64 h-64 bg-indigo-100 rounded-full blur-3xl opacity-30 -ml-32 -mb-32"></div>
+                            
+                            <div class="relative z-10 max-w-2xl mx-auto">
+                                <div class="inline-flex items-center justify-center w-14 h-14 bg-blue-600 rounded-xl mb-5 shadow-lg">
+                                    <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/></svg>
+                                </div>
+                                
+                                <h2 class="text-slate-900 text-3xl font-extrabold mb-4 tracking-tight" style="color: #0f172a !important; border: none !important; margin-top: 0; padding-bottom: 0;">
+                                    Generate Your AI Signature
+                                </h2>
+                                
+                                <p class="text-slate-600 text-base mb-8 leading-relaxed max-w-xl mx-auto" style="margin-bottom: 2rem;">
+                                    Type your name. Pick a style. Download a realistic handwritten signature in seconds.
+                                </p>
+                                
+                                <a href="/" class="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3.5 px-8 rounded-lg transition-all shadow-md hover:shadow-xl text-base group relative z-20">
+                                    <span class="text-white">Start Drawing Now</span>
+                                    <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                                </a>
+                                
+                                <div class="mt-6 flex flex-wrap items-center justify-center gap-6 text-sm text-slate-600">
+                                    <div class="flex items-center gap-1.5">
+                                        <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                        <span>100% Free</span>
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+                                        <span>Secure & Private</span>
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                                        <span>Instant Download</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </article>
+                </main>
+
+                <!-- Sidebar (4 cols) -->
+                <aside class="lg:col-span-4 space-y-10">
+                    <div class="space-y-10">
+                        
+                        <!-- CTA Widget -->
+                        <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all">
+                            <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-600 mb-5">
+                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/></svg>
+                            </div>
+                            <h3 class="font-bold text-slate-900 text-xl mb-3">Try the AI Generator</h3>
+                            <p class="text-base text-slate-500 mb-6 leading-relaxed">
+                                Type your name and get a realistic handwritten signature. No sign-up needed.
+                            </p>
+                            <a href="/" class="flex items-center justify-center gap-2 w-full py-3.5 px-4 bg-slate-900 hover:bg-slate-800 text-white font-semibold rounded-xl transition-all shadow-md text-sm group">
+                                <span>Open Generator</span>
+                                <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                            </a>
+                        </div>
+
+                        <!-- Table of Contents -->
+                        <div class="bg-slate-50 rounded-xl p-8 border border-slate-200">
+                            <h4 class="font-bold text-slate-900 text-xs uppercase tracking-widest mb-6">Contents</h4>
+                            <ul class="space-y-4">
+                                <li><a href="#how-ai-signatures-work" class="flex items-center gap-3 text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors group"><span class="w-6 h-6 rounded bg-white border border-slate-200 text-slate-400 flex items-center justify-center text-xs group-hover:border-blue-200 group-hover:text-blue-600">1</span>How AI Signatures Work</a></li>
+                                <li><a href="#typed-vs-drawn" class="flex items-center gap-3 text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors group"><span class="w-6 h-6 rounded bg-white border border-slate-200 text-slate-400 flex items-center justify-center text-xs group-hover:border-blue-200 group-hover:text-blue-600">2</span>Typed vs. Drawn</a></li>
+                                <li><a href="#step-by-step" class="flex items-center gap-3 text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors group"><span class="w-6 h-6 rounded bg-white border border-slate-200 text-slate-400 flex items-center justify-center text-xs group-hover:border-blue-200 group-hover:text-blue-600">3</span>Step-by-Step Guide</a></li>
+                                <li><a href="#privacy" class="flex items-center gap-3 text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors group"><span class="w-6 h-6 rounded bg-white border border-slate-200 text-slate-400 flex items-center justify-center text-xs group-hover:border-blue-200 group-hover:text-blue-600">4</span>Privacy & Security</a></li>
+                                <li><a href="#realistic-tips" class="flex items-center gap-3 text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors group"><span class="w-6 h-6 rounded bg-white border border-slate-200 text-slate-400 flex items-center justify-center text-xs group-hover:border-blue-200 group-hover:text-blue-600">5</span>Realism Tips</a></li>
+                                <li><a href="#faq" class="flex items-center gap-3 text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors group"><span class="w-6 h-6 rounded bg-white border border-slate-200 text-slate-400 flex items-center justify-center text-xs group-hover:border-blue-200 group-hover:text-blue-600">6</span>FAQ</a></li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Ad Placeholder -->
+                        <div class="bg-slate-100 border-2 border-dashed border-slate-200 rounded-xl h-[300px] flex items-center justify-center">
+                             <span class="text-xs text-slate-400 uppercase tracking-widest font-medium">Advertisement</span>
+                        </div>
+
+                        <!-- Related Articles -->
+                        <div class="bg-white rounded-xl p-8 border border-slate-200">
+                            <h4 class="font-bold text-slate-900 text-sm mb-6">Related Articles</h4>
+                            <div class="space-y-5">
+                                <a href="cursive-signature-generator.html" class="block group">
+                                    <div class="text-xs text-indigo-600 font-semibold mb-1.5">Listicle</div>
+                                    <div class="text-sm font-medium text-slate-800 group-hover:text-blue-600 transition-colors leading-snug">5 Best Cursive Signature Generators</div>
+                                </a>
+                                <div class="h-px bg-slate-100"></div>
+                                <a href="wet-blue-ink-signature.html" class="block group">
+                                    <div class="text-xs text-blue-600 font-semibold mb-1.5">Tutorial</div>
+                                    <div class="text-sm font-medium text-slate-800 group-hover:text-blue-600 transition-colors leading-snug">Wet Blue Ink Signature Generator</div>
+                                </a>
+                                <div class="h-px bg-slate-100"></div>
+                                <a href="how-to-make-signature-transparent.html" class="block group">
+                                    <div class="text-xs text-purple-600 font-semibold mb-1.5">Guide</div>
+                                    <div class="text-sm font-medium text-slate-800 group-hover:text-blue-600 transition-colors leading-snug">How to Make Signature Transparent</div>
+                                </a>
+                                <div class="h-px bg-slate-100"></div>
+                                <a href="how-to-add-signature-in-word.html" class="block group">
+                                    <div class="text-xs text-green-600 font-semibold mb-1.5">Tutorial</div>
+                                    <div class="text-sm font-medium text-slate-800 group-hover:text-blue-600 transition-colors leading-snug">How to Add a Signature in Word</div>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </aside>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8 flex flex-col items-center">
+            <div class="font-bold text-slate-900 text-lg mb-4 flex items-center gap-2">
+                <svg width="24" height="24" viewBox="0 0 38 38" fill="none" class="rounded opacity-80">
+                    <rect width="38" height="38" rx="8" fill="#2563EB"/>
+                    <path d="M26.5 11.5L28.5 13.5L16.5 25.5H13.5V22.5L25.5 11.5Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M13.5 29C13.5 29 16 31.5 20 31.5C24 31.5 27.5 27.5 27.5 27.5" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Signature Sketch
+            </div>
+            <div class="flex gap-8 text-sm text-slate-500 mb-8 font-medium">
+                <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                <a href="/privacy-policy.html" class="hover:text-blue-600 transition-colors">Privacy</a>
+                <a href="/terms-of-service.html" class="hover:text-blue-600 transition-colors">Terms</a>
+                <a href="/contact.html" class="hover:text-blue-600 transition-colors">Contact</a>
+            </div>
+            <p class="text-slate-400 text-xs">&copy; <span id="year"></span> Signature Sketch. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
