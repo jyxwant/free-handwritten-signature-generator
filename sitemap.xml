@@ -256,6 +256,16 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://signaturesketch.tech/blog/ai-handwritten-signature-generator.html"/>
   </url>
 
+  <!-- Blog Article: Digital Signature vs Electronic Signature (English) -->
+  <url>
+    <loc>https://signaturesketch.tech/blog/digital-signature-vs-electronic-signature.html</loc>
+    <lastmod>2026-02-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://signaturesketch.tech/blog/digital-signature-vs-electronic-signature.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://signaturesketch.tech/blog/digital-signature-vs-electronic-signature.html"/>
+  </url>
+
   <!-- Blog Article: Comment faire une signature électronique (French only) -->
   <url>
     <loc>https://signaturesketch.tech/fr/blog/comment-faire-une-signature-electronique.html</loc>
