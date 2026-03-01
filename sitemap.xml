@@ -53,7 +53,7 @@
   <!-- Blog -->
   <url>
     <loc>https://signaturesketch.tech/blog.html</loc>
-    <lastmod>2026-01-14</lastmod>
+    <lastmod>2026-03-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://signaturesketch.tech/blog.html"/>
@@ -274,6 +274,16 @@
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://signaturesketch.tech/blog/digital-signature-vs-electronic-signature.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://signaturesketch.tech/blog/digital-signature-vs-electronic-signature.html"/>
+  </url>
+
+  <!-- Blog Article: Professional Signature Generator (English) -->
+  <url>
+    <loc>https://signaturesketch.tech/blog/professional-signature-generator.html</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://signaturesketch.tech/blog/professional-signature-generator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://signaturesketch.tech/blog/professional-signature-generator.html"/>
   </url>
 
   <!-- Blog Article: Comment faire une signature électronique (French only) -->

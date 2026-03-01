@@ -1,8 +1,8 @@
 const sharp = require('sharp');
 const fs = require('fs');
 
-const inputPath = 'blog/Generated Image February 28, 2026 - 12_23PM.jpg.jpeg';
-const outputPath = 'blog/draw-signature-online-guide.webp';
+const inputPath = 'blog/Generated Image March 01, 2026 - 4_28PM.png';
+const outputPath = 'blog/professional-signature-guide.webp';
 
 sharp(inputPath)
   .webp({ quality: 85 })
