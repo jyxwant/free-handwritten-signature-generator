@@ -53,7 +53,7 @@
   <!-- Blog -->
   <url>
     <loc>https://signaturesketch.tech/blog.html</loc>
-    <lastmod>2026-03-01</lastmod>
+    <lastmod>2026-03-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://signaturesketch.tech/blog.html"/>
@@ -588,5 +588,14 @@
     <xhtml:link rel="alternate" hreflang="ko" href="https://signaturesketch.tech/ko/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://signaturesketch.tech/pt/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://signaturesketch.tech/de/"/>
+  </url>
+  <!-- Blog Article: What Is an Electronic Signature (English) -->
+  <url>
+    <loc>https://signaturesketch.tech/blog/what-is-an-electronic-signature.html</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://signaturesketch.tech/blog/what-is-an-electronic-signature.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://signaturesketch.tech/blog/what-is-an-electronic-signature.html"/>
   </url>
 </urlset>
