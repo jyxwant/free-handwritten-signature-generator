@@ -53,7 +53,7 @@
   <!-- Blog -->
   <url>
     <loc>https://signaturesketch.tech/blog.html</loc>
-    <lastmod>2026-03-01</lastmod>
+    <lastmod>2026-03-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://signaturesketch.tech/blog.html"/>
@@ -588,5 +588,145 @@
     <xhtml:link rel="alternate" hreflang="ko" href="https://signaturesketch.tech/ko/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://signaturesketch.tech/pt/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://signaturesketch.tech/de/"/>
+  </url>
+
+  <!-- Blog Article: What Is an Electronic Signature? -->
+  <url>
+    <loc>https://signaturesketch.tech/blog/what-is-an-electronic-signature.html</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://signaturesketch.tech/blog/what-is-an-electronic-signature.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://signaturesketch.tech/blog/what-is-an-electronic-signature.html"/>
+  </url>
+
+  <!-- Blog Article: What Is a Digital Signature? -->
+  <url>
+    <loc>https://signaturesketch.tech/blog/what-is-a-digital-signature.html</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://signaturesketch.tech/blog/what-is-a-digital-signature.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://signaturesketch.tech/blog/what-is-a-digital-signature.html"/>
+  </url>
+
+  <!-- Blog Article: What Is a Wet Signature? -->
+  <url>
+    <loc>https://signaturesketch.tech/blog/what-is-a-wet-signature.html</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://signaturesketch.tech/blog/what-is-a-wet-signature.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://signaturesketch.tech/blog/what-is-a-wet-signature.html"/>
+  </url>
+
+  <!-- Blog Article: What Is a Signature Block? -->
+  <url>
+    <loc>https://signaturesketch.tech/blog/what-is-a-signature-block.html</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://signaturesketch.tech/blog/what-is-a-signature-block.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://signaturesketch.tech/blog/what-is-a-signature-block.html"/>
+  </url>
+
+  <!-- Blog Article: What Is a Digital Certificate? -->
+  <url>
+    <loc>https://signaturesketch.tech/blog/what-is-a-digital-certificate.html</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://signaturesketch.tech/blog/what-is-a-digital-certificate.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://signaturesketch.tech/blog/what-is-a-digital-certificate.html"/>
+  </url>
+
+  <!-- Blog Article: What Is PKI (Public Key Infrastructure)? -->
+  <url>
+    <loc>https://signaturesketch.tech/blog/what-is-pki.html</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://signaturesketch.tech/blog/what-is-pki.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://signaturesketch.tech/blog/what-is-pki.html"/>
+  </url>
+
+  <!-- Blog Article: What Is the ESIGN Act? -->
+  <url>
+    <loc>https://signaturesketch.tech/blog/what-is-the-esign-act.html</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://signaturesketch.tech/blog/what-is-the-esign-act.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://signaturesketch.tech/blog/what-is-the-esign-act.html"/>
+  </url>
+
+  <!-- Blog Article: What Is eIDAS? -->
+  <url>
+    <loc>https://signaturesketch.tech/blog/what-is-eidas.html</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://signaturesketch.tech/blog/what-is-eidas.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://signaturesketch.tech/blog/what-is-eidas.html"/>
+  </url>
+
+  <!-- Blog Article: What Is a Signature Line? -->
+  <url>
+    <loc>https://signaturesketch.tech/blog/what-is-a-signature-line.html</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://signaturesketch.tech/blog/what-is-a-signature-line.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://signaturesketch.tech/blog/what-is-a-signature-line.html"/>
+  </url>
+
+  <!-- Blog Article: What Is a Notarized Signature? -->
+  <url>
+    <loc>https://signaturesketch.tech/blog/what-is-a-notarized-signature.html</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://signaturesketch.tech/blog/what-is-a-notarized-signature.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://signaturesketch.tech/blog/what-is-a-notarized-signature.html"/>
+  </url>
+
+  <!-- Blog Article: What Is an Electronic Seal (eSeal)? -->
+  <url>
+    <loc>https://signaturesketch.tech/blog/what-is-an-electronic-seal.html</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://signaturesketch.tech/blog/what-is-an-electronic-seal.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://signaturesketch.tech/blog/what-is-an-electronic-seal.html"/>
+  </url>
+
+  <!-- Blog Article: What Is a Signature Stamp? -->
+  <url>
+    <loc>https://signaturesketch.tech/blog/what-is-a-signature-stamp.html</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://signaturesketch.tech/blog/what-is-a-signature-stamp.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://signaturesketch.tech/blog/what-is-a-signature-stamp.html"/>
+  </url>
+
+  <!-- Blog Article: What Is a Signature Font? -->
+  <url>
+    <loc>https://signaturesketch.tech/blog/what-is-a-signature-font.html</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://signaturesketch.tech/blog/what-is-a-signature-font.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://signaturesketch.tech/blog/what-is-a-signature-font.html"/>
+  </url>
+
+  <!-- Blog Article: What Is an Ink Signature? -->
+  <url>
+    <loc>https://signaturesketch.tech/blog/what-is-an-ink-signature.html</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://signaturesketch.tech/blog/what-is-an-ink-signature.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://signaturesketch.tech/blog/what-is-an-ink-signature.html"/>
   </url>
 </urlset>
