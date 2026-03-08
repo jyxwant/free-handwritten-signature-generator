@@ -53,7 +53,7 @@
   <!-- Blog -->
   <url>
     <loc>https://signaturesketch.tech/blog.html</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://signaturesketch.tech/blog.html"/>
@@ -607,5 +607,15 @@
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://signaturesketch.tech/blog/what-is-a-wet-signature.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://signaturesketch.tech/blog/what-is-a-wet-signature.html"/>
+  </url>
+
+  <!-- Blog Article: How to Add Signature to Outlook (English) -->
+  <url>
+    <loc>https://signaturesketch.tech/blog/how-to-add-signature-to-outlook.html</loc>
+    <lastmod>2026-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://signaturesketch.tech/blog/how-to-add-signature-to-outlook.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://signaturesketch.tech/blog/how-to-add-signature-to-outlook.html"/>
   </url>
 </urlset>
