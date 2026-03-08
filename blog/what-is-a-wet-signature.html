@@ -3,544 +3,446 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blog - Signature Sketch</title>
-    <meta name="description" content="Insights, tips, and news about digital signatures, productivity, and going paperless. Learn how to create handwritten signatures online, add signatures to Word documents, PDFs, and emails. Free signature generator tutorials, electronic signature guides, and best practices for digital document signing. Discover professional signature creation tools and techniques.">
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6903593415712702" crossorigin="anonymous"></script>
+    
+    <!-- SEO Meta Tags -->
+    <title>What Is a Wet Signature? Why It's Called "Wet" and When You Still Need One</title>
+    <meta name="description" content="A wet signature is a handwritten mark made with pen and ink on paper. Learn where the name comes from, which documents still require one, and when an electronic signature works just as well.">
+    <meta name="keywords" content="what is a wet signature, wet signature meaning, wet ink signature, wet signature vs electronic signature, when is a wet signature required, wet signature definition">
+    <meta name="author" content="Signature Sketch Team">
+    <meta name="robots" content="index, follow">
     <link rel="icon" type="image/png" sizes="192x192" href="/icon.png?v=2">
     <link rel="apple-touch-icon" href="/icon.png?v=2">
     
-    <!-- Dependencies -->
-<!-- Local Styles -->
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://signaturesketch.tech/blog/what-is-a-wet-signature.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="What Is a Wet Signature? Why It's Called 'Wet' and When You Still Need One">
+    <meta property="og:description" content="The origin of the term, which documents still demand pen on paper, and how electronic alternatives compare.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://signaturesketch.tech/blog/what-is-a-wet-signature.html">
+
+    <!-- Schema.org Article -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "What Is a Wet Signature? Why It's Called Wet and When You Still Need One",
+      "author": { "@type": "Organization", "name": "Signature Sketch Team" },
+      "publisher": { "@type": "Organization", "name": "Signature Sketch", "logo": { "@type": "ImageObject", "url": "https://signaturesketch.tech/icon.png" } },
+      "datePublished": "2026-03-04",
+      "dateModified": "2026-03-04",
+      "description": "A complete explanation of wet signatures: the origin of the term, legal requirements, when you still need one, and how electronic signatures compare."
+    }
+    </script>
+    
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Why is it called a wet signature?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The term refers to the liquid ink that transfers from pen to paper. At the moment of signing, the ink is literally wet before it dries on the page. The word distinguishes physical pen-on-paper signatures from electronic ones." }
+      }, {
+        "@type": "Question",
+        "name": "Is a wet signature more legally valid than an electronic signature?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Not for most documents. Under the ESIGN Act (US) and eIDAS (EU), electronic signatures have equal legal standing for standard business transactions. Wet signatures are only required for specific exceptions like wills, certain real estate deeds, and some court documents." }
+      }, {
+        "@type": "Question",
+        "name": "What documents still require a wet signature?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Requirements vary by jurisdiction, but common exceptions include wills and testaments, certain real estate deeds and property transfers, court orders, immigration forms, notarized documents, and some government filings. Most business contracts, NDAs, and employment documents accept electronic signatures." }
+      }, {
+        "@type": "Question",
+        "name": "Can I use blue ink for a wet signature?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes, and many legal professionals prefer it. Blue ink makes it easy to distinguish an original signed document from a black-and-white photocopy. Both blue and black ink are universally accepted for legal documents." }
+      }]
+    }
+    </script>
+
+    <!-- Custom Typography & UI Styles -->
+    <style>
+        .article-body { font-size: 1.125rem; line-height: 1.85; color: #334155; max-width: 65ch; }
+        .article-body p { margin-bottom: 2em; }
+        .article-body h2 { font-size: 1.875rem; font-weight: 800; color: #0f172a; margin-top: 3.5em; margin-bottom: 1em; letter-spacing: -0.025em; line-height: 1.3; border-bottom: 1px solid #f1f5f9; padding-bottom: 0.5em; }
+        .article-body h3 { font-size: 1.4rem; font-weight: 700; color: #1e293b; margin-top: 2.5em; margin-bottom: 0.8em; }
+        .article-body ul, .article-body ol { margin-bottom: 2.5em; padding-left: 1rem; }
+        .article-body li { margin-bottom: 0.75em; position: relative; padding-left: 1.5em; }
+        .article-body ul li::before { content: ""; position: absolute; left: 0; top: 0.7em; width: 6px; height: 6px; background: #d97706; border-radius: 50%; }
+        .article-body ol { counter-reset: item; }
+        .article-body ol li { list-style: none; }
+        .article-body ol li::before { content: counter(item) "."; counter-increment: item; position: absolute; left: 0; font-weight: 700; color: #d97706; }
+        .article-body a { color: #2563eb; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; text-decoration-color: #dbeafe; transition: all 0.2s; }
+        .article-body a:hover { background: #eff6ff; text-decoration-color: #2563eb; }
+        .lead-paragraph { font-size: 1.35rem; line-height: 1.6; color: #475569; font-weight: 400; margin-bottom: 3em; border-left: 4px solid #d97706; padding-left: 1.5rem; }
+        .callout { background-color: #fffbeb; border: 1px solid #fde68a; border-radius: 0.75rem; padding: 2rem; margin: 3rem 0; }
+        .comparison-table { width: 100%; border-collapse: separate; border-spacing: 0; border: 1px solid #e2e8f0; border-radius: 0.75rem; overflow: hidden; margin: 2.5rem 0; font-size: 0.95rem; }
+        .comparison-table th { background: #fffbeb; padding: 1rem; text-align: left; font-weight: 700; color: #0f172a; }
+        .comparison-table td { padding: 1rem; border-top: 1px solid #e2e8f0; color: #334155; }
+    </style>
     <style>*,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/*! tailwindcss v3.4.19 | MIT License | https://tailwindcss.com*/*,:after,:before{box-sizing:border-box;border:0 solid #e5e7eb}:after,:before{--tw-content:""}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0}fieldset,legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.\!container{width:100%!important}.container{width:100%}@media (min-width:640px){.\!container{max-width:640px!important}.container{max-width:640px}}@media (min-width:768px){.\!container{max-width:768px!important}.container{max-width:768px}}@media (min-width:1024px){.\!container{max-width:1024px!important}.container{max-width:1024px}}@media (min-width:1280px){.\!container{max-width:1280px!important}.container{max-width:1280px}}@media (min-width:1536px){.\!container{max-width:1536px!important}.container{max-width:1536px}}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0}.pointer-events-none{pointer-events:none}.visible{visibility:visible}.invisible{visibility:hidden}.collapse{visibility:collapse}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0}.inset-y-0{top:0;bottom:0}.-left-4{left:-1rem}.-right-4{right:-1rem}.bottom-0{bottom:0}.bottom-0\.5{bottom:.125rem}.left-0{left:0}.left-3{left:.75rem}.right-0{right:0}.right-3{right:.75rem}.top-0{top:0}.top-24{top:6rem}.top-3{top:.75rem}.z-10{z-index:10}.z-20{z-index:20}.z-50{z-index:50}.z-\[60\]{z-index:60}.z-\[70\]{z-index:70}.order-first{order:-9999}.order-last{order:9999}.m-0{margin:0}.m-4{margin:1rem}.mx-0{margin-left:0;margin-right:0}.mx-0\.5{margin-left:.125rem;margin-right:.125rem}.mx-2{margin-left:.5rem;margin-right:.5rem}.mx-auto{margin-left:auto;margin-right:auto}.my-14{margin-top:3.5rem;margin-bottom:3.5rem}.my-6{margin-top:1.5rem;margin-bottom:1.5rem}.my-8{margin-top:2rem;margin-bottom:2rem}.-mb-32{margin-bottom:-8rem}.-ml-32{margin-left:-8rem}.-mr-32{margin-right:-8rem}.-mt-32{margin-top:-8rem}.mb-1{margin-bottom:.25rem}.mb-1\.5{margin-bottom:.375rem}.mb-10{margin-bottom:2.5rem}.mb-12{margin-bottom:3rem}.mb-14{margin-bottom:3.5rem}.mb-16{margin-bottom:4rem}.mb-2{margin-bottom:.5rem}.mb-3{margin-bottom:.75rem}.mb-4{margin-bottom:1rem}.mb-5{margin-bottom:1.25rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.ml-1{margin-left:.25rem}.ml-3{margin-left:.75rem}.ml-4{margin-left:1rem}.ml-5{margin-left:1.25rem}.ml-8{margin-left:2rem}.mr-3{margin-right:.75rem}.mr-8{margin-right:2rem}.mt-0{margin-top:0}.mt-0\.5{margin-top:.125rem}.mt-1{margin-top:.25rem}.mt-12{margin-top:3rem}.mt-16{margin-top:4rem}.mt-2{margin-top:.5rem}.mt-20{margin-top:5rem}.mt-3{margin-top:.75rem}.mt-4{margin-top:1rem}.mt-6{margin-top:1.5rem}.mt-8{margin-top:2rem}.mt-auto{margin-top:auto}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.inline-flex{display:inline-flex}.table{display:table}.grid{display:grid}.hidden{display:none}.h-1{height:.25rem}.h-10{height:2.5rem}.h-12{height:3rem}.h-14{height:3.5rem}.h-16{height:4rem}.h-2{height:.5rem}.h-28{height:7rem}.h-3{height:.75rem}.h-4{height:1rem}.h-48{height:12rem}.h-5{height:1.25rem}.h-56{height:14rem}.h-6{height:1.5rem}.h-64{height:16rem}.h-7{height:1.75rem}.h-8{height:2rem}.h-\[300px\]{height:300px}.h-auto{height:auto}.h-fit{height:-moz-fit-content;height:fit-content}.h-full{height:100%}.h-px{height:1px}.max-h-full{max-height:100%}.min-h-\[100px\]{min-height:100px}.min-h-\[120px\]{min-height:120px}.min-h-\[180px\]{min-height:180px}.min-h-\[600px\]{min-height:600px}.min-h-full{min-height:100%}.min-h-screen{min-height:100vh}.w-1{width:.25rem}.w-1\/2{width:50%}.w-10{width:2.5rem}.w-12{width:3rem}.w-14{width:3.5rem}.w-16{width:4rem}.w-2{width:.5rem}.w-3{width:.75rem}.w-3\/4{width:75%}.w-32{width:8rem}.w-4{width:1rem}.w-40{width:10rem}.w-5{width:1.25rem}.w-6{width:1.5rem}.w-64{width:16rem}.w-7{width:1.75rem}.w-8{width:2rem}.w-full{width:100%}.w-px{width:1px}.w-screen{width:100vw}.max-w-2xl{max-width:42rem}.max-w-3xl{max-width:48rem}.max-w-4xl{max-width:56rem}.max-w-5xl{max-width:64rem}.max-w-7xl{max-width:80rem}.max-w-\[1600px\]{max-width:1600px}.max-w-full{max-width:100%}.max-w-none{max-width:none}.max-w-xl{max-width:36rem}.flex-1{flex:1 1 0%}.flex-shrink-0{flex-shrink:0}.border-collapse{border-collapse:collapse}.translate-x-0{--tw-translate-x:0px}.scale-100,.translate-x-0{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.scale-100{--tw-scale-x:1;--tw-scale-y:1}.scale-95{--tw-scale-x:.95;--tw-scale-y:.95}.scale-95,.transform{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@keyframes pulse{50%{opacity:.5}}.animate-pulse{animation:pulse 2s cubic-bezier(.4,0,.6,1) infinite}.cursor-crosshair{cursor:crosshair}.cursor-not-allowed{cursor:not-allowed}.cursor-pointer{cursor:pointer}.touch-none{touch-action:none}.select-none{-webkit-user-select:none;-moz-user-select:none;user-select:none}.resize-none{resize:none}.resize{resize:both}.list-inside{list-style-position:inside}.list-decimal{list-style-type:decimal}.list-disc{list-style-type:disc}.list-none{list-style-type:none}.appearance-none{-webkit-appearance:none;-moz-appearance:none;appearance:none}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:.25rem}.gap-1\.5{gap:.375rem}.gap-10{gap:2.5rem}.gap-12{gap:3rem}.gap-16{gap:4rem}.gap-2{gap:.5rem}.gap-3{gap:.75rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.space-y-1>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.25rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.25rem*var(--tw-space-y-reverse))}.space-y-10>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(2.5rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(2.5rem*var(--tw-space-y-reverse))}.space-y-12>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(3rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(3rem*var(--tw-space-y-reverse))}.space-y-2>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.5rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.5rem*var(--tw-space-y-reverse))}.space-y-2\.5>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.625rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.625rem*var(--tw-space-y-reverse))}.space-y-3>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.75rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.75rem*var(--tw-space-y-reverse))}.space-y-4>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem*var(--tw-space-y-reverse))}.space-y-5>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.25rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.25rem*var(--tw-space-y-reverse))}.space-y-6>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem*var(--tw-space-y-reverse))}.space-y-8>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(2rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(2rem*var(--tw-space-y-reverse))}.divide-y>:not([hidden])~:not([hidden]){--tw-divide-y-reverse:0;border-top-width:calc(1px*(1 - var(--tw-divide-y-reverse)));border-bottom-width:calc(1px*var(--tw-divide-y-reverse))}.divide-slate-100>:not([hidden])~:not([hidden]){--tw-divide-opacity:1;border-color:rgb(241 245 249/var(--tw-divide-opacity,1))}.overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}.overflow-y-auto{overflow-y:auto}.whitespace-nowrap{white-space:nowrap}.rounded{border-radius:.25rem}.rounded-2xl{border-radius:1rem}.rounded-3xl{border-radius:1.5rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:.5rem}.rounded-md{border-radius:.375rem}.rounded-xl{border-radius:.75rem}.border{border-width:1px}.border-2{border-width:2px}.border-y{border-top-width:1px}.border-b,.border-y{border-bottom-width:1px}.border-l-2{border-left-width:2px}.border-r-2{border-right-width:2px}.border-t{border-top-width:1px}.border-dashed{border-style:dashed}.border-none{border-style:none}.border-blue-100{--tw-border-opacity:1;border-color:rgb(219 234 254/var(--tw-border-opacity,1))}.border-blue-400{--tw-border-opacity:1;border-color:rgb(96 165 250/var(--tw-border-opacity,1))}.border-green-100{--tw-border-opacity:1;border-color:rgb(220 252 231/var(--tw-border-opacity,1))}.border-orange-100{--tw-border-opacity:1;border-color:rgb(255 237 213/var(--tw-border-opacity,1))}.border-purple-100{--tw-border-opacity:1;border-color:rgb(243 232 255/var(--tw-border-opacity,1))}.border-red-100{--tw-border-opacity:1;border-color:rgb(254 226 226/var(--tw-border-opacity,1))}.border-slate-100{--tw-border-opacity:1;border-color:rgb(241 245 249/var(--tw-border-opacity,1))}.border-slate-200{--tw-border-opacity:1;border-color:rgb(226 232 240/var(--tw-border-opacity,1))}.border-slate-200\/60{border-color:rgba(226,232,240,.6)}.border-slate-300{--tw-border-opacity:1;border-color:rgb(203 213 225/var(--tw-border-opacity,1))}.border-slate-600{--tw-border-opacity:1;border-color:rgb(71 85 105/var(--tw-border-opacity,1))}.border-transparent{border-color:transparent}.border-yellow-100{--tw-border-opacity:1;border-color:rgb(254 249 195/var(--tw-border-opacity,1))}.bg-\[\#0047AB\]{--tw-bg-opacity:1;background-color:rgb(0 71 171/var(--tw-bg-opacity,1))}.bg-\[\#2B579A\]\/10{background-color:rgba(43,87,154,.1)}.bg-\[\#EA4335\]\/10{background-color:rgba(234,67,53,.1)}.bg-\[\#F8FAFC\]{--tw-bg-opacity:1;background-color:rgb(248 250 252/var(--tw-bg-opacity,1))}.bg-\[\#FF0000\]\/10{background-color:rgba(255,0,0,.1)}.bg-amber-100{--tw-bg-opacity:1;background-color:rgb(254 243 199/var(--tw-bg-opacity,1))}.bg-black{--tw-bg-opacity:1;background-color:rgb(0 0 0/var(--tw-bg-opacity,1))}.bg-blue-100{--tw-bg-opacity:1;background-color:rgb(219 234 254/var(--tw-bg-opacity,1))}.bg-blue-50{--tw-bg-opacity:1;background-color:rgb(239 246 255/var(--tw-bg-opacity,1))}.bg-blue-50\/50{background-color:rgba(239,246,255,.5)}.bg-blue-600{--tw-bg-opacity:1;background-color:rgb(37 99 235/var(--tw-bg-opacity,1))}.bg-green-100{--tw-bg-opacity:1;background-color:rgb(220 252 231/var(--tw-bg-opacity,1))}.bg-green-50{--tw-bg-opacity:1;background-color:rgb(240 253 244/var(--tw-bg-opacity,1))}.bg-green-500{--tw-bg-opacity:1;background-color:rgb(34 197 94/var(--tw-bg-opacity,1))}.bg-green-600{--tw-bg-opacity:1;background-color:rgb(22 163 74/var(--tw-bg-opacity,1))}.bg-indigo-100{--tw-bg-opacity:1;background-color:rgb(224 231 255/var(--tw-bg-opacity,1))}.bg-orange-100{--tw-bg-opacity:1;background-color:rgb(255 237 213/var(--tw-bg-opacity,1))}.bg-orange-50{--tw-bg-opacity:1;background-color:rgb(255 247 237/var(--tw-bg-opacity,1))}.bg-purple-100{--tw-bg-opacity:1;background-color:rgb(243 232 255/var(--tw-bg-opacity,1))}.bg-purple-50{--tw-bg-opacity:1;background-color:rgb(250 245 255/var(--tw-bg-opacity,1))}.bg-purple-600{--tw-bg-opacity:1;background-color:rgb(147 51 234/var(--tw-bg-opacity,1))}.bg-red-100{--tw-bg-opacity:1;background-color:rgb(254 226 226/var(--tw-bg-opacity,1))}.bg-red-50{--tw-bg-opacity:1;background-color:rgb(254 242 242/var(--tw-bg-opacity,1))}.bg-red-500{--tw-bg-opacity:1;background-color:rgb(239 68 68/var(--tw-bg-opacity,1))}.bg-red-600{--tw-bg-opacity:1;background-color:rgb(220 38 38/var(--tw-bg-opacity,1))}.bg-slate-100{--tw-bg-opacity:1;background-color:rgb(241 245 249/var(--tw-bg-opacity,1))}.bg-slate-200{--tw-bg-opacity:1;background-color:rgb(226 232 240/var(--tw-bg-opacity,1))}.bg-slate-50{--tw-bg-opacity:1;background-color:rgb(248 250 252/var(--tw-bg-opacity,1))}.bg-slate-50\/50{background-color:rgba(248,250,252,.5)}.bg-slate-600{--tw-bg-opacity:1;background-color:rgb(71 85 105/var(--tw-bg-opacity,1))}.bg-slate-800{--tw-bg-opacity:1;background-color:rgb(30 41 59/var(--tw-bg-opacity,1))}.bg-slate-900{--tw-bg-opacity:1;background-color:rgb(15 23 42/var(--tw-bg-opacity,1))}.bg-slate-900\/50{background-color:rgba(15,23,42,.5)}.bg-teal-100{--tw-bg-opacity:1;background-color:rgb(204 251 241/var(--tw-bg-opacity,1))}.bg-teal-500{--tw-bg-opacity:1;background-color:rgb(20 184 166/var(--tw-bg-opacity,1))}.bg-transparent{background-color:transparent}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity,1))}.bg-white\/80{background-color:hsla(0,0%,100%,.8)}.bg-white\/90{background-color:hsla(0,0%,100%,.9)}.bg-yellow-50{--tw-bg-opacity:1;background-color:rgb(254 252 232/var(--tw-bg-opacity,1))}.bg-gradient-to-br{background-image:linear-gradient(to bottom right,var(--tw-gradient-stops))}.bg-gradient-to-tr{background-image:linear-gradient(to top right,var(--tw-gradient-stops))}.from-blue-50{--tw-gradient-from:#eff6ff var(--tw-gradient-from-position);--tw-gradient-to:rgba(239,246,255,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-blue-500{--tw-gradient-from:#3b82f6 var(--tw-gradient-from-position);--tw-gradient-to:rgba(59,130,246,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-indigo-500{--tw-gradient-from:#6366f1 var(--tw-gradient-from-position);--tw-gradient-to:rgba(99,102,241,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.via-purple-500{--tw-gradient-to:rgba(168,85,247,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),#a855f7 var(--tw-gradient-via-position),var(--tw-gradient-to)}.to-blue-600{--tw-gradient-to:#2563eb var(--tw-gradient-to-position)}.to-indigo-50{--tw-gradient-to:#eef2ff var(--tw-gradient-to-position)}.to-pink-500{--tw-gradient-to:#ec4899 var(--tw-gradient-to-position)}.object-contain{-o-object-fit:contain;object-fit:contain}.object-cover{-o-object-fit:cover;object-fit:cover}.p-1{padding:.25rem}.p-1\.5{padding:.375rem}.p-10{padding:2.5rem}.p-2{padding:.5rem}.p-3{padding:.75rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.p-8{padding:2rem}.px-2{padding-left:.5rem;padding-right:.5rem}.px-3{padding-left:.75rem;padding-right:.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.px-8{padding-left:2rem;padding-right:2rem}.py-1{padding-top:.25rem;padding-bottom:.25rem}.py-1\.5{padding-top:.375rem;padding-bottom:.375rem}.py-12{padding-top:3rem;padding-bottom:3rem}.py-16{padding-top:4rem;padding-bottom:4rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.py-2\.5{padding-top:.625rem;padding-bottom:.625rem}.py-3{padding-top:.75rem;padding-bottom:.75rem}.py-3\.5{padding-top:.875rem;padding-bottom:.875rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-6{padding-top:1.5rem;padding-bottom:1.5rem}.py-8{padding-top:2rem;padding-bottom:2rem}.pb-10{padding-bottom:2.5rem}.pb-4{padding-bottom:1rem}.pb-6{padding-bottom:1.5rem}.pl-0{padding-left:0}.pl-2{padding-left:.5rem}.pl-3{padding-left:.75rem}.pl-4{padding-left:1rem}.pl-8{padding-left:2rem}.pr-3{padding-right:.75rem}.pr-8{padding-right:2rem}.pt-4{padding-top:1rem}.pt-5{padding-top:1.25rem}.pt-8{padding-top:2rem}.text-left{text-align:left}.text-center{text-align:center}.text-right{text-align:right}.font-mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace}.font-sans{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif}.font-serif{font-family:ui-serif,Georgia,Cambria,Times New Roman,Times,serif}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-\[10px\]{font-size:10px}.text-\[9px\]{font-size:9px}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:.75rem;line-height:1rem}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-medium{font-weight:500}.font-normal{font-weight:400}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.italic{font-style:italic}.leading-\[1\.1\]{line-height:1.1}.leading-relaxed{line-height:1.625}.leading-snug{line-height:1.375}.leading-tight{line-height:1.25}.tracking-tight{letter-spacing:-.025em}.tracking-wide{letter-spacing:.025em}.tracking-wider{letter-spacing:.05em}.tracking-widest{letter-spacing:.1em}.text-\[\#2B579A\]{--tw-text-opacity:1;color:rgb(43 87 154/var(--tw-text-opacity,1))}.text-\[\#EA4335\]{--tw-text-opacity:1;color:rgb(234 67 53/var(--tw-text-opacity,1))}.text-\[\#FF0000\]{--tw-text-opacity:1;color:rgb(255 0 0/var(--tw-text-opacity,1))}.text-amber-600{--tw-text-opacity:1;color:rgb(217 119 6/var(--tw-text-opacity,1))}.text-blue-600{--tw-text-opacity:1;color:rgb(37 99 235/var(--tw-text-opacity,1))}.text-blue-700{--tw-text-opacity:1;color:rgb(29 78 216/var(--tw-text-opacity,1))}.text-blue-800{--tw-text-opacity:1;color:rgb(30 64 175/var(--tw-text-opacity,1))}.text-blue-900{--tw-text-opacity:1;color:rgb(30 58 138/var(--tw-text-opacity,1))}.text-green-600{--tw-text-opacity:1;color:rgb(22 163 74/var(--tw-text-opacity,1))}.text-green-700{--tw-text-opacity:1;color:rgb(21 128 61/var(--tw-text-opacity,1))}.text-indigo-600{--tw-text-opacity:1;color:rgb(79 70 229/var(--tw-text-opacity,1))}.text-orange-600{--tw-text-opacity:1;color:rgb(234 88 12/var(--tw-text-opacity,1))}.text-purple-600{--tw-text-opacity:1;color:rgb(147 51 234/var(--tw-text-opacity,1))}.text-purple-700{--tw-text-opacity:1;color:rgb(126 34 206/var(--tw-text-opacity,1))}.text-red-600{--tw-text-opacity:1;color:rgb(220 38 38/var(--tw-text-opacity,1))}.text-red-800{--tw-text-opacity:1;color:rgb(153 27 27/var(--tw-text-opacity,1))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225/var(--tw-text-opacity,1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184/var(--tw-text-opacity,1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139/var(--tw-text-opacity,1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105/var(--tw-text-opacity,1))}.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85/var(--tw-text-opacity,1))}.text-slate-800{--tw-text-opacity:1;color:rgb(30 41 59/var(--tw-text-opacity,1))}.text-slate-900{--tw-text-opacity:1;color:rgb(15 23 42/var(--tw-text-opacity,1))}.text-teal-600{--tw-text-opacity:1;color:rgb(13 148 136/var(--tw-text-opacity,1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.underline{text-decoration-line:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.opacity-0{opacity:0}.opacity-10{opacity:.1}.opacity-100{opacity:1}.opacity-30{opacity:.3}.opacity-50{opacity:.5}.opacity-60{opacity:.6}.opacity-70{opacity:.7}.opacity-80{opacity:.8}.shadow-\[0_8px_30px_rgb\(0\2c 0\2c 0\2c 0\.04\)\]{--tw-shadow:0 8px 30px rgb(0,0,0,0.04);--tw-shadow-colored:0 8px 30px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-\[0_8px_30px_rgb\(0\2c 0\2c 0\2c 0\.08\)\]{--tw-shadow:0 8px 30px rgb(0,0,0,0.08);--tw-shadow-colored:0 8px 30px var(--tw-shadow-color)}.shadow-\[0_8px_30px_rgb\(0\2c 0\2c 0\2c 0\.08\)\],.shadow-lg{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color),0 4px 6px -4px var(--tw-shadow-color)}.shadow-md{--tw-shadow:0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -2px rgba(0,0,0,.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color),0 2px 4px -2px var(--tw-shadow-color)}.shadow-md,.shadow-none{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-none{--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000}.shadow-sm{--tw-shadow:0 1px 2px 0 rgba(0,0,0,.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color)}.shadow-sm,.shadow-xl{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgba(0,0,0,.1),0 8px 10px -6px rgba(0,0,0,.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color),0 8px 10px -6px var(--tw-shadow-color)}.shadow-blue-500{--tw-shadow-color:#3b82f6;--tw-shadow:var(--tw-shadow-colored)}.outline-none{outline:2px solid transparent;outline-offset:2px}.ring-1{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color)}.ring-1,.ring-2{box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000)}.ring-2{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color)}.ring-4{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(4px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000)}.ring-blue-500{--tw-ring-opacity:1;--tw-ring-color:rgb(59 130 246/var(--tw-ring-opacity,1))}.ring-red-300{--tw-ring-opacity:1;--tw-ring-color:rgb(252 165 165/var(--tw-ring-opacity,1))}.ring-slate-200{--tw-ring-opacity:1;--tw-ring-color:rgb(226 232 240/var(--tw-ring-opacity,1))}.ring-slate-400{--tw-ring-opacity:1;--tw-ring-color:rgb(148 163 184/var(--tw-ring-opacity,1))}.ring-white{--tw-ring-opacity:1;--tw-ring-color:rgb(255 255 255/var(--tw-ring-opacity,1))}.ring-offset-1{--tw-ring-offset-width:1px}.blur-3xl{--tw-blur:blur(64px);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.backdrop-blur-md{--tw-backdrop-blur:blur(12px)}.backdrop-blur-md,.backdrop-blur-sm{-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.backdrop-blur-sm{--tw-backdrop-blur:blur(4px)}.backdrop-filter{-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-colors{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-opacity{transition-property:opacity;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-shadow{transition-property:box-shadow;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.duration-200{transition-duration:.2s}.duration-300{transition-duration:.3s}.marker\:font-bold ::marker{font-weight:700}.marker\:text-blue-600 ::marker{color:#2563eb}.marker\:font-bold::marker{font-weight:700}.marker\:text-blue-600::marker{color:#2563eb}.selection\:bg-blue-100 ::-moz-selection{--tw-bg-opacity:1;background-color:rgb(219 234 254/var(--tw-bg-opacity,1))}.selection\:bg-blue-100 ::selection{--tw-bg-opacity:1;background-color:rgb(219 234 254/var(--tw-bg-opacity,1))}.selection\:text-blue-700 ::-moz-selection{--tw-text-opacity:1;color:rgb(29 78 216/var(--tw-text-opacity,1))}.selection\:text-blue-700 ::selection{--tw-text-opacity:1;color:rgb(29 78 216/var(--tw-text-opacity,1))}.selection\:bg-blue-100::-moz-selection{--tw-bg-opacity:1;background-color:rgb(219 234 254/var(--tw-bg-opacity,1))}.selection\:bg-blue-100::selection{--tw-bg-opacity:1;background-color:rgb(219 234 254/var(--tw-bg-opacity,1))}.selection\:text-blue-700::-moz-selection{--tw-text-opacity:1;color:rgb(29 78 216/var(--tw-text-opacity,1))}.selection\:text-blue-700::selection{--tw-text-opacity:1;color:rgb(29 78 216/var(--tw-text-opacity,1))}.last\:border-0:last-child{border-width:0}.last\:pb-0:last-child{padding-bottom:0}.hover\:scale-110:hover{--tw-scale-x:1.1;--tw-scale-y:1.1;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:border-blue-300:hover{--tw-border-opacity:1;border-color:rgb(147 197 253/var(--tw-border-opacity,1))}.hover\:border-blue-400:hover{--tw-border-opacity:1;border-color:rgb(96 165 250/var(--tw-border-opacity,1))}.hover\:border-slate-100:hover{--tw-border-opacity:1;border-color:rgb(241 245 249/var(--tw-border-opacity,1))}.hover\:border-slate-200:hover{--tw-border-opacity:1;border-color:rgb(226 232 240/var(--tw-border-opacity,1))}.hover\:border-slate-300:hover{--tw-border-opacity:1;border-color:rgb(203 213 225/var(--tw-border-opacity,1))}.hover\:border-slate-400:hover{--tw-border-opacity:1;border-color:rgb(148 163 184/var(--tw-border-opacity,1))}.hover\:bg-blue-50:hover{--tw-bg-opacity:1;background-color:rgb(239 246 255/var(--tw-bg-opacity,1))}.hover\:bg-blue-50\/50:hover{background-color:rgba(239,246,255,.5)}.hover\:bg-blue-700:hover{--tw-bg-opacity:1;background-color:rgb(29 78 216/var(--tw-bg-opacity,1))}.hover\:bg-red-50:hover{--tw-bg-opacity:1;background-color:rgb(254 242 242/var(--tw-bg-opacity,1))}.hover\:bg-slate-100:hover{--tw-bg-opacity:1;background-color:rgb(241 245 249/var(--tw-bg-opacity,1))}.hover\:bg-slate-200:hover{--tw-bg-opacity:1;background-color:rgb(226 232 240/var(--tw-bg-opacity,1))}.hover\:bg-slate-50:hover{--tw-bg-opacity:1;background-color:rgb(248 250 252/var(--tw-bg-opacity,1))}.hover\:bg-slate-700:hover{--tw-bg-opacity:1;background-color:rgb(51 65 85/var(--tw-bg-opacity,1))}.hover\:bg-slate-800:hover{--tw-bg-opacity:1;background-color:rgb(30 41 59/var(--tw-bg-opacity,1))}.hover\:bg-white:hover{--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity,1))}.hover\:text-blue-500:hover{--tw-text-opacity:1;color:rgb(59 130 246/var(--tw-text-opacity,1))}.hover\:text-blue-600:hover{--tw-text-opacity:1;color:rgb(37 99 235/var(--tw-text-opacity,1))}.hover\:text-blue-700:hover{--tw-text-opacity:1;color:rgb(29 78 216/var(--tw-text-opacity,1))}.hover\:text-primary-600:hover{--tw-text-opacity:1;color:rgb(37 99 235/var(--tw-text-opacity,1))}.hover\:text-red-500:hover{--tw-text-opacity:1;color:rgb(239 68 68/var(--tw-text-opacity,1))}.hover\:text-slate-600:hover{--tw-text-opacity:1;color:rgb(71 85 105/var(--tw-text-opacity,1))}.hover\:text-slate-700:hover{--tw-text-opacity:1;color:rgb(51 65 85/var(--tw-text-opacity,1))}.hover\:text-slate-800:hover{--tw-text-opacity:1;color:rgb(30 41 59/var(--tw-text-opacity,1))}.hover\:text-slate-900:hover{--tw-text-opacity:1;color:rgb(15 23 42/var(--tw-text-opacity,1))}.hover\:underline:hover{text-decoration-line:underline}.hover\:opacity-100:hover{opacity:1}.hover\:shadow-\[0_8px_30px_rgb\(0\2c 0\2c 0\2c 0\.08\)\]:hover{--tw-shadow:0 8px 30px rgb(0,0,0,0.08);--tw-shadow-colored:0 8px 30px var(--tw-shadow-color)}.hover\:shadow-\[0_8px_30px_rgb\(0\2c 0\2c 0\2c 0\.08\)\]:hover,.hover\:shadow-lg:hover{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.hover\:shadow-lg:hover{--tw-shadow:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color),0 4px 6px -4px var(--tw-shadow-color)}.hover\:shadow-md:hover{--tw-shadow:0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -2px rgba(0,0,0,.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color),0 2px 4px -2px var(--tw-shadow-color)}.hover\:shadow-md:hover,.hover\:shadow-xl:hover{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.hover\:shadow-xl:hover{--tw-shadow:0 20px 25px -5px rgba(0,0,0,.1),0 8px 10px -6px rgba(0,0,0,.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color),0 8px 10px -6px var(--tw-shadow-color)}.hover\:shadow-blue-500\/20:hover{--tw-shadow-color:rgba(59,130,246,.2);--tw-shadow:var(--tw-shadow-colored)}.focus\:border-blue-300:focus{--tw-border-opacity:1;border-color:rgb(147 197 253/var(--tw-border-opacity,1))}.focus\:border-blue-500:focus{--tw-border-opacity:1;border-color:rgb(59 130 246/var(--tw-border-opacity,1))}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.focus\:ring-1:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color)}.focus\:ring-1:focus,.focus\:ring-2:focus{box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000)}.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color)}.focus\:ring-blue-500:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(59 130 246/var(--tw-ring-opacity,1))}.focus\:ring-blue-500\/20:focus{--tw-ring-color:rgba(59,130,246,.2)}.disabled\:cursor-not-allowed:disabled{cursor:not-allowed}.disabled\:opacity-30:disabled{opacity:.3}.disabled\:opacity-50:disabled{opacity:.5}.disabled\:shadow-none:disabled{--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.group:hover .group-hover\:visible{visibility:visible}.group:hover .group-hover\:translate-x-0\.5{--tw-translate-x:0.125rem}.group:hover .group-hover\:translate-x-0\.5,.group:hover .group-hover\:translate-x-1{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:translate-x-1{--tw-translate-x:0.25rem}.group:hover .group-hover\:scale-105{--tw-scale-x:1.05;--tw-scale-y:1.05;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:border-blue-200{--tw-border-opacity:1;border-color:rgb(191 219 254/var(--tw-border-opacity,1))}.group:hover .group-hover\:bg-blue-100{--tw-bg-opacity:1;background-color:rgb(219 234 254/var(--tw-bg-opacity,1))}.group:hover .group-hover\:text-blue-500{--tw-text-opacity:1;color:rgb(59 130 246/var(--tw-text-opacity,1))}.group:hover .group-hover\:text-blue-600{--tw-text-opacity:1;color:rgb(37 99 235/var(--tw-text-opacity,1))}.group:hover .group-hover\:text-blue-700{--tw-text-opacity:1;color:rgb(29 78 216/var(--tw-text-opacity,1))}.group:hover .group-hover\:text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105/var(--tw-text-opacity,1))}.group:hover .group-hover\:opacity-100{opacity:1}@supports ((-webkit-backdrop-filter:var(--tw )) or (backdrop-filter:var(--tw ))){.supports-\[backdrop-filter\]\:bg-white\/60{background-color:hsla(0,0%,100%,.6)}}@media (min-width:640px){.sm\:my-8{margin-top:2rem;margin-bottom:2rem}.sm\:block{display:block}.sm\:w-auto{width:auto}.sm\:w-full{width:100%}.sm\:max-w-4xl{max-width:56rem}.sm\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.sm\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.sm\:flex-row{flex-direction:row}.sm\:items-center{align-items:center}.sm\:p-0{padding:0}.sm\:p-6{padding:1.5rem}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:pb-4{padding-bottom:1rem}}@media (min-width:768px){.md\:block{display:block}.md\:inline{display:inline}.md\:flex{display:flex}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.md\:grid-cols-6{grid-template-columns:repeat(6,minmax(0,1fr))}.md\:p-10{padding:2.5rem}.md\:p-12{padding:3rem}.md\:text-3xl{font-size:1.875rem;line-height:2.25rem}.md\:text-4xl{font-size:2.25rem;line-height:2.5rem}.md\:text-5xl{font-size:3rem;line-height:1}.md\:text-xl{font-size:1.25rem;line-height:1.75rem}}@media (min-width:1024px){.lg\:col-span-4{grid-column:span 4/span 4}.lg\:col-span-8{grid-column:span 8/span 8}.lg\:w-1\/2{width:50%}.lg\:w-1\/3{width:33.333333%}.lg\:w-2\/3{width:66.666667%}.lg\:grid-cols-12{grid-template-columns:repeat(12,minmax(0,1fr))}.lg\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.lg\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.lg\:flex-row{flex-direction:row}.lg\:divide-x>:not([hidden])~:not([hidden]){--tw-divide-x-reverse:0;border-right-width:calc(1px*var(--tw-divide-x-reverse));border-left-width:calc(1px*(1 - var(--tw-divide-x-reverse)))}.lg\:divide-y-0>:not([hidden])~:not([hidden]){--tw-divide-y-reverse:0;border-top-width:calc(0px*(1 - var(--tw-divide-y-reverse)));border-bottom-width:calc(0px*var(--tw-divide-y-reverse))}.lg\:p-8{padding:2rem}.lg\:px-8{padding-left:2rem;padding-right:2rem}}@media (min-width:1280px){.xl\:block{display:block}.xl\:hidden{display:none}}</style>
-    <style>/* Global Styles */
-body {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-/* Canvas Specifics */
-canvas {
-    touch-action: none;
-    -webkit-tap-highlight-color: transparent;
-}
-
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-    width: 8px;
-}
-::-webkit-scrollbar-track {
-    background: #f1f1f1;
-}
-::-webkit-scrollbar-thumb {
-    background: #cbd5e1;
-    border-radius: 4px;
-}
-::-webkit-scrollbar-thumb:hover {
-    background: #94a3b8;
-}
-
-/* Range Input Customization */
-input[type="range"] {
-    -webkit-appearance: none;
-}
-input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background: #1e293b;
-    cursor: pointer;
-    transition: background .15s ease-in-out;
-}
-input[type="range"]::-webkit-slider-thumb:hover {
-    background: #334155;
-}
-input[type="range"]::-moz-range-thumb {
-    width: 16px;
-    height: 16px;
-    border: none;
-    border-radius: 50%;
-    background: #1e293b;
-    cursor: pointer;
-    transition: background .15s ease-in-out;
-}
-input[type="range"]::-moz-range-thumb:hover {
-    background: #334155;
-}
-
-/* Fullscreen Mode */
-#fullscreen-modal {
-    overscroll-behavior: contain;
-}
-
-#fullscreen-canvas {
-    touch-action: none;
-    -webkit-tap-highlight-color: transparent;
-}
-
-/* Eraser Mode Cursor */
-.eraser-mode {
-    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2'%3E%3Ccircle cx='12' cy='12' r='8'/%3E%3C/svg%3E") 12 12, crosshair;
-}
-
-/* Font Template Buttons */
-.font-template-btn:hover span {
-    color: #2563eb;
-}
-
-/* Size Button Active State */
-.size-btn.active {
-    opacity: 1 !important;
-}
-
-/* Eraser Active State */
-.eraser-active {
-    background-color: #3b82f6 !important;
-    color: white !important;
-}</style>
 </head>
-<body class="bg-[#F8FAFC] text-slate-900 font-sans flex flex-col min-h-screen">
+<body class="bg-white text-slate-900 font-sans flex flex-col min-h-screen">
 
     <!-- Header -->
-    <nav class="w-full bg-white/80 backdrop-blur-md border-b border-slate-200/60 sticky top-0 z-50 supports-[backdrop-filter]:bg-white/60">
+    <nav class="w-full bg-white border-b border-slate-200 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
-                <div class="flex items-center gap-3">
-                    <a href="/" class="flex items-center gap-3 group">
-                        <!-- Logo SVG -->
-                        <div class="relative flex-shrink-0">
-                            <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg" class="shadow-sm rounded-xl group-hover:scale-105 transition-transform">
-                                <rect width="38" height="38" rx="10" fill="#2563EB"/>
-                                <path d="M26.5 11.5L28.5 13.5L16.5 25.5H13.5V22.5L25.5 11.5Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M13.5 29C13.5 29 16 31.5 20 31.5C24 31.5 27.5 27.5 27.5 27.5" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </div>
-                        <span class="text-lg md:text-xl font-bold text-slate-800 tracking-tight group-hover:text-blue-600 transition-colors">
-                            Signature Sketch
-                        </span>
-                    </a>
-                </div>
-                
-                <div class="flex items-center gap-6">
-                    <!-- Navigation Links -->
-                    <div class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600">
-                        <a href="guide.html" class="hover:text-blue-600 transition-colors">Guide</a>
-                        <a href="blog.html" class="text-blue-600 font-semibold transition-colors">Blog</a>
+                <a href="/" class="flex items-center gap-3 group">
+                    <div class="relative flex-shrink-0">
+                        <svg width="32" height="32" viewBox="0 0 38 38" fill="none" class="rounded-lg">
+                            <rect width="38" height="38" rx="8" fill="#2563EB"/>
+                            <path d="M26.5 11.5L28.5 13.5L16.5 25.5H13.5V22.5L25.5 11.5Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M13.5 29C13.5 29 16 31.5 20 31.5C24 31.5 27.5 27.5 27.5 27.5" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
                     </div>
-
-                    <div class="h-4 w-px bg-slate-200 hidden md:block"></div>
-
-                    <div class="relative group">
-                        <button class="flex items-center gap-1.5 text-sm font-medium text-slate-600 hover:text-blue-600">
-                            <span>English</span>
-                            <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </button>
-                        <div class="absolute right-0 mt-2 w-32 bg-white rounded-lg shadow-lg border border-slate-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
-                            <a href="/blog.html" class="block px-4 py-2 text-sm text-blue-600 bg-blue-50 font-medium">English</a>
-                            <a href="/zh/blog.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-50">中文</a>
-                            <a href="/fr/blog.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-50">Français</a>
-                            <a href="/ru/blog.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-50">Русский</a>
-                            <a href="/es/blog.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-50">Español</a>
-                            <a href="/ko/blog.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-50">한국어</a>
-                        </div>
-                    </div>
+                    <span class="text-lg font-bold text-slate-900 tracking-tight">Signature Sketch</span>
+                </a>
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="/" class="text-sm font-medium text-slate-600 hover:text-slate-900">Home</a>
+                    <a href="/blog.html" class="text-sm font-medium text-blue-600">Blog</a>
+                    <a href="/" class="px-4 py-2 text-sm font-medium text-white bg-slate-900 rounded-lg hover:bg-slate-800 shadow-sm transition-colors">Create Signature</a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- Main Content -->
-    <main class="flex-1 w-full">
-        
-        <!-- Page Header -->
-        <div class="bg-white border-b border-slate-200">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-                <h1 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Latest Updates & Guides</h1>
-                <p class="text-slate-500 max-w-2xl mx-auto text-lg">Tips, tutorials, and industry news about digital signatures, productivity, and the future of paperless work.</p>
-            </div>
-        </div>
-
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <!-- Blog Grid -->
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-                <!-- Blog Post Card: What Is a Wet Signature -->
-                <article class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-shadow flex flex-col">
-                    <div class="h-48 bg-amber-50 flex items-center justify-center">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#D97706" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/><path d="m15 5 4 4"/></svg>
-                    </div>
-                    <div class="p-6 flex-1 flex flex-col">
-                        <div class="flex items-center gap-2 mb-3">
-                            <span class="px-2 py-1 bg-amber-50 text-amber-700 text-xs font-semibold rounded-full uppercase tracking-wide">Explainer</span>
-                            <span class="text-slate-400 text-xs">Mar 2026</span>
-                        </div>
-                        <h2 class="text-xl font-bold text-slate-900 mb-2">
-                            <a href="blog/what-is-a-wet-signature.html" class="hover:text-blue-600 transition-colors">What Is a Wet Signature? Why It's Called "Wet" and When You Still Need One</a>
-                        </h2>
-                        <p class="text-slate-500 text-sm mb-4 flex-1">
-                            The origin of the term, which documents still demand pen on paper, blue vs black ink, and how electronic alternatives compare.
-                        </p>
-                        <a href="blog/what-is-a-wet-signature.html" class="text-blue-600 font-medium text-sm hover:underline inline-flex items-center gap-1">
-                            Read Article <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-                        </a>
-                    </div>
-                </article>
-
-                <!-- Blog Post Card: What Is an Electronic Signature -->
-                <article class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-shadow flex flex-col">
-                    <div class="h-48 bg-blue-50 flex items-center justify-center">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/><path d="M8 7h6"/><path d="M8 11h8"/></svg>
-                    </div>
-                    <div class="p-6 flex-1 flex flex-col">
-                        <div class="flex items-center gap-2 mb-3">
-                            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-semibold rounded-full uppercase tracking-wide">Explainer</span>
-                            <span class="text-slate-400 text-xs">Mar 2026</span>
-                        </div>
-                        <h2 class="text-xl font-bold text-slate-900 mb-2">
-                            <a href="blog/what-is-an-electronic-signature.html" class="hover:text-blue-600 transition-colors">What Is an Electronic Signature? A Plain-English Guide</a>
-                        </h2>
-                        <p class="text-slate-500 text-sm mb-4 flex-1">
-                            The legal definition, how e-signatures work, which documents accept them, and how to create one for free in under a minute.
-                        </p>
-                        <a href="blog/what-is-an-electronic-signature.html" class="text-blue-600 font-medium text-sm hover:underline inline-flex items-center gap-1">
-                            Read Article <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-                        </a>
-                    </div>
-                </article>
-
-                <!-- Blog Post Card: Professional Signature Generator -->
-                <article class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-shadow flex flex-col">
-                    <div class="h-48 bg-slate-50 flex items-center justify-center">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#334155" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="18" rx="2"/><path d="M8 7h8"/><path d="M8 11h8"/><path d="M8 15h4"/><path d="M14 15l2 2 4-4"/></svg>
-                    </div>
-                    <div class="p-6 flex-1 flex flex-col">
-                        <div class="flex items-center gap-2 mb-3">
-                            <span class="px-2 py-1 bg-slate-100 text-slate-700 text-xs font-semibold rounded-full uppercase tracking-wide">Business</span>
-                            <span class="text-slate-400 text-xs">Mar 2026</span>
-                        </div>
-                        <h2 class="text-xl font-bold text-slate-900 mb-2">
-                            <a href="blog/professional-signature-generator.html" class="hover:text-blue-600 transition-colors">Professional Signature Generator: Create a Business Signature Online Free</a>
-                        </h2>
-                        <p class="text-slate-500 text-sm mb-4 flex-1">
-                            Create a professional signature for contracts, emails, and business documents. Free online tool with drawing and font options. No sign-up required.
-                        </p>
-                        <a href="blog/professional-signature-generator.html" class="text-blue-600 font-medium text-sm hover:underline inline-flex items-center gap-1">
-                            Read Article <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-                        </a>
-                    </div>
-                </article>
-
-                <!-- Blog Post Card: How to Draw Signature Online -->
-                <article class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-shadow flex flex-col">
-                    <div class="h-48 bg-cyan-50 flex items-center justify-center">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#0891B2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/><path d="m15 5 4 4"/><path d="M13.5 6.5a2 2 0 0 0-3 0L2 15v5h5l8.5-8.5a2 2 0 0 0 0-3z"/></svg>
-                    </div>
-                    <div class="p-6 flex-1 flex flex-col">
-                        <div class="flex items-center gap-2 mb-3">
-                            <span class="px-2 py-1 bg-cyan-50 text-cyan-700 text-xs font-semibold rounded-full uppercase tracking-wide">Guide</span>
-                            <span class="text-slate-400 text-xs">Feb 2026</span>
-                        </div>
-                        <h2 class="text-xl font-bold text-slate-900 mb-2">
-                            <a href="blog/how-to-draw-signature-online.html" class="hover:text-blue-600 transition-colors">How to Draw a Signature Online Free (No App Needed)</a>
-                        </h2>
-                        <p class="text-slate-500 text-sm mb-4 flex-1">
-                            Draw your signature in the browser using your mouse, trackpad, or finger. Download a transparent PNG instantly. No app required.
-                        </p>
-                        <a href="blog/how-to-draw-signature-online.html" class="text-blue-600 font-medium text-sm hover:underline inline-flex items-center gap-1">
-                            Read Article <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-                        </a>
-                    </div>
-                </article>
-
-                <!-- Blog Post Card: Digital Signature vs Electronic Signature -->
-                <article class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-shadow flex flex-col">
-                    <div class="h-48 bg-rose-50 flex items-center justify-center">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#E11D48" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
-                    </div>
-                    <div class="p-6 flex-1 flex flex-col">
-                        <div class="flex items-center gap-2 mb-3">
-                            <span class="px-2 py-1 bg-rose-50 text-rose-700 text-xs font-semibold rounded-full uppercase tracking-wide">Explainer</span>
-                            <span class="text-slate-400 text-xs">Feb 2026</span>
-                        </div>
-                        <h2 class="text-xl font-bold text-slate-900 mb-2">
-                            <a href="blog/digital-signature-vs-electronic-signature.html" class="hover:text-blue-600 transition-colors">Digital Signature vs Electronic Signature: What's the Difference?</a>
-                        </h2>
-                        <p class="text-slate-500 text-sm mb-4 flex-1">
-                            They are not the same thing. Learn the legal, technical, and practical differences, and which one you actually need.
-                        </p>
-                        <a href="blog/digital-signature-vs-electronic-signature.html" class="text-blue-600 font-medium text-sm hover:underline inline-flex items-center gap-1">
-                            Read Article <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-                        </a>
-                    </div>
-                </article>
-
-                <!-- Blog Post Card: Email Signature -->
-                <article class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-shadow flex flex-col">
-                    <div class="h-48 bg-indigo-50 flex items-center justify-center">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#6366F1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                    </div>
-                    <div class="p-6 flex-1 flex flex-col">
-                        <div class="flex items-center gap-2 mb-3">
-                            <span class="px-2 py-1 bg-indigo-50 text-indigo-700 text-xs font-semibold rounded-full uppercase tracking-wide">Guide</span>
-                            <span class="text-slate-400 text-xs">Feb 2026</span>
-                        </div>
-                        <h2 class="text-xl font-bold text-slate-900 mb-2">
-                            <a href="blog/how-to-create-email-signature.html" class="hover:text-blue-600 transition-colors">How to Create a Professional Email Signature (With Handwritten Touch)</a>
-                        </h2>
-                        <p class="text-slate-500 text-sm mb-4 flex-1">
-                            Stand out in every inbox. Add a real handwritten signature to your email footer for Gmail, Outlook, and Apple Mail.
-                        </p>
-                        <a href="blog/how-to-create-email-signature.html" class="text-blue-600 font-medium text-sm hover:underline inline-flex items-center gap-1">
-                            Read Article <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-                        </a>
-                    </div>
-                </article>
-
-                <!-- Blog Post Card: Digital Signature on Phone -->
-                <article class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-shadow flex flex-col">
-                    <div class="h-48 bg-teal-50 flex items-center justify-center">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#0D9488" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
-                    </div>
-                    <div class="p-6 flex-1 flex flex-col">
-                        <div class="flex items-center gap-2 mb-3">
-                            <span class="px-2 py-1 bg-teal-50 text-teal-700 text-xs font-semibold rounded-full uppercase tracking-wide">Guide</span>
-                            <span class="text-slate-400 text-xs">Feb 2026</span>
-                        </div>
-                        <h2 class="text-xl font-bold text-slate-900 mb-2">
-                            <a href="blog/how-to-create-digital-signature-on-phone.html" class="hover:text-blue-600 transition-colors">How to Create a Digital Signature on Your Phone (iPhone & Android)</a>
-                        </h2>
-                        <p class="text-slate-500 text-sm mb-4 flex-1">
-                            Create a professional handwritten signature on your phone. No app download needed — works directly in your browser.
-                        </p>
-                        <a href="blog/how-to-create-digital-signature-on-phone.html" class="text-blue-600 font-medium text-sm hover:underline inline-flex items-center gap-1">
-                            Read Article <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-                        </a>
-                    </div>
-                </article>
-
-                <!-- Blog Post Card: How to Sign a PDF Online -->
-                <article class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-shadow flex flex-col">
-                    <div class="h-48 bg-orange-50 flex items-center justify-center">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#EA580C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><path d="M12 18v-6"/><path d="m9 15 3-3 3 3"/></svg>
-                    </div>
-                    <div class="p-6 flex-1 flex flex-col">
-                        <div class="flex items-center gap-2 mb-3">
-                            <span class="px-2 py-1 bg-orange-50 text-orange-700 text-xs font-semibold rounded-full uppercase tracking-wide">Guide</span>
-                            <span class="text-slate-400 text-xs">Feb 2026</span>
-                        </div>
-                        <h2 class="text-xl font-bold text-slate-900 mb-2">
-                            <a href="blog/how-to-sign-a-pdf-online.html" class="hover:text-blue-600 transition-colors">How to Sign a PDF Online for Free (No Printer Needed)</a>
-                        </h2>
-                        <p class="text-slate-500 text-sm mb-4 flex-1">
-                            Stop printing, signing, and scanning. Learn the modern way to add a handwritten signature to any PDF in seconds.
-                        </p>
-                        <a href="blog/how-to-sign-a-pdf-online.html" class="text-blue-600 font-medium text-sm hover:underline inline-flex items-center gap-1">
-                            Read Article <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-                        </a>
-                    </div>
-                </article>
-
-                <!-- Blog Post Card: Signature Ideas for My Name -->
-                <article class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-shadow flex flex-col">
-                    <div class="h-48 bg-amber-50 flex items-center justify-center">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#D97706" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/><path d="m15 5 4 4"/><path d="M2 18h4"/></svg>
-                    </div>
-                    <div class="p-6 flex-1 flex flex-col">
-                        <div class="flex items-center gap-2 mb-3">
-                            <span class="px-2 py-1 bg-amber-50 text-amber-700 text-xs font-semibold rounded-full uppercase tracking-wide">Ideas</span>
-                            <span class="text-slate-400 text-xs">Feb 2026</span>
-                        </div>
-                        <h2 class="text-xl font-bold text-slate-900 mb-2">
-                            <a href="blog/signature-ideas-for-my-name.html" class="hover:text-blue-600 transition-colors">Signature Ideas for My Name: 7 Styles That Actually Look Good</a>
-                        </h2>
-                        <p class="text-slate-500 text-sm mb-4 flex-1">
-                            Explore 7 proven signature styles from elegant cursive to bold minimalist. Generate a custom signature from your name for free.
-                        </p>
-                        <a href="blog/signature-ideas-for-my-name.html" class="text-blue-600 font-medium text-sm hover:underline inline-flex items-center gap-1">
-                            Read Article <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-                        </a>
-                    </div>
-                </article>
-
-                <!-- Blog Post Card: AI Handwritten Signature Generator -->
-                <article class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-shadow flex flex-col">
-                    <div class="h-48 bg-emerald-50 flex items-center justify-center">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 1 4 4c0 1.95-1.4 3.58-3.25 3.93"/><path d="M8.56 13.44A5 5 0 0 0 7 17c0 1.1.9 2 2 2h6c1.1 0 2-.9 2-2a5 5 0 0 0-1.56-3.56"/><path d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 1 1 3.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/></svg>
-                    </div>
-                    <div class="p-6 flex-1 flex flex-col">
-                        <div class="flex items-center gap-2 mb-3">
-                            <span class="px-2 py-1 bg-emerald-50 text-emerald-700 text-xs font-semibold rounded-full uppercase tracking-wide">Guide</span>
-                            <span class="text-slate-400 text-xs">Feb 2026</span>
-                        </div>
-                        <h2 class="text-xl font-bold text-slate-900 mb-2">
-                            <a href="blog/ai-handwritten-signature-generator.html" class="hover:text-blue-600 transition-colors">Free AI Handwritten Signature Generator: Turn Text to Realistic Signature</a>
-                        </h2>
-                        <p class="text-slate-500 text-sm mb-4 flex-1">
-                            Generate a realistic handwritten signature from text using AI. Free online tool with no sign-up. Create professional signatures that look hand-drawn.
-                        </p>
-                        <a href="blog/ai-handwritten-signature-generator.html" class="text-blue-600 font-medium text-sm hover:underline inline-flex items-center gap-1">
-                            Read Article <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-                        </a>
-                    </div>
-                </article>
-
-                <!-- Blog Post Card: Cursive Signature Generator -->
-                <article class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-shadow flex flex-col">
-                    <div class="h-48 bg-indigo-50 flex items-center justify-center">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#6366F1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/><path d="m15 5 4 4"/></svg>
-                    </div>
-                    <div class="p-6 flex-1 flex flex-col">
-                        <div class="flex items-center gap-2 mb-3">
-                            <span class="px-2 py-1 bg-indigo-50 text-indigo-700 text-xs font-semibold rounded-full uppercase tracking-wide">Listicle</span>
-                            <span class="text-slate-400 text-xs">Feb 2026</span>
-                        </div>
-                        <h2 class="text-xl font-bold text-slate-900 mb-2">
-                            <a href="blog/cursive-signature-generator.html" class="hover:text-blue-600 transition-colors">5 Best Cursive Signature Generators to Create a Cool Signature</a>
-                        </h2>
-                        <p class="text-slate-500 text-sm mb-4 flex-1">
-                            Create a beautiful cursive signature online for free. Compare the best tools, learn design tips, and download a transparent PNG.
-                        </p>
-                        <a href="blog/cursive-signature-generator.html" class="text-blue-600 font-medium text-sm hover:underline inline-flex items-center gap-1">
-                            Read Article <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-                        </a>
-                    </div>
-                </article>
-
-                <!-- Blog Post Card: Wet Blue Ink Signature -->
-                <article class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-shadow flex flex-col">
-                    <div class="h-48 bg-blue-50 flex items-center justify-center">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
-                    </div>
-                    <div class="p-6 flex-1 flex flex-col">
-                        <div class="flex items-center gap-2 mb-3">
-                            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-semibold rounded-full uppercase tracking-wide">Tutorial</span>
-                            <span class="text-slate-400 text-xs">Feb 2026</span>
-                        </div>
-                        <h2 class="text-xl font-bold text-slate-900 mb-2">
-                            <a href="blog/wet-blue-ink-signature.html" class="hover:text-blue-600 transition-colors">Wet Blue Ink Signature Generator: Create Realistic Signatures Online</a>
-                        </h2>
-                        <p class="text-slate-500 text-sm mb-4 flex-1">
-                            Why do banks and legal documents require blue ink signatures? Learn how to create a realistic, transparent blue signature online.
-                        </p>
-                        <a href="blog/wet-blue-ink-signature.html" class="text-blue-600 font-medium text-sm hover:underline inline-flex items-center gap-1">
-                            Read Article <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-                        </a>
-                    </div>
-                </article>
-
-                <!-- Blog Post Card: How to Make Signature Transparent -->
-                <article class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-shadow flex flex-col">
-                    <div class="h-48 bg-purple-50 flex items-center justify-center">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#9333EA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-                    </div>
-                    <div class="p-6 flex-1 flex flex-col">
-                        <div class="flex items-center gap-2 mb-3">
-                            <span class="px-2 py-1 bg-purple-50 text-purple-700 text-xs font-semibold rounded-full uppercase tracking-wide">Guide</span>
-                            <span class="text-slate-400 text-xs">Jan 2026</span>
-                        </div>
-                        <h2 class="text-xl font-bold text-slate-900 mb-2">
-                            <a href="blog/how-to-make-signature-transparent.html" class="hover:text-blue-600 transition-colors">How to Make a Signature Transparent Online for Free</a>
-                        </h2>
-                        <p class="text-slate-500 text-sm mb-4 flex-1">
-                            Stop struggling with white backgrounds. Learn how to create transparent PNG signatures for professional documents.
-                        </p>
-                        <a href="blog/how-to-make-signature-transparent.html" class="text-blue-600 font-medium text-sm hover:underline inline-flex items-center gap-1">
-                            Read Article <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-                        </a>
-                    </div>
-                </article>
+    <!-- Content Layout -->
+    <div class="flex-1 w-full bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
                 
-                <!-- Blog Post Card 1: How to Add Signature in Word -->
-                <article class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-shadow flex flex-col">
-                    <div class="h-48 bg-blue-50 flex items-center justify-center">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg>
-                    </div>
-                    <div class="p-6 flex-1 flex flex-col">
-                        <div class="flex items-center gap-2 mb-3">
-                            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-semibold rounded-full uppercase tracking-wide">Tutorial</span>
-                            <span class="text-slate-400 text-xs">Jan 2026</span>
+                <!-- Main Article (8 cols) -->
+                <main class="lg:col-span-8">
+                    
+                    <!-- Breadcrumbs -->
+                    <nav class="flex items-center gap-3 text-sm text-slate-500 mb-10 overflow-x-auto whitespace-nowrap" aria-label="Breadcrumb">
+                        <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                        <svg class="w-3 h-3 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                        <a href="/blog.html" class="hover:text-blue-600 transition-colors">Blog</a>
+                        <svg class="w-3 h-3 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                        <span class="text-slate-900 font-medium">What Is a Wet Signature?</span>
+                    </nav>
+
+                    <!-- H1 -->
+                    <header class="mb-14 max-w-3xl">
+                        <h1 class="text-3xl md:text-5xl font-extrabold text-slate-900 leading-[1.1] mb-8 tracking-tight">
+                            What Is a Wet Signature? <span class="text-amber-600">The Term, the Law, and the Future</span>
+                        </h1>
+                        
+                        <div class="flex items-center gap-4 py-6 border-y border-slate-100">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 font-bold border border-amber-200 text-sm">SS</div>
+                                <div>
+                                    <div class="text-sm font-bold text-slate-900">Signature Sketch Team</div>
+                                    <div class="text-xs text-slate-500 mt-1">Published: March 4, 2026</div>
+                                </div>
+                            </div>
+                            <div class="h-8 w-px bg-slate-200 mx-2 hidden sm:block"></div>
+                            <div class="text-sm text-slate-500 font-medium px-3 py-1 bg-slate-50 rounded-full border border-slate-100">
+                                6 min read
+                            </div>
                         </div>
-                        <h2 class="text-xl font-bold text-slate-900 mb-2">
-                            <a href="blog/how-to-add-signature-in-word.html" class="hover:text-blue-600 transition-colors">How to Add a Signature in Word (The Easy Way)</a>
-                        </h2>
-                        <p class="text-slate-500 text-sm mb-4 flex-1">
-                            Learn professional methods to add signatures in Word without scanning. Transparent PNG, drawing canvas, and more.
+                    </header>
+
+                    <!-- Article Body -->
+                    <article class="article-body">
+
+                        <p class="lead-paragraph">
+                            Nobody called it a "wet signature" until there was a dry one to compare it to. For most of human history, signing your name with a pen was just... signing your name. Then email happened, PDFs happened, and suddenly we needed a word to distinguish ink on paper from pixels on a screen.
                         </p>
-                        <a href="blog/how-to-add-signature-in-word.html" class="text-blue-600 font-medium text-sm hover:underline inline-flex items-center gap-1">
-                            Read Article <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+
+                        <!-- Hero Image -->
+                        <figure class="my-14">
+                            <div class="w-full bg-slate-50 border border-slate-200 rounded-xl overflow-hidden shadow-sm">
+                                <img src="blue-ink-signature-comparison.webp" alt="Close-up of a wet ink signature on paper showing the characteristic sheen of fresh blue ink before it dries" class="w-full h-auto" loading="lazy">
+                            </div>
+                            <figcaption class="p-4 text-center text-sm text-slate-500 bg-white border-t border-slate-100">
+                                A wet signature gets its name from the literal wetness of ink at the moment pen meets paper
+                            </figcaption>
+                        </figure>
+
+                        <h2 id="origin">Where Does the Term Come From?</h2>
+
+                        <p>
+                            The word "wet" is not a metaphor. When you press a ballpoint, rollerball, or fountain pen against paper, liquid ink transfers from the pen tip to the surface. For a brief moment, that ink is physically wet. It then absorbs into the paper fibers and dries, leaving a permanent mark.
+                        </p>
+
+                        <p>
+                            Before the 1990s, nobody needed this distinction. A signature was a signature. But as fax machines, email, and eventually PDF documents made it possible to sign things without touching paper, the legal and business world needed vocabulary to tell the two apart. "Wet signature" emerged as the retronym — a new name for an old thing, created because the old thing suddenly had competition.
+                        </p>
+
+                        <p>
+                            In legal contexts, "wet ink" carries a specific meaning: an <strong>original</strong> signature on an <strong>original</strong> document. Not a photocopy. Not a scan. Not a fax. The actual pen mark on the actual piece of paper. Some institutions care deeply about this distinction, which is why the term persists even in 2026.
+                        </p>
+
+                        <h2 id="blue-vs-black">Why Lawyers Prefer Blue Ink</h2>
+
+                        <p>
+                            Here is a piece of practical wisdom that has survived the digital revolution: if you are signing a legal document with a pen, use <a href="wet-blue-ink-signature.html">blue ink</a>.
+                        </p>
+
+                        <p>
+                            The reason is simple. Most printers and photocopiers produce black output. If you sign in black ink, a photocopy of your signature looks identical to the original. Sign in blue, and anyone can immediately tell whether they are looking at the original document or a copy. This matters in courtrooms, real estate closings, and any situation where the authenticity of the original is in question.
+                        </p>
+
+                        <p>
+                            That said, black ink is universally accepted and perfectly fine for most business documents. The blue ink preference is a best practice, not a legal requirement.
+                        </p>
+
+                        <div class="callout">
+                            <h3 style="margin-top:0; font-size: 1.15rem; color: #92400e;">A note on pen types</h3>
+                            <p style="margin-bottom: 0;">
+                                Ballpoint pens are the safest choice for legal documents. The oil-based ink dries almost instantly, resists smudging, and is extremely difficult to alter or erase. Gel pens look nicer but take longer to dry and can smear. Fountain pens are elegant but impractical for most signing situations. If you are signing something important, reach for a ballpoint.
+                            </p>
+                        </div>
+
+                        <h2 id="still-required">When Is a Wet Signature Still Required?</h2>
+
+                        <p>
+                            Despite the global shift toward <a href="what-is-an-electronic-signature.html">electronic signatures</a>, certain documents and situations still demand pen on paper. The specifics vary by country and even by state, but here are the most common holdouts:
+                        </p>
+
+                        <h3>Wills and testaments</h3>
+                        <p>
+                            Almost every jurisdiction requires handwritten signatures on wills, typically witnessed by two people who also sign in ink. This is one of the most resistant areas to electronic adoption, largely because of the high stakes involved and the potential for disputes after the signer's death.
+                        </p>
+
+                        <h3>Certain real estate transactions</h3>
+                        <p>
+                            Property deeds, mortgage documents, and title transfers often require notarized wet signatures. This is changing — many US states now allow remote online notarization — but the transition is uneven. Always check your local requirements before assuming electronic is acceptable for a property deal.
+                        </p>
+
+                        <h3>Court filings and legal proceedings</h3>
+                        <p>
+                            Many courts still require original wet signatures on filings, affidavits, and sworn statements. Federal courts in the US have largely moved to electronic filing (PACER/CM/ECF), but state and local courts vary widely.
+                        </p>
+
+                        <h3>Immigration documents</h3>
+                        <p>
+                            USCIS forms and equivalent agencies in other countries frequently require wet ink signatures. Immigration is one of the most paper-heavy government processes remaining.
+                        </p>
+
+                        <h3>Notarized documents</h3>
+                        <p>
+                            Traditional notarization requires physical presence and a wet signature from both the signer and the notary. Remote online notarization (RON) is now legal in over 40 US states, but in-person notarization with wet ink remains the default in many situations.
+                        </p>
+
+                        <p>
+                            For everything else — business contracts, NDAs, employment agreements, invoices, purchase orders, internal approvals — electronic signatures are legally valid and increasingly preferred.
+                        </p>
+
+                        <h2 id="wet-vs-electronic">Wet Signature vs Electronic Signature: A Practical Comparison</h2>
+
+                        <p>
+                            The debate is not really about which is "better." Each has strengths, and the right choice depends on the document and the situation.
+                        </p>
+
+                        <table class="comparison-table">
+                            <thead>
+                                <tr>
+                                    <th>Factor</th>
+                                    <th>Wet Signature</th>
+                                    <th>Electronic Signature</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Speed</td>
+                                    <td>Print, sign, scan, send</td>
+                                    <td>Sign and send in seconds</td>
+                                </tr>
+                                <tr>
+                                    <td>Location</td>
+                                    <td>Need the physical document</td>
+                                    <td>Sign from anywhere, any device</td>
+                                </tr>
+                                <tr>
+                                    <td>Verification</td>
+                                    <td>Visual comparison, forensics</td>
+                                    <td>Audit trail: timestamp, IP, email</td>
+                                </tr>
+                                <tr>
+                                    <td>Storage</td>
+                                    <td>Physical filing cabinets</td>
+                                    <td>Digital, searchable, backed up</td>
+                                </tr>
+                                <tr>
+                                    <td>Legal standing</td>
+                                    <td>Universal</td>
+                                    <td>Valid for most documents (some exceptions)</td>
+                                </tr>
+                                <tr>
+                                    <td>Cost</td>
+                                    <td>Paper, ink, postage, storage</td>
+                                    <td>Free or low-cost</td>
+                                </tr>
+                                <tr>
+                                    <td>Forgery resistance</td>
+                                    <td>Can be traced from other documents</td>
+                                    <td>Harder to forge with audit trail</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <p>
+                            One thing that surprises people: electronic signatures are actually <em>harder</em> to forge than wet ones. A handwritten signature can be traced or copied from any document you have previously signed. An electronic signature backed by a timestamp, IP address, and email verification creates a much stronger chain of evidence.
+                        </p>
+
+                        <h2 id="going-digital">Making the Switch: From Wet Ink to Electronic</h2>
+
+                        <p>
+                            If you have been printing, signing, scanning, and emailing documents back, you are spending time you do not need to spend. Here is the modern workflow:
+                        </p>
+
+                        <ol>
+                            <li>Create your signature once using <a href="/">Signature Sketch</a>. Draw it with your mouse or finger for a natural handwritten look, or type your name and choose a <a href="cursive-signature-generator.html">script font</a>.</li>
+                            <li>Download it as a <a href="how-to-make-signature-transparent.html">transparent PNG</a>. This is important — a transparent background means no white box covering text in your documents.</li>
+                            <li>Save the file somewhere accessible. Your desktop, cloud storage, or phone photo library all work.</li>
+                            <li>When you need to sign, insert the image into your <a href="how-to-add-signature-in-word.html">Word document</a>, <a href="how-to-sign-a-pdf-online.html">PDF</a>, <a href="how-to-insert-signature-in-google-docs.html">Google Doc</a>, or <a href="how-to-create-email-signature.html">email</a>.</li>
+                        </ol>
+
+                        <p>
+                            You create the signature once and reuse it indefinitely. No printer, no scanner, no postage. The entire signing process takes about 10 seconds instead of 10 minutes.
+                        </p>
+
+                        <p>
+                            And if you want your electronic signature to have that authentic <a href="wet-blue-ink-signature.html">blue ink look</a>? Just select blue as your color when creating it. The result looks exactly like a wet signature — because it is based on one — but lives as a digital file you can use anywhere.
+                        </p>
+
+                        <h2 id="future">Is the Wet Signature Going Away?</h2>
+
+                        <p>
+                            Not entirely, but its territory is shrinking every year. The COVID-19 pandemic accelerated the adoption of electronic signatures by years, if not decades. Remote work made it impractical to require physical documents, and governments responded by loosening wet signature requirements across the board.
+                        </p>
+
+                        <p>
+                            Over 40 US states now allow remote online notarization. The EU’s eIDAS regulation recognizes electronic signatures across all member states. Even traditionally paper-heavy industries like real estate and healthcare are moving toward electronic processes.
+                        </p>
+
+                        <p>
+                            Will wills ever be signed electronically? Probably, eventually. Some jurisdictions are already experimenting with it. But for now, the wet signature retains its place for a small but important category of documents where physical presence and original ink still carry weight.
+                        </p>
+
+                        <p>
+                            For everything else, the pen is optional.
+                        </p>
+
+                        <!-- FAQ Section -->
+                        <h2 id="faq" style="margin-top: 4em;">Frequently Asked Questions</h2>
+
+                        <div class="space-y-8 mt-8" style="font-size: 1rem;">
+                            <div class="bg-amber-50 rounded-xl p-6 border border-amber-100">
+                                <h3 style="margin-top: 0; font-size: 1.1rem; color: #0f172a;">Why is it called a wet signature?</h3>
+                                <p style="margin-bottom: 0; color: #475569;">
+                                    The term refers to the physical ink being wet at the moment of signing. When pen touches paper, liquid ink transfers and then dries. The word distinguishes this from electronic signatures, which exist only as digital data.
+                                </p>
+                            </div>
+
+                            <div class="bg-amber-50 rounded-xl p-6 border border-amber-100">
+                                <h3 style="margin-top: 0; font-size: 1.1rem; color: #0f172a;">Is a wet signature more legally valid than an electronic one?</h3>
+                                <p style="margin-bottom: 0; color: #475569;">
+                                    For most documents, no. The ESIGN Act and eIDAS give electronic signatures equal legal standing. Wet signatures are only required for specific exceptions like wills, certain property deeds, and some court filings.
+                                </p>
+                            </div>
+
+                            <div class="bg-amber-50 rounded-xl p-6 border border-amber-100">
+                                <h3 style="margin-top: 0; font-size: 1.1rem; color: #0f172a;">Should I use blue or black ink?</h3>
+                                <p style="margin-bottom: 0; color: #475569;">
+                                    Both are accepted. Blue ink is preferred for legal documents because it makes originals easy to distinguish from black-and-white photocopies. Black is the universal standard and works everywhere.
+                                </p>
+                            </div>
+
+                            <div class="bg-amber-50 rounded-xl p-6 border border-amber-100">
+                                <h3 style="margin-top: 0; font-size: 1.1rem; color: #0f172a;">Can I replace wet signatures with electronic ones for business contracts?</h3>
+                                <p style="margin-bottom: 0; color: #475569;">
+                                    Yes. Standard business contracts, NDAs, employment agreements, invoices, and purchase orders are all legally valid with electronic signatures in the US, EU, UK, Canada, Australia, and most other countries.
+                                </p>
+                            </div>
+                        </div>
+
+                    </article>
+
+                    <!-- CTA -->
+                    <div class="mt-16 bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-10 border border-amber-100">
+                        <h2 class="text-2xl font-bold text-slate-900 mb-3">Skip the Printer. Sign Digitally.</h2>
+                        <p class="text-slate-600 mb-6 text-lg">Create a signature that looks like wet ink but works on any digital document. Free, private, instant.</p>
+                        <a href="/" class="inline-block bg-amber-600 text-white font-semibold py-3 px-8 rounded-xl hover:bg-amber-700 transition-colors shadow-sm">
+                            Create Your Signature
                         </a>
                     </div>
-                </article>
 
-                <!-- Blog Post Card 2: How to Insert Signature in Google Docs -->
-                <article class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-shadow flex flex-col">
-                    <div class="h-48 bg-green-50 flex items-center justify-center">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg>
+                </main>
+
+                <!-- Sidebar (4 cols) -->
+                <aside class="lg:col-span-4">
+                    
+                    <!-- Table of Contents -->
+                    <div class="bg-slate-50 rounded-2xl p-8 border border-slate-100 mb-8">
+                        <h3 class="text-sm font-bold text-slate-900 uppercase tracking-wider mb-6">In This Article</h3>
+                        <ul class="space-y-4">
+                            <li><a href="#origin" class="flex items-center gap-3 text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors group"><span class="w-6 h-6 rounded bg-white border border-slate-200 text-slate-400 flex items-center justify-center text-xs group-hover:border-amber-200 group-hover:text-amber-600">1</span>Where the Term Comes From</a></li>
+                            <li><a href="#blue-vs-black" class="flex items-center gap-3 text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors group"><span class="w-6 h-6 rounded bg-white border border-slate-200 text-slate-400 flex items-center justify-center text-xs group-hover:border-amber-200 group-hover:text-amber-600">2</span>Blue vs Black Ink</a></li>
+                            <li><a href="#still-required" class="flex items-center gap-3 text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors group"><span class="w-6 h-6 rounded bg-white border border-slate-200 text-slate-400 flex items-center justify-center text-xs group-hover:border-amber-200 group-hover:text-amber-600">3</span>When Still Required</a></li>
+                            <li><a href="#wet-vs-electronic" class="flex items-center gap-3 text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors group"><span class="w-6 h-6 rounded bg-white border border-slate-200 text-slate-400 flex items-center justify-center text-xs group-hover:border-amber-200 group-hover:text-amber-600">4</span>Wet vs Electronic</a></li>
+                            <li><a href="#going-digital" class="flex items-center gap-3 text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors group"><span class="w-6 h-6 rounded bg-white border border-slate-200 text-slate-400 flex items-center justify-center text-xs group-hover:border-amber-200 group-hover:text-amber-600">5</span>Making the Switch</a></li>
+                            <li><a href="#future" class="flex items-center gap-3 text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors group"><span class="w-6 h-6 rounded bg-white border border-slate-200 text-slate-400 flex items-center justify-center text-xs group-hover:border-amber-200 group-hover:text-amber-600">6</span>The Future</a></li>
+                            <li><a href="#faq" class="flex items-center gap-3 text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors group"><span class="w-6 h-6 rounded bg-white border border-slate-200 text-slate-400 flex items-center justify-center text-xs group-hover:border-amber-200 group-hover:text-amber-600">7</span>FAQ</a></li>
+                        </ul>
                     </div>
-                    <div class="p-6 flex-1 flex flex-col">
-                        <div class="flex items-center gap-2 mb-3">
-                            <span class="px-2 py-1 bg-green-50 text-green-700 text-xs font-semibold rounded-full uppercase tracking-wide">Tutorial</span>
-                            <span class="text-slate-400 text-xs">Jan 2026</span>
+
+                    <!-- Related Articles -->
+                    <div class="bg-white rounded-2xl p-8 border border-slate-200 mb-8">
+                        <h3 class="text-sm font-bold text-slate-900 uppercase tracking-wider mb-6">Related Reading</h3>
+                        <div class="space-y-5">
+                            <a href="wet-blue-ink-signature.html" class="block group">
+                                <div class="text-sm font-semibold text-slate-800 group-hover:text-blue-600 transition-colors mb-1">Wet Blue Ink Signature Generator</div>
+                                <div class="text-xs text-slate-500">Create a realistic blue ink signature online</div>
+                            </a>
+                            <a href="what-is-an-electronic-signature.html" class="block group">
+                                <div class="text-sm font-semibold text-slate-800 group-hover:text-blue-600 transition-colors mb-1">What Is an Electronic Signature?</div>
+                                <div class="text-xs text-slate-500">The complete guide to e-signatures</div>
+                            </a>
+                            <a href="digital-signature-vs-electronic-signature.html" class="block group">
+                                <div class="text-sm font-semibold text-slate-800 group-hover:text-blue-600 transition-colors mb-1">Digital vs Electronic Signature</div>
+                                <div class="text-xs text-slate-500">They are not the same thing</div>
+                            </a>
+                            <a href="how-to-sign-a-pdf-online.html" class="block group">
+                                <div class="text-sm font-semibold text-slate-800 group-hover:text-blue-600 transition-colors mb-1">How to Sign a PDF Online</div>
+                                <div class="text-xs text-slate-500">No printer needed</div>
+                            </a>
                         </div>
-                        <h2 class="text-xl font-bold text-slate-900 mb-2">
-                            <a href="blog/how-to-insert-signature-in-google-docs.html" class="hover:text-blue-600 transition-colors">How to Insert Signature in Google Docs (3 Easy Methods)</a>
-                        </h2>
-                        <p class="text-slate-500 text-sm mb-4 flex-1">
-                            Learn how to add your handwritten signature to Google Docs using drawing tools, image insertion, or add-ons.
-                        </p>
-                        <a href="blog/how-to-insert-signature-in-google-docs.html" class="text-blue-600 font-medium text-sm hover:underline inline-flex items-center gap-1">
-                            Read Article <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-                        </a>
                     </div>
-                </article>
+
+                </aside>
 
             </div>
-
-             <!-- Newsletter / Ad Placeholder -->
-             <div class="mt-16 bg-slate-900 rounded-3xl p-8 md:p-12 text-center text-white relative overflow-hidden">
-                <div class="relative z-10 max-w-2xl mx-auto">
-                    <h2 class="text-2xl md:text-3xl font-bold mb-4">Ready to create your signature?</h2>
-                    <p class="text-slate-300 mb-8 text-lg">Join thousands of professionals who save time by signing documents digitally.</p>
-                    <a href="/" class="inline-block bg-white text-slate-900 hover:bg-slate-100 font-bold py-3 px-8 rounded-xl transition-colors">
-                        Go to Generator
-                    </a>
-                </div>
-                <!-- Abstract BG decoration -->
-                <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
-                    <svg viewBox="0 0 100 100" preserveAspectRatio="none" class="w-full h-full">
-                        <circle cx="0" cy="0" r="40" fill="white" />
-                        <circle cx="100" cy="100" r="40" fill="white" />
-                    </svg>
-                </div>
-            </div>
-
         </div>
-    </main>
+    </div>
 
     <!-- Footer -->
     <footer class="bg-white border-t border-slate-200 mt-auto">
         <div class="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
             <div class="flex flex-col items-center justify-center space-y-4">
-                <p class="text-slate-500 text-sm font-medium flex items-center gap-1">
-                    Digital Signature Tool <span class="text-slate-300">•</span> Simple, Fast, Professional
-                </p>
-                
-                <div class="flex items-center gap-6 text-sm">
-                    <a href="https://github.com/jyxwant/free-handwritten-signature-generator" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-slate-600 hover:text-primary-600 transition-colors">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
-                        <span>Open Source</span>
-                    </a>
+                <div class="flex items-center gap-3">
+                    <svg width="24" height="24" viewBox="0 0 38 38" fill="none"><rect width="38" height="38" rx="8" fill="#2563EB"/><path d="M26.5 11.5L28.5 13.5L16.5 25.5H13.5V22.5L25.5 11.5Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M13.5 29C13.5 29 16 31.5 20 31.5C24 31.5 27.5 27.5 27.5 27.5" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <span class="text-sm font-bold text-slate-700">Signature Sketch</span>
                 </div>
-                
-                <p class="text-slate-400 text-xs mt-4">
-                    &copy; <span id="year"></span> Signature Sketch. All rights reserved.
-                </p>
+                <div class="flex items-center gap-6 text-sm text-slate-500">
+                    <a href="/" class="hover:text-slate-700 transition-colors">Home</a>
+                    <a href="/privacy-policy.html" class="hover:text-slate-700 transition-colors">Privacy</a>
+                    <a href="/terms-of-service.html" class="hover:text-slate-700 transition-colors">Terms</a>
+                    <a href="/contact.html" class="hover:text-slate-700 transition-colors">Contact</a>
+                </div>
+                <p class="text-slate-400 text-xs">&copy; <script>document.write(new Date().getFullYear())</script> Signature Sketch. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
 <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>
