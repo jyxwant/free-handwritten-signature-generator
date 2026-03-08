@@ -618,4 +618,14 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://signaturesketch.tech/blog/how-to-add-signature-to-outlook.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://signaturesketch.tech/blog/how-to-add-signature-to-outlook.html"/>
   </url>
+
+  <!-- Blog Article: Is a Typed Signature Legally Binding (English) -->
+  <url>
+    <loc>https://signaturesketch.tech/blog/is-typed-signature-legally-binding.html</loc>
+    <lastmod>2026-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://signaturesketch.tech/blog/is-typed-signature-legally-binding.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://signaturesketch.tech/blog/is-typed-signature-legally-binding.html"/>
+  </url>
 </urlset>
